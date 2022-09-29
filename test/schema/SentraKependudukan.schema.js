@@ -934,3 +934,305 @@ export const VALIDATE_UPDATE_STATUS = {
         }
     }]
 };
+
+
+const VALID_SCHEMA_ADD_KTP = {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "status_code",
+        "message",
+        "data"
+    ],
+    "properties": {
+        "status_code": {
+            "type": "integer",
+            "default": 0,
+            "title": "The status_code Schema",
+            "examples": [
+                200
+            ]
+        },
+        "message": {
+            "type": "string",
+            "default": "",
+            "title": "The message Schema",
+            "examples": [
+                "Success"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "alamat",
+                "created_at",
+                "id",
+                "jenis_permohonan",
+                "kecamatan",
+                "kecamatan_id",
+                "kelurahan",
+                "kelurahan_id",
+                "kode_pos",
+                "kota",
+                "kota_id",
+                "lokasi_id",
+                "m_user_id",
+                "nama",
+                "no_kk",
+                "no_nik",
+                "no_registrasi",
+                "provinsi",
+                "provinsi_id",
+                "rt",
+                "rw",
+                "tempat_kedatangan",
+                "updated_at"
+            ],
+            "properties": {
+                "alamat": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The alamat Schema",
+                    "examples": [
+                        "Lorem Ipsum"
+                    ]
+                },
+                "created_at": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The created_at Schema",
+                    "examples": [
+                        "2022-09-29 10:21:03"
+                    ]
+                },
+                "id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The id Schema",
+                    "examples": [
+                        239
+                    ]
+                },
+                "jenis_permohonan": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The jenis_permohonan Schema",
+                    "examples": [
+                        "Pembuatan Baru"
+                    ]
+                },
+                "kecamatan": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The kecamatan Schema",
+                    "examples": [
+                        "Wagir"
+                    ]
+                },
+                "kecamatan_id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The kecamatan_id Schema",
+                    "examples": [
+                        "350721"
+                    ]
+                },
+                "kelurahan": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The kelurahan Schema",
+                    "examples": [
+                        "Sidorahayu"
+                    ]
+                },
+                "kelurahan_id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The kelurahan_id Schema",
+                    "examples": [
+                        "3507210009"
+                    ]
+                },
+                "kode_pos": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The kode_pos Schema",
+                    "examples": [
+                        "777333"
+                    ]
+                },
+                "kota": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The kota Schema",
+                    "examples": [
+                        "Malang"
+                    ]
+                },
+                "kota_id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The kota_id Schema",
+                    "examples": [
+                        "3507"
+                    ]
+                },
+                "lokasi_id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The lokasi_id Schema",
+                    "examples": [
+                        "350721"
+                    ]
+                },
+                "m_user_id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The m_user_id Schema",
+                    "examples": [
+                        "21"
+                    ]
+                },
+                "nama": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The nama Schema",
+                    "examples": [
+                        "Qoin Mocha"
+                    ]
+                },
+                "no_kk": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The no_kk Schema",
+                    "examples": [
+                        "35097235326"
+                    ]
+                },
+                "no_nik": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The no_nik Schema",
+                    "examples": [
+                        "35090623445"
+                    ]
+                },
+                "no_registrasi": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The no_registrasi Schema",
+                    "examples": [
+                        "NTT2022092911001"
+                    ]
+                },
+                "provinsi": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The provinsi Schema",
+                    "examples": [
+                        "Jawa Timur"
+                    ]
+                },
+                "provinsi_id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The provinsi_id Schema",
+                    "examples": [
+                        "35"
+                    ]
+                },
+                "rt": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The rt Schema",
+                    "examples": [
+                        "55"
+                    ]
+                },
+                "rw": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The rw Schema",
+                    "examples": [
+                        "345"
+                    ]
+                },
+                "tempat_kedatangan": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The tempat_kedatangan Schema",
+                    "examples": [
+                        "Wagir"
+                    ]
+                },
+                "updated_at": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The updated_at Schema",
+                    "examples": [
+                        "2022-09-29 10:21:03"
+                    ]
+                }
+            },
+            "examples": [{
+                "alamat": "Lorem Ipsum",
+                "created_at": "2022-09-29 10:21:03",
+                "id": 239,
+                "jenis_permohonan": "Pembuatan Baru",
+                "kecamatan": "Wagir",
+                "kecamatan_id": "350721",
+                "kelurahan": "Sidorahayu",
+                "kelurahan_id": "3507210009",
+                "kode_pos": "777333",
+                "kota": "Malang",
+                "kota_id": "3507",
+                "lokasi_id": "350721",
+                "m_user_id": "21",
+                "nama": "Qoin Mocha",
+                "no_kk": "35097235326",
+                "no_nik": "35090623445",
+                "no_registrasi": "NTT2022092911001",
+                "provinsi": "Jawa Timur",
+                "provinsi_id": "35",
+                "rt": "55",
+                "rw": "345",
+                "tempat_kedatangan": "Wagir",
+                "updated_at": "2022-09-29 10:21:03"
+            }]
+        }
+    },
+    "examples": [{
+        "status_code": 200,
+        "message": "Success",
+        "data": {
+            "alamat": "Lorem Ipsum",
+            "created_at": "2022-09-29 10:21:03",
+            "id": 239,
+            "jenis_permohonan": "Pembuatan Baru",
+            "kecamatan": "Wagir",
+            "kecamatan_id": "350721",
+            "kelurahan": "Sidorahayu",
+            "kelurahan_id": "3507210009",
+            "kode_pos": "777333",
+            "kota": "Malang",
+            "kota_id": "3507",
+            "lokasi_id": "350721",
+            "m_user_id": "21",
+            "nama": "Qoin Mocha",
+            "no_kk": "35097235326",
+            "no_nik": "35090623445",
+            "no_registrasi": "NTT2022092911001",
+            "provinsi": "Jawa Timur",
+            "provinsi_id": "35",
+            "rt": "55",
+            "rw": "345",
+            "tempat_kedatangan": "Wagir",
+            "updated_at": "2022-09-29 10:21:03"
+        }
+    }]
+}

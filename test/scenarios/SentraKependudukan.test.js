@@ -8,13 +8,12 @@ import Getid from '$root/helper/get-id-ktp'; //import id
 chai.use(jsonSchema)
 
 describe('Mobile', () => {
-    it.only('Berhasil membuat ktp melalui mobile', async () => {
+    it('Berhasil membuat ktp melalui mobile', async () => {
         const response = await QoinAPI.addKTP(data.VALID_ADDKTP) //hit API
         
         //result
         assert.equal(response.status, 200); //Check Respons
-        // assert.containsAllKeys(response.data.data, data.VALID_ADDKTP)
-        assert.containsAllKeys(data.VALID_ADDKTP, response.data.data)
+        assert.equal(response.data.data.name, data.VALID_ADDKTP.nama); //Check Respons
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.ValidateAddktpSchema) //Call JSON Schema
