@@ -2,7 +2,7 @@ import chai,{ assert,expect } from 'chai';
 import jsonSchema from 'chai-json-schema';//import json schema 
 import QoinAPI from '$root/pages/qoin.api'; //import endpoint API
 import * as data from '$root/data/user.data'; //import data params
-import * as schema from '$root/schema/SentraKependudukan.schema'; //import schema
+import * as schema from '$root/schema/SentraKependudukan_KTP.schema'; //import schema
 import Getid from '$root/helper/get-id-ktp'; //import id
 
 chai.use(jsonSchema)
