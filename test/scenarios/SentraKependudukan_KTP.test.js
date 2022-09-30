@@ -1,8 +1,8 @@
 import chai,{ assert,expect } from 'chai';
 import jsonSchema from 'chai-json-schema';//import json schema 
-import QoinAPI from '$root/pages/qoin.api'; //import endpoint API
-import * as data from '$root/data/user.data'; //import data params
-import * as schema from '$root/schema/SentraKependudukan_KTP.schema'; //import schema
+import QoinAPI from '$root/pages/SentraKependudukan_KTP.api'; //import endpoint API
+import * as data from '$root/data/SentraKependudukan_KTP.data'; //import data params
+import * as schema from '../schema/SentraKependudukan_KTP.schema'; //import schema
 import Getid from '$root/helper/get-id-ktp'; //import id
 
 chai.use(jsonSchema)
@@ -44,7 +44,7 @@ describe('Web', () => {
         
     });
 
-    it.only('Update jadwal KTP', async () => {
+    it('Update jadwal KTP', async () => {
         const response = await QoinAPI.updatejadwal(data.VALID_UPDATE_JADWAL_KTP) //hit API
     
         expect(response.data).to.be.jsonSchema(schema.ValidateKtpJadwalSchema) //Call JSON Schema

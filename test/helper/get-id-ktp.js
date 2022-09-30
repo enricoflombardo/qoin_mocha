@@ -1,4 +1,4 @@
-import QoinAPI from '$root/pages/qoin.api'; //import endpoint API
+import QoinAPI from '$root/pages/SentraKependudukan_KTP.api'; //import endpoint API
 
 async function Getid(){
 
