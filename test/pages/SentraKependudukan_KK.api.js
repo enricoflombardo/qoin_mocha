@@ -5,7 +5,7 @@ const QoinAPI = {
     addKk: (data) => BaseAPI_JSON.post('/Kk',data),
     login: (data) => BaseAPI.post('/access/login/web', data),
     getid: () => BaseAPI.get('/getDocument?limit=1&filter={"type":"m_kk"}'),
-    kk: () => BaseAPI.get('/Kk/270'),
+    index_by_id: (id) => BaseAPI.get('/Kk/'+id),
     updatekk: (data) => BaseAPI.put('/kk/', data),
     updatestatusverif: (data) => BaseAPI.put('/kkStatusVerifikasi/', data),
     updatestatus: (data) => BaseAPI.put('/kkStatus/', data),

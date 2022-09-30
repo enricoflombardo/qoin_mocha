@@ -1,4 +1,4 @@
-export const ValidateAddktpKSchema = 
+export const VALIDATE_CREATE_KTP_SCHEMA = 
 {
         "$schema": "https://json-schema.org/draft/2019-09/schema",
         "$id": "http://example.com/example.json",
@@ -298,9 +298,9 @@ export const ValidateAddktpKSchema =
                 "updated_at": "2022-09-26 11:49:11"
             }
         }]
-    }
+};
 
-export const ValidateGetAllDocumentSchema = 
+export const VALIDATE_GET_INDEX_BY_ID_SCHEMA = 
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
@@ -335,7 +335,7 @@ export const ValidateGetAllDocumentSchema =
             "title": "The data Schema",
             "required": [
                 "list",
-                "total_items"
+                "total_item"
             ],
             "properties": {
                 "list": {
@@ -347,40 +347,57 @@ export const ValidateGetAllDocumentSchema =
                         "default": {},
                         "title": "A Schema",
                         "required": [
-                            "UserId",
-                            "created_at",
-                            "doc_id",
+                            "alamat",
+                            "foto",
                             "id",
-                            "job_adj_id",
-                            "job_assign_to",
-                            "job_status",
+                            "jam_kedatangan",
+                            "jenis_permohonan",
+                            "kecamatan",
+                            "kecamatan_id",
+                            "kelurahan",
+                            "kelurahan_id",
+                            "kode_pos",
+                            "konfirmasi_at",
+                            "konfirmasi_by",
+                            "kota",
+                            "kota_id",
+                            "link_picture",
+                            "lokasi_id",
+                            "m_user_id",
                             "nama",
+                            "no_kk",
+                            "no_nik",
                             "no_registrasi",
-                            "type"
+                            "notes",
+                            "notes_operator",
+                            "notes_supervisor",
+                            "path",
+                            "pekerjaan_lainnya",
+                            "provinsi",
+                            "provinsi_id",
+                            "rt",
+                            "rw",
+                            "status",
+                            "tanggal_kedatangan",
+                            "tempat_kedatangan",
+                            "verifikasi_at",
+                            "verifikasi_by"
                         ],
                         "properties": {
-                            "UserId": {
-                                "type": "integer",
-                                "default": 0,
-                                "title": "The UserId Schema",
-                                "examples": [
-                                    21
-                                ]
-                            },
-                            "created_at": {
+                            "alamat": {
                                 "type": "string",
                                 "default": "",
-                                "title": "The created_at Schema",
+                                "title": "The alamat Schema",
                                 "examples": [
-                                    "2022-09-27 14:32:08"
+                                    "LOREM IPSUM"
                                 ]
                             },
-                            "doc_id": {
-                                "type": "integer",
-                                "default": 0,
-                                "title": "The doc_id Schema",
+                            "foto": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The foto Schema",
                                 "examples": [
-                                    151
+                                    null
                                 ]
                             },
                             "id": {
@@ -388,31 +405,119 @@ export const ValidateGetAllDocumentSchema =
                                 "default": 0,
                                 "title": "The id Schema",
                                 "examples": [
-                                    177
+                                    264
                                 ]
                             },
-                            "job_adj_id": {
-                                "type": "integer",
-                                "default": 0,
-                                "title": "The job_adj_id Schema",
+                            "jam_kedatangan": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The jam_kedatangan Schema",
                                 "examples": [
-                                    1619
+                                    null
                                 ]
                             },
-                            "job_assign_to": {
+                            "jenis_permohonan": {
                                 "type": "string",
                                 "default": "",
-                                "title": "The job_assign_to Schema",
+                                "title": "The jenis_permohonan Schema",
                                 "examples": [
-                                    "ADMIN LVTIGA"
+                                    "PEMBUATAN BARU"
                                 ]
                             },
-                            "job_status": {
+                            "kecamatan": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kecamatan Schema",
+                                "examples": [
+                                    "WAGIR"
+                                ]
+                            },
+                            "kecamatan_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kecamatan_id Schema",
+                                "examples": [
+                                    "350721"
+                                ]
+                            },
+                            "kelurahan": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kelurahan Schema",
+                                "examples": [
+                                    "SIDORAHAYU"
+                                ]
+                            },
+                            "kelurahan_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kelurahan_id Schema",
+                                "examples": [
+                                    "3507210009"
+                                ]
+                            },
+                            "kode_pos": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kode_pos Schema",
+                                "examples": [
+                                    "777333"
+                                ]
+                            },
+                            "konfirmasi_at": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The konfirmasi_at Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "konfirmasi_by": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The konfirmasi_by Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "kota": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kota Schema",
+                                "examples": [
+                                    "MALANG"
+                                ]
+                            },
+                            "kota_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kota_id Schema",
+                                "examples": [
+                                    "3507"
+                                ]
+                            },
+                            "link_picture": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The link_picture Schema",
+                                "examples": [
+                                    "https://s3.loyalto.id/inisadev/public/noimage.png"
+                                ]
+                            },
+                            "lokasi_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The lokasi_id Schema",
+                                "examples": [
+                                    "350721"
+                                ]
+                            },
+                            "m_user_id": {
                                 "type": "integer",
                                 "default": 0,
-                                "title": "The job_status Schema",
+                                "title": "The m_user_id Schema",
                                 "examples": [
-                                    0
+                                    21
                                 ]
                             },
                             "nama": {
@@ -423,55 +528,225 @@ export const ValidateGetAllDocumentSchema =
                                     "QOIN MOCHA 3"
                                 ]
                             },
+                            "no_kk": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The no_kk Schema",
+                                "examples": [
+                                    "35097235326"
+                                ]
+                            },
+                            "no_nik": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The no_nik Schema",
+                                "examples": [
+                                    "35090623445"
+                                ]
+                            },
                             "no_registrasi": {
                                 "type": "string",
                                 "default": "",
                                 "title": "The no_registrasi Schema",
                                 "examples": [
-                                    "NTT2022092711017"
+                                    "NTT2022092811029"
                                 ]
                             },
-                            "type": {
+                            "notes": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The notes Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "notes_operator": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The notes_operator Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "notes_supervisor": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The notes_supervisor Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "path": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The path Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "pekerjaan_lainnya": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The pekerjaan_lainnya Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "provinsi": {
                                 "type": "string",
                                 "default": "",
-                                "title": "The type Schema",
+                                "title": "The provinsi Schema",
                                 "examples": [
-                                    "M_KTP"
+                                    "JAWA TIMUR"
+                                ]
+                            },
+                            "provinsi_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The provinsi_id Schema",
+                                "examples": [
+                                    "35"
+                                ]
+                            },
+                            "rt": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The rt Schema",
+                                "examples": [
+                                    "55"
+                                ]
+                            },
+                            "rw": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The rw Schema",
+                                "examples": [
+                                    "345"
+                                ]
+                            },
+                            "status": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The status Schema",
+                                "examples": [
+                                    "diproses"
+                                ]
+                            },
+                            "tanggal_kedatangan": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The tanggal_kedatangan Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "tempat_kedatangan": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The tempat_kedatangan Schema",
+                                "examples": [
+                                    "WAGIR"
+                                ]
+                            },
+                            "verifikasi_at": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The verifikasi_at Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "verifikasi_by": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The verifikasi_by Schema",
+                                "examples": [
+                                    null
                                 ]
                             }
                         },
                         "examples": [{
-                            "UserId": 21,
-                            "created_at": "2022-09-27 14:32:08",
-                            "doc_id": 151,
-                            "id": 177,
-                            "job_adj_id": 1619,
-                            "job_assign_to": "ADMIN LVTIGA",
-                            "job_status": 0,
+                            "alamat": "LOREM IPSUM",
+                            "foto": null,
+                            "id": 264,
+                            "jam_kedatangan": null,
+                            "jenis_permohonan": "PEMBUATAN BARU",
+                            "kecamatan": "WAGIR",
+                            "kecamatan_id": "350721",
+                            "kelurahan": "SIDORAHAYU",
+                            "kelurahan_id": "3507210009",
+                            "kode_pos": "777333",
+                            "konfirmasi_at": null,
+                            "konfirmasi_by": null,
+                            "kota": "MALANG",
+                            "kota_id": "3507",
+                            "link_picture": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "lokasi_id": "350721",
+                            "m_user_id": 21,
                             "nama": "QOIN MOCHA 3",
-                            "no_registrasi": "NTT2022092711017",
-                            "type": "M_KTP"
+                            "no_kk": "35097235326",
+                            "no_nik": "35090623445",
+                            "no_registrasi": "NTT2022092811029",
+                            "notes": null,
+                            "notes_operator": null,
+                            "notes_supervisor": null,
+                            "path": null,
+                            "pekerjaan_lainnya": null,
+                            "provinsi": "JAWA TIMUR",
+                            "provinsi_id": "35",
+                            "rt": "55",
+                            "rw": "345",
+                            "status": "diproses",
+                            "tanggal_kedatangan": null,
+                            "tempat_kedatangan": "WAGIR",
+                            "verifikasi_at": null,
+                            "verifikasi_by": null
                         }]
                     },
                     "examples": [
                         [{
-                            "UserId": 21,
-                            "created_at": "2022-09-27 14:32:08",
-                            "doc_id": 151,
-                            "id": 177,
-                            "job_adj_id": 1619,
-                            "job_assign_to": "ADMIN LVTIGA",
-                            "job_status": 0,
+                            "alamat": "LOREM IPSUM",
+                            "foto": null,
+                            "id": 264,
+                            "jam_kedatangan": null,
+                            "jenis_permohonan": "PEMBUATAN BARU",
+                            "kecamatan": "WAGIR",
+                            "kecamatan_id": "350721",
+                            "kelurahan": "SIDORAHAYU",
+                            "kelurahan_id": "3507210009",
+                            "kode_pos": "777333",
+                            "konfirmasi_at": null,
+                            "konfirmasi_by": null,
+                            "kota": "MALANG",
+                            "kota_id": "3507",
+                            "link_picture": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "lokasi_id": "350721",
+                            "m_user_id": 21,
                             "nama": "QOIN MOCHA 3",
-                            "no_registrasi": "NTT2022092711017",
-                            "type": "M_KTP"
+                            "no_kk": "35097235326",
+                            "no_nik": "35090623445",
+                            "no_registrasi": "NTT2022092811029",
+                            "notes": null,
+                            "notes_operator": null,
+                            "notes_supervisor": null,
+                            "path": null,
+                            "pekerjaan_lainnya": null,
+                            "provinsi": "JAWA TIMUR",
+                            "provinsi_id": "35",
+                            "rt": "55",
+                            "rw": "345",
+                            "status": "diproses",
+                            "tanggal_kedatangan": null,
+                            "tempat_kedatangan": "WAGIR",
+                            "verifikasi_at": null,
+                            "verifikasi_by": null
                         }]
                     ]
                 },
-                "total_items": {
+                "total_item": {
                     "type": "integer",
                     "default": 0,
-                    "title": "The total_items Schema",
+                    "title": "The total_item Schema",
                     "examples": [
                         1
                     ]
@@ -479,18 +754,43 @@ export const ValidateGetAllDocumentSchema =
             },
             "examples": [{
                 "list": [{
-                    "UserId": 21,
-                    "created_at": "2022-09-27 14:32:08",
-                    "doc_id": 151,
-                    "id": 177,
-                    "job_adj_id": 1619,
-                    "job_assign_to": "ADMIN LVTIGA",
-                    "job_status": 0,
+                    "alamat": "LOREM IPSUM",
+                    "foto": null,
+                    "id": 264,
+                    "jam_kedatangan": null,
+                    "jenis_permohonan": "PEMBUATAN BARU",
+                    "kecamatan": "WAGIR",
+                    "kecamatan_id": "350721",
+                    "kelurahan": "SIDORAHAYU",
+                    "kelurahan_id": "3507210009",
+                    "kode_pos": "777333",
+                    "konfirmasi_at": null,
+                    "konfirmasi_by": null,
+                    "kota": "MALANG",
+                    "kota_id": "3507",
+                    "link_picture": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "lokasi_id": "350721",
+                    "m_user_id": 21,
                     "nama": "QOIN MOCHA 3",
-                    "no_registrasi": "NTT2022092711017",
-                    "type": "M_KTP"
+                    "no_kk": "35097235326",
+                    "no_nik": "35090623445",
+                    "no_registrasi": "NTT2022092811029",
+                    "notes": null,
+                    "notes_operator": null,
+                    "notes_supervisor": null,
+                    "path": null,
+                    "pekerjaan_lainnya": null,
+                    "provinsi": "JAWA TIMUR",
+                    "provinsi_id": "35",
+                    "rt": "55",
+                    "rw": "345",
+                    "status": "diproses",
+                    "tanggal_kedatangan": null,
+                    "tempat_kedatangan": "WAGIR",
+                    "verifikasi_at": null,
+                    "verifikasi_by": null
                 }],
-                "total_items": 1
+                "total_item": 1
             }]
         }
     },
@@ -499,21 +799,46 @@ export const ValidateGetAllDocumentSchema =
         "message": "Success",
         "data": {
             "list": [{
-                "UserId": 21,
-                "created_at": "2022-09-27 14:32:08",
-                "doc_id": 151,
-                "id": 177,
-                "job_adj_id": 1619,
-                "job_assign_to": "ADMIN LVTIGA",
-                "job_status": 0,
+                "alamat": "LOREM IPSUM",
+                "foto": null,
+                "id": 264,
+                "jam_kedatangan": null,
+                "jenis_permohonan": "PEMBUATAN BARU",
+                "kecamatan": "WAGIR",
+                "kecamatan_id": "350721",
+                "kelurahan": "SIDORAHAYU",
+                "kelurahan_id": "3507210009",
+                "kode_pos": "777333",
+                "konfirmasi_at": null,
+                "konfirmasi_by": null,
+                "kota": "MALANG",
+                "kota_id": "3507",
+                "link_picture": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                "lokasi_id": "350721",
+                "m_user_id": 21,
                 "nama": "QOIN MOCHA 3",
-                "no_registrasi": "NTT2022092711017",
-                "type": "M_KTP"
+                "no_kk": "35097235326",
+                "no_nik": "35090623445",
+                "no_registrasi": "NTT2022092811029",
+                "notes": null,
+                "notes_operator": null,
+                "notes_supervisor": null,
+                "path": null,
+                "pekerjaan_lainnya": null,
+                "provinsi": "JAWA TIMUR",
+                "provinsi_id": "35",
+                "rt": "55",
+                "rw": "345",
+                "status": "diproses",
+                "tanggal_kedatangan": null,
+                "tempat_kedatangan": "WAGIR",
+                "verifikasi_at": null,
+                "verifikasi_by": null
             }],
-            "total_items": 1
+            "total_item": 1
         }
     }]
-}
+};
 
 export const ValidateGetRiwayatWebSchema = 
 {
@@ -563,7 +888,7 @@ export const ValidateGetRiwayatWebSchema =
     }
 }
 
-export const ValidateUpdateKTPSchema = 
+export const VALIDATE_UPDATE_KTP_SCHEMA = 
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
@@ -689,7 +1014,7 @@ export const ValidateUpdateKTPSchema =
     }]
 }
 
-export const ValidateUpdateStatusVerifSchema = 
+export const VALIDATE_UPDATE_STATUS_VERIFIKASI_SCHEMA = 
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
@@ -771,7 +1096,7 @@ export const ValidateUpdateStatusVerifSchema =
     }]
 }
 
-export const ValidateKtpJadwalSchema = 
+export const VALIDATE_UPDATE_JADWAL_SCHEMA = 
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",

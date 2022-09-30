@@ -3,7 +3,7 @@ import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '$root/pages/SentraKependudukan_KK.api'; //import endpoint API
 import * as data from '$root/data/SentraKependudukan_KK.data'; //import data params
 import * as schema from '../schema/SentraKependudukan_KK.schema'; //import schema
-// import Getid from '$root/helper/get-id-ktp'; //import id
+import Getid from '$root/helper/get-id-kk'; //import id
 
 chai.use(jsonSchema)
 
@@ -13,11 +13,11 @@ describe('Mobile', () => {
         
         if (response.status == 200) {
             //result
-            assert.equal(response.status, 200); //Check Respons
-            assert.equal(response.data.data.rincian_pemohon.nama_pemohon.toLowerCase(), data.VALID_ADDKK.data.nama_pemohon.toLowerCase()); //Check Respons
+            assert.equal(response.status, 200);
+            assert.equal(response.data.data.rincian_pemohon.nama_pemohon.toLowerCase(), data.VALID_ADDKK.data.nama_pemohon.toLowerCase());
 
             //schema
-            expect(response.data).to.be.jsonSchema(schema.ValidateAddkkKSchema) //Call JSON Schema  
+            expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_KK_SCHEMA)
 
         } else{
             console.log(response.status)
@@ -29,9 +29,20 @@ describe('Mobile', () => {
 });
 describe('Web', () => {
     it('Index by id', async () => {
-        const response = await QoinAPI.getid() //hit API
+        const id = await Getid();//Get ID
+        const response = await QoinAPI.index_by_id(id) //hit API
         
-        expect(response.data).to.be.jsonSchema(schema.ValidateGetAllDocumentSchema) //Call JSON Schema
+        if (response.status == 200) {
+            //result
+            assert.equal(response.status, 200);
+
+            //schema
+            expect(response.data).to.be.jsonSchema(schema.VALIDATE_GET_INDEX_BY_ID)
+
+        } else{
+            console.log(response.status)
+            console.log(response.config)
+        }
 
     });
 

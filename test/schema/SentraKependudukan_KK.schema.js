@@ -1,4 +1,4 @@
-export const ValidateAddkkKSchema = 
+export const VALIDATE_ADD_KK_SCHEMA = 
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
@@ -505,7 +505,7 @@ export const ValidateAddkkKSchema =
     }]
 }
 
-export const ValidateGetAllDocumentSchema = {
+export const VALIDATE_GET_INDEX_BY_ID = {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
@@ -539,7 +539,7 @@ export const ValidateGetAllDocumentSchema = {
             "title": "The data Schema",
             "required": [
                 "list",
-                "total_items"
+                "total_item"
             ],
             "properties": {
                 "list": {
@@ -551,40 +551,53 @@ export const ValidateGetAllDocumentSchema = {
                         "default": {},
                         "title": "A Schema",
                         "required": [
-                            "UserId",
-                            "created_at",
-                            "doc_id",
+                            "alamat",
+                            "alasan_permohonan",
                             "id",
-                            "job_adj_id",
-                            "job_assign_to",
-                            "job_status",
-                            "nama",
+                            "jenis_permohonan",
+                            "jumlah_anggota",
+                            "kecamatan_domisili",
+                            "kecamatan_domisili_id",
+                            "kecamatan_id",
+                            "kecamatan_pemohon",
+                            "kelurahan_domisili",
+                            "kelurahan_domisili_id",
+                            "kelurahan_id",
+                            "kelurahan_pemohon",
+                            "kodepos",
+                            "kota_domisili",
+                            "kota_domisili_id",
+                            "kota_id",
+                            "kota_pemohon",
+                            "lokasi_id",
+                            "m_user_id",
+                            "nama_pemohon",
+                            "nik_pemohon",
                             "no_registrasi",
-                            "type"
+                            "provinsi_domisili",
+                            "provinsi_domisili_id",
+                            "provinsi_id",
+                            "provinsi_pemohon",
+                            "rt",
+                            "rw",
+                            "status",
+                            "tempat_kedatangan"
                         ],
                         "properties": {
-                            "UserId": {
-                                "type": "integer",
-                                "default": 0,
-                                "title": "The UserId Schema",
-                                "examples": [
-                                    2
-                                ]
-                            },
-                            "created_at": {
+                            "alamat": {
                                 "type": "string",
                                 "default": "",
-                                "title": "The created_at Schema",
+                                "title": "The alamat Schema",
                                 "examples": [
-                                    "2022-09-30 09:04:50"
+                                    "KUTO BEDAH"
                                 ]
                             },
-                            "doc_id": {
-                                "type": "integer",
-                                "default": 0,
-                                "title": "The doc_id Schema",
+                            "alasan_permohonan": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The alasan_permohonan Schema",
                                 "examples": [
-                                    56
+                                    "MEMBENTUK RUMAH TANGGA BARU"
                                 ]
                             },
                             "id": {
@@ -592,39 +605,159 @@ export const ValidateGetAllDocumentSchema = {
                                 "default": 0,
                                 "title": "The id Schema",
                                 "examples": [
-                                    270
+                                    275
                                 ]
                             },
-                            "job_adj_id": {
-                                "type": "integer",
-                                "default": 0,
-                                "title": "The job_adj_id Schema",
-                                "examples": [
-                                    1619
-                                ]
-                            },
-                            "job_assign_to": {
+                            "jenis_permohonan": {
                                 "type": "string",
                                 "default": "",
-                                "title": "The job_assign_to Schema",
+                                "title": "The jenis_permohonan Schema",
                                 "examples": [
-                                    "ADMIN LVTIGA"
+                                    "PEMBUATAN BARU"
                                 ]
                             },
-                            "job_status": {
-                                "type": "integer",
-                                "default": 0,
-                                "title": "The job_status Schema",
-                                "examples": [
-                                    0
-                                ]
-                            },
-                            "nama": {
+                            "jumlah_anggota": {
                                 "type": "string",
                                 "default": "",
-                                "title": "The nama Schema",
+                                "title": "The jumlah_anggota Schema",
+                                "examples": [
+                                    "3"
+                                ]
+                            },
+                            "kecamatan_domisili": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kecamatan_domisili Schema",
+                                "examples": [
+                                    "JABUNG"
+                                ]
+                            },
+                            "kecamatan_domisili_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kecamatan_domisili_id Schema",
+                                "examples": [
+                                    "350717"
+                                ]
+                            },
+                            "kecamatan_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kecamatan_id Schema",
+                                "examples": [
+                                    "350717"
+                                ]
+                            },
+                            "kecamatan_pemohon": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kecamatan_pemohon Schema",
+                                "examples": [
+                                    "JABUNG"
+                                ]
+                            },
+                            "kelurahan_domisili": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kelurahan_domisili Schema",
+                                "examples": [
+                                    "KEMANTREN"
+                                ]
+                            },
+                            "kelurahan_domisili_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kelurahan_domisili_id Schema",
+                                "examples": [
+                                    "3507172010"
+                                ]
+                            },
+                            "kelurahan_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kelurahan_id Schema",
+                                "examples": [
+                                    "3507172010"
+                                ]
+                            },
+                            "kelurahan_pemohon": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kelurahan_pemohon Schema",
+                                "examples": [
+                                    "KEMANTREN"
+                                ]
+                            },
+                            "kodepos": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kodepos Schema",
+                                "examples": [
+                                    "65155"
+                                ]
+                            },
+                            "kota_domisili": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kota_domisili Schema",
+                                "examples": [
+                                    "MALANG"
+                                ]
+                            },
+                            "kota_domisili_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kota_domisili_id Schema",
+                                "examples": [
+                                    "3507"
+                                ]
+                            },
+                            "kota_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kota_id Schema",
+                                "examples": [
+                                    "3507"
+                                ]
+                            },
+                            "kota_pemohon": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The kota_pemohon Schema",
+                                "examples": [
+                                    "MALANG"
+                                ]
+                            },
+                            "lokasi_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The lokasi_id Schema",
+                                "examples": [
+                                    "350717"
+                                ]
+                            },
+                            "m_user_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The m_user_id Schema",
+                                "examples": [
+                                    9
+                                ]
+                            },
+                            "nama_pemohon": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The nama_pemohon Schema",
                                 "examples": [
                                     "KIRANA"
+                                ]
+                            },
+                            "nik_pemohon": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The nik_pemohon Schema",
+                                "examples": [
+                                    "35071717697230008"
                                 ]
                             },
                             "no_registrasi": {
@@ -632,50 +765,148 @@ export const ValidateGetAllDocumentSchema = {
                                 "default": "",
                                 "title": "The no_registrasi Schema",
                                 "examples": [
-                                    "NTT2022093021001"
+                                    "NTT2022093021006"
                                 ]
                             },
-                            "type": {
+                            "provinsi_domisili": {
                                 "type": "string",
                                 "default": "",
-                                "title": "The type Schema",
+                                "title": "The provinsi_domisili Schema",
                                 "examples": [
-                                    "M_KK"
+                                    "JAWA TIMUR"
+                                ]
+                            },
+                            "provinsi_domisili_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The provinsi_domisili_id Schema",
+                                "examples": [
+                                    "35"
+                                ]
+                            },
+                            "provinsi_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The provinsi_id Schema",
+                                "examples": [
+                                    "35"
+                                ]
+                            },
+                            "provinsi_pemohon": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The provinsi_pemohon Schema",
+                                "examples": [
+                                    "JAWA TIMUR"
+                                ]
+                            },
+                            "rt": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The rt Schema",
+                                "examples": [
+                                    "5"
+                                ]
+                            },
+                            "rw": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The rw Schema",
+                                "examples": [
+                                    "6"
+                                ]
+                            },
+                            "status": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The status Schema",
+                                "examples": [
+                                    "diproses"
+                                ]
+                            },
+                            "tempat_kedatangan": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The tempat_kedatangan Schema",
+                                "examples": [
+                                    "JABUNG"
                                 ]
                             }
                         },
                         "examples": [{
-                            "UserId": 2,
-                            "created_at": "2022-09-30 09:04:50",
-                            "doc_id": 56,
-                            "id": 270,
-                            "job_adj_id": 1619,
-                            "job_assign_to": "ADMIN LVTIGA",
-                            "job_status": 0,
-                            "nama": "KIRANA",
-                            "no_registrasi": "NTT2022093021001",
-                            "type": "M_KK"
+                            "alamat": "KUTO BEDAH",
+                            "alasan_permohonan": "MEMBENTUK RUMAH TANGGA BARU",
+                            "id": 275,
+                            "jenis_permohonan": "PEMBUATAN BARU",
+                            "jumlah_anggota": "3",
+                            "kecamatan_domisili": "JABUNG",
+                            "kecamatan_domisili_id": "350717",
+                            "kecamatan_id": "350717",
+                            "kecamatan_pemohon": "JABUNG",
+                            "kelurahan_domisili": "KEMANTREN",
+                            "kelurahan_domisili_id": "3507172010",
+                            "kelurahan_id": "3507172010",
+                            "kelurahan_pemohon": "KEMANTREN",
+                            "kodepos": "65155",
+                            "kota_domisili": "MALANG",
+                            "kota_domisili_id": "3507",
+                            "kota_id": "3507",
+                            "kota_pemohon": "MALANG",
+                            "lokasi_id": "350717",
+                            "m_user_id": 9,
+                            "nama_pemohon": "KIRANA",
+                            "nik_pemohon": "35071717697230008",
+                            "no_registrasi": "NTT2022093021006",
+                            "provinsi_domisili": "JAWA TIMUR",
+                            "provinsi_domisili_id": "35",
+                            "provinsi_id": "35",
+                            "provinsi_pemohon": "JAWA TIMUR",
+                            "rt": "5",
+                            "rw": "6",
+                            "status": "diproses",
+                            "tempat_kedatangan": "JABUNG"
                         }]
                     },
                     "examples": [
                         [{
-                            "UserId": 2,
-                            "created_at": "2022-09-30 09:04:50",
-                            "doc_id": 56,
-                            "id": 270,
-                            "job_adj_id": 1619,
-                            "job_assign_to": "ADMIN LVTIGA",
-                            "job_status": 0,
-                            "nama": "KIRANA",
-                            "no_registrasi": "NTT2022093021001",
-                            "type": "M_KK"
+                            "alamat": "KUTO BEDAH",
+                            "alasan_permohonan": "MEMBENTUK RUMAH TANGGA BARU",
+                            "id": 275,
+                            "jenis_permohonan": "PEMBUATAN BARU",
+                            "jumlah_anggota": "3",
+                            "kecamatan_domisili": "JABUNG",
+                            "kecamatan_domisili_id": "350717",
+                            "kecamatan_id": "350717",
+                            "kecamatan_pemohon": "JABUNG",
+                            "kelurahan_domisili": "KEMANTREN",
+                            "kelurahan_domisili_id": "3507172010",
+                            "kelurahan_id": "3507172010",
+                            "kelurahan_pemohon": "KEMANTREN",
+                            "kodepos": "65155",
+                            "kota_domisili": "MALANG",
+                            "kota_domisili_id": "3507",
+                            "kota_id": "3507",
+                            "kota_pemohon": "MALANG",
+                            "lokasi_id": "350717",
+                            "m_user_id": 9,
+                            "nama_pemohon": "KIRANA",
+                            "nik_pemohon": "35071717697230008",
+                            "no_registrasi": "NTT2022093021006",
+                            "provinsi_domisili": "JAWA TIMUR",
+                            "provinsi_domisili_id": "35",
+                            "provinsi_id": "35",
+                            "provinsi_pemohon": "JAWA TIMUR",
+                            "rt": "5",
+                            "rw": "6",
+                            "status": "diproses",
+                            "tempat_kedatangan": "JABUNG"
                         }]
                     ]
                 },
-                "total_items": {
+                "total_item": {
                     "type": "integer",
                     "default": 0,
-                    "title": "The total_items Schema",
+                    "title": "The total_item Schema",
                     "examples": [
                         1
                     ]
@@ -683,18 +914,39 @@ export const ValidateGetAllDocumentSchema = {
             },
             "examples": [{
                 "list": [{
-                    "UserId": 2,
-                    "created_at": "2022-09-30 09:04:50",
-                    "doc_id": 56,
-                    "id": 270,
-                    "job_adj_id": 1619,
-                    "job_assign_to": "ADMIN LVTIGA",
-                    "job_status": 0,
-                    "nama": "KIRANA",
-                    "no_registrasi": "NTT2022093021001",
-                    "type": "M_KK"
+                    "alamat": "KUTO BEDAH",
+                    "alasan_permohonan": "MEMBENTUK RUMAH TANGGA BARU",
+                    "id": 275,
+                    "jenis_permohonan": "PEMBUATAN BARU",
+                    "jumlah_anggota": "3",
+                    "kecamatan_domisili": "JABUNG",
+                    "kecamatan_domisili_id": "350717",
+                    "kecamatan_id": "350717",
+                    "kecamatan_pemohon": "JABUNG",
+                    "kelurahan_domisili": "KEMANTREN",
+                    "kelurahan_domisili_id": "3507172010",
+                    "kelurahan_id": "3507172010",
+                    "kelurahan_pemohon": "KEMANTREN",
+                    "kodepos": "65155",
+                    "kota_domisili": "MALANG",
+                    "kota_domisili_id": "3507",
+                    "kota_id": "3507",
+                    "kota_pemohon": "MALANG",
+                    "lokasi_id": "350717",
+                    "m_user_id": 9,
+                    "nama_pemohon": "KIRANA",
+                    "nik_pemohon": "35071717697230008",
+                    "no_registrasi": "NTT2022093021006",
+                    "provinsi_domisili": "JAWA TIMUR",
+                    "provinsi_domisili_id": "35",
+                    "provinsi_id": "35",
+                    "provinsi_pemohon": "JAWA TIMUR",
+                    "rt": "5",
+                    "rw": "6",
+                    "status": "diproses",
+                    "tempat_kedatangan": "JABUNG"
                 }],
-                "total_items": 1
+                "total_item": 1
             }]
         }
     },
@@ -703,740 +955,48 @@ export const ValidateGetAllDocumentSchema = {
         "message": "Success",
         "data": {
             "list": [{
-                "UserId": 2,
-                "created_at": "2022-09-30 09:04:50",
-                "doc_id": 56,
-                "id": 270,
-                "job_adj_id": 1619,
-                "job_assign_to": "ADMIN LVTIGA",
-                "job_status": 0,
-                "nama": "KIRANA",
-                "no_registrasi": "NTT2022093021001",
-                "type": "M_KK"
-            }],
-            "total_items": 1
-        }
-    }]
-}
-
-export const ValidateGetRiwayatWebSchema = 
-{
-    "status_code": 200,
-    "message": "Success",
-    "data": {
-        "list": [
-            {
-                "alamat": "LOREM IPSUM",
-                "foto": null,
-                "id": 177,
-                "jam_kedatangan": null,
+                "alamat": "KUTO BEDAH",
+                "alasan_permohonan": "MEMBENTUK RUMAH TANGGA BARU",
+                "id": 275,
                 "jenis_permohonan": "PEMBUATAN BARU",
-                "kecamatan": "WAGIR",
-                "kecamatan_id": "350721",
-                "kelurahan": "SIDORAHAYU",
-                "kelurahan_id": "3507210009",
-                "kode_pos": "777333",
-                "konfirmasi_at": null,
-                "konfirmasi_by": null,
-                "kota": "MALANG",
+                "jumlah_anggota": "3",
+                "kecamatan_domisili": "JABUNG",
+                "kecamatan_domisili_id": "350717",
+                "kecamatan_id": "350717",
+                "kecamatan_pemohon": "JABUNG",
+                "kelurahan_domisili": "KEMANTREN",
+                "kelurahan_domisili_id": "3507172010",
+                "kelurahan_id": "3507172010",
+                "kelurahan_pemohon": "KEMANTREN",
+                "kodepos": "65155",
+                "kota_domisili": "MALANG",
+                "kota_domisili_id": "3507",
                 "kota_id": "3507",
-                "link_picture": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "lokasi_id": "350721",
-                "m_user_id": 21,
-                "nama": "QOIN MOCHA 3",
-                "no_kk": "35097235326",
-                "no_nik": "35090623445",
-                "no_registrasi": "NTT2022092711017",
-                "notes": null,
-                "notes_operator": null,
-                "notes_supervisor": null,
-                "path": null,
-                "pekerjaan_lainnya": null,
-                "provinsi": "JAWA TIMUR",
+                "kota_pemohon": "MALANG",
+                "lokasi_id": "350717",
+                "m_user_id": 9,
+                "nama_pemohon": "KIRANA",
+                "nik_pemohon": "35071717697230008",
+                "no_registrasi": "NTT2022093021006",
+                "provinsi_domisili": "JAWA TIMUR",
+                "provinsi_domisili_id": "35",
                 "provinsi_id": "35",
-                "rt": "55",
-                "rw": "345",
+                "provinsi_pemohon": "JAWA TIMUR",
+                "rt": "5",
+                "rw": "6",
                 "status": "diproses",
-                "tanggal_kedatangan": null,
-                "tempat_kedatangan": "WAGIR",
-                "verifikasi_at": null,
-                "verifikasi_by": null
-            }
-        ],
-        "total_item": 1
-    }
-}
-
-export const ValidateUpdateKTPSchema = 
-{
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "http://example.com/example.json",
-    "type": "object",
-    "default": {},
-    "title": "Root Schema",
-    "required": [
-        "status_code",
-        "message",
-        "data"
-    ],
-    "properties": {
-        "status_code": {
-            "type": "integer",
-            "default": 0,
-            "title": "The status_code Schema",
-            "examples": [
-                200
-            ]
-        },
-        "message": {
-            "type": "string",
-            "default": "",
-            "title": "The message Schema",
-            "examples": [
-                "Success"
-            ]
-        },
-        "data": {
-            "type": "object",
-            "default": {},
-            "title": "The data Schema",
-            "required": [
-                "id",
-                "kecamatan",
-                "kecamatan_id",
-                "kota",
-                "kota_id",
-                "provinsi",
-                "provinsi_id"
-            ],
-            "properties": {
-                "id": {
-                    "type": "integer",
-                    "default": 0,
-                    "title": "The id Schema",
-                    "examples": [
-                        171
-                    ]
-                },
-                "kecamatan": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The kecamatan Schema",
-                    "examples": [
-                        "p"
-                    ]
-                },
-                "kecamatan_id": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The kecamatan_id Schema",
-                    "examples": [
-                        "3507210"
-                    ]
-                },
-                "kota": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The kota Schema",
-                    "examples": [
-                        "mlg"
-                    ]
-                },
-                "kota_id": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The kota_id Schema",
-                    "examples": [
-                        "3507"
-                    ]
-                },
-                "provinsi": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The provinsi Schema",
-                    "examples": [
-                        "Test"
-                    ]
-                },
-                "provinsi_id": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The provinsi_id Schema",
-                    "examples": [
-                        "35"
-                    ]
-                }
-            },
-            "examples": [{
-                "id": 171,
-                "kecamatan": "p",
-                "kecamatan_id": "3507210",
-                "kota": "mlg",
-                "kota_id": "3507",
-                "provinsi": "Test",
-                "provinsi_id": "35"
-            }]
-        }
-    },
-    "examples": [{
-        "status_code": 200,
-        "message": "Success",
-        "data": {
-            "id": 171,
-            "kecamatan": "p",
-            "kecamatan_id": "3507210",
-            "kota": "mlg",
-            "kota_id": "3507",
-            "provinsi": "Test",
-            "provinsi_id": "35"
+                "tempat_kedatangan": "JABUNG"
+            }],
+            "total_item": 1
         }
     }]
 }
 
-export const ValidateUpdateStatusVerifSchema = 
-{
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "http://example.com/example.json",
-    "type": "object",
-    "default": {},
-    "title": "Root Schema",
-    "required": [
-        "status_code",
-        "message",
-        "data"
-    ],
-    "properties": {
-        "status_code": {
-            "type": "integer",
-            "default": 0,
-            "title": "The status_code Schema",
-            "examples": [
-                200
-            ]
-        },
-        "message": {
-            "type": "string",
-            "default": "",
-            "title": "The message Schema",
-            "examples": [
-                "Success"
-            ]
-        },
-        "data": {
-            "type": "object",
-            "default": {},
-            "title": "The data Schema",
-            "required": [
-                "id",
-                "notes",
-                "updated_at"
-            ],
-            "properties": {
-                "id": {
-                    "type": "integer",
-                    "default": 0,
-                    "title": "The id Schema",
-                    "examples": [
-                        177
-                    ]
-                },
-                "notes": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The notes Schema",
-                    "examples": [
-                        "test"
-                    ]
-                },
-                "updated_at": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The updated_at Schema",
-                    "examples": [
-                        "2022-09-27 15:35:54"
-                    ]
-                }
-            },
-            "examples": [{
-                "id": 177,
-                "notes": "test",
-                "updated_at": "2022-09-27 15:35:54"
-            }]
-        }
-    },
-    "examples": [{
-        "status_code": 200,
-        "message": "Success",
-        "data": {
-            "id": 177,
-            "notes": "test",
-            "updated_at": "2022-09-27 15:35:54"
-        }
-    }]
-}
 
-export const ValidateKtpJadwalSchema = 
-{
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "http://example.com/example.json",
-    "type": "object",
-    "default": {},
-    "title": "Root Schema",
-    "required": [
-        "status_code",
-        "message",
-        "data"
-    ],
-    "properties": {
-        "status_code": {
-            "type": "integer",
-            "default": 0,
-            "title": "The status_code Schema",
-            "examples": [
-                200
-            ]
-        },
-        "message": {
-            "type": "string",
-            "default": "",
-            "title": "The message Schema",
-            "examples": [
-                "Success"
-            ]
-        },
-        "data": {
-            "type": "array",
-            "default": [],
-            "title": "The data Schema",
-            "items": {
-                "type": "object",
-                "default": {},
-                "title": "A Schema",
-                "required": [
-                    "id",
-                    "status",
-                    "tanggal_kedatangan"
-                ],
-                "properties": {
-                    "id": {
-                        "type": "integer",
-                        "default": 0,
-                        "title": "The id Schema",
-                        "examples": [
-                            177
-                        ]
-                    },
-                    "status": {
-                        "type": "string",
-                        "default": "",
-                        "title": "The status Schema",
-                        "examples": [
-                            "dijadwalkan"
-                        ]
-                    },
-                    "tanggal_kedatangan": {
-                        "type": "string",
-                        "default": "",
-                        "title": "The tanggal_kedatangan Schema",
-                        "examples": [
-                            "2021-12-12"
-                        ]
-                    }
-                },
-                "examples": [{
-                    "id": 177,
-                    "status": "dijadwalkan",
-                    "tanggal_kedatangan": "2021-12-12"
-                }]
-            },
-            "examples": [
-                [{
-                    "id": 177,
-                    "status": "dijadwalkan",
-                    "tanggal_kedatangan": "2021-12-12"
-                }]
-            ]
-        }
-    },
-    "examples": [{
-        "status_code": 200,
-        "message": "Success",
-        "data": [{
-            "id": 177,
-            "status": "dijadwalkan",
-            "tanggal_kedatangan": "2021-12-12"
-        }]
-    }]
+export const VALIDATE_UPDATE_KK_SCHEMA =  {
+
 };
 
-export const VALIDATE_UPDATE_STATUS = {
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "http://example.com/example.json",
-    "type": "object",
-    "default": {},
-    "title": "Root Schema",
-    "required": [
-        "status_code",
-        "message",
-        "data"
-    ],
-    "properties": {
-        "status_code": {
-            "type": "integer",
-            "default": 0,
-            "title": "The status_code Schema",
-            "examples": [
-                200
-            ]
-        },
-        "message": {
-            "type": "string",
-            "default": "",
-            "title": "The message Schema",
-            "examples": [
-                "Success"
-            ]
-        },
-        "data": {
-            "type": "object",
-            "default": {},
-            "title": "The data Schema",
-            "required": [
-                "id",
-                "status"
-            ],
-            "properties": {
-                "id": {
-                    "type": "integer",
-                    "default": 0,
-                    "title": "The id Schema",
-                    "examples": [
-                        62
-                    ]
-                },
-                "status": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The status Schema",
-                    "examples": [
-                        "dibatalkan"
-                    ]
-                }
-            },
-            "examples": [{
-                "id": 62,
-                "status": "dibatalkan"
-            }]
-        }
-    },
-    "examples": [{
-        "status_code": 200,
-        "message": "Success",
-        "data": {
-            "id": 62,
-            "status": "dibatalkan"
-        }
-    }]
+export const VALIDATE_UPDATE_JADWAL_SCHEMA =  {
+    
 };
-
-
-const VALID_SCHEMA_ADD_KTP = {
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "http://example.com/example.json",
-    "type": "object",
-    "default": {},
-    "title": "Root Schema",
-    "required": [
-        "status_code",
-        "message",
-        "data"
-    ],
-    "properties": {
-        "status_code": {
-            "type": "integer",
-            "default": 0,
-            "title": "The status_code Schema",
-            "examples": [
-                200
-            ]
-        },
-        "message": {
-            "type": "string",
-            "default": "",
-            "title": "The message Schema",
-            "examples": [
-                "Success"
-            ]
-        },
-        "data": {
-            "type": "object",
-            "default": {},
-            "title": "The data Schema",
-            "required": [
-                "alamat",
-                "created_at",
-                "id",
-                "jenis_permohonan",
-                "kecamatan",
-                "kecamatan_id",
-                "kelurahan",
-                "kelurahan_id",
-                "kode_pos",
-                "kota",
-                "kota_id",
-                "lokasi_id",
-                "m_user_id",
-                "nama",
-                "no_kk",
-                "no_nik",
-                "no_registrasi",
-                "provinsi",
-                "provinsi_id",
-                "rt",
-                "rw",
-                "tempat_kedatangan",
-                "updated_at"
-            ],
-            "properties": {
-                "alamat": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The alamat Schema",
-                    "examples": [
-                        "Lorem Ipsum"
-                    ]
-                },
-                "created_at": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The created_at Schema",
-                    "examples": [
-                        "2022-09-29 10:21:03"
-                    ]
-                },
-                "id": {
-                    "type": "integer",
-                    "default": 0,
-                    "title": "The id Schema",
-                    "examples": [
-                        239
-                    ]
-                },
-                "jenis_permohonan": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The jenis_permohonan Schema",
-                    "examples": [
-                        "Pembuatan Baru"
-                    ]
-                },
-                "kecamatan": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The kecamatan Schema",
-                    "examples": [
-                        "Wagir"
-                    ]
-                },
-                "kecamatan_id": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The kecamatan_id Schema",
-                    "examples": [
-                        "350721"
-                    ]
-                },
-                "kelurahan": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The kelurahan Schema",
-                    "examples": [
-                        "Sidorahayu"
-                    ]
-                },
-                "kelurahan_id": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The kelurahan_id Schema",
-                    "examples": [
-                        "3507210009"
-                    ]
-                },
-                "kode_pos": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The kode_pos Schema",
-                    "examples": [
-                        "777333"
-                    ]
-                },
-                "kota": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The kota Schema",
-                    "examples": [
-                        "Malang"
-                    ]
-                },
-                "kota_id": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The kota_id Schema",
-                    "examples": [
-                        "3507"
-                    ]
-                },
-                "lokasi_id": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The lokasi_id Schema",
-                    "examples": [
-                        "350721"
-                    ]
-                },
-                "m_user_id": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The m_user_id Schema",
-                    "examples": [
-                        "21"
-                    ]
-                },
-                "nama": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The nama Schema",
-                    "examples": [
-                        "Qoin Mocha"
-                    ]
-                },
-                "no_kk": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The no_kk Schema",
-                    "examples": [
-                        "35097235326"
-                    ]
-                },
-                "no_nik": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The no_nik Schema",
-                    "examples": [
-                        "35090623445"
-                    ]
-                },
-                "no_registrasi": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The no_registrasi Schema",
-                    "examples": [
-                        "NTT2022092911001"
-                    ]
-                },
-                "provinsi": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The provinsi Schema",
-                    "examples": [
-                        "Jawa Timur"
-                    ]
-                },
-                "provinsi_id": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The provinsi_id Schema",
-                    "examples": [
-                        "35"
-                    ]
-                },
-                "rt": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The rt Schema",
-                    "examples": [
-                        "55"
-                    ]
-                },
-                "rw": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The rw Schema",
-                    "examples": [
-                        "345"
-                    ]
-                },
-                "tempat_kedatangan": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The tempat_kedatangan Schema",
-                    "examples": [
-                        "Wagir"
-                    ]
-                },
-                "updated_at": {
-                    "type": "string",
-                    "default": "",
-                    "title": "The updated_at Schema",
-                    "examples": [
-                        "2022-09-29 10:21:03"
-                    ]
-                }
-            },
-            "examples": [{
-                "alamat": "Lorem Ipsum",
-                "created_at": "2022-09-29 10:21:03",
-                "id": 239,
-                "jenis_permohonan": "Pembuatan Baru",
-                "kecamatan": "Wagir",
-                "kecamatan_id": "350721",
-                "kelurahan": "Sidorahayu",
-                "kelurahan_id": "3507210009",
-                "kode_pos": "777333",
-                "kota": "Malang",
-                "kota_id": "3507",
-                "lokasi_id": "350721",
-                "m_user_id": "21",
-                "nama": "Qoin Mocha",
-                "no_kk": "35097235326",
-                "no_nik": "35090623445",
-                "no_registrasi": "NTT2022092911001",
-                "provinsi": "Jawa Timur",
-                "provinsi_id": "35",
-                "rt": "55",
-                "rw": "345",
-                "tempat_kedatangan": "Wagir",
-                "updated_at": "2022-09-29 10:21:03"
-            }]
-        }
-    },
-    "examples": [{
-        "status_code": 200,
-        "message": "Success",
-        "data": {
-            "alamat": "Lorem Ipsum",
-            "created_at": "2022-09-29 10:21:03",
-            "id": 239,
-            "jenis_permohonan": "Pembuatan Baru",
-            "kecamatan": "Wagir",
-            "kecamatan_id": "350721",
-            "kelurahan": "Sidorahayu",
-            "kelurahan_id": "3507210009",
-            "kode_pos": "777333",
-            "kota": "Malang",
-            "kota_id": "3507",
-            "lokasi_id": "350721",
-            "m_user_id": "21",
-            "nama": "Qoin Mocha",
-            "no_kk": "35097235326",
-            "no_nik": "35090623445",
-            "no_registrasi": "NTT2022092911001",
-            "provinsi": "Jawa Timur",
-            "provinsi_id": "35",
-            "rt": "55",
-            "rw": "345",
-            "tempat_kedatangan": "Wagir",
-            "updated_at": "2022-09-29 10:21:03"
-        }
-    }]
-}

@@ -1,5 +1,5 @@
 export const VALID_ADDKTP = {
-"nama" : "Qoin Mocha 3",
+"nama" : "Arif Surahman",
 "jenis_permohonan" : "Pembuatan Baru",
 "alamat" : "Lorem Ipsum",
 "no_kk": "35097235326",
@@ -24,7 +24,7 @@ export const VALID_ADDKTP = {
 };
 
 export const VALID_UPDATEKTP = {
-    "nama" : "Test API Mocha",
+    "nama" : "Muhammad Arif Surahman",
     "jenis_permohonan" : "Pembuatan Baru",
     "alamat" : "Perumahan. Maju mundur Blok C No 45",
     "no_kk": "35097235326",

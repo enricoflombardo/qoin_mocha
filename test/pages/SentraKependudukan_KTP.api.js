@@ -6,7 +6,7 @@ const QoinAPI = {
     login: (data) => BaseAPI.post('/access/login/web', data),
     // ktp: (data) => BaseAPI.post('/ktp/1', data),
     getid: () => BaseAPI.get('/getDocument?limit=1&user_id=1619&filter={"type":"m_ktp"}'),
-    riwayatweb: (id) => BaseAPI.get('/ktp/'+id),
+    get_index_by_id: (id) => BaseAPI.get('/ktp/'+id),
     updatektp: (id, data) => BaseAPI.put('/ktp/'+id, data),
     updatestatusverif: (id, data) => BaseAPI.put('/ktpStatusVerifikasi/'+id, data),
     updatejadwal: (data) => BaseAPI_JSON.put('/ktpJadwal', data),

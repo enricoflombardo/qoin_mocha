@@ -11,28 +11,39 @@ describe('Mobile', () => {
     it('Berhasil membuat ktp melalui mobile', async () => {
         const response = await QoinAPI.addKTP(data.VALID_ADDKTP) //hit API
         
-        //result
-        assert.equal(response.status, 200); //Check Respons
-        assert.equal(response.data.data.name, data.VALID_ADDKTP.nama); //Check Respons
-
-        //schema
-        expect(response.data).to.be.jsonSchema(schema.ValidateAddktpSchema) //Call JSON Schema
+        if (response.status == 200) {
+            //result
+            assert.equal(response.status, 200);
+            assert.equal(response.data.data.nama, data.VALID_ADDKTP.nama);
+    
+            //schema
+            expect(response.data).to.be.jsonSchema(schema.VALIDATE_CREATE_KTP_SCHEMA)
+        
+        } else{
+            console.log(response.status)
+            console.log(response.config)
+        }
 
     });
 });
 describe('Web', () => {
     it('Index by id', async () => {
-        const response = await QoinAPI.getid() //hit API
+        const id = await Getid();
+        const response = await QoinAPI.get_index_by_id(id)
         
-        expect(response.data).to.be.jsonSchema(schema.ValidateGetAllDocumentSchema) //Call JSON Schema
+        //result
+        assert.equal(response.status, 200);
+        
+        //schema
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GET_INDEX_BY_ID_SCHEMA)
 
     });
 
     it('update data KTP', async () => {
         const id = await Getid();
-        const response = await QoinAPI.updatektp(id, data.VALID_UPDATEKTP) //hit API
+        const response = await QoinAPI.updatektp(id, data.VALID_UPDATEKTP) 
     
-        expect(response.data).to.be.jsonSchema(schema.ValidateUpdateKTPSchema) //Call JSON Schema
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_CREATE_KTP_SCHEMA)
        
     });
 
@@ -40,14 +51,14 @@ describe('Web', () => {
         const id = await Getid();
         const response = await QoinAPI.updatestatusverif(id, data.VALID_STATUSVERIFKTP)
     
-        expect(response.data).to.be.jsonSchema(schema.ValidateUpdateStatusVerifSchema) //Call JSON Schema
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_UPDATE_STATUS_VERIFIKASI_SCHEMA)
         
     });
 
     it('Update jadwal KTP', async () => {
-        const response = await QoinAPI.updatejadwal(data.VALID_UPDATE_JADWAL_KTP) //hit API
+        const response = await QoinAPI.updatejadwal(data.VALID_UPDATE_JADWAL_KTP)
     
-        expect(response.data).to.be.jsonSchema(schema.ValidateKtpJadwalSchema) //Call JSON Schema
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_UPDATE_JADWAL_SCHEMA)
 
     });
 
@@ -55,7 +66,7 @@ describe('Web', () => {
         const id = await Getid();
         const response = await QoinAPI.updatestatus(id, data.VALID_STATUSKTP)
     
-        expect(response.data).to.be.jsonSchema(schema.VALIDATE_UPDATE_STATUS) //Call JSON Schema
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_UPDATE_STATUS)
 
     });
 
