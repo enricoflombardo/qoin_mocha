@@ -9,7 +9,7 @@ import Getid from '$root/helper/get-id-akta';
 chai.use(jsonSchema);
 chai.use(chaiExclude);
 
-describe('Mobile', () => {
+describe.only('Mobile', () => {
     it('Berhasil membuat akta melalui mobile', async () => {
         const response = await QoinAPI.add_akta(data.VALID_ADD_AKTA) //hit API
         
@@ -17,10 +17,10 @@ describe('Mobile', () => {
         assert.equal(response.status, 200);
 
         //check object Rincian Ayah
-        assert.equal(response.data.data.rincian_ayah.nama_ayah.toLowerCase(), data.VALID_ADD_AKTA.nama_ayah.toLowerCase());
+        // assert.deepEqualExcludingEvery(response.data.data.rincian_ayah, data.VALID_ADD_AKTA, ['id', 'updatebyid', 'updated_at'])
 
         //check object Pemohon
-        assert.equal(response.data.data.rincian_pemohon.nama_pelapor.toLowerCase(), data.VALID_ADD_AKTA.nama_pelapor.toLowerCase());
+        // assert.equal(response.data.data.rincian_pemohon.nama_pelapor.toLowerCase(), data.VALID_ADD_AKTA.nama_pelapor.toLowerCase());
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALID_ADD_AKTA_SCHEMA)
@@ -28,7 +28,7 @@ describe('Mobile', () => {
     });
 });
 
-describe('Web', () => {
+describe.only('Web', () => {
     it('Get Index by ID', async () => {
         const id = await Getid()
         const response = await QoinAPI.index_by_id(id) //hit API
@@ -37,7 +37,7 @@ describe('Web', () => {
         assert.equal(response.status, 200);
 
         //response data
-        assert.equal(response.data.data.list.nama_pemohon.toLowerCase(), data.VALID_ADD_AKTA.nama_pemohon.toLowerCase());
+        assert.equal(response.data.data.list[0].nama_pelapor.toLowerCase(), data.VALID_ADD_AKTA.nama_pelapor.toLowerCase());
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALID_GET_INDEX_BY_ID_SCHEMA)
@@ -115,8 +115,7 @@ describe('Web', () => {
         assert.equal(response.status, 200);
 
         //response data
-        // assert.equal(response.data.data.jam_kedatangan, data.VALID_UPDATE_STATUS_KONFIRMASI.jam_kedatangan);
-        assert.deepEqualExcluding(response.data.data, data.INVALID_UPDATE_STATUS_KONFIRMASI, ['id', 'updatebyid', 'updated_at'])
+        assert.deepEqualExcluding(response.data.data, data.VALID_UPDATE_STATUS_KONFIRMASI, ['id', 'updatebyid', 'updated_at'])
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALID_UPDATE_STATUS_KONFIRMASI_SCHEMA)
