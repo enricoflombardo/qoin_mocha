@@ -8,8 +8,8 @@ async function Getid(){
 }
 
 async function Getid_anggota(){
-
-    const response = await QoinAPI.getid_anggota() //hit API
+    const id = await Getid()
+    const response = await QoinAPI.getid_anggota(id) //hit API
     let IDrespons = response.data.data[2].id
     return IDrespons
 }
