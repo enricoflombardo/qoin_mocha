@@ -1,3 +1,7 @@
+import Getid from '$root/helper/get-id-kk'; //import id
+
+const id = await Getid()
+
 export const VALID_ADDKK = {
     "data":{
         "m_user_id": 9,
@@ -71,7 +75,7 @@ export const VALID_STATUSKK = {
 };
 
 export const VALID_UPDATE_JADWAL_KK = [{
-    "id" : 318,
+    "id" : id,
     "tanggal_kedatangan" : "2022-10-01",
 }];
 

@@ -3,12 +3,12 @@ import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '$root/pages/SentraKependudukan_KK.api'; //import endpoint API
 import * as data from '$root/data/SentraKependudukan_KK.data'; //import data params
 import * as schema from '../schema/SentraKependudukan_KK.schema'; //import schema
-import Getid from '$root/helper/helper_kk'; //import id
-import Getid_anggota from '$root/helper/helper_kk'; //import id
+import Getid from '$root/helper/get-id-kk'; //import id
+import Getid_anggota from '$root/helper/get-idanggota-kk'; //import id
 
 chai.use(jsonSchema)
 
-describe('Mobile', () => {
+describe.only('Mobile', () => {
     it('Berhasil membuat kk melalui mobile', async () => {
         const response = await QoinAPI.addKk(data.VALID_ADDKK) //hit API
         
@@ -24,7 +24,7 @@ describe('Mobile', () => {
             expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_KK_SCHEMA)
     });
 });
-describe('Web', () => {
+describe.only('Web', () => {
     it('Index by id', async () => {
         const id = await Getid();//Get ID
         const response = await QoinAPI.index_by_id(id) //hit API
