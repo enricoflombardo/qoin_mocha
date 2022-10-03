@@ -994,7 +994,139 @@ export const VALIDATE_GET_INDEX_BY_ID = {
 
 
 export const VALIDATE_UPDATE_KK_SCHEMA =  {
-
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "status_code",
+        "message",
+        "data"
+    ],
+    "properties": {
+        "status_code": {
+            "type": "integer",
+            "default": 0,
+            "title": "The status_code Schema",
+            "examples": [
+                200
+            ]
+        },
+        "message": {
+            "type": "string",
+            "default": "",
+            "title": "The message Schema",
+            "examples": [
+                "Success"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "id",
+                "kecamatan_domisili",
+                "kecamatan_domisili_id",
+                "kelurahan_domisili_id",
+                "kota_domisili_id",
+                "nama_pemohon",
+                "provinsi_domisili_id",
+                "provinsi_id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The id Schema",
+                    "examples": [
+                        282
+                    ]
+                },
+                "kecamatan_domisili": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The kecamatan_domisili Schema",
+                    "examples": [
+                        "Jabung"
+                    ]
+                },
+                "kecamatan_domisili_id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The kecamatan_domisili_id Schema",
+                    "examples": [
+                        "350717"
+                    ]
+                },
+                "kelurahan_domisili_id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The kelurahan_domisili_id Schema",
+                    "examples": [
+                        "3507172010"
+                    ]
+                },
+                "kota_domisili_id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The kota_domisili_id Schema",
+                    "examples": [
+                        "3507"
+                    ]
+                },
+                "nama_pemohon": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The nama_pemohon Schema",
+                    "examples": [
+                        "KIRANA DWI ARIANTI"
+                    ]
+                },
+                "provinsi_domisili_id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The provinsi_domisili_id Schema",
+                    "examples": [
+                        "35"
+                    ]
+                },
+                "provinsi_id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The provinsi_id Schema",
+                    "examples": [
+                        "35"
+                    ]
+                }
+            },
+            "examples": [{
+                "id": 282,
+                "kecamatan_domisili": "Jabung",
+                "kecamatan_domisili_id": "350717",
+                "kelurahan_domisili_id": "3507172010",
+                "kota_domisili_id": "3507",
+                "nama_pemohon": "KIRANA DWI ARIANTI",
+                "provinsi_domisili_id": "35",
+                "provinsi_id": "35"
+            }]
+        }
+    },
+    "examples": [{
+        "status_code": 200,
+        "message": "Success",
+        "data": {
+            "id": 282,
+            "kecamatan_domisili": "Jabung",
+            "kecamatan_domisili_id": "350717",
+            "kelurahan_domisili_id": "3507172010",
+            "kota_domisili_id": "3507",
+            "nama_pemohon": "KIRANA DWI ARIANTI",
+            "provinsi_domisili_id": "35",
+            "provinsi_id": "35"
+        }
+    }]
 };
 
 export const VALIDATE_UPDATE_JADWAL_SCHEMA =  {
