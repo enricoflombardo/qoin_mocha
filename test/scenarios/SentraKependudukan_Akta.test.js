@@ -107,7 +107,7 @@ describe('Web', () => {
 
     });
     
-    it.only('Update Status Konfirmasi', async () => {
+    it('Update Status Konfirmasi', async () => {
         const id = await Getid()
         const response = await QoinAPI.update_status_konfirmasi(id, data.VALID_UPDATE_STATUS_KONFIRMASI) //hit API
         
