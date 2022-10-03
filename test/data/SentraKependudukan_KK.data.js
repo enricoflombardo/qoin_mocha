@@ -71,7 +71,7 @@ export const VALID_STATUSKK = {
 };
 
 export const VALID_UPDATE_JADWAL_KK = [{
-    "id" : 266,
+    "id" : 318,
     "tanggal_kedatangan" : "2022-10-01",
 }];
 

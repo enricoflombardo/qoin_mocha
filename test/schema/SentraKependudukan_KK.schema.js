@@ -505,7 +505,7 @@ export const VALIDATE_ADD_KK_SCHEMA =
     }]
 }
 
-export const VALIDATE_GET_INDEX_BY_ID = {
+export const VALIDATE_GET_INDEX_BY_ID_SCHEMA = {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
@@ -1129,6 +1129,441 @@ export const VALIDATE_UPDATE_KK_SCHEMA =  {
     }]
 };
 
-export const VALIDATE_UPDATE_JADWAL_SCHEMA =  {
-    
+export const VALIDATE_UPDATE_STATUSVERIF_SCHEMA = {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "status_code",
+        "message",
+        "data"
+    ],
+    "properties": {
+        "status_code": {
+            "type": "integer",
+            "default": 0,
+            "title": "The status_code Schema",
+            "examples": [
+                200
+            ]
+        },
+        "message": {
+            "type": "string",
+            "default": "",
+            "title": "The message Schema",
+            "examples": [
+                "Success"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "id",
+                "notes",
+                "updated_at"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The id Schema",
+                    "examples": [
+                        317
+                    ]
+                },
+                "notes": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The notes Schema",
+                    "examples": [
+                        "Pembuatan KK KIRANA DWI ARIANTI di verifikasi"
+                    ]
+                },
+                "updated_at": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The updated_at Schema",
+                    "examples": [
+                        "2022-10-03 15:03:25"
+                    ]
+                }
+            },
+            "examples": [{
+                "id": 317,
+                "notes": "Pembuatan KK KIRANA DWI ARIANTI di verifikasi",
+                "updated_at": "2022-10-03 15:03:25"
+            }]
+        }
+    },
+    "examples": [{
+        "status_code": 200,
+        "message": "Success",
+        "data": {
+            "id": 317,
+            "notes": "Pembuatan KK KIRANA DWI ARIANTI di verifikasi",
+            "updated_at": "2022-10-03 15:03:25"
+        }
+    }]
+};
+
+export const VALIDATE_UPDATE_STATUS_SCHEMA = {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "status_code",
+        "message",
+        "data"
+    ],
+    "properties": {
+        "status_code": {
+            "type": "integer",
+            "default": 0,
+            "title": "The status_code Schema",
+            "examples": [
+                200
+            ]
+        },
+        "message": {
+            "type": "string",
+            "default": "",
+            "title": "The message Schema",
+            "examples": [
+                "Success"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "id",
+                "status"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The id Schema",
+                    "examples": [
+                        1
+                    ]
+                },
+                "status": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The status Schema",
+                    "examples": [
+                        "dibatalkan"
+                    ]
+                }
+            },
+            "examples": [{
+                "id": 1,
+                "status": "dibatalkan"
+            }]
+        }
+    },
+    "examples": [{
+        "status_code": 200,
+        "message": "Success",
+        "data": {
+            "id": 1,
+            "status": "dibatalkan"
+        }
+    }]
+};
+
+export const VALIDATE_UPDATE_JADWAL_SCHEMA = {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "status_code",
+        "message",
+        "data"
+    ],
+    "properties": {
+        "status_code": {
+            "type": "integer",
+            "default": 0,
+            "title": "The status_code Schema",
+            "examples": [
+                200
+            ]
+        },
+        "message": {
+            "type": "string",
+            "default": "",
+            "title": "The message Schema",
+            "examples": [
+                "Success"
+            ]
+        },
+        "data": {
+            "type": "array",
+            "default": [],
+            "title": "The data Schema",
+            "items": {
+                "type": "object",
+                "default": {},
+                "title": "A Schema",
+                "required": [
+                    "id",
+                    "status",
+                    "tanggal_kedatangan"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "default": 0,
+                        "title": "The id Schema",
+                        "examples": [
+                            1
+                        ]
+                    },
+                    "status": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The status Schema",
+                        "examples": [
+                            "dijadwalkan"
+                        ]
+                    },
+                    "tanggal_kedatangan": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The tanggal_kedatangan Schema",
+                        "examples": [
+                            "2021-12-12"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "id": 1,
+                    "status": "dijadwalkan",
+                    "tanggal_kedatangan": "2021-12-12"
+                }]
+            },
+            "examples": [
+                [{
+                    "id": 1,
+                    "status": "dijadwalkan",
+                    "tanggal_kedatangan": "2021-12-12"
+                }]
+            ]
+        }
+    },
+    "examples": [{
+        "status_code": 200,
+        "message": "Success",
+        "data": [{
+            "id": 1,
+            "status": "dijadwalkan",
+            "tanggal_kedatangan": "2021-12-12"
+        }]
+    }]
+};
+
+export const VALIDATE_UPDATE_ANGGOTA_SCHEMA = {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "status_code",
+        "message",
+        "data"
+    ],
+    "properties": {
+        "status_code": {
+            "type": "integer",
+            "default": 0,
+            "title": "The status_code Schema",
+            "examples": [
+                200
+            ]
+        },
+        "message": {
+            "type": "string",
+            "default": "",
+            "title": "The message Schema",
+            "examples": [
+                "Success"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "id",
+                "nama",
+                "no_nik",
+                "status_hubungan"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The id Schema",
+                    "examples": [
+                        266
+                    ]
+                },
+                "nama": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The nama Schema",
+                    "examples": [
+                        "Hamster"
+                    ]
+                },
+                "no_nik": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The no_nik Schema",
+                    "examples": [
+                        "123113"
+                    ]
+                },
+                "status_hubungan": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The status_hubungan Schema",
+                    "examples": [
+                        "Mantan"
+                    ]
+                }
+            },
+            "examples": [{
+                "id": 266,
+                "nama": "Hamster",
+                "no_nik": "123113",
+                "status_hubungan": "Mantan"
+            }]
+        }
+    },
+    "examples": [{
+        "status_code": 200,
+        "message": "Success",
+        "data": {
+            "id": 266,
+            "nama": "Hamster",
+            "no_nik": "123113",
+            "status_hubungan": "Mantan"
+        }
+    }]
+};
+
+export const VALIDATE_UPDATE_STATUSKONFIR_SCHEMA = {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "status_code",
+        "message",
+        "data"
+    ],
+    "properties": {
+        "status_code": {
+            "type": "integer",
+            "default": 0,
+            "title": "The status_code Schema",
+            "examples": [
+                200
+            ]
+        },
+        "message": {
+            "type": "string",
+            "default": "",
+            "title": "The message Schema",
+            "examples": [
+                "Success"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "id",
+                "jam_kedatangan",
+                "notes",
+                "tanggal_kedatangan",
+                "updated_at"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The id Schema",
+                    "examples": [
+                        317
+                    ]
+                },
+                "jam_kedatangan": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The jam_kedatangan Schema",
+                    "examples": [
+                        "12:12:12"
+                    ]
+                },
+                "notes": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The notes Schema",
+                    "examples": [
+                        "sase"
+                    ]
+                },
+                "tanggal_kedatangan": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The tanggal_kedatangan Schema",
+                    "examples": [
+                        "2012-12-12"
+                    ]
+                },
+                "updated_at": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The updated_at Schema",
+                    "examples": [
+                        "2022-10-03 14:47:50"
+                    ]
+                }
+            },
+            "examples": [{
+                "id": 317,
+                "jam_kedatangan": "12:12:12",
+                "notes": "sase",
+                "tanggal_kedatangan": "2012-12-12",
+                "updated_at": "2022-10-03 14:47:50"
+            }]
+        }
+    },
+    "examples": [{
+        "status_code": 200,
+        "message": "Success",
+        "data": {
+            "id": 317,
+            "jam_kedatangan": "12:12:12",
+            "notes": "sase",
+            "tanggal_kedatangan": "2012-12-12",
+            "updated_at": "2022-10-03 14:47:50"
+        }
+    }]
 };
