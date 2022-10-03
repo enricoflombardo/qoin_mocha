@@ -5,13 +5,14 @@ const QoinAPI = {
     addKk: (data) => BaseAPI_JSON.post('/Kk',data),
     login: (data) => BaseAPI.post('/access/login/web', data),
     getid: () => BaseAPI.get('/getDocument?limit=1&filter={"type":"m_kk"}'),
-    index_by_id: (id) => BaseAPI.get('/Kk/'+id),
-    updatekk: (data) => BaseAPI.put('/kk/', data),
-    updatestatusverif: (data) => BaseAPI.put('/kkStatusVerifikasi/', data),
-    updatestatus: (data) => BaseAPI.put('/kkStatus/', data),
+    getid_anggota: (id) => BaseAPI.get('/kkAnggota/' + id),
+    index_by_id: (id) => BaseAPI.get('/Kk/'+ id),
+    updatekk: (data) => BaseAPI.put('/kk/282', data),
+    updatestatusverif: (id, data) => BaseAPI.put('/kkStatusVerifikasi/'+ id, data),
+    updatestatus: (id, data) => BaseAPI.put('/kkStatus/' + id, data),
     updatejadwal: (data) => BaseAPI_JSON.put('/kkJadwal', data),
-    updateanggota: (data) => BaseAPI_JSON.put('/kkAnggota/270/122', data),
-    updatekonfirmasi: (data) => BaseAPI.put('/kkStatusKonfirmasi/', data)
+    updateanggota: (id, id_anggota, data) => BaseAPI_JSON.put('/kkAnggota/'+ id + '/' + id_anggota, data),
+    updatekonfirmasi: (id, data) => BaseAPI.put('/kkStatusKonfirmasi/'+ id, data)
 }
 
 export default QoinAPI 
