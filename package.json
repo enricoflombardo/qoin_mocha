@@ -23,5 +23,8 @@
   "_moduleAliases": {
     "$root": "test",
     "$helper": "test/helper"
+  },
+  "devDependencies": {
+    "chai-exclude": "^2.1.0"
   }
 }
