@@ -1,27 +1,22 @@
 import chai,{ assert,expect } from 'chai';
 import jsonSchema from 'chai-json-schema';//import json schema 
-import QoinAPI from '$root/pages/SentraKependudukan_KK.api'; //import endpoint API
-import * as data from '$root/data/SentraKependudukan_KK.data'; //import data params
-import * as schema from '../schema/SentraKependudukan_KK.schema'; //import schema
-import Getid from '$root/helper/get-id-kk'; //import id
-import Getid_anggota from '$root/helper/get-idanggota-kk'; //import id
+import QoinAPI from '$root/pages/csr-penerbit.api'; //import endpoint API
+import * as data from '$root/data/csr-penerbit.data'; //import data params
+// import * as schema from '../schema/csr-penerbit.schema'; //import schema
+// import Getid from '$root/helper/get-id-kk'; //import id
+// import Getid_anggota from '$root/helper/get-idanggota-kk'; //import id
 
 chai.use(jsonSchema)
 
 describe('Mobile', () => {
-    it('Berhasil membuat kk melalui mobile', async () => {
-        const response = await QoinAPI.addKk(data.VALID_ADDKK) //hit API
+    it('Login web', async () => {
+        const response = await QoinAPI.login(data.VALID_LOGIN) //hit API
         
             //result
             assert.equal(response.status, 200);
-            assert.equal(response.data.data.rincian_pemohon.nama_pemohon.toLowerCase(), data.VALID_ADDKK.data.nama_pemohon.toLowerCase());
-            assert.equal(response.data.data.rincian_pemohon.nik_pemohon, data.VALID_ADDKK.data.nik_pemohon);
-            assert.equal(response.data.data.rincian_pemohon.jumlah_anggota, data.VALID_ADDKK.data.jumlah_anggota);
-            assert.equal(response.data.data.rincian_alamat.alamat.toLowerCase(), data.VALID_ADDKK.data.alamat.toLowerCase());
-            assert.equal(response.data.data.rincian_alamat.kota_pemohon.toLowerCase(), data.VALID_ADDKK.data.kota_pemohon.toLowerCase());
 
             //schema
-            expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_KK_SCHEMA)
+            // expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_KK_SCHEMA)
     });
 });
 describe('Web', () => {
