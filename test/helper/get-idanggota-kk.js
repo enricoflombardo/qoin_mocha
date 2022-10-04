@@ -4,7 +4,7 @@ import Getid from '$root/helper/get-id-kk'; //import id
 async function Getid_anggota(){
     const id = await Getid()
     const response = await QoinAPI.getid_anggota(id) //hit API
-    let IDrespons = response.data.data[2].id
+    let IDrespons = response.data.data[2].id //sesuaikan list yang ingin diubah
     return IDrespons
 }
  
