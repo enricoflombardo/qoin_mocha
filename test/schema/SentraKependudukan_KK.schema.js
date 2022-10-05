@@ -1,5 +1,4 @@
-export const VALIDATE_ADD_KK_SCHEMA = 
-{
+export const VALIDATE_ADD_KK_SCHEMA = {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
