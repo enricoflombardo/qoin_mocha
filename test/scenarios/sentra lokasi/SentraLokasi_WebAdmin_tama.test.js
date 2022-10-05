@@ -102,7 +102,7 @@ describe('Web', () => {
 
         //result
         assert.equal(response.status, 200)
-
+                                                                            //LOKAL MAS SASE
         //schema
         expect(response.data).to.be.jsonSchema(schema)
     });*/
