@@ -7,4 +7,4 @@ async function Getid(){
     return IDrespons 
 }
  
-export default Getid
+export default Getid //

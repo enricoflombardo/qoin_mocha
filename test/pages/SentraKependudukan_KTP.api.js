@@ -14,4 +14,4 @@ const QoinAPI = {
     updatestatus: (id, data) => BaseAPI.put('/ktpStatus/'+id, data)
 }
 
-export default QoinAPI 
+export default QoinAPI --

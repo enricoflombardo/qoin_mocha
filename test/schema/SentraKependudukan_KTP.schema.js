@@ -1,3 +1,4 @@
+
 export const VALIDATE_CREATE_KTP_SCHEMA = 
 {
         "$schema": "https://json-schema.org/draft/2019-09/schema",

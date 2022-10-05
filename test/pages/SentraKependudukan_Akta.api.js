@@ -15,4 +15,4 @@ const QoinAPI = {
     update_status_konfirmasi: (id, data) => BaseAPI.put('/aktaLahirStatusKonfirmasi/' + id, data)
 }
 
-export default QoinAPI 
+export default QoinAPI --
