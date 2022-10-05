@@ -9,7 +9,7 @@ import Get_token from '$root/helper/csr-token'; //import id
 chai.use(jsonSchema)
 
 describe('Web', () => {
-    it.only('Login', async () => {
+    it('Login', async () => {
         const response = await QoinAPI.login(data.VALID_LOGIN) //hit API
         
             //result
@@ -29,7 +29,7 @@ describe('Web', () => {
         // expect(response.data).to.be.jsonSchema(schema.VALIDATE_MULTIPENERBIT_SCHEMA) //Call JSON Schema
     });
 
-    it.only('Create Penerbit', async () => {
+    it('Create Penerbit', async () => {
         const token = await Get_token();
         const response = await QoinAPI.penerbit(data.VALID_PENERBIT, token) //hit API
 
