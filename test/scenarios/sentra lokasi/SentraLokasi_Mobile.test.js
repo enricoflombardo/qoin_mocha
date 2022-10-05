@@ -6,7 +6,7 @@ import * as schema from "$root/schema/SentraLokasi_Mobile.schema";
 chai.use(jsonSchema)
 
 describe('Lokasi terdeteksi', (done) => {
-    it.only('Lokasi ditemukan', async ()=> {
+    it('Lokasi ditemukan', async ()=> {
         const response = await qoinAPI.get_lokasi();
 
         assert.equal(response.status, 200)

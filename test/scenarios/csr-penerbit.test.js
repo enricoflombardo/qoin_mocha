@@ -13,7 +13,7 @@ describe('Web', () => {
         const response = await QoinAPI.login(data.VALID_LOGIN) //hit API
         
             //result
-            assert.equal(response.status, 202);
+            assert.equal(response.status, 202); 
             
 
             //schema
