@@ -77,7 +77,7 @@ export const VALID_STATUSKTP = {
 export const VALID_STATUSKONFIRKTP = {
     
     "updatebyid" : "1",
-    "notes" : "sase",
+    "notes" : "lanjutkan",
     "tanggal_kedatangan" : "2021-12-12",
     "status" : "dijadwalkan",
     "lokasi_id" : "111111",
@@ -88,9 +88,4 @@ export const VALID_LOGINAPP = {
     "email": "ilyas@loyalto.id",
     "password": "123123",
     "Source" : "app"
-};
-
-export const UPDATE_DATA = {
-    "name": "ocir",
-    "job": "zion resident"
 };

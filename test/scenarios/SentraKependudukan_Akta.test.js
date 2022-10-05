@@ -9,26 +9,103 @@ import Getid from '$root/helper/get-id-akta';
 chai.use(jsonSchema);
 chai.use(chaiExclude);
 
-describe.only('Mobile', () => {
+
+describe('Mobile', () => {
     it('Berhasil membuat akta melalui mobile', async () => {
         const response = await QoinAPI.add_akta(data.VALID_ADD_AKTA) //hit API
         
-        //result
+        // //result
         assert.equal(response.status, 200);
 
-        //check object Rincian Ayah
-        // assert.deepEqualExcludingEvery(response.data.data.rincian_ayah, data.VALID_ADD_AKTA, ['id', 'updatebyid', 'updated_at'])
+        let resultObject = {};
+        Object.keys(response.data.data).map((key) => { // iterate over the keys
+        resultObject = {
+            ...resultObject,
+            ['data']: {...response.data.data['rincian_pemohon'], ...response.data.data['rincian_pelapor'], ...response.data.data['rincian_kk'], ...response.data.data['rincian_biodata_anak'], ...response.data.data['rincian_ibu'], ...response.data.data['rincian_ayah'], ...response.data.data['rincian_kedatangan']} // merge two or more objects 
+        }
+        return;
+        });
+        
+        const data_res = Object.fromEntries(
+            Object.entries(resultObject.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
+          );
 
-        //check object Pemohon
-        // assert.equal(response.data.data.rincian_pemohon.nama_pelapor.toLowerCase(), data.VALID_ADD_AKTA.nama_pelapor.toLowerCase());
+        const data_in = Object.fromEntries(
+            Object.entries(data.VALID_ADD_AKTA).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
+          );
+        
+        //check object Rincian Ayah
+        assert.deepEqualExcluding(data_in, data_res, ['id', 'updatebyid', 'updated_at', 'client_id', 'created_by','alamat_pelapor',
+        'berat',
+        'is_dengan_ortu',
+        'berat_bayi',
+        'dengan_orang_tua',
+        'jam_kedatangan',
+        'jenis_kelamin_anak',
+        'jenis_kelamin_pelapor',
+        'jenis_permohonan',
+        'jenis_kelamin',
+        'kecamatan_ayah_id',
+        'kecamatan_ibu_id',
+        'kecamatan_id',
+        'kecamatan_pelapor_id',
+        'kelahiran_ke_spell_en',
+        'kelahiran_ke_spell_id',
+        'kelurahan_ayah_id',
+        'kelurahan_ibu_id',
+        'kelurahan_id',
+        'kelurahan_pelapor_id',
+        'kota_ayah_id',
+        'kota_ibu_id',
+        'kota_id',
+        'kota_pelapor_id',
+        'lokasi_id',
+        'm_user_id',
+        'nama_anak',
+        'nama_lengkap',
+        'nik_ayah',
+        'nik_ibu',
+        'no_nik_ayah',
+        'no_nik_ibu',
+        'panjang',
+        'pekerjaan_ayah',
+        'pekerjaan_ayah_lainnya',
+        'no_registrasi',
+        'panjang_bayi',
+        'pekerjaan_ayah',
+        'provinsi_ayah_id',
+        'provinsi_ibu_id',
+        'provinsi_id',
+        'provinsi_pelapor_id',
+        'pukul_kelahiran',
+        'tanggal_lahir',
+        'tanggal_lahir_ayah',
+        'tanggal_lahir_ibu',
+        'tanggal_pernikahan_ibu',
+        'pukul_kelahiran',
+        'status',
+        'tahun_spell_en',
+        'tahun_spell_id',
+        'tanggal_kedatangan',
+        'tanggal_lahir',
+        'tanggal_lahir_spell_en',
+        'tanggal_lahir_spell_id',
+        'tanggal_permohonan',
+        'tanggal_pernikahan_ibu',
+        'umur_pelapor',
+        'tgl_lahir_ayah',
+        'tgl_lahir_ibu',
+        'umur'])
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALID_ADD_AKTA_SCHEMA)
 
+        // console.log(response.data)
+
     });
 });
 
-describe.only('Web', () => {
+describe('Web', () => {
     it('Get Index by ID', async () => {
         const id = await Getid()
         const response = await QoinAPI.index_by_id(id) //hit API
@@ -50,12 +127,6 @@ describe.only('Web', () => {
         
         //result
         assert.equal(response.status, 200);
-
-        //check object Rincian Ayah
-        assert.equal(response.data.data.rincian_ayah.nama_ayah.toLowerCase(), data.VALID_UPDATE_AKTA.nama_ayah.toLowerCase());
-
-        //check object Pemohon
-        assert.equal(response.data.data.rincian_pemohon.nama_pelapor.toLowerCase(), data.VALID_UPDATE_AKTA.nama_pelapor.toLowerCase());
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALID_UPDATE_AKTA_SCHEMA)

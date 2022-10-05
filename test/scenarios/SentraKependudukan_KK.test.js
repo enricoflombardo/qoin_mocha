@@ -3,8 +3,8 @@ import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '$root/pages/SentraKependudukan_KK.api'; //import endpoint API
 import * as data from '$root/data/SentraKependudukan_KK.data'; //import data params
 import * as schema from '../schema/SentraKependudukan_KK.schema'; //import schema
-import Getid from '$root/helper/get-id-kk'; //import id
-import Getid_anggota from '$root/helper/get-idanggota-kk'; //import id
+import Getid from '$root/helper/helper-kk'; //import id
+import Getid_anggota from '$root/helper/helper-kk'; //import id
 
 chai.use(jsonSchema)
 

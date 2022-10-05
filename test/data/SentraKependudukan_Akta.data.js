@@ -8,7 +8,7 @@ export const VALID_ADD_AKTA = {
     'jenis_permohonan': 'bikin baru ',
     'nik_pelapor': '555555',
     'nama_pelapor': 'TES AKTA LAHIR BARU',
-    'umur_pelapor': '15',
+    'umur_pelapor': 15,
     'jenis_kelamin_pelapor': 'laki-laki ',
     'pekerjaan_pelapor': 'tukang lapor ',
     'alamat_pelapor': 'jl. rumah pelapor ',
@@ -30,9 +30,9 @@ export const VALID_ADD_AKTA = {
     'pukul_kelahiran': '19.55',
     'jenis_kelahiran': 'tunggal',
     'penolong_kelahiran': 'dokter',
-    'kelahiran_ke': '1',
-    'berat': '5.6',
-    'panjang': '50.7',
+    'kelahiran_ke': 1,
+    'berat': 5.6,
+    'panjang': 50.7,
     'no_nik_ibu': '12345',
     'nama_ibu': 'si ibu',
     'tanggal_lahir_ibu': '1979-10-05',
@@ -84,7 +84,7 @@ export const VALID_ADD_AKTA = {
     'is_dengan_ortu': '1',
     'm_user_id': '9',
     'nik_pelapor': '555555',
-    'nama_pelapor': 'sase',
+    'nama_pelapor': 'ahmad',
     'umur_pelapor': '15',
     'jenis_kelamin_pelapor': 'laki-laki',
     'pekerjaan_pelapor': 'tukang lapor',
@@ -144,7 +144,7 @@ export const VALID_ADD_AKTA = {
 
   export const VALID_UPDATE_STATUS_VERIFIKASI = {
     'updatebyid': '1',
-    'notes': 'sase'
+    'notes': 'lanjut'
 };
 
 export const VALID_UPDATE_STATUS = {

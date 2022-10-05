@@ -6,8 +6,9 @@ import * as schema from '../schema/SentraKependudukan_KTP.schema'; //import sche
 import Getid from '$root/helper/get-id-ktp'; //import id
 
 chai.use(jsonSchema)
-
+for (let index = 0; index < 1; index++) {
 describe('Mobile', () => {
+        
     it('Berhasil membuat ktp melalui mobile', async () => {
         const response = await QoinAPI.addKTP(data.VALID_ADDKTP) //hit API
         
@@ -26,6 +27,7 @@ describe('Mobile', () => {
 
     });
 });
+
 describe('Web', () => {
     it('Index by id', async () => {
         const id = await Getid();
@@ -43,7 +45,7 @@ describe('Web', () => {
         const id = await Getid();
         const response = await QoinAPI.updatektp(id, data.VALID_UPDATEKTP) 
     
-        expect(response.data).to.be.jsonSchema(schema.VALIDATE_CREATE_KTP_SCHEMA)
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_UPDATE_KTP_SCHEMA)
        
     });
 
@@ -76,3 +78,4 @@ describe('Web', () => {
 
     });
 });
+}
