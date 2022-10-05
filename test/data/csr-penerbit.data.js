@@ -1,12 +1,12 @@
 export const VALID_LOGIN = {
-    "email": "ilyas@loyalto.id",
-    "password": "123123",
-    "Source" : "web"
+    'Email': 'ilyas@loyalto.id',
+    'Password': '123123',
+    'Source': 'web'
 };
 
 export const VALID_PENERBIT = {
     'IssuerName': 'PT FILMA JAYA',
-    'IssuerCode': 'PFJ',
+    'IssuerCode': 'PFJ1',
     'IssuerStatus': '1'
 };
 
