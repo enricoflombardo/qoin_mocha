@@ -1,4 +1,4 @@
-import Getid from '$root/helper/get-id-kk'; //import id
+import Getid from '$root/helper/helper-kk'; //import id
 
 const id = await Getid()
 

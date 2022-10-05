@@ -5,7 +5,7 @@ import QoinAPI from '$root/pages/SentraKependudukan_Umum.api'; //import endpoint
 
 chai.use(jsonSchema)
 
-describe.only('Web Admin', () => {
+describe('Web Admin', () => {
     it('Get Dashboard', async () => {
         const response = await QoinAPI.get_dashboard() //hit API
         
@@ -22,20 +22,18 @@ describe.only('Web Admin', () => {
         
             //status
             assert.equal(response.status, 200);
-            console.log(response.data)
 
             //schema
             // expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_KK_SCHEMA)
     });
 });
 
-describe.only('Mobile', () => {
+describe('Mobile', () => {
     it('Riwayat All', async () => {
         const response = await QoinAPI.get_riwayatAll() //hit API
         
             //status
             assert.equal(response.status, 200);
-            console.log(response.data)
 
             //schema
             // expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_KK_SCHEMA)
@@ -46,7 +44,6 @@ describe.only('Mobile', () => {
         
             //status
             assert.equal(response.status, 200);
-            console.log(response.data)
 
             //schema
             // expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_KK_SCHEMA)
@@ -57,7 +54,6 @@ describe.only('Mobile', () => {
         
             //status
             assert.equal(response.status, 200);
-            console.log(response.data)
 
             //schema
             // expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_KK_SCHEMA)
