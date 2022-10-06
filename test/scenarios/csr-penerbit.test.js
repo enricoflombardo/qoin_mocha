@@ -3,12 +3,12 @@ import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '$root/pages/csr-penerbit.api'; //import endpoint API
 import * as data from '$root/data/csr-penerbit.data'; //import data params
 import * as schema from '../schema/csr-penerbit.schema'; //import schema
-import Getid, {} from '$root/helper/helper-csr'; //import id
+import Getid, { Getid_voucher } from '$root/helper/helper-csr'; //import id
 import Get_token from '$root/helper/csr-token'; //import token
 
 chai.use(jsonSchema)
 
-describe('Web', () => {
+describe.only('Web', () => {
     it('Login', async () => {
         const response = await QoinAPI.login(data.VALID_LOGIN) //hit API
         
@@ -29,7 +29,7 @@ describe('Web', () => {
         // expect(response.data).to.be.jsonSchema(schema.VALIDATE_MULTIPENERBIT_SCHEMA) //Call JSON Schema
     });
 
-    it.only('Create Penerbit', async () => {
+    it('Create Penerbit', async () => {
         const token = await Get_token();
         const response = await QoinAPI.penerbit(data.VALID_PENERBIT, token) //hit API
 
@@ -44,8 +44,9 @@ describe('Web', () => {
     });
     
     it('Read Penerbit', async () => {
+        const token = await Get_token();
         const id = await Getid();
-        const response = await QoinAPI.getpenerbit(id)
+        const response = await QoinAPI.getpenerbit(id, token)
 
         assert.equal(response.status, 200);
     
@@ -53,13 +54,44 @@ describe('Web', () => {
     });
 
     it('Update Penerbit', async () => {
+        const token = await Get_token();
         const id = await Getid();
-        const response = await QoinAPI.updatepenerbit(id, data.VALID_UPDATEPENERBIT) //hit API
+        const response = await QoinAPI.updatepenerbit(id, data.VALID_UPDATEPENERBIT, token) //hit API
 
         assert.equal(response.status, 200);
     
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_UPDATEPENERBIT_SCHEMA) //Call JSON Schema
     });
+
+    it('Create Voucher', async () => {
+        const token = await Get_token();
+        const response = await QoinAPI.penerbit(data.VALID_VOUCHER, token) //hit API
+
+        assert.equal(response.status, 200);
+    
+        // expect(response.data).to.be.jsonSchema(schema.VALIDATE_PENERBIT_SCHEMA) //Call JSON Schema
+    });
+
+    it('Update Voucher', async () => {
+        const id_voucher = await Getid_voucher();
+        const token = await Get_token();
+        const response = await QoinAPI.penerbit(data.VALID_UPDATEVOUCHER, token) //hit API
+
+        assert.equal(response.status, 200);
+    
+        // expect(response.data).to.be.jsonSchema(schema.VALIDATE_PENERBIT_SCHEMA) //Call JSON Schema
+    });
+
+    it('Create Program Bantuan', async () => {
+        const token = await Get_token();
+        const response = await QoinAPI.penerbit(data.VALID_BANSOS, token) //hit API
+
+        assert.equal(response.status, 200);
+    
+        // expect(response.data).to.be.jsonSchema(schema.VALIDATE_PENERBIT_SCHEMA) //Call JSON Schema
+    });
+
+
 });
 
 
