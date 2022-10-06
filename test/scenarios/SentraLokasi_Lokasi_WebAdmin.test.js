@@ -100,12 +100,13 @@ describe('Web', () => {
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
     });
 
+    // Endpoint lokal mas sase
     /*it('Get Template Excel', async() => {
         const response = await QoinAPI.getTemplateexcel()
 
         //result
         assert.equal(response.status, 200)
-                                                                            //LOKAL MAS SASE
+        
         //schema
         expect(response.data).to.be.jsonSchema(schema)
     });*/
