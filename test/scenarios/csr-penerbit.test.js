@@ -3,8 +3,8 @@ import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '$root/pages/csr-penerbit.api'; //import endpoint API
 import * as data from '$root/data/csr-penerbit.data'; //import data params
 import * as schema from '../schema/csr-penerbit.schema'; //import schema
-import Getid from '$root/helper/get-id-csr-penerbit'; //import id
-import Get_token from '$root/helper/csr-token'; //import id
+import Getid, {} from '$root/helper/helper-csr'; //import id
+import Get_token from '$root/helper/csr-token'; //import token
 
 chai.use(jsonSchema)
 
