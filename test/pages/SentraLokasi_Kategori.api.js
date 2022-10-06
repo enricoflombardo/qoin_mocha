@@ -9,7 +9,7 @@ const QoinAPI = {
     createkategoriLokasi: (data) => BaseAPI.post('/kategoriLokasi', data),
     getdetailkategoriLokasi: () => BaseAPI.get('/detailKategoriLokasiWeb/2'),
     updatekategoriLokasi: (data) => BaseAPI.put('/detailKategoriLokasiWeb/2', data),
-    deletekategoriLokasi: () => BaseAPI.del('/kategoriLokasi/{{id}}'),
+    deletekategoriLokasi: () => BaseAPI.delete('/kategoriLokasi/{{id}}'),
     readkategoriLokasi: () => BaseAPI.get('/kategoriLokasiWeb/{{id}}')
 }
 
