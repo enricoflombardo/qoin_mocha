@@ -111,7 +111,7 @@ describe('Web', () => {
         expect(response.data).to.be.jsonSchema(schema)
     });*/
 
-    it.only('Get Lokasi By Id', async() => {
+    it('Get Lokasi By Id', async() => {
         const response = await QoinAPI.getLokasibyid()
 
         //result
