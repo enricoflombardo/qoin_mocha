@@ -13,9 +13,9 @@ const QoinAPI = {
             Authorization : "Bearer "+ token
         }
     }),
-    penerbit: (data) => BaseAPI.post('/Penerbit', data, {
+    penerbit: (data, token) => BaseAPI.post('/Penerbit', data, {
         headers : {
-            Authorization: "Bearer ${token}"
+            Authorization: "Bearer "+ token
         }
     }),
     getid: () => BaseAPI.get('/Penerbit/List?limit=1'),

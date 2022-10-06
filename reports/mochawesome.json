@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2022-10-06T02:12:16.215Z",
-    "end": "2022-10-06T02:12:16.451Z",
-    "duration": 236,
+    "failures": 1,
+    "start": "2022-10-06T08:27:58.006Z",
+    "end": "2022-10-06T08:27:58.444Z",
+    "duration": 438,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,52 +18,56 @@
   },
   "results": [
     {
-      "uuid": "8dc7e899-7297-414b-b1e4-2d614912f9c1",
+      "uuid": "43f9f890-7f77-40bf-8dcf-ce0568407e0e",
       "title": "",
-      "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\sentra lokasi\\SentraLokasi_Lokasi_WebAdmin.test.js",
-      "file": "\\test\\scenarios\\sentra lokasi\\SentraLokasi_Lokasi_WebAdmin.test.js",
+      "fullFile": "G:\\qoin_mocha\\test\\scenarios\\csr-penerbit.test.js",
+      "file": "\\test\\scenarios\\csr-penerbit.test.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "407c6c86-23be-4449-b25a-35c0ecbae23b",
+          "uuid": "88de5f7b-4fe0-4a13-aa88-2ff0f6c36d5d",
           "title": "Web",
-          "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\sentra lokasi\\SentraLokasi_Lokasi_WebAdmin.test.js",
-          "file": "\\test\\scenarios\\sentra lokasi\\SentraLokasi_Lokasi_WebAdmin.test.js",
+          "fullFile": "G:\\qoin_mocha\\test\\scenarios\\csr-penerbit.test.js",
+          "file": "\\test\\scenarios\\csr-penerbit.test.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Get Lokasi By Id",
-              "fullTitle": "Web Get Lokasi By Id",
+              "title": "Create Penerbit",
+              "fullTitle": "Web Create Penerbit",
               "timedOut": false,
-              "duration": 200,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 427,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
-              "code": "const response = await QoinAPI.getLokasibyid()\n//result\nassert.equal(response.status, 200)\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_GETLOKASIBYID_SCHEMA)",
-              "err": {},
-              "uuid": "1ad43ff2-5327-48d2-80ef-f06fee2e40a4",
-              "parentUUID": "407c6c86-23be-4449-b25a-35c0ecbae23b",
+              "code": "const token = await Get_token();\nconst response = await QoinAPI.penerbit(data.VALID_PENERBIT, token) //hit API\n// console.log(response.headers);\n// console.log(response.body);\n// console.log(response.data);\n// assert.equal(response.status, 200);\n    \nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_PENERBIT_SCHEMA) //Call JSON Schema\n// IssuerCode = response.data.data.list[0].id",
+              "err": {
+                "message": "AssertionError: expected value to match json-schema 'Root Schema' -> '{\"status_code\":400,\"message\":\"...'\n      Invalid type: null (expected object)\n          schema: Root Schema\n          rule:   /properties/data/type -> \"object\"\n          field:  /data -> null: null",
+                "estack": "AssertionError: expected value to match json-schema 'Root Schema' -> '{\"status_code\":400,\"message\":\"...'\n      Invalid type: null (expected object)\n          schema: Root Schema\n          rule:   /properties/data/type -> \"object\"\n          field:  /data -> null: null\n    at Context.<anonymous> (file:///G:/qoin_mocha/test/scenarios/csr-penerbit.test.js:42:37)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "diff": null
+              },
+              "uuid": "3f868111-6e0a-46a5-8901-f875c2dadf86",
+              "parentUUID": "88de5f7b-4fe0-4a13-aa88-2ff0f6c36d5d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "1ad43ff2-5327-48d2-80ef-f06fee2e40a4"
+          "passes": [],
+          "failures": [
+            "3f868111-6e0a-46a5-8901-f875c2dadf86"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 200,
+          "duration": 427,
           "root": false,
           "rootEmpty": false,
-          "_timeout": 50000
+          "_timeout": 10000
         }
       ],
       "passes": [],
@@ -73,7 +77,7 @@
       "duration": 0,
       "root": true,
       "rootEmpty": true,
-      "_timeout": 50000
+      "_timeout": 10000
     }
   ],
   "meta": {
