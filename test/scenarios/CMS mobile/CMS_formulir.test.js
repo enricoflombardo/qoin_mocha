@@ -1,4 +1,4 @@
-import chai, {assert, expect} from "chai";
+/*import chai, {assert, expect} from "chai";
 import jsonSchema from "chai-json-schema";
 import qoinAPI from "$root/pages/CMS_Formulir_mobile.api";
 import * as data from "$root/data/CMS_AddFormulir_mobile.data";
@@ -17,14 +17,14 @@ describe('CMS Formulir', (done) => {
 })
 
 //Tidak ada di dalam DOCUMENT API - QOIN google spreadsheet
-/*describe('CMS list Formulir', (done) => {
+describe('CMS list Formulir', (done) => {
     it('CMS list Formulir ditemukan', async () => {
         const response = await qoinAPI.get_list_formulir();
 
         assert.equal(response.status, 200)
         //expect(response.data).to.be.jsonSchema(schema.VALIDATE_LIST_FORMULIR_SCHEMA)  //Schema error
     })
-})*/
+})
 
 describe('CMS list Document', (done) => {
     it('CMS list Document ditemukan', async () => {
@@ -44,7 +44,7 @@ describe('CMS detail Document by ID', (done) => {
     })
 })
 
-/*describe('CMS Add Formulir', (done) => {
+describe('CMS Add Formulir', (done) => {
     it.only('CMS Add Formulir ditemukan', async () => {
         const response = await qoinAPI.post_add_fromulir(data.VALID_ADDFORMULIR);
 

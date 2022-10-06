@@ -1,4 +1,4 @@
-export const VALIDATE_FORMULIR_SCHEMA = {
+/*export const VALIDATE_FORMULIR_SCHEMA = {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
@@ -3468,4 +3468,4 @@ export const VALIDATE_ADDFORMULIR_SCHEMA = {
     "examples": [{
         "oh-my-god": "What on earth are you requesting?"
     }]
-}
+}*/

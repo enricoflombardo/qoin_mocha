@@ -1,4 +1,4 @@
-import BaseAPI from "$root/pages/base.api";
+/*import BaseAPI from "$root/pages/base.api";
 
 const qoinAPI = {
     //Formulir
@@ -9,4 +9,4 @@ const qoinAPI = {
     post_add_fromulir: () => BaseAPI.post('/createFormulir')
 }
 
-export default qoinAPI
+export default qoinAPI*/

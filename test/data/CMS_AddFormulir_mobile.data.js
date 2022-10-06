@@ -1,4 +1,4 @@
-export const VALID_ADDFORMULIR = [ {
+/*export const VALID_ADDFORMULIR = {
     "pekerjaan_1": "Wiraswasta",
     "nama_lengkap_2": "HTes",
     "umur_2": "11",
@@ -389,4 +389,4 @@ export const VALID_ADDFORMULIR = [ {
             "title": "FORM PEMBUATAN KTP"
         }
     ]
-} ]
+}*/
