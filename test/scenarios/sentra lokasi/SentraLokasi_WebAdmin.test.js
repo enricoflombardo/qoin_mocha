@@ -1,12 +1,16 @@
 import chai,{ assert,expect } from 'chai';
 import jsonSchema from 'chai-json-schema';//import json schema
-import QoinAPI from '$root/pages/SentraLokasi_WebAdmin_tama.api'; //import endpoint API
-import * as data from '$root/data/SentraLokasi_WebAdmin_tama.data'; //import data
-import * as schema from '$root/schema/SentaLokasi_WebAdmin_tama.schema';
+import QoinAPI from '$root/pages/SentraLokasi_WebAdmin.api'; //import endpoint API
+import * as data from '$root/data/SentraLokasi_WebAdmin.data'; //import data
+import * as schema from '$root/schema/SentaLokasi_WebAdmin.schema';
 
 chai.use(jsonSchema)
 
 describe('Web', () => {
+
+
+    // Engineer mas sase
+
     it('Add lokasi', async() => {
         const response = await QoinAPI.addLokasi(data.VALID_ADDLOKASI)
 
