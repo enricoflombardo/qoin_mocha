@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-10-06T01:39:25.068Z",
-    "end": "2022-10-06T01:39:25.232Z",
-    "duration": 164,
+    "start": "2022-10-06T02:12:16.215Z",
+    "end": "2022-10-06T02:12:16.451Z",
+    "duration": 236,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,19 +18,19 @@
   },
   "results": [
     {
-      "uuid": "578f63c0-0771-4be7-9299-b425bfe60922",
+      "uuid": "8dc7e899-7297-414b-b1e4-2d614912f9c1",
       "title": "",
-      "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\sentra lokasi\\SentraLokasi_WebAdmin.test.js",
-      "file": "\\test\\scenarios\\sentra lokasi\\SentraLokasi_WebAdmin.test.js",
+      "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\sentra lokasi\\SentraLokasi_Lokasi_WebAdmin.test.js",
+      "file": "\\test\\scenarios\\sentra lokasi\\SentraLokasi_Lokasi_WebAdmin.test.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "c6eeefef-504f-4ce8-b56e-c0aae386f6a6",
+          "uuid": "407c6c86-23be-4449-b25a-35c0ecbae23b",
           "title": "Web",
-          "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\sentra lokasi\\SentraLokasi_WebAdmin.test.js",
-          "file": "\\test\\scenarios\\sentra lokasi\\SentraLokasi_WebAdmin.test.js",
+          "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\sentra lokasi\\SentraLokasi_Lokasi_WebAdmin.test.js",
+          "file": "\\test\\scenarios\\sentra lokasi\\SentraLokasi_Lokasi_WebAdmin.test.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
@@ -38,7 +38,7 @@
               "title": "Get Lokasi By Id",
               "fullTitle": "Web Get Lokasi By Id",
               "timedOut": false,
-              "duration": 119,
+              "duration": 200,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const response = await QoinAPI.getLokasibyid()\n//result\nassert.equal(response.status, 200)\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_GETLOKASIBYID_SCHEMA)",
               "err": {},
-              "uuid": "818f6eab-6f3b-4f1e-88ee-1c81cc4d9248",
-              "parentUUID": "c6eeefef-504f-4ce8-b56e-c0aae386f6a6",
+              "uuid": "1ad43ff2-5327-48d2-80ef-f06fee2e40a4",
+              "parentUUID": "407c6c86-23be-4449-b25a-35c0ecbae23b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "818f6eab-6f3b-4f1e-88ee-1c81cc4d9248"
+            "1ad43ff2-5327-48d2-80ef-f06fee2e40a4"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 119,
+          "duration": 200,
           "root": false,
           "rootEmpty": false,
           "_timeout": 50000
