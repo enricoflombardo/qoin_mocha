@@ -5,9 +5,15 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
+<<<<<<< HEAD
     "start": "2022-10-06T07:15:49.052Z",
     "end": "2022-10-06T07:15:49.215Z",
     "duration": 163,
+=======
+    "start": "2022-10-06T08:37:51.457Z",
+    "end": "2022-10-06T08:37:53.746Z",
+    "duration": 2289,
+>>>>>>> 6f635d8c355073c2d091d2eccb53cb142854689b
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,52 +24,88 @@
   },
   "results": [
     {
+<<<<<<< HEAD
       "uuid": "1c75587b-f5b1-4a68-941c-4662af68ce79",
       "title": "",
       "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\SentraLokasi_Kategori.test.js",
       "file": "\\test\\scenarios\\SentraLokasi_Kategori.test.js",
+=======
+      "uuid": "8316bbfa-aaf7-4b5c-b6a3-1ccf1ab00a5f",
+      "title": "",
+      "fullFile": "G:\\qoin_mocha\\test\\scenarios\\csr-penerbit.test.js",
+      "file": "\\test\\scenarios\\csr-penerbit.test.js",
+>>>>>>> 6f635d8c355073c2d091d2eccb53cb142854689b
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
+<<<<<<< HEAD
           "uuid": "c749cba8-350b-4df3-8b26-a941ff5b5503",
           "title": "Web",
           "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\SentraLokasi_Kategori.test.js",
           "file": "\\test\\scenarios\\SentraLokasi_Kategori.test.js",
+=======
+          "uuid": "1919634f-ad05-4f0d-97d3-7718da9ab2bb",
+          "title": "Web",
+          "fullFile": "G:\\qoin_mocha\\test\\scenarios\\csr-penerbit.test.js",
+          "file": "\\test\\scenarios\\csr-penerbit.test.js",
+>>>>>>> 6f635d8c355073c2d091d2eccb53cb142854689b
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
+<<<<<<< HEAD
               "title": "Get detail kategori lokasi",
               "fullTitle": "Web Get detail kategori lokasi",
               "timedOut": false,
               "duration": 149,
+=======
+              "title": "Create Penerbit",
+              "fullTitle": "Web Create Penerbit",
+              "timedOut": false,
+              "duration": 2278,
+>>>>>>> 6f635d8c355073c2d091d2eccb53cb142854689b
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
+<<<<<<< HEAD
               "code": "const response = await QoinAPI.getdetailkategoriLokasi()\n//result\nassert.equal(response.status, 200)\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_GETDETAILKATEGORILOKASI)",
               "err": {},
               "uuid": "22907e73-ba1e-42c6-b1b0-4c7088192f86",
               "parentUUID": "c749cba8-350b-4df3-8b26-a941ff5b5503",
+=======
+              "code": "const token = await Get_token();\nconst response = await QoinAPI.penerbit(data.VALID_PENERBIT, token) //hit API\n// console.log(response.headers);\n// console.log(response.body);\n// console.log(response.data);\nassert.equal(response.status, 200);\n    \nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_PENERBIT_SCHEMA) //Call JSON Schema\n// IssuerCode = response.data.data.list[0].id",
+              "err": {},
+              "uuid": "d1841bfb-2496-4d9f-bbcc-0319e3678e7e",
+              "parentUUID": "1919634f-ad05-4f0d-97d3-7718da9ab2bb",
+>>>>>>> 6f635d8c355073c2d091d2eccb53cb142854689b
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
+<<<<<<< HEAD
             "22907e73-ba1e-42c6-b1b0-4c7088192f86"
+=======
+            "d1841bfb-2496-4d9f-bbcc-0319e3678e7e"
+>>>>>>> 6f635d8c355073c2d091d2eccb53cb142854689b
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
+<<<<<<< HEAD
           "duration": 149,
+=======
+          "duration": 2278,
+>>>>>>> 6f635d8c355073c2d091d2eccb53cb142854689b
           "root": false,
           "rootEmpty": false,
-          "_timeout": 50000
+          "_timeout": 10000
         }
       ],
       "passes": [],
@@ -73,7 +115,7 @@
       "duration": 0,
       "root": true,
       "rootEmpty": true,
-      "_timeout": 50000
+      "_timeout": 10000
     }
   ],
   "meta": {
