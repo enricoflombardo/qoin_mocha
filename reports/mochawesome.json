@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-10-06T02:55:36.787Z",
-    "end": "2022-10-06T02:55:36.905Z",
-    "duration": 118,
+    "start": "2022-10-06T03:53:27.210Z",
+    "end": "2022-10-06T03:53:27.338Z",
+    "duration": 128,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "00d53bbc-4fc1-4923-898b-c6c471469505",
+      "uuid": "acea6245-75ed-4e85-8fd5-1a54e29b8985",
       "title": "",
       "fullFile": "D:\\Venturo\\QOIN\\qoin_mocha\\test\\scenarios\\CMS mobile\\CMS_formulir.test.js",
       "file": "\\test\\scenarios\\CMS mobile\\CMS_formulir.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ef658702-25fb-4c3b-afde-4f37fa3599d7",
+          "uuid": "ad217c3a-e094-4c65-bcee-7cd867bda09c",
           "title": "CMS detail Document by ID",
           "fullFile": "D:\\Venturo\\QOIN\\qoin_mocha\\test\\scenarios\\CMS mobile\\CMS_formulir.test.js",
           "file": "\\test\\scenarios\\CMS mobile\\CMS_formulir.test.js",
@@ -38,7 +38,7 @@
               "title": "CMS detail Document by ID ditemukan",
               "fullTitle": "CMS detail Document by ID CMS detail Document by ID ditemukan",
               "timedOut": false,
-              "duration": 107,
+              "duration": 120,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const response = await qoinAPI.get_detaildocument_byid();\nassert.equal(response.status, 200)\nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_DETAILDOCUMENT_BYID)",
               "err": {},
-              "uuid": "7a775c87-56fa-4b15-a2a5-abf3e86f1415",
-              "parentUUID": "ef658702-25fb-4c3b-afde-4f37fa3599d7",
+              "uuid": "09b88eb9-4ca4-4130-8c39-0fbf8ab35fae",
+              "parentUUID": "ad217c3a-e094-4c65-bcee-7cd867bda09c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7a775c87-56fa-4b15-a2a5-abf3e86f1415"
+            "09b88eb9-4ca4-4130-8c39-0fbf8ab35fae"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 107,
+          "duration": 120,
           "root": false,
           "rootEmpty": false,
           "_timeout": 50000

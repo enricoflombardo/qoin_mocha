@@ -1,13 +1,12 @@
 import chai,{ assert,expect } from 'chai';
 import jsonSchema from 'chai-json-schema';//import json schema
-import QoinAPI from '$root/pages/SentraLokasi_WebAdmin.api'; //import endpoint API
-import * as data from '$root/data/SentraLokasi_WebAdmin.data'; //import data
-import * as schema from '$root/schema/SentaLokasi_WebAdmin.schema';
+import QoinAPI from '$root/pages/SentraLokasi_Lokasi_WebAdmin.api'; //import endpoint API
+import * as data from '$root/data/SentraLokasi_Lokasi_WebAdmin.data'; //import data
+import * as schema from '$root/schema/SentaLokasi_Lokasi_WebAdmin.schema'; //import schema
 
 chai.use(jsonSchema)
 
 describe('Web', () => {
-
 
     // Engineer mas sase
 

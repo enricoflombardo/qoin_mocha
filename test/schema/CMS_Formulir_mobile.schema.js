@@ -3445,3 +3445,27 @@ export const VALIDATE_DETAILDOCUMENT_BYID = {
         }
     ]
 }
+
+export const VALIDATE_ADDFORMULIR_SCHEMA = {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "oh-my-god"
+    ],
+    "properties": {
+        "oh-my-god": {
+            "type": "string",
+            "default": "",
+            "title": "The oh-my-god Schema",
+            "examples": [
+                "What on earth are you requesting?"
+            ]
+        }
+    },
+    "examples": [{
+        "oh-my-god": "What on earth are you requesting?"
+    }]
+}

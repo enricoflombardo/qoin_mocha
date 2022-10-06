@@ -1,6 +1,7 @@
 import chai, {assert, expect} from "chai";
 import jsonSchema from "chai-json-schema";
 import qoinAPI from "$root/pages/CMS_Formulir_mobile.api";
+import * as data from "$root/data/CMS_AddFormulir_mobile.data";
 import * as schema from "$root/schema/CMS_Formulir_mobile.schema";
 
 chai.use(jsonSchema)
@@ -42,3 +43,12 @@ describe('CMS detail Document by ID', (done) => {
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_DETAILDOCUMENT_BYID)
     })
 })
+
+/*describe('CMS Add Formulir', (done) => {
+    it.only('CMS Add Formulir ditemukan', async () => {
+        const response = await qoinAPI.post_add_fromulir(data.VALID_ADDFORMULIR);
+
+        assert.equal(response.status, 200)
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDFORMULIR_SCHEMA)
+    })
+})*/
