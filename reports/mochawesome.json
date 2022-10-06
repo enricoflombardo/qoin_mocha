@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2022-10-06T08:27:58.006Z",
-    "end": "2022-10-06T08:27:58.444Z",
-    "duration": 438,
+    "failures": 0,
+    "start": "2022-10-06T08:37:51.457Z",
+    "end": "2022-10-06T08:37:53.746Z",
+    "duration": 2289,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "43f9f890-7f77-40bf-8dcf-ce0568407e0e",
+      "uuid": "8316bbfa-aaf7-4b5c-b6a3-1ccf1ab00a5f",
       "title": "",
       "fullFile": "G:\\qoin_mocha\\test\\scenarios\\csr-penerbit.test.js",
       "file": "\\test\\scenarios\\csr-penerbit.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "88de5f7b-4fe0-4a13-aa88-2ff0f6c36d5d",
+          "uuid": "1919634f-ad05-4f0d-97d3-7718da9ab2bb",
           "title": "Web",
           "fullFile": "G:\\qoin_mocha\\test\\scenarios\\csr-penerbit.test.js",
           "file": "\\test\\scenarios\\csr-penerbit.test.js",
@@ -38,33 +38,29 @@
               "title": "Create Penerbit",
               "fullTitle": "Web Create Penerbit",
               "timedOut": false,
-              "duration": 427,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 2278,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
-              "code": "const token = await Get_token();\nconst response = await QoinAPI.penerbit(data.VALID_PENERBIT, token) //hit API\n// console.log(response.headers);\n// console.log(response.body);\n// console.log(response.data);\n// assert.equal(response.status, 200);\n    \nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_PENERBIT_SCHEMA) //Call JSON Schema\n// IssuerCode = response.data.data.list[0].id",
-              "err": {
-                "message": "AssertionError: expected value to match json-schema 'Root Schema' -> '{\"status_code\":400,\"message\":\"...'\n      Invalid type: null (expected object)\n          schema: Root Schema\n          rule:   /properties/data/type -> \"object\"\n          field:  /data -> null: null",
-                "estack": "AssertionError: expected value to match json-schema 'Root Schema' -> '{\"status_code\":400,\"message\":\"...'\n      Invalid type: null (expected object)\n          schema: Root Schema\n          rule:   /properties/data/type -> \"object\"\n          field:  /data -> null: null\n    at Context.<anonymous> (file:///G:/qoin_mocha/test/scenarios/csr-penerbit.test.js:42:37)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
-                "diff": null
-              },
-              "uuid": "3f868111-6e0a-46a5-8901-f875c2dadf86",
-              "parentUUID": "88de5f7b-4fe0-4a13-aa88-2ff0f6c36d5d",
+              "code": "const token = await Get_token();\nconst response = await QoinAPI.penerbit(data.VALID_PENERBIT, token) //hit API\n// console.log(response.headers);\n// console.log(response.body);\n// console.log(response.data);\nassert.equal(response.status, 200);\n    \nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_PENERBIT_SCHEMA) //Call JSON Schema\n// IssuerCode = response.data.data.list[0].id",
+              "err": {},
+              "uuid": "d1841bfb-2496-4d9f-bbcc-0319e3678e7e",
+              "parentUUID": "1919634f-ad05-4f0d-97d3-7718da9ab2bb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "3f868111-6e0a-46a5-8901-f875c2dadf86"
+          "passes": [
+            "d1841bfb-2496-4d9f-bbcc-0319e3678e7e"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 427,
+          "duration": 2278,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000

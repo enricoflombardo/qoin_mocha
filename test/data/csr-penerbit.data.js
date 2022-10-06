@@ -6,7 +6,7 @@ export const VALID_LOGIN = {
 
 export const VALID_PENERBIT = {
     'IssuerName': 'PT FILMA JAYA',
-    'IssuerCode': 'PFJ1',
+    'IssuerCode': 'PFJ3',
     'IssuerStatus': '1'
 };
 

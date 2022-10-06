@@ -37,7 +37,7 @@ describe('Web', () => {
         // console.log(response.body);
         // console.log(response.data);
 
-        // assert.equal(response.status, 200);
+        assert.equal(response.status, 200);
     
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_PENERBIT_SCHEMA) //Call JSON Schema
         // IssuerCode = response.data.data.list[0].id
