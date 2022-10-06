@@ -19,15 +19,19 @@ const QoinAPI = {
         }
     }),
     getid: () => BaseAPI.get('/Penerbit/List?limit=1'),
-    getpenerbit: (id) => BaseAPI.get('/Penerbit'+ id),
+    getpenerbit: (id) => BaseAPI.get('/Penerbit/'+ id),
     updatepenerbit: (id, data) => BaseAPI.put('/Penerbit/'+ id, data),
-    voucher: (data) => BaseAPI.post('/Voucher', data),
-    getvoucher: (id) => BaseAPI.get('/Voucher'+ id),
-    updatevoucher: (id_voucher, data) => BaseAPI.put('/Voucher'+ id_voucher, data),
-    programbantuan: (data) => BaseAPI.post('/create-bansos-multi', data),
-    listpenerimabansos: (id_program) => BaseAPI.get('/listPenerimaByProgram'+ id_program),
-    listbansospenerima: () => BaseAPI.get('/listBansosPenerima')
-    
+    voucher: (data) => BaseAPI.post('/Voucher', data), //id_voucher
+    getvoucher: (id) => BaseAPI.get('/Voucher/'+ id),
+    updatevoucher: (id_voucher, data) => BaseAPI.put('/Voucher/'+ id_voucher, data),
+    programbantuan: (data) => BaseAPI.post('/create-bansos-multi', data), 
+    listbansos: () => BaseAPI.get('/listBansos?limit=1'), //id_program
+    listpenerimabansos: (id_program) => BaseAPI.get('/listPenerimaByProgram/'+ id_program),
+    listvoucherbansos: (id_program) => BaseAPI.get('/listVoucherByBansos/'+ id_program),
+    listbansospenerima: () => BaseAPI.get('/listBansosPenerima'), //id_user dan id_penerima
+    bansosuser: (id_penerima) => BaseAPI.get('/getBansosUser/'+ id_penerima), //id_bansos
+    listvoucheruser: (id_bansos, id_user) => BaseAPI.get('/listVoucherByBansosAndUserId/'+ id_bansos +'/'+ id_user),
+    redeemvoucher: (data) => BaseAPI_JSON.put('/redeemVoucher', data)
 };
 
 export default QoinAPI 
