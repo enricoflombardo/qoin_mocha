@@ -78,7 +78,7 @@ describe.only('Web', () => {
     it('Update Voucher', async () => {
         const id_voucher = await Getid_voucher();
         const token = await Get_token();
-        const response = await QoinAPI.penerbit(data.VALID_UPDATEVOUCHER, token) //hit API
+        const response = await QoinAPI.penerbit(id_voucher, data.VALID_UPDATEVOUCHER, token) //hit API
 
         assert.equal(response.status, 200);
     
@@ -94,7 +94,81 @@ describe.only('Web', () => {
         // expect(response.data).to.be.jsonSchema(schema.VALIDATE_PENERBIT_SCHEMA) //Call JSON Schema
     });
 
+    it('Get Program Bantuan', async() => {x
+        const token = await Get_token();
+        const response = await QoinAPI.listbansos(token)
 
+        assert.equal(response.status, 200);
+
+        //expect(response.data).to.be.jsonSchema(schema.) // call JSON Schema
+    });
+
+    it('Read Daftar Program Bantuan', async() => {
+        const token = await Get_token();
+        const response = await QoinAPI.listbansos(token);
+
+        assert.equal(response.status, 200);
+
+        //expect(response.data).to.be.jsonSchema(schema.) // call JSON Schema
+    });
+
+    it('Read List Penerima', async() => {
+        const token = await Get_token();
+        const id_program = Getid();
+        const response = await QoinAPI.listpenerimabansos(id_program, token);
+
+        assert.equal(response.status, 200)
+
+        //expect(response.data).to.be.jsonSchema(schema.) // call JSON Schema
+    });
+
+    it('Read Voucher Bantuan', async() => {
+        const id_program = Getid();
+        const token = Get_token()
+        const response = await QoinAPI.listvoucherbansos(id_program, token);
+
+        assert.equal(response.status, 200);
+
+        //expect(response.data).to.be.jsonSchema(schema.) // call JSON Schema
+    });
+
+    it('Find Penerima Bansos Berdasarkan Nama', async() => {
+        const token = await Get_token();
+        const response = await QoinAPI.listbansospenerima(token);
+
+        assert.equal(response.status, 200)
+
+        //expect(response.data).to.be.jsonSchema(schema.) // call JSON Schema
+    });
+
+    it('Read Detail Data Penerima Bansos', async() => {
+        const id_penerima = await Getid()
+        const token = await Get_token()
+        const response = await QoinAPI.BansosUser(id_penerima, token)
+
+        assert.equal(response.status, 200)
+
+        //expect(response.data).to.be.jsonSchema(schema.) // call JSON Schema
+    });
+
+    it('Read List Program Bantuan Yang Diterima', async() => {
+        const id_bansos = await Getid()
+        const id_user = await Getid()
+        const token = await Get_token()
+        const response = await QoinAPI.listvoucheruser(id_bansos, id_user, token)
+
+        assert.equal(response.status, 200)
+
+        //expect(response.data).to.be.jsonSchema(schema.) // call JSON Schema
+    });
+
+    it('Reedem Voucher Bansos', async() => {
+        const token = await Get_token()
+        const response = await QoinAPI.redeemvoucher(token)
+
+        assert.equal(response.status, 200)
+
+        //expect(response.data).to.be.jsonSchema(schema.) // call JSON Schema
+    });
 });
-
 // export default IssuerCode 
