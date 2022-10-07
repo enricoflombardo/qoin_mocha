@@ -53,57 +53,43 @@ export const VALID_MULTIVOUCHER = {
 };
 
 export const VALID_VOUCHER = {
-    "IssuerId": id,
-    "MerchantCode": IssuerCode,
+    "IssuerId": "1",
+    "MerchantCode": "VNTR",
     "PrefixCode": "VCH12",
-    "Start": "0",
-    "End": "20",
-    "VoucherName": "VOUCHER BERAS 10 KG",
+    "Start": "5",
+    "End": "9",
+    "VoucherName": "Voucher Active",
     "VoucherType": "1",
     "AmountValue": "10000",
-    "VoucherDesc": "Ini voucher beras",
-    "VoucherTC": "S&K berlaku",
+    "VoucherDesc": "Voucher Mocha",
+    "VoucherTC": "Syarat dan Ketentuan",
     "StartDate": "2022-01-01",
     "EndDate": "2022-12-30",
     "Status": "2",
-    "Distributed": "20"
+    "Distributed": "1000"
 };
 
 export const  VALID_UPDATEVOUCHER = {
-    "IssuerId": id,
-    "MerchantCode": IssuerCode,
-    "PrefixCode": PrefixCode,
-    "Start": "0",
-    "End": "20",
-    "VoucherName": "VOUCHER BERAS 10 KG",
+    "IssuerId": "1",
+    "MerchantCode": "VNTR",
+    "PrefixCode": "VCH12",
+    "Start": "5",
+    "End": "9",
+    "VoucherName": "Voucher Active",
     "VoucherType": "1",
     "AmountValue": "10000",
-    "VoucherDesc": "Ini voucher beras",
-    "VoucherTC": "S&K berlaku",
+    "VoucherDesc": "Voucher Mocha",
+    "VoucherTC": "Syarat dan Ketentuan",
     "StartDate": "2022-01-01",
     "EndDate": "2022-12-30",
     "Status": "2",
-    "Distributed": "20"
+    "Distributed": "1000"
 };
-
-export const VALID_BANSOS = {
-    "nama_program": "BANSOS BERAS",
-    "tanggal_mulai": "2022-01-01",
-    "tanggal_selesai": "2022-12-31",
-    "excel": "C:\Users\USER\Downloads\tmp_bansos.xlsx",
-    "penyelenggara": IssuerName,
-    "kode_penyelenggara": IssuerCode,
-    "validasi_kk": 0,
-    "status": 1,
-    "m_issuer_id": id,
-    "voucher": [PrefixCode],
-    "validasi_id": 0
-}
 
 export const VALID_REDEEMVOUCHER = {
     "expired_date": 1662536112333,
     "install_id": "-",
     "is_qrcode": "0",
-    "kode_voucher": KodeVoucher,
-    "prefix_code": PrefixCode
+    "kode_voucher": "",
+    "prefix_code": ""
 };

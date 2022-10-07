@@ -1,23 +1,49 @@
 import chai,{ assert,expect } from 'chai';
+import chaiExclude from 'chai-exclude';
 import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '$root/pages/SentraLokasi_Lokasi.api'; //import endpoint API
 import * as data from '$root/data/SentraLokasi_Lokasi.data'; //import data
 import * as schema from '$root/schema/SentaLokasi_Lokasi.schema'; //import schema
+import Getid_Lokasi from '$root/helper/helper-sentraLokasi'; //import id
+import GetID_Lokasi from '$root/helper/get-id-lokasi';
 
 chai.use(jsonSchema)
+chai.use(chaiExclude)
 
 describe('Web lokasi', () => {
 
     // Engineer mas sase
 
-    it('Add lokasi', async() => {
+    it.only('Add lokasi', async() => {
         const response = await QoinAPI.addLokasi(data.VALID_ADDLOKASI)
 
         //result
         assert.equal(response.status, 200)
 
         //schema belum nyoba ga brani
-        //expect(response.data).to.be.jsonSchema(schema)
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDLOKASI_SCHEMA)
+
+        let resultObject = {};
+        Object.keys(response.data.data).map((key) => {
+            resultObject = {
+                ...resultObject,
+                ['data']:{...response.data.data['latitude'], ...response.data.data['longitude'], ...response.data.data['m_lokasi_kategori_id'], ...response.data.data['bahasa'],
+                ...response.data.data['name'], ...response.data.data['description']}
+            }
+            return
+        });
+
+        const data_res = Object.fromEntries(
+            Object.entries(resultObject.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
+        );
+
+        const data_in = Object.fromEntries(
+            Object.entries(data.VALID_ADDLOKASI).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
+        );
+
+        assert.deepEqualExcluding(data_res, data_in ['id'])
+
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDLOKASI_SCHEMA);
     });
 
     it('Add multi lokasi', async() => {
@@ -41,7 +67,8 @@ describe('Web lokasi', () => {
     });
 
     it('Edit lokasi', async() => {
-        const response = await QoinAPI.updateLokasi(data.VALID_PUTLOKASI)
+        const id = await Getid_Lokasi()
+        const response = await QoinAPI.updateLokasi(id, data.VALID_PUTLOKASI)
 
         //result
         assert.equal(response.status, 200)
@@ -112,7 +139,8 @@ describe('Web lokasi', () => {
     });
 
     it('Hapus lokasi', async() => {
-        const response = await QoinAPI.deleteLokasi()
+        const id = await Getid_Lokasi()
+        const response = await QoinAPI.deleteLokasi(id)
 
         //result
         assert.equal(response.status, 200)

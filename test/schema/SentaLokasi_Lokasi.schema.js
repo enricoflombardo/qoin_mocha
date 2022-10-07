@@ -4366,3 +4366,140 @@ export const VALIDATE_KATEGORIBYID_SCHEMA = {
         }
     }]
 }
+
+export const VALIDATE_ADDLOKASI_SCHEMA = {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "data",
+        "fasilitas"
+    ],
+    "properties": {
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "latitude",
+                "longitude",
+                "m_lokasi_kategori_id",
+                "bahasa",
+                "name",
+                "description"
+            ],
+            "properties": {
+                "latitude": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The latitude Schema",
+                    "examples": [
+                        "-7.942348725600281"
+                    ]
+                },
+                "longitude": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The longitude Schema",
+                    "examples": [
+                        "112.62298581228141"
+                    ]
+                },
+                "m_lokasi_kategori_id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The m_lokasi_kategori_id Schema",
+                    "examples": [
+                        1
+                    ]
+                },
+                "bahasa": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The bahasa Schema",
+                    "examples": [
+                        "id"
+                    ]
+                },
+                "name": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The name Schema",
+                    "examples": [
+                        "Rumah Sakit Venturo 2"
+                    ]
+                },
+                "description": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The description Schema",
+                    "examples": [
+                        "Ini Cabang Rumah Sakit Venturo"
+                    ]
+                }
+            },
+            "examples": [{
+                "latitude": "-7.942348725600281",
+                "longitude": "112.62298581228141",
+                "m_lokasi_kategori_id": 1,
+                "bahasa": "id",
+                "name": "Rumah Sakit Venturo 2",
+                "description": "Ini Cabang Rumah Sakit Venturo"
+            }]
+        },
+        "fasilitas": {
+            "type": "array",
+            "default": [],
+            "title": "The fasilitas Schema",
+            "items": {
+                "type": "object",
+                "title": "A Schema",
+                "required": [
+                    "name"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "The name Schema",
+                        "examples": [
+                            "UGD",
+                            "USG"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "name": "UGD"
+                },
+                {
+                    "name": "USG"
+                }]
+            },
+            "examples": [
+                [{
+                    "name": "UGD"
+                },
+                {
+                    "name": "USG"
+                }]
+            ]
+        }
+    },
+    "examples": [{
+        "data": {
+            "latitude": "-7.942348725600281",
+            "longitude": "112.62298581228141",
+            "m_lokasi_kategori_id": 1,
+            "bahasa": "id",
+            "name": "Rumah Sakit Venturo 2",
+            "description": "Ini Cabang Rumah Sakit Venturo"
+        },
+        "fasilitas": [{
+            "name": "UGD"
+        },
+        {
+            "name": "USG"
+        }]
+    }]
+}

@@ -3,6 +3,10 @@ import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '../pages/SentraLokasi_Kategori.api'; //import endpoint API
 import * as data from '$root/data/SentraLokasi_Kategori.data'; //import data
 import * as schema from '$root/schema/SentraLokasi_Kategori.schema'; //import schema
+<<<<<<< HEAD
+=======
+import Getid from '$root/helper/helper-sentraLokasi'; //import id
+>>>>>>> 675ff4b4d91557b61d21d142e1563caa6bd392ff
 
 chai.use(jsonSchema)
 
@@ -30,12 +34,18 @@ describe('Web kategori lokasi', () => {
     });
 
     it('Update kategori lokasi', async() => {
+<<<<<<< HEAD
         const response = await QoinAPI.updatekategoriLokasi(data.VALID_UPDATEKATEGORI)
+=======
+        const id = await Getid()
+        const response = await QoinAPI.updatekategoriLokasi(id, data.VALID_UPDATEKATEGORI)
+>>>>>>> 675ff4b4d91557b61d21d142e1563caa6bd392ff
 
         //result
         assert.equal(response.status, 200)
 
         //schema
+<<<<<<< HEAD
         //expect(response.data).to.be.jsonSchema(schema.)
     });
 
@@ -51,6 +61,27 @@ describe('Web kategori lokasi', () => {
 
     it('Delete kategori lokasi', async() => {
         const response = await QoinAPI.deletekategoriLokasi()
+=======
+        // expect(response.data).to.be.jsonSchema(schema.)
+
+        // console.log(response.data.data)
+    });
+
+    // it('Read kategori lokasi', async() => {
+    //     const id = await Getid()
+    //     const response = await QoinAPI.readkategoriLokasi(id)
+
+    //     // result
+    //     assert.equal(response.status, 200)
+
+    //     //schema
+    //     expect(response.data).to.be.jsonSchema(schema.VALIDATE_READKATEGORILOKASI)
+    // });
+
+    it('Delete kategori lokasi', async() => {
+        const id = await Getid()
+        const response = await QoinAPI.deletekategoriLokasi(id)
+>>>>>>> 675ff4b4d91557b61d21d142e1563caa6bd392ff
 
         //result
         assert.equal(response.status, 200)
@@ -65,6 +96,11 @@ describe('Mobile kategori lokasi', (done) => {
         const response = await QoinAPI.get_lokasi();
     
         assert.equal(response.status, 200)
+<<<<<<< HEAD
+=======
+        // console.log(response.data.data)
+
+>>>>>>> 675ff4b4d91557b61d21d142e1563caa6bd392ff
         //schema
         //expect(response.data).to.be.jsonSchema(schema.VALIDATE_LOKASI_SCHEMA)
     });

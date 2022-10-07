@@ -1,3 +1,7 @@
+import Getid from "$root/helper/get-id-lokasi";
+
+const id_lokasi = await GetID_Lokasi()
+
 export const VALID_ADDMULTILOKASI = [
     {
         "data":[
