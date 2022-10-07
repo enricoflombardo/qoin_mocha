@@ -91,10 +91,9 @@ describe.only('Web', () => {
         // expect(response.data).to.be.jsonSchema(schema.VALIDATE_PENERBIT_SCHEMA) //Call JSON Schema
     });
 
-    it('Get Program Bantuan', async() => {
-        const id_program = await Getid();
+    it('Get Program Bantuan', async() => {x
         const token = await Get_token();
-        const response = await QoinAPI.listbansos(id_program, token)
+        const response = await QoinAPI.listbansos(token)
 
         assert.equal(response.status, 200);
 
@@ -102,9 +101,8 @@ describe.only('Web', () => {
     });
 
     it('Read Daftar Program Bantuan', async() => {
-        const id_bansos = await Getid();
         const token = await Get_token();
-        const response = await QoinAPI.listbansos(id_bansos, token);
+        const response = await QoinAPI.listbansos(token);
 
         assert.equal(response.status, 200);
 
@@ -113,8 +111,8 @@ describe.only('Web', () => {
 
     it('Read List Penerima', async() => {
         const token = await Get_token();
-        const id_penerima = Getid();
-        const response = await QoinAPI.listpenerimabansos(id_penerima, token);
+        const id_program = Getid();
+        const response = await QoinAPI.listpenerimabansos(id_program, token);
 
         assert.equal(response.status, 200)
 
@@ -122,9 +120,9 @@ describe.only('Web', () => {
     });
 
     it('Read Voucher Bantuan', async() => {
-        const id_voucher = Getid();
+        const id_program = Getid();
         const token = Get_token()
-        const response = await QoinAPI.listvoucherbansos(id_voucher, token);
+        const response = await QoinAPI.listvoucherbansos(id_program, token);
 
         assert.equal(response.status, 200);
 
@@ -132,9 +130,8 @@ describe.only('Web', () => {
     });
 
     it('Find Penerima Bansos Berdasarkan Nama', async() => {
-        const id_penerima = await Getid();
         const token = await Get_token();
-        const response = await QoinAPI.listbansospenerima(id_penerima, token);
+        const response = await QoinAPI.listbansospenerima(token);
 
         assert.equal(response.status, 200)
 
@@ -144,7 +141,7 @@ describe.only('Web', () => {
     it('Read Detail Data Penerima Bansos', async() => {
         const id_penerima = await Getid()
         const token = await Get_token()
-        const response = await QoinAPI.getBansosUser(id_penerima, token)
+        const response = await QoinAPI.BansosUser(id_penerima, token)
 
         assert.equal(response.status, 200)
 
@@ -153,8 +150,9 @@ describe.only('Web', () => {
 
     it('Read List Program Bantuan Yang Diterima', async() => {
         const id_bansos = await Getid()
+        const id_user = await Getid()
         const token = await Get_token()
-        const response = await QoinAPI.listbansospenerima(id_bansos, token)
+        const response = await QoinAPI.listvoucheruser(id_bansos, id_user, token)
 
         assert.equal(response.status, 200)
 
@@ -162,9 +160,8 @@ describe.only('Web', () => {
     });
 
     it('Reedem Voucher Bansos', async() => {
-        const id_voucher = await Getid()
         const token = await Get_token()
-        const response = await QoinAPI.redeemvoucher(id_voucher, token)
+        const response = await QoinAPI.redeemvoucher(token)
 
         assert.equal(response.status, 200)
 
