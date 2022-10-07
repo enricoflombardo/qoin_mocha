@@ -3,6 +3,7 @@ import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '$root/pages/SentraLokasi_Lokasi.api'; //import endpoint API
 import * as data from '$root/data/SentraLokasi_Lokasi.data'; //import data
 import * as schema from '$root/schema/SentaLokasi_Lokasi.schema'; //import schema
+import Getid_Lokasi from '$root/helper/helper-sentraLokasi'; //import id
 
 chai.use(jsonSchema)
 
@@ -41,7 +42,8 @@ describe('Web lokasi', () => {
     });
 
     it('Edit lokasi', async() => {
-        const response = await QoinAPI.updateLokasi(data.VALID_PUTLOKASI)
+        const id = await Getid_Lokasi()
+        const response = await QoinAPI.updateLokasi(id, data.VALID_PUTLOKASI)
 
         //result
         assert.equal(response.status, 200)
@@ -112,7 +114,8 @@ describe('Web lokasi', () => {
     });
 
     it('Hapus lokasi', async() => {
-        const response = await QoinAPI.deleteLokasi()
+        const id = await Getid_Lokasi()
+        const response = await QoinAPI.deleteLokasi(id)
 
         //result
         assert.equal(response.status, 200)

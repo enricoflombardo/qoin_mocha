@@ -8,11 +8,11 @@ const QoinAPI = {
     get_lokasi_byid: () => BaseAPI.get('/get-lokasi-byId/1?lat=-7.938337447142101&long=112.59039767966426&bahasa=id'),
 
     //web
-    addLokasi: (data) => BaseAPI.post('/Lokasi', data),
+    addLokasi: (data) => BaseAPI_JSON.post('/Lokasi', data),
     addMultilokasi: (data) => BaseAPI_JSON.post('/multiLokasi', data),
     getLokasi: () => BaseAPI.get('/Lokasi'),
-    updateLokasi: (data) => BaseAPI.put('/lokasi', data),
-    deleteLokasi: (data) => BaseAPI.delete('lokasi', data),
+    updateLokasi: (id, data) => BaseAPI_JSON.put('/lokasi/' + id, data),
+    deleteLokasi: (id, data) => BaseAPI.delete('/lokasi/' + id, data),
     addImagelokasi: (data) => BaseAPI.post('/lokasiAddImage/1', data),
     getImagelokasi: () => BaseAPI.get('/lokasiGetImage/1'),
     deleteImagelokasi: () => BaseAPI.delete('/lokasiDeleteImage/18'),
