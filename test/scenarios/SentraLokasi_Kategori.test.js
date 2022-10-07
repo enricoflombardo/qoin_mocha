@@ -1,12 +1,14 @@
 import chai,{ assert,expect } from 'chai';
 import jsonSchema from 'chai-json-schema';//import json schema
-import QoinAPI from '$root/pages/SentraLokasi_Kategori_WebAdmin.api'; //import endpoint API
-import * as data from '$root/data/SentraLokasi_Kategori_WebAdmin.data'; //import data
-import * as schema from '$root/schema/SentraLokasi_Kategori_WebAdmin.shema'; //import schema
+import QoinAPI from '../pages/SentraLokasi_Kategori.api'; //import endpoint API
+import * as data from '$root/data/SentraLokasi_Kategori.data'; //import data
+import * as schema from '$root/schema/SentraLokasi_Kategori.schema'; //import schema
 
 chai.use(jsonSchema)
 
-describe('Web', () => {
+// Website
+
+describe('Web kategori lokasi', () => {
     it('Add kategori lokasi', async() => {
         const response = await QoinAPI.createkategoriLokasi(data.VALID_ADDKATEGORI)
 
@@ -37,13 +39,6 @@ describe('Web', () => {
         //expect(response.data).to.be.jsonSchema(schema.)
     });
 
-    it('Delete kategori lokasi', async() => {
-        const response = await QoinAPI.deletekategoriLokasi()
-
-        //result
-        assert.equal(response.status, 200)
-    });
-
     it('Read kategori lokasi', async() => {
         const response = await QoinAPI.readkategoriLokasi()
 
@@ -52,5 +47,25 @@ describe('Web', () => {
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_READKATEGORILOKASI)
+    });
+
+    it('Delete kategori lokasi', async() => {
+        const response = await QoinAPI.deletekategoriLokasi()
+
+        //result
+        assert.equal(response.status, 200)
+    });
+});
+
+// Mobile
+
+describe('Mobile kategori lokasi', (done) => {
+
+    it('Get kategori lokasi', async ()=> {
+        const response = await QoinAPI.get_lokasi();
+    
+        assert.equal(response.status, 200)
+        //schema
+        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_LOKASI_SCHEMA)
     });
 });
