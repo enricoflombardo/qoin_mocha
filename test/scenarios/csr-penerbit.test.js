@@ -168,6 +168,4 @@ describe.only('Web', () => {
         //expect(response.data).to.be.jsonSchema(schema.) // call JSON Schema
     });
 });
-
-// penerbit -> voucher -> program bantuan -> penerima bantuan, jadi stiap fiturnya saling membutuhkan id
 // export default IssuerCode 
