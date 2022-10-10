@@ -1,13 +1,17 @@
 import chai,{ assert,expect } from 'chai';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import chaiExclude from 'chai-exclude';
 =======
 >>>>>>> 81c7e05e77500a5fbe7ed9b1390ae4245090184a
+=======
+>>>>>>> c938d786cd2856a91202eac645ca8da031373cb9
 import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '$root/pages/SentraLokasi_Lokasi.api'; //import endpoint API
 import * as data from '$root/data/SentraLokasi_Lokasi.data'; //import data
 import * as schema from '$root/schema/SentaLokasi_Lokasi.schema'; //import schema
 import Getid_Lokasi from '$root/helper/helper-sentraLokasi'; //import id
+<<<<<<< HEAD
 <<<<<<< HEAD
 import GetID_Lokasi from '$root/helper/get-id-lokasi';
 
@@ -17,22 +21,31 @@ chai.use(chaiExclude)
 
 chai.use(jsonSchema)
 >>>>>>> 81c7e05e77500a5fbe7ed9b1390ae4245090184a
+=======
+
+chai.use(jsonSchema)
+>>>>>>> c938d786cd2856a91202eac645ca8da031373cb9
 
 describe('Web lokasi', () => {
 
     // Engineer mas sase
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     it.only('Add lokasi', async() => {
 =======
     it('Add lokasi', async() => {
 >>>>>>> 81c7e05e77500a5fbe7ed9b1390ae4245090184a
+=======
+    it('Add lokasi', async() => {
+>>>>>>> c938d786cd2856a91202eac645ca8da031373cb9
         const response = await QoinAPI.addLokasi(data.VALID_ADDLOKASI)
 
         //result
         assert.equal(response.status, 200)
 
         //schema belum nyoba ga brani
+<<<<<<< HEAD
 <<<<<<< HEAD
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDLOKASI_SCHEMA)
 
@@ -60,6 +73,9 @@ describe('Web lokasi', () => {
 =======
         //expect(response.data).to.be.jsonSchema(schema)
 >>>>>>> 81c7e05e77500a5fbe7ed9b1390ae4245090184a
+=======
+        //expect(response.data).to.be.jsonSchema(schema)
+>>>>>>> c938d786cd2856a91202eac645ca8da031373cb9
     });
 
     it('Add multi lokasi', async() => {

@@ -18,72 +18,72 @@ const QoinAPI = {
             Authorization: "Bearer "+ token
         }
     }),
-    getid: () => BaseAPI.get('/Penerbit/List?limit=1', {
+    getid: (token) => BaseAPI.get('/Penerbit/List?limit=1', {
         headers : {
             Authorization: "Bearer "+ token
         }
     }),
-    getpenerbit: (id) => BaseAPI.get('/Penerbit/'+ id, {
+    getpenerbit: (id, token) => BaseAPI.get('/Penerbit/'+ id, {
         headers : {
             Authorization: "Bearer "+ token
         }
     }),
-    updatepenerbit: (id, data) => BaseAPI.put('/Penerbit/'+ id, data, {
+    updatepenerbit: (id, data, token) => BaseAPI.put('/Penerbit/'+ id, data, {
         headers : {
             Authorization: "Bearer "+ token
         }
     }),
-    voucher: (data) => BaseAPI.post('/Voucher', data, {
+    voucher: (data, token) => BaseAPI.post('/Voucher', data, {
         headers : {
             Authorization: "Bearer "+ token
         }
     }), //id_voucher
-    getvoucher: (id) => BaseAPI.get('/Voucher/'+ id, {
+    getvoucher: (id, token) => BaseAPI.get('/Voucher/'+ id, {
         headers : {
             Authorization: "Bearer "+ token
         }
     }),
-    updatevoucher: (id_voucher, data) => BaseAPI.put('/Voucher/'+ id_voucher, data, {
+    updatevoucher: (id_voucher, data, token) => BaseAPI.put('/Voucher/'+ id_voucher, data, {
         headers : {
             Authorization: "Bearer "+ token
         }
     }),
-    programbantuan: (data) => BaseAPI.post('/create-bansos-multi', data, {
+    programbantuan: (data, token) => BaseAPI.post('/create-bansos-multi', data, {
         headers : {
             Authorization: "Bearer "+ token
         }
     }), 
-    listbansos: () => BaseAPI.get('/listBansos?limit=1', {
+    listbansos: (token) => BaseAPI.get('/listBansos?limit=1', {
         headers : {
             Authorization: "Bearer "+ token
         }
     }), //id_program
-    listpenerimabansos: (id_program) => BaseAPI.get('/listPenerimaByProgram/'+ id_program, {
+    listpenerimabansos: (id_program, token) => BaseAPI.get('/listPenerimaByProgram/'+ id_program, {
         headers : {
             Authorization: "Bearer "+ token
         }
     }),
-    listvoucherbansos: (id_program) => BaseAPI.get('/listVoucherByBansos/'+ id_program, {
+    listvoucherbansos: (id_program, token) => BaseAPI.get('/listVoucherByBansos/'+ id_program, {
         headers : {
             Authorization: "Bearer "+ token
         }
     }),
-    listbansospenerima: () => BaseAPI.get('/listBansosPenerima', {
+    listbansospenerima: (token) => BaseAPI.get('/listBansosPenerima', {
         headers : {
             Authorization: "Bearer "+ token
         }
     }), //id_user dan id_penerima
-    bansosuser: (id_penerima) => BaseAPI.get('/getBansosUser/'+ id_penerima, {
+    bansosuser: (id_penerima, token) => BaseAPI.get('/getBansosUser/'+ id_penerima, {
         headers : {
             Authorization: "Bearer "+ token
         }
     }), //id_bansos
-    listvoucheruser: (id_bansos, id_user) => BaseAPI.get('/listVoucherByBansosAndUserId/'+ id_bansos +'/'+ id_user, {
+    listvoucheruser: (id_bansos, id_user, token) => BaseAPI.get('/listVoucherByBansosAndUserId/'+ id_bansos +'/'+ id_user, {
         headers : {
             Authorization: "Bearer "+ token
         }
     }),
-    redeemvoucher: (data) => BaseAPI_JSON.put('/redeemVoucher', data, {
+    redeemvoucher: (data, token) => BaseAPI_JSON.put('/redeemVoucher', data, {
         headers : {
             Authorization: "Bearer "+ token
         }
