@@ -8,7 +8,7 @@ import Get_token from '$root/helper/csr-token'; //import token
 
 chai.use(jsonSchema)
 
-describe.only('Web', () => {
+describe('Web', () => {
     it('Login', async () => {
         const response = await QoinAPI.login(data.VALID_LOGIN) //hit API
         
