@@ -1,8 +1,8 @@
 import QoinAPI from '$root/pages/csr-penerbit.api'; //import endpoint API
 
 export default async function Getid(){
-    const response = await QoinAPI.getid() //hit API
-    let IDrespons = response.data.data.list[0].id
+    const response = await QoinAPI.penerbit() //hit API
+    let IDrespons = response.data.data.id
     return IDrespons 
 };
 
