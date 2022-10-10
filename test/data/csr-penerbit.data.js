@@ -1,4 +1,4 @@
-import Getid, {Getissuer_code, Getissuer_name, Getprefix_code} from '$root/helper/helper-csr';
+import Getid, {Getissuer_code, Getissuer_name, Getprefix_code, kode_voucher} from '$root/helper/helper-csr';
 
 const id = await Getid()
 const IssuerCode = await Getissuer_code()
@@ -98,7 +98,7 @@ export const VALID_BANSOS = {
     "m_issuer_id": id,
     "voucher": [PrefixCode],
     "validasi_id": 0
-}
+};
 
 export const VALID_REDEEMVOUCHER = {
     "expired_date": 1662536112333,
