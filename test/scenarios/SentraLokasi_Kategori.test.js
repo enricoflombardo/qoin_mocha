@@ -4,6 +4,8 @@ import QoinAPI from '../pages/SentraLokasi_Kategori.api'; //import endpoint API
 import * as data from '$root/data/SentraLokasi_Kategori.data'; //import data
 import * as schema from '$root/schema/SentraLokasi_Kategori.schema'; //import schema
 import Getid from '$root/helper/helper-sentraLokasi'; //import id
+import Gettoken from '$root/helper/csr-token';
+import Get_token from '$root/helper/csr-token';
 
 chai.use(jsonSchema)
 
@@ -67,7 +69,7 @@ describe('Web kategori lokasi', () => {
 
 describe('Mobile kategori lokasi', (done) => {
 
-    it('Get kategori lokasi', async ()=> {
+    it.only('Get kategori lokasi', async ()=> {
         const response = await QoinAPI.get_lokasi();
     
         assert.equal(response.status, 200)
@@ -75,5 +77,7 @@ describe('Mobile kategori lokasi', (done) => {
 
         //schema
         //expect(response.data).to.be.jsonSchema(schema.VALIDATE_LOKASI_SCHEMA)
+        const token = await Get_token()
+        console.log(token)
     });
 });
