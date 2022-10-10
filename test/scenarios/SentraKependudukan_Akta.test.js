@@ -22,7 +22,8 @@ describe('Mobile', () => {
         resultObject = {
             ...resultObject,
             ['data']: {...response.data.data['rincian_pemohon'], ...response.data.data['rincian_pelapor'], ...response.data.data['rincian_kk'], 
-            ...response.data.data['rincian_biodata_anak'], ...response.data.data['rincian_ibu'], ...response.data.data['rincian_ayah'], ...response.data.data['rincian_kedatangan']} // merge two or more objects 
+            ...response.data.data['rincian_biodata_anak'], ...response.data.data['rincian_ibu'], ...response.data.data['rincian_ayah'], ...response.data.data['rincian_kedatangan']}
+             // merge two or more objects 
         }
         return;
         });

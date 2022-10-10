@@ -4366,3 +4366,171 @@ export const VALIDATE_KATEGORIBYID_SCHEMA = {
         }
     }]
 }
+
+export const VALIDATE_UPDATELOKASI_SCHEMA = {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "data",
+        "fasilitas"
+    ],
+    "properties": {
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "id",
+                "latitude",
+                "longitude",
+                "m_lokasi_kategori_id",
+                "bahasa",
+                "name"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The id Schema",
+                    "examples": [
+                        6
+                    ]
+                },
+                "latitude": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The latitude Schema",
+                    "examples": [
+                        "-7.264188839148579"
+                    ]
+                },
+                "longitude": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The longitude Schema",
+                    "examples": [
+                        "112.69104859142386"
+                    ]
+                },
+                "m_lokasi_kategori_id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The m_lokasi_kategori_id Schema",
+                    "examples": [
+                        1
+                    ]
+                },
+                "bahasa": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The bahasa Schema",
+                    "examples": [
+                        "id"
+                    ]
+                },
+                "name": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The name Schema",
+                    "examples": [
+                        "Mitra Keluarga Surabaya"
+                    ]
+                }
+            },
+            "examples": [{
+                "id": 6,
+                "latitude": "-7.264188839148579",
+                "longitude": "112.69104859142386",
+                "m_lokasi_kategori_id": 1,
+                "bahasa": "id",
+                "name": "Mitra Keluarga Surabaya"
+            }]
+        },
+        "fasilitas": {
+            "type": "array",
+            "default": [],
+            "title": "The fasilitas Schema",
+            "items": {
+                "type": "object",
+                "title": "A Schema",
+                "required": [
+                    "name"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "The name Schema",
+                        "examples": [
+                            "UGD",
+                            "USG"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "name": "UGD"
+                },
+                {
+                    "name": "USG"
+                }]
+            },
+            "examples": [
+                [{
+                    "name": "UGD"
+                },
+                {
+                    "name": "USG"
+                }]
+            ]
+        }
+    },
+    "examples": [{
+        "data": {
+            "id": 6,
+            "latitude": "-7.264188839148579",
+            "longitude": "112.69104859142386",
+            "m_lokasi_kategori_id": 1,
+            "bahasa": "id",
+            "name": "Mitra Keluarga Surabaya"
+        },
+        "fasilitas": [{
+            "name": "UGD"
+        },
+        {
+            "name": "USG"
+        }]
+    }]
+}
+
+export const VALIDATE_ADDLOKASI_SCHEMA = {
+    "status_code": 200,
+    "message": "Success",
+    "data": {
+      "data": {
+        "alamat": null,
+        "bahasa": "id",
+        "created_at": "2022-06-09T09:04:26+07:00",
+        "deleted_at": null,
+        "description": "Ini Cabang Rumah Sakit Venturo",
+        "id": 18,
+        "is_active": 1,
+        "latitude": "-7.942348725600281",
+        "longitude": "112.62298581228141",
+        "m_lokasi_kategori_id": 1,
+        "name": "Rumah Sakit Venturo 2",
+        "updated_at": "2022-06-09T09:04:26+07:00"
+      },
+      "fasilitas": [
+        {
+          "m_lokasi_id": 18,
+          "name": "UGD"
+        },
+        {
+          "m_lokasi_id": 18,
+          "name": "USG"
+        }
+      ]
+    }
+  }

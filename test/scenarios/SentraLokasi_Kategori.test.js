@@ -3,18 +3,7 @@ import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '../pages/SentraLokasi_Kategori.api'; //import endpoint API
 import * as data from '$root/data/SentraLokasi_Kategori.data'; //import data
 import * as schema from '$root/schema/SentraLokasi_Kategori.schema'; //import schema
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import Getid from '$root/helper/helper-sentraLokasi'; //import id
->>>>>>> 675ff4b4d91557b61d21d142e1563caa6bd392ff
-=======
-import Getid from '$root/helper/helper-sentraLokasi'; //import id
->>>>>>> 81c7e05e77500a5fbe7ed9b1390ae4245090184a
-=======
-import Getid from '$root/helper/helper-sentraLokasi'; //import id
->>>>>>> c938d786cd2856a91202eac645ca8da031373cb9
 
 chai.use(jsonSchema)
 
@@ -42,30 +31,11 @@ describe('Web kategori lokasi', () => {
     });
 
     it('Update kategori lokasi', async() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        const response = await QoinAPI.updatekategoriLokasi(data.VALID_UPDATEKATEGORI)
-=======
         const id = await Getid()
         const response = await QoinAPI.updatekategoriLokasi(id, data.VALID_UPDATEKATEGORI)
->>>>>>> 675ff4b4d91557b61d21d142e1563caa6bd392ff
-=======
-        const id = await Getid()
-        const response = await QoinAPI.updatekategoriLokasi(id, data.VALID_UPDATEKATEGORI)
->>>>>>> 81c7e05e77500a5fbe7ed9b1390ae4245090184a
-=======
-        const id = await Getid()
-        const response = await QoinAPI.updatekategoriLokasi(id, data.VALID_UPDATEKATEGORI)
->>>>>>> c938d786cd2856a91202eac645ca8da031373cb9
-
         //result
         assert.equal(response.status, 200)
-
         //schema
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         //expect(response.data).to.be.jsonSchema(schema.)
     });
 
@@ -81,11 +51,6 @@ describe('Web kategori lokasi', () => {
 
     it('Delete kategori lokasi', async() => {
         const response = await QoinAPI.deletekategoriLokasi()
-=======
-=======
->>>>>>> 81c7e05e77500a5fbe7ed9b1390ae4245090184a
-=======
->>>>>>> c938d786cd2856a91202eac645ca8da031373cb9
         // expect(response.data).to.be.jsonSchema(schema.)
 
         // console.log(response.data.data)
@@ -105,14 +70,6 @@ describe('Web kategori lokasi', () => {
     it('Delete kategori lokasi', async() => {
         const id = await Getid()
         const response = await QoinAPI.deletekategoriLokasi(id)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 675ff4b4d91557b61d21d142e1563caa6bd392ff
-=======
->>>>>>> 81c7e05e77500a5fbe7ed9b1390ae4245090184a
-=======
->>>>>>> c938d786cd2856a91202eac645ca8da031373cb9
-
         //result
         assert.equal(response.status, 200)
     });
@@ -126,21 +83,8 @@ describe('Mobile kategori lokasi', (done) => {
         const response = await QoinAPI.get_lokasi();
     
         assert.equal(response.status, 200)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         // console.log(response.data.data)
-
->>>>>>> 675ff4b4d91557b61d21d142e1563caa6bd392ff
-=======
-        // console.log(response.data.data)
-
->>>>>>> 81c7e05e77500a5fbe7ed9b1390ae4245090184a
-=======
-        // console.log(response.data.data)
-
->>>>>>> c938d786cd2856a91202eac645ca8da031373cb9
+        
         //schema
         //expect(response.data).to.be.jsonSchema(schema.VALIDATE_LOKASI_SCHEMA)
     });
