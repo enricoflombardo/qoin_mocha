@@ -69,15 +69,14 @@ describe('Web kategori lokasi', () => {
 
 describe('Mobile kategori lokasi', (done) => {
 
-    it.only('Get kategori lokasi', async ()=> {
+    it('Get kategori lokasi', async ()=> {
         const response = await QoinAPI.get_lokasi();
     
         assert.equal(response.status, 200)
         // console.log(response.data.data)
 
         //schema
-        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_LOKASI_SCHEMA)
-        const token = await Get_token()
-        console.log(token)
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_LOKASI_SCHEMA)
+        
     });
 });
