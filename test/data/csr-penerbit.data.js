@@ -1,4 +1,4 @@
-import Getid, {Getissuer_code, Getissuer_name, Getprefix_code} from '$root/helper/helper-csr';
+import Getid, {Getissuer_code, Getissuer_name, Getprefix_code, kode_voucher} from '$root/helper/helper-csr';
 
 const id = await Getid()
 const IssuerCode = await Getissuer_code()

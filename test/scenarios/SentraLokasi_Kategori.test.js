@@ -69,7 +69,7 @@ describe('Web kategori lokasi', () => {
 
 describe('Mobile kategori lokasi', (done) => {
 
-    it.only('Get kategori lokasi', async ()=> {
+    it('Get kategori lokasi', async ()=> {
         const response = await QoinAPI.get_lokasi();
     
         assert.equal(response.status, 200)
