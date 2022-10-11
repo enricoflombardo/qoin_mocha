@@ -78,8 +78,7 @@ describe('Mobile kategori lokasi', (done) => {
         // console.log(response.data.data)
 
         //schema
-        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_LOKASI_SCHEMA)
-        const token = await Get_token()
-        console.log(token)
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_LOKASI_SCHEMA)
+        
     });
 });
