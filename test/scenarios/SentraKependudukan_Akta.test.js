@@ -99,6 +99,9 @@ describe('Mobile', () => {
         'tgl_lahir_ibu',
         'umur'])
 
+        assert.equal(data_in.berat, data_res.berat_bayi);
+        assert.equal(data_in.dengan_orang_tua, data_res.is_dengan_ortu);
+
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALID_ADD_AKTA_SCHEMA)
 

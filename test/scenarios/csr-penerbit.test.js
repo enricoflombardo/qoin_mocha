@@ -3,8 +3,13 @@ import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '$root/pages/csr-penerbit.api'; //import endpoint API
 import * as data from '$root/data/csr-penerbit.data'; //import data params
 import * as schema from '../schema/csr-penerbit.schema'; //import schema
+<<<<<<< HEAD
 import Getid, {Getid_voucher } from '$root/helper/helper-csr'; //import id
 import Get_token from '$root/helper/csr-token'; //import token
+=======
+import Get_token, {Getid, Getid_voucher, Getid_program, Getid_bansos, Getid_user, Getid_penerima} from '$root/helper/helper-csr'; //import id
+// import Get_token from '$root/helper/csr-token'; //import token
+>>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
 
 chai.use(jsonSchema)
 
@@ -13,9 +18,8 @@ describe.only('Web', () => {
         const response = await QoinAPI.login(data.VALID_LOGIN) //hit API
         
             //result
-            assert.equal(response.status, 202); 
+            assert.equal(response.status, 202) 
             
-
             //schema
             // expect(response.data).to.be.jsonSchema(schema.VALIDATE_LOGIN_SCHEMA)
     });
@@ -113,8 +117,13 @@ describe.only('Web', () => {
     });
 
     it('Read List Penerima', async() => {
+<<<<<<< HEAD
         const token = await Get_token();
         const id_program = Getid();
+=======
+        const id_program = await Getid_program();
+        const token = await Get_token();
+>>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
         const response = await QoinAPI.listpenerimabansos(id_program, token);
 
         assert.equal(response.status, 200)
@@ -123,8 +132,13 @@ describe.only('Web', () => {
     });
 
     it('Read Voucher Bantuan', async() => {
+<<<<<<< HEAD
         const id_program = Getid();
         const token = Get_token()
+=======
+        const id_program = await Getid_program();
+        const token = await Get_token();
+>>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
         const response = await QoinAPI.listvoucherbansos(id_program, token);
 
         assert.equal(response.status, 200);
@@ -142,9 +156,15 @@ describe.only('Web', () => {
     });
 
     it('Read Detail Data Penerima Bansos', async() => {
+<<<<<<< HEAD
         const id_penerima = await Getid()
         const token = await Get_token()
         const response = await QoinAPI.BansosUser(id_penerima, token)
+=======
+        const id_penerima = await Getid_penerima()
+        const token = await Get_token()
+        const response = await QoinAPI.bansosuser(id_penerima, token)
+>>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
 
         assert.equal(response.status, 200)
 
@@ -152,8 +172,13 @@ describe.only('Web', () => {
     });
 
     it('Read List Program Bantuan Yang Diterima', async() => {
+<<<<<<< HEAD
         const id_bansos = await Getid()
         const id_user = await Getid()
+=======
+        const id_bansos = await Getid_bansos()
+        const id_user = await Getid_user()
+>>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
         const token = await Get_token()
         const response = await QoinAPI.listvoucheruser(id_bansos, id_user, token)
 
@@ -171,4 +196,8 @@ describe.only('Web', () => {
         //expect(response.data).to.be.jsonSchema(schema.) // call JSON Schema
     });
 });
+<<<<<<< HEAD
 // export default IssuerCode 
+=======
+// export default IssuerCode 
+>>>>>>> e408fc9422fcafc2520994324e130480a00afbe2

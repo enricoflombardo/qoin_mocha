@@ -1,5 +1,5 @@
 import QoinAPI from '$root/pages/SentraKependudukan_KK.api'; //import endpoint API
-import Getid from '$root/helper/get-id-kk'; //import id
+import Getid from '$root/helper/helper-kk'; //import id
 
 async function Getid_anggota(){
     const id = await Getid()

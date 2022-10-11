@@ -1,10 +1,14 @@
 import chai,{ assert,expect } from 'chai';
+<<<<<<< HEAD
 import chaiExclude from 'chai-exclude';
+=======
+>>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
 import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '$root/pages/SentraLokasi_Lokasi.api'; //import endpoint API
 import * as data from '$root/data/SentraLokasi_Lokasi.data'; //import data
 import * as schema from '$root/schema/SentaLokasi_Lokasi.schema'; //import schema
 import Getid_Lokasi from '$root/helper/helper-sentraLokasi'; //import id
+<<<<<<< HEAD
 import GetID_Lokasi from '$root/helper/get-id-lokasi';
 
 chai.use(jsonSchema)
@@ -14,11 +18,22 @@ describe('Web lokasi', () => {
     // Engineer mas sase
     it.only('Add lokasi', async() => {
         const id = await GetID_Lokasi()
+=======
+
+chai.use(jsonSchema)
+
+describe('Web lokasi', () => {
+
+    // Engineer mas sase
+
+    it('Add lokasi', async() => {
+>>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
         const response = await QoinAPI.addLokasi(data.VALID_ADDLOKASI)
 
         //result
         assert.equal(response.status, 200)
 
+<<<<<<< HEAD
         const data_res = Object.fromEntries(
             Object.entries(response.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
         );
@@ -37,11 +52,19 @@ describe('Web lokasi', () => {
 
     it('Add multi lokasi', async() => {
         const id = GetID_Lokasi()
+=======
+        //schema belum nyoba ga brani
+        //expect(response.data).to.be.jsonSchema(schema)
+    });
+
+    it('Add multi lokasi', async() => {
+>>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
         const response = await QoinAPI.addMultilokasi(data.VALID_ADDMULTILOKASI)
 
         //result
         assert.equal(response.status, 200)
 
+<<<<<<< HEAD
         const data_res = Object.fromEntries(
             Object.entries(response.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
         );
@@ -56,6 +79,10 @@ describe('Web lokasi', () => {
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDSENTRAMULTILOKASI_WEBADMIN_SCHEMA)
+=======
+        //schema
+        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDSENTRAMULTILOKASI_WEBADMIN_SCHEMA)
+>>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
     });
 
     it('Get dan Cek Data Multi Lokasi', async() => {
@@ -69,15 +96,25 @@ describe('Web lokasi', () => {
     });
 
     it('Edit lokasi', async() => {
+<<<<<<< HEAD
         const id = await GetID_Lokasi()
+=======
+        const id = await Getid_Lokasi()
+>>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
         const response = await QoinAPI.updateLokasi(id, data.VALID_PUTLOKASI)
 
         //result
         assert.equal(response.status, 200)
+<<<<<<< HEAD
         assert.equal(response.data.data.updateLokasi.toLowerCase(), data.VALID_PUTLOKASI.updateLokasi.toLowerCase());
 
         //schema BELUM NYOBA JUGA
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_UPDATELOKASI_SCHEMA)
+=======
+
+        //schema BELUM NYOBA JUGA
+        //expect(response.data).to.be.jsonSchema(schema)
+>>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
     });
 
     it('Add lokasi image', async() => {
