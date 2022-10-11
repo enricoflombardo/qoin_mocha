@@ -79,5 +79,5 @@ export const VALID_PUTLOKASI = {
 }
 
 export const VALID_ADDLOCATIONIMAGE = {
-    "picture": "https://cdn.antaranews.com/cache/800x533/2022/06/21/FOTO-Advent.png"
+    "picture": "C:\Users\WINDOWS 10\Downloads\B3V7LzRQ1665044777-04faba2d228b70b6811d0377cb54c32f.jpg"
 }

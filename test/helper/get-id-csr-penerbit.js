@@ -2,6 +2,7 @@ import QoinAPI from '$root/pages/csr-penerbit.api'; //import endpoint API
 
 async function Getid(){
     const response = await QoinAPI.getid() //hit API
+    
     let IDrespons = "3"
     
     if (response.data.data.total_items == 0) {
@@ -11,7 +12,7 @@ async function Getid(){
         // IDrespons = ""
     }
     
-    return IDrespons  
+    return IDrespons 
 }
  
 export default Getid

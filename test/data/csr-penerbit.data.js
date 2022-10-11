@@ -98,7 +98,7 @@ export const VALID_BANSOS = {
     "m_issuer_id": id,
     "voucher": [PrefixCode],
     "validasi_id": 0
-};
+}
 
 export const VALID_REDEEMVOUCHER = {
     "expired_date": 1662536112333,

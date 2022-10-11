@@ -4366,6 +4366,7 @@ export const VALIDATE_KATEGORIBYID_SCHEMA = {
         }
     }]
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 export const VALIDATE_UPDATELOKASI_SCHEMA = {
@@ -4538,3 +4539,6 @@ export const VALIDATE_ADDLOKASI_SCHEMA = {
 =======
 }
 >>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
+=======
+}
+>>>>>>> 123b496b452a021bfaa7c04d8f18807df1dbb65a
