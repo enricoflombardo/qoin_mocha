@@ -5,7 +5,7 @@ import QoinAPI from '$root/pages/SentraLokasi_Lokasi.api'; //import endpoint API
 import * as data from '$root/data/SentraLokasi_Lokasi.data'; //import data
 import * as schema from '$root/schema/SentaLokasi_Lokasi.schema'; //import schema
 import Getid_Lokasi from '$root/helper/helper-sentraLokasi'; //import id
-import Get_token from '$root/helper/csr-token';
+import Get_token from '$root/helper/csr-token'; // import token
 
 chai.use(jsonSchema)
 // chai.use(chaiExclude)
@@ -82,25 +82,27 @@ describe('Web lokasi', () => {
         //expect(response.data).to.be.jsonSchema(schema)
     });
 
-    it('Add lokasi image', async() => {
+     // BASE URL tidak ada
+    /*it('Add lokasi image', async() => {
         const response = await QoinAPI.addImagelokasi(data.VALID_ADDLOCATIONIMAGE)
 
         //result
         assert.equal(response.status, 200)
 
         //schema BELUM NYOBA JUGA
-        //expect(response.data).to.be.jsonSchema(schema)
-    });
+        expect(response.data).to.be.jsonSchema(schema)
+    });*/
 
-    it('Get dan Cek Image Lokasi', async() => {
+     // BASE URL tidak ada
+    /*it('Get dan Cek Image Lokasi', async() => {
         const response = await QoinAPI.getImagelokasi()
 
         //result
         assert.equal(response.status, 200)
 
         //schema
-        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETIMAGELOKASI_SCHEMA)
-    });
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETIMAGELOKASI_SCHEMA)
+    });*/
 
     it.only('Get Fasilitas Lokasi', async() => {
         const get_id = await Getid_Lokasi()

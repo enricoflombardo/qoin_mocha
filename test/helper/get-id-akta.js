@@ -9,8 +9,7 @@ async function Getid(){
     if (response.data.total_items == 0) {
         IDrespons = "3"
     }else{
-        IDrespons = response.data.total_items
-        // IDrespons = ""
+        IDrespons = response.data.total_items        // IDrespons = ""
     }
     
     return IDrespons 

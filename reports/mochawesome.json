@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2022-10-11T07:08:01.485Z",
-    "end": "2022-10-11T07:08:02.763Z",
-    "duration": 1278,
+    "failures": 0,
+    "start": "2022-10-11T07:16:13.077Z",
+    "end": "2022-10-11T07:16:13.450Z",
+    "duration": 373,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8280e725-fb00-4d4b-b225-392d910bbb25",
+      "uuid": "abf90a5c-2078-41eb-931d-40fffda3adfe",
       "title": "",
       "fullFile": "D:\\Venturo\\QOIN\\qoin_mocha\\test\\scenarios\\SentraLokasi_Lokasi.test.js",
       "file": "\\test\\scenarios\\SentraLokasi_Lokasi.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "cd94813d-6bb7-4716-af7d-26877efc2930",
+          "uuid": "5c3791ee-7ade-452f-b9f1-9c3e6cdc22b1",
           "title": "Web lokasi",
           "fullFile": "D:\\Venturo\\QOIN\\qoin_mocha\\test\\scenarios\\SentraLokasi_Lokasi.test.js",
           "file": "\\test\\scenarios\\SentraLokasi_Lokasi.test.js",
@@ -38,33 +38,29 @@
               "title": "Get Fasilitas Lokasi",
               "fullTitle": "Web lokasi Get Fasilitas Lokasi",
               "timedOut": false,
-              "duration": 1267,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 361,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "const get_id = await Getid_Lokasi()\nconst GettokenAPI = await Get_token()\nconst response = await QoinAPI.getFasilitaslokasi(get_id, GettokenAPI)\n//result\nassert.equal(response.status, 200)\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)\nconsole.log(response.headers)\nconsole.log(response.data)",
-              "err": {
-                "message": "AssertionError: expected 400 to equal 200",
-                "estack": "AssertionError: expected 400 to equal 200\n    at Context.<anonymous> (file:///D:/Venturo/QOIN/qoin_mocha/test/scenarios/SentraLokasi_Lokasi.test.js:111:16)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
-                "diff": "- 400\n+ 200\n"
-              },
-              "uuid": "2b1c0e50-125e-4071-8f63-5459177c955a",
-              "parentUUID": "cd94813d-6bb7-4716-af7d-26877efc2930",
+              "err": {},
+              "uuid": "3fff8ff8-5903-43fe-b47e-b868ae027dcc",
+              "parentUUID": "5c3791ee-7ade-452f-b9f1-9c3e6cdc22b1",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "2b1c0e50-125e-4071-8f63-5459177c955a"
+          "passes": [
+            "3fff8ff8-5903-43fe-b47e-b868ae027dcc"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1267,
+          "duration": 361,
           "root": false,
           "rootEmpty": false,
           "_timeout": 50000
