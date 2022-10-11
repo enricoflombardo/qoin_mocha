@@ -13,13 +13,17 @@ const QoinAPI = {
     getLokasi: () => BaseAPI.get('/Lokasi'),
     updateLokasi: (id, data) => BaseAPI_JSON.put('/lokasi/' + id, data),
     deleteLokasi: (id, data) => BaseAPI.delete('/lokasi/' + id, data),
-    addImagelokasi: (data) => BaseAPI.post('/lokasiAddImage/1', data),
-    getImagelokasi: () => BaseAPI.get('/lokasiGetImage/1'),
-    deleteImagelokasi: () => BaseAPI.delete('/lokasiDeleteImage/18'),
-    getFasilitaslokasi: () => BaseAPI.get('/fasilitasLokasi/6'),
+    addImagelokasi: (id, data) => BaseAPI.post('/lokasiAddImage/' + id, data),
+    getImagelokasi: (id) => BaseAPI.get('/lokasiGetImage/' + id),
+    deleteImagelokasi: (id) => BaseAPI.delete('/lokasiDeleteImage/' + id),
+    getFasilitaslokasi: (id, token) => BaseAPI.get('/fasilitasLokasi/' + id, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
     readExcel: () => BaseAPI.post('/readExcel'),
     getTemplateexcel: () => BaseAPI.get('/template-excel'),
-    getLokasibyid: () => BaseAPI.get('/lokasiById/308')
+    getLokasibyid: (id) => BaseAPI.get('/lokasiById/' + id)
 }
 
 export default QoinAPI

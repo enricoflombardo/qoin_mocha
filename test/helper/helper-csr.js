@@ -51,7 +51,7 @@ export async function Getid_voucher(){
     let IDrespons = "3"
 
     // validate api
-    if (response.data.data == "undefined") {
+    if (response.data.data.id == "undefined") {
         IDrespons = "3"
     }else{
         IDrespons = response.data.data.id
