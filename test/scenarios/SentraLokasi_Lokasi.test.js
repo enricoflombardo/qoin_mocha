@@ -4,7 +4,7 @@ import QoinAPI from '$root/pages/SentraLokasi_Lokasi.api'; //import endpoint API
 import * as data from '$root/data/SentraLokasi_Lokasi.data'; //import data
 import * as schema from '$root/schema/SentaLokasi_Lokasi.schema'; //import schema
 import Getid_Lokasi from '$root/helper/helper-sentraLokasi'; //import id
-import Get_token from '$root/helper/csr-token'
+import Get_token from '$root/helper/csr-token'; // import token
 
 chai.use(jsonSchema)
 
@@ -85,8 +85,6 @@ describe('Web lokasi', () => {
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
-        console.log(response.headers)
-        console.log(response.data)
     });
 
     // Endpoint lokal mas sase
