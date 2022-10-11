@@ -33,7 +33,6 @@ describe('Web kategori lokasi', () => {
     it('Update kategori lokasi', async() => {
         const id = await Getid()
         const response = await QoinAPI.updatekategoriLokasi(id, data.VALID_UPDATEKATEGORI)
-<<<<<<< HEAD
         //result
         assert.equal(response.status, 200)
         //schema
@@ -52,13 +51,6 @@ describe('Web kategori lokasi', () => {
 
     it('Delete kategori lokasi', async() => {
         const response = await QoinAPI.deletekategoriLokasi()
-=======
-
-        //result
-        assert.equal(response.status, 200)
-
-        //schema
->>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
         // expect(response.data).to.be.jsonSchema(schema.)
 
         // console.log(response.data.data)
@@ -78,10 +70,6 @@ describe('Web kategori lokasi', () => {
     it('Delete kategori lokasi', async() => {
         const id = await Getid()
         const response = await QoinAPI.deletekategoriLokasi(id)
-<<<<<<< HEAD
-=======
-
->>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
         //result
         assert.equal(response.status, 200)
     });
@@ -96,11 +84,6 @@ describe('Mobile kategori lokasi', (done) => {
     
         assert.equal(response.status, 200)
         // console.log(response.data.data)
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
         //schema
         //expect(response.data).to.be.jsonSchema(schema.VALIDATE_LOKASI_SCHEMA)
     });
