@@ -6,7 +6,7 @@ async function GetID_Lokasi(){
 
     let IDrespons = "3"
     
-    if (response.data.data.total_items == 0) {
+    if (response.data.data.id == 0) {
         IDrespons = "3"
     }else{
         IDrespons = response.data.data.list[0].id
