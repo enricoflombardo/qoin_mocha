@@ -4817,8 +4817,4 @@ export const VALIDATE_LOKASI_SCHEMA = {
             "total_item": 48
         }
     }]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 123b496b452a021bfaa7c04d8f18807df1dbb65a
