@@ -5,7 +5,7 @@ import querystring from 'querystring';
 dotenv.config();
 
 const BaseAPI_JSON = axios.create({
-    baseURL: process.env.CSR_URL,
+    baseURL: process.env.BASE_URL,
     headers: {
         "Content-Type": "application/json",
         accept: "application/json"

@@ -6,9 +6,13 @@ import * as schema from '../schema/csr-penerbit.schema'; //import schema
 import Get_token, {Getid, Getid_voucher, Getid_program, Getid_bansos, Getid_user, Getid_penerima} from '$root/helper/helper-csr'; //import id
 // import Get_token from '$root/helper/csr-token'; //import token
 
+
+// TAMA TAMA TAMA
+
+
 chai.use(jsonSchema)
 
-describe.only('Web', () => {
+describe('Web', () => {
     it('Login', async () => {
         const response = await QoinAPI.login(data.VALID_LOGIN) //hit API
         
