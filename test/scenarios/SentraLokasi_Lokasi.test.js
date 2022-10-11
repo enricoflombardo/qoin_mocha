@@ -10,6 +10,7 @@ chai.use(jsonSchema)
 
 describe('Web lokasi', () => {
 
+
     // Engineer mas sase
 
     it('Add lokasi', async() => {
@@ -131,6 +132,7 @@ describe('Web lokasi', () => {
 });
 
 describe('Mobile lokasi', async() => {
+
     it('Get haversin circle', async () => {
         const response = await QoinAPI.get_haversin_circle();
     

@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\WINDOWS 10\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init
+  C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init
 
 PATH: 
-  C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Windows Live\Shared;C:\xampp\php;C:\composer;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\kotlinc\bin;C:\Windows\system32\config\systemprofile\AppData\Roaming\Composer\vendor\bin;C:\Program Files\nodejs\;C:\Ruby31-x64\bin;C:\Users\WINDOWS 10\AppData\Local\Microsoft\WindowsApps;C:\Users\WINDOWS 10\AppData\Roaming\Composer\vendor\bin;C:\Microsoft VS Code\bin;C:\Users\WINDOWS 10\AppData\Roaming\npm
+  C:\tools\jdk\jdk-17.0.4.101-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Files\cpp\bin\Intel64;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;D:\Program Files\MATLAB\R2018a\runtime\win64;D:\Program Files\MATLAB\R2018a\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\User\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Microsoft VS Code\bin;C:\Users\User\AppData\Roaming\Composer\vendor\bin;C:\Users\User\AppData\Local\GitHubDesktop\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;E:\TestProject Agent;C:\Users\User\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\User\AppData\Roaming\npm
 
 Yarn version: 
   1.22.19
@@ -15,7 +15,7 @@ Platform:
 
 Trace: 
   Error: canceled
-      at Interface.<anonymous> (C:\Users\WINDOWS 10\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:137150:13)
+      at Interface.<anonymous> (C:\Users\User\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:137150:13)
       at Interface.emit (events.js:400:28)
       at Interface._ttyWrite (readline.js:1001:16)
       at ReadStream.onkeypress (readline.js:265:10)
