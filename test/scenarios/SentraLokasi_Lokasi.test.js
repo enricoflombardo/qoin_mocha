@@ -1,49 +1,24 @@
 import chai,{ assert,expect } from 'chai';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import chaiExclude from 'chai-exclude';
-=======
->>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
-=======
->>>>>>> 123b496b452a021bfaa7c04d8f18807df1dbb65a
 import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '$root/pages/SentraLokasi_Lokasi.api'; //import endpoint API
 import * as data from '$root/data/SentraLokasi_Lokasi.data'; //import data
 import * as schema from '$root/schema/SentaLokasi_Lokasi.schema'; //import schema
 import Getid_Lokasi from '$root/helper/helper-sentraLokasi'; //import id
-<<<<<<< HEAD
-<<<<<<< HEAD
 import GetID_Lokasi from '$root/helper/get-id-lokasi';
 
 chai.use(jsonSchema)
 chai.use(chaiExclude)
-describe('Web lokasi', () => {
-
-    // Engineer mas sase
-    it.only('Add lokasi', async() => {
-        const id = await GetID_Lokasi()
-=======
-=======
->>>>>>> 123b496b452a021bfaa7c04d8f18807df1dbb65a
-
-chai.use(jsonSchema)
 
 describe('Web lokasi', () => {
 
     // Engineer mas sase
 
     it('Add lokasi', async() => {
-<<<<<<< HEAD
->>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
-=======
->>>>>>> 123b496b452a021bfaa7c04d8f18807df1dbb65a
         const response = await QoinAPI.addLokasi(data.VALID_ADDLOKASI)
 
         //result
         assert.equal(response.status, 200)
-
-<<<<<<< HEAD
-<<<<<<< HEAD
         const data_res = Object.fromEntries(
             Object.entries(response.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
         );
@@ -61,26 +36,10 @@ describe('Web lokasi', () => {
     });
 
     it('Add multi lokasi', async() => {
-        const id = GetID_Lokasi()
-=======
-=======
->>>>>>> 123b496b452a021bfaa7c04d8f18807df1dbb65a
-        //schema belum nyoba ga brani
-        //expect(response.data).to.be.jsonSchema(schema)
-    });
-
-    it('Add multi lokasi', async() => {
-<<<<<<< HEAD
->>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
-=======
->>>>>>> 123b496b452a021bfaa7c04d8f18807df1dbb65a
         const response = await QoinAPI.addMultilokasi(data.VALID_ADDMULTILOKASI)
 
         //result
         assert.equal(response.status, 200)
-
-<<<<<<< HEAD
-<<<<<<< HEAD
         const data_res = Object.fromEntries(
             Object.entries(response.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
         );
@@ -95,14 +54,6 @@ describe('Web lokasi', () => {
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDSENTRAMULTILOKASI_WEBADMIN_SCHEMA)
-=======
-        //schema
-        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDSENTRAMULTILOKASI_WEBADMIN_SCHEMA)
->>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
-=======
-        //schema
-        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDSENTRAMULTILOKASI_WEBADMIN_SCHEMA)
->>>>>>> 123b496b452a021bfaa7c04d8f18807df1dbb65a
     });
 
     it('Get dan Cek Data Multi Lokasi', async() => {
@@ -116,35 +67,19 @@ describe('Web lokasi', () => {
     });
 
     it('Edit lokasi', async() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        const id = await GetID_Lokasi()
-=======
+
         const id = await Getid_Lokasi()
->>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
-=======
-        const id = await Getid_Lokasi()
->>>>>>> 123b496b452a021bfaa7c04d8f18807df1dbb65a
         const response = await QoinAPI.updateLokasi(id, data.VALID_PUTLOKASI)
 
         //result
         assert.equal(response.status, 200)
-<<<<<<< HEAD
-<<<<<<< HEAD
         assert.equal(response.data.data.updateLokasi.toLowerCase(), data.VALID_PUTLOKASI.updateLokasi.toLowerCase());
 
         //schema BELUM NYOBA JUGA
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_UPDATELOKASI_SCHEMA)
-=======
 
         //schema BELUM NYOBA JUGA
         //expect(response.data).to.be.jsonSchema(schema)
->>>>>>> e408fc9422fcafc2520994324e130480a00afbe2
-=======
-
-        //schema BELUM NYOBA JUGA
-        //expect(response.data).to.be.jsonSchema(schema)
->>>>>>> 123b496b452a021bfaa7c04d8f18807df1dbb65a
     });
 
     it('Add lokasi image', async() => {
@@ -167,11 +102,7 @@ describe('Web lokasi', () => {
         //expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETIMAGELOKASI_SCHEMA)
     });
 
-<<<<<<< HEAD
-    it('Get Fasilitas Lokasi', async() => {
-=======
     it.only('Get Fasilitas Lokasi', async() => {
->>>>>>> 123b496b452a021bfaa7c04d8f18807df1dbb65a
         const response = await QoinAPI.getFasilitaslokasi()
 
         //result
