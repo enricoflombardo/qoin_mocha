@@ -80,10 +80,10 @@ describe('Web lokasi', () => {
         const response = await QoinAPI.getFasilitaslokasi(get_id, GettokenAPI)
 
         //result
-        // assert.equal(response.status, 200)
+         assert.equal(response.status, 200)
 
         // //schema
-        // expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
         console.log(response.headers)
         console.log(response.data)
     });
