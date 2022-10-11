@@ -20,10 +20,10 @@ export async function Getissuer_code(){
     let IDrespons = "3"
     
     // validate api
-    if (response.data.data == "undefined") {
+    if (response.data.IssuerCode == "undefined") {
         IDrespons = "3"
     }else{
-        //IDrespons = response.data.data.IssuerCode
+        IDrespons = response.data.IssuerCode
         // IDrespons = ""
     }
     
@@ -35,10 +35,10 @@ export async function Getissuer_name(){
     let IDrespons = "3"
     
     // validate api
-    if (response.data.data == "undefined") {
+    if (response.data.IssuerName == "undefined") {
         IDrespons = "3"
     }else{
-        //IDrespons = response.data.data.IssuerName
+        IDrespons = response.data.IssuerName
         // IDrespons = ""
     }
     
