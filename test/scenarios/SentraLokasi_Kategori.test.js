@@ -10,8 +10,8 @@ import Get_token from '$root/helper/csr-token';
 chai.use(jsonSchema)
 
 // Website
-
 describe('Web kategori lokasi', () => {
+
     it('Add kategori lokasi', async() => {
         const response = await QoinAPI.createkategoriLokasi(data.VALID_ADDKATEGORI)
 
@@ -67,7 +67,9 @@ describe('Web kategori lokasi', () => {
 
 // Mobile
 
+
 describe('Mobile kategori lokasi', (done) => {
+
 
     it('Get kategori lokasi', async ()=> {
         const response = await QoinAPI.get_lokasi();
