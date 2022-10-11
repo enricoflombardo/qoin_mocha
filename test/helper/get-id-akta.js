@@ -6,10 +6,10 @@ async function Getid(){
 
     let IDrespons = "3"
     
-    if (response.data.data.total_items == 0) {
+    if (response.data.total_items == 0) {
         IDrespons = "3"
     }else{
-        IDrespons = response.data.data.list[0].id
+        IDrespons = response.data.total_items
         // IDrespons = ""
     }
     
