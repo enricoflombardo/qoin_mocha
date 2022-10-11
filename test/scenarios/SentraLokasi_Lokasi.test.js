@@ -76,7 +76,7 @@ describe('Web lokasi', () => {
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETIMAGELOKASI_SCHEMA)
     });*/
 
-    it.only('Get Fasilitas Lokasi', async() => {
+    it('Get Fasilitas Lokasi', async() => {
         const get_id = await Getid_Lokasi()
         const GettokenAPI = await Get_token()
         const response = await QoinAPI.getFasilitaslokasi(get_id, GettokenAPI)
