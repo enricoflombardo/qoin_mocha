@@ -11,7 +11,6 @@ describe('Web Admin', () => {
         
             //status
             assert.equal(response.status, 200);
-            console.log(response.data)
 
             //schema
             // expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_KK_SCHEMA)

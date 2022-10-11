@@ -8,18 +8,22 @@ const QoinAPI = {
     get_lokasi_byid: () => BaseAPI.get('/get-lokasi-byId/1?lat=-7.938337447142101&long=112.59039767966426&bahasa=id'),
 
     //web
-    addLokasi: (data) => BaseAPI.post('/Lokasi', data),
+    addLokasi: (data) => BaseAPI_JSON.post('/Lokasi', data),
     addMultilokasi: (data) => BaseAPI_JSON.post('/multiLokasi', data),
     getLokasi: () => BaseAPI.get('/Lokasi'),
-    updateLokasi: (data) => BaseAPI.put('/lokasi', data),
-    deleteLokasi: (data) => BaseAPI.del('lokasi', data),
-    addImagelokasi: (data) => BaseAPI.post('/lokasiAddImage/1', data),
-    getImagelokasi: () => BaseAPI.get('/lokasiGetImage/1'),
-    deleteImagelokasi: () => BaseAPI.del('/lokasiDeleteImage/18'),
-    getFasilitaslokasi: () => BaseAPI.get('/fasilitasLokasi/6'),
+    updateLokasi: (id, data) => BaseAPI_JSON.put('/lokasi/' + id, data),
+    deleteLokasi: (id, data) => BaseAPI.delete('/lokasi/' + id, data),
+    addImagelokasi: (id, data) => BaseAPI.post('/lokasiAddImage/' + id, data),
+    getImagelokasi: (id) => BaseAPI.get('/lokasiGetImage/' + id),
+    deleteImagelokasi: (id) => BaseAPI.delete('/lokasiDeleteImage/' + id),
+    getFasilitaslokasi: (id, token) => BaseAPI.get('/fasilitasLokasi/' + id, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
     readExcel: () => BaseAPI.post('/readExcel'),
     getTemplateexcel: () => BaseAPI.get('/template-excel'),
-    getLokasibyid: () => BaseAPI.get('/lokasiById/308')
+    getLokasibyid: (id) => BaseAPI.get('/lokasiById/' + id)
 }
 
 export default QoinAPI

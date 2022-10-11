@@ -3,10 +3,13 @@ import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '$root/pages/SentraLokasi_Lokasi.api'; //import endpoint API
 import * as data from '$root/data/SentraLokasi_Lokasi.data'; //import data
 import * as schema from '$root/schema/SentaLokasi_Lokasi.schema'; //import schema
+import Getid_Lokasi from '$root/helper/helper-sentraLokasi'; //import id
+import Get_token from '$root/helper/csr-token'
 
 chai.use(jsonSchema)
 
-describe.only('Web', () => {
+describe('Web lokasi', () => {
+
 
     // Engineer mas sase
 
@@ -27,7 +30,7 @@ describe.only('Web', () => {
         assert.equal(response.status, 200)
 
         //schema
-        expect(response.data).to.be.jsonSchema(schema.VALIDATE_SENTRALOKASI_WEBADMIN_SCHEMA)
+        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDSENTRAMULTILOKASI_WEBADMIN_SCHEMA)
     });
 
     it('Get dan Cek Data Multi Lokasi', async() => {
@@ -37,11 +40,12 @@ describe.only('Web', () => {
         assert.equal(response.status, 200)
 
         //schema
-        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETSENTRALOKASI_WEBADMIN_SCHEMA)
+        //expect(response.data).to.be.jsonSchema(schema.)
     });
 
     it('Edit lokasi', async() => {
-        const response = await QoinAPI.updateLokasi(data.VALID_PUTLOKASI)
+        const id = await Getid_Lokasi()
+        const response = await QoinAPI.updateLokasi(id, data.VALID_PUTLOKASI)
 
         //result
         assert.equal(response.status, 200)
@@ -67,17 +71,21 @@ describe.only('Web', () => {
         assert.equal(response.status, 200)
 
         //schema
-        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETIMAGELOKASI_SCHEMA)
+        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETIMAGELOKASI_SCHEMA)
     });
 
-    it('Get Fasilitas Lokasi', async() => {
-        const response = await QoinAPI.getFasilitaslokasi()
+    it.only('Get Fasilitas Lokasi', async() => {
+        const get_id = await Getid_Lokasi()
+        const GettokenAPI = await Get_token()
+        const response = await QoinAPI.getFasilitaslokasi(get_id, GettokenAPI)
 
         //result
-        assert.equal(response.status, 200)
+        // assert.equal(response.status, 200)
 
-        //schema
-        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
+        // //schema
+        // expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
+        console.log(response.headers)
+        console.log(response.data)
     });
 
     // Endpoint lokal mas sase
@@ -101,7 +109,7 @@ describe.only('Web', () => {
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETLOKASIBYID_SCHEMA)
     });
 
-    it('Delete Image Lokasi', async() => {
+    it('Hapus Image Lokasi', async() => {
         const response = await QoinAPI.deleteImagelokasi()
 
         //result
@@ -112,7 +120,8 @@ describe.only('Web', () => {
     });
 
     it('Hapus lokasi', async() => {
-        const response = await QoinAPI.deleteLokasi()
+        const id = await Getid_Lokasi()
+        const response = await QoinAPI.deleteLokasi(id)
 
         //result
         assert.equal(response.status, 200)
@@ -122,7 +131,8 @@ describe.only('Web', () => {
     });
 });
 
-describe.only('Mobile', async() => {
+describe('Mobile lokasi', async() => {
+
     it('Get haversin circle', async () => {
         const response = await QoinAPI.get_haversin_circle();
     

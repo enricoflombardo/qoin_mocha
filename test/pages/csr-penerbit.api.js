@@ -13,21 +13,81 @@ const QoinAPI = {
             Authorization : "Bearer "+ token
         }
     }),
-    penerbit: (data) => BaseAPI.post('/Penerbit', data, {
+    penerbit: (data, token) => BaseAPI.post('/Penerbit', data, {
         headers : {
-            Authorization: "Bearer ${token}"
+            Authorization: "Bearer "+ token
         }
     }),
-    getid: () => BaseAPI.get('/Penerbit/List?limit=1'),
-    getpenerbit: (id) => BaseAPI.get('/Penerbit'+ id),
-    updatepenerbit: (id, data) => BaseAPI.put('/Penerbit/'+ id, data),
-    voucher: (data) => BaseAPI.post('/Voucher', data),
-    getvoucher: (id) => BaseAPI.get('/Voucher'+ id),
-    updatevoucher: (id_voucher, data) => BaseAPI.put('/Voucher'+ id_voucher, data),
-    programbantuan: (data) => BaseAPI.post('/create-bansos-multi', data),
-    listpenerimabansos: (id_program) => BaseAPI.get('/listPenerimaByProgram'+ id_program),
-    listbansospenerima: () => BaseAPI.get('/listBansosPenerima')
-    
+    getid: (token) => BaseAPI.get('/Penerbit/List?limit=1', {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
+    getpenerbit: (id, token) => BaseAPI.get('/Penerbit/'+ id, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
+    updatepenerbit: (id, data, token) => BaseAPI.put('/Penerbit/'+ id, data, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
+    voucher: (data, token) => BaseAPI.post('/Voucher', data, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }), //id_voucher
+    getvoucher: (id, token) => BaseAPI.get('/Voucher/'+ id, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
+    updatevoucher: (id_voucher, data, token) => BaseAPI.put('/Voucher/'+ id_voucher, data, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
+    programbantuan: (data, token) => BaseAPI.post('/create-bansos-multi', data, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }), 
+    listbansos: (token) => BaseAPI.get('/listBansos?limit=1', {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }), //id_program
+    listpenerimabansos: (id_program, token) => BaseAPI.get('/listPenerimaByProgram/'+ id_program, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
+    listvoucherbansos: (id_program, token) => BaseAPI.get('/listVoucherByBansos/'+ id_program, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
+    listbansospenerima: (token) => BaseAPI.get('/listBansosPenerima', {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }), //id_user dan id_penerima
+    bansosuser: (id_penerima, token) => BaseAPI.get('/getBansosUser/'+ id_penerima, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }), //id_bansos
+    listvoucheruser: (id_bansos, id_user, token) => BaseAPI.get('/listVoucherByBansosAndUserId/'+ id_bansos +'/'+ id_user, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
+    redeemvoucher: (data, token) => BaseAPI_JSON.put('/redeemVoucher', data, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    })
 };
 
 export default QoinAPI 

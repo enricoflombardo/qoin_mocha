@@ -4,12 +4,21 @@
     "tests": 19,
     "passes": 9,
     "pending": 0,
+<<<<<<< HEAD
     "failures": 10,
     "start": "2022-10-06T11:01:28.206Z",
     "end": "2022-10-06T11:01:38.270Z",
     "duration": 10064,
     "testsRegistered": 19,
     "passPercent": 47.368421052631575,
+=======
+    "failures": 0,
+    "start": "2022-10-11T04:34:36.276Z",
+    "end": "2022-10-11T04:34:37.411Z",
+    "duration": 1135,
+    "testsRegistered": 1,
+    "passPercent": 100,
+>>>>>>> origin/dev-tama
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,23 +27,38 @@
   },
   "results": [
     {
+<<<<<<< HEAD
       "uuid": "2b9c9f63-9c3b-44fe-8283-d30c9c2e9ea6",
       "title": "",
       "fullFile": "",
       "file": "",
+=======
+      "uuid": "f055c6aa-45cc-4cb0-9786-0fed89246d7e",
+      "title": "",
+      "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\SentraLokasi_Lokasi.test.js",
+      "file": "\\test\\scenarios\\SentraLokasi_Lokasi.test.js",
+>>>>>>> origin/dev-tama
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
+<<<<<<< HEAD
           "uuid": "d8ac1d4e-0ff9-416b-84a7-96abe8332a41",
           "title": "Web",
           "fullFile": "E:\\ProjectMocha\\Automation Qoin\\qoin_mocha\\test\\scenarios\\SentraLokasi_Kategori.test.js",
           "file": "\\test\\scenarios\\SentraLokasi_Kategori.test.js",
+=======
+          "uuid": "d0a358ec-0217-42bc-bcf3-42dd607f98bc",
+          "title": "Web lokasi",
+          "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\SentraLokasi_Lokasi.test.js",
+          "file": "\\test\\scenarios\\SentraLokasi_Lokasi.test.js",
+>>>>>>> origin/dev-tama
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
+<<<<<<< HEAD
               "title": "Add kategori lokasi",
               "fullTitle": "Web Add kategori lokasi",
               "timedOut": false,
@@ -57,14 +81,21 @@
               "fullTitle": "Web Get detail kategori lokasi",
               "timedOut": false,
               "duration": 120,
+=======
+              "title": "Get Fasilitas Lokasi",
+              "fullTitle": "Web lokasi Get Fasilitas Lokasi",
+              "timedOut": false,
+              "duration": 729,
+>>>>>>> origin/dev-tama
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const response = await QoinAPI.getdetailkategoriLokasi()\n//result\nassert.equal(response.status, 200)\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_GETDETAILKATEGORILOKASI)",
+              "code": "const get_id = await Getid_Lokasi()\nconst GettokenAPI = await Get_token()\nconst response = await QoinAPI.getFasilitaslokasi(get_id, GettokenAPI)\n//result\n// assert.equal(response.status, 200)\n// //schema\n// expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)\nconsole.log(response.headers)\nconsole.log(response.data)",
               "err": {},
+<<<<<<< HEAD
               "uuid": "45fa012d-0e97-492d-b864-e8a8d0c1b84a",
               "parentUUID": "d8ac1d4e-0ff9-416b-84a7-96abe8332a41",
               "isHook": false,
@@ -133,12 +164,17 @@
               },
               "uuid": "e7f9d5f9-fb8f-4172-9c15-05500064ec3d",
               "parentUUID": "d8ac1d4e-0ff9-416b-84a7-96abe8332a41",
+=======
+              "uuid": "c64449dc-4a23-4c0c-bcbb-44b32dbaafa2",
+              "parentUUID": "d0a358ec-0217-42bc-bcf3-42dd607f98bc",
+>>>>>>> origin/dev-tama
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
+<<<<<<< HEAD
             "3c616c15-7ca0-4ad0-bbdd-1dacc44db29c",
             "45fa012d-0e97-492d-b864-e8a8d0c1b84a"
           ],
@@ -184,10 +220,14 @@
           "suites": [],
           "passes": [
             "e7c67c57-2a7e-457d-8bcf-85c691c2a340"
+=======
+            "c64449dc-4a23-4c0c-bcbb-44b32dbaafa2"
+>>>>>>> origin/dev-tama
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
+<<<<<<< HEAD
           "duration": 130,
           "root": false,
           "rootEmpty": false,
@@ -505,6 +545,9 @@
           "pending": [],
           "skipped": [],
           "duration": 942,
+=======
+          "duration": 729,
+>>>>>>> origin/dev-tama
           "root": false,
           "rootEmpty": false,
           "_timeout": 50000
