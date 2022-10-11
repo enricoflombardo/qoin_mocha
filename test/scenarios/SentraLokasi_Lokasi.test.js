@@ -53,25 +53,27 @@ describe('Web lokasi', () => {
         //expect(response.data).to.be.jsonSchema(schema)
     });
 
-    it('Add lokasi image', async() => {
+     // BASE URL tidak ada
+    /*it('Add lokasi image', async() => {
         const response = await QoinAPI.addImagelokasi(data.VALID_ADDLOCATIONIMAGE)
 
         //result
         assert.equal(response.status, 200)
 
         //schema BELUM NYOBA JUGA
-        //expect(response.data).to.be.jsonSchema(schema)
-    });
+        expect(response.data).to.be.jsonSchema(schema)
+    });*/
 
-    it('Get dan Cek Image Lokasi', async() => {
+     // BASE URL tidak ada
+    /*it('Get dan Cek Image Lokasi', async() => {
         const response = await QoinAPI.getImagelokasi()
 
         //result
         assert.equal(response.status, 200)
 
         //schema
-        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETIMAGELOKASI_SCHEMA)
-    });
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETIMAGELOKASI_SCHEMA)
+    });*/
 
     it.only('Get Fasilitas Lokasi', async() => {
         const get_id = await Getid_Lokasi()
@@ -79,10 +81,10 @@ describe('Web lokasi', () => {
         const response = await QoinAPI.getFasilitaslokasi(get_id, GettokenAPI)
 
         //result
-        // assert.equal(response.status, 200)
+        assert.equal(response.status, 200)
 
-        // //schema
-        // expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
+        //schema
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
         console.log(response.headers)
         console.log(response.data)
     });
