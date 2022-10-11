@@ -8,7 +8,7 @@ chai.use(jsonSchema)
 
 // Website
 
-describe('Web', () => {
+describe.only('Web', () => {
     it('Add kategori lokasi', async() => {
         const response = await QoinAPI.createkategoriLokasi(data.VALID_ADDKATEGORI)
 
@@ -59,7 +59,7 @@ describe('Web', () => {
 
 // Mobile
 
-describe('Mobile', (done) => {
+describe.only('Mobile', (done) => {
 
     it('Get kategori lokasi', async ()=> {
         const response = await QoinAPI.get_lokasi();

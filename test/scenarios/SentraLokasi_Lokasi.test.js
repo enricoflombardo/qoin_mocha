@@ -6,7 +6,7 @@ import * as schema from '$root/schema/SentaLokasi_Lokasi.schema'; //import schem
 
 chai.use(jsonSchema)
 
-describe('Web', () => {
+describe.only('Web', () => {
 
     // Engineer mas sase
 
@@ -122,7 +122,7 @@ describe('Web', () => {
     });
 });
 
-describe('Mobile', async() => {
+describe.only('Mobile', async() => {
     it('Get haversin circle', async () => {
         const response = await QoinAPI.get_haversin_circle();
     
