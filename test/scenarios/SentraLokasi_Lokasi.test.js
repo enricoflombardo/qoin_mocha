@@ -18,7 +18,6 @@ describe('Web lokasi', () => {
 
     it('Add lokasi', async() => {
         const response = await QoinAPI.addLokasi(data.VALID_ADDLOKASI, token)
-
         //result
         assert.equal(response.status, 200)
         //schema
@@ -37,7 +36,6 @@ describe('Web lokasi', () => {
 
     it('Get dan Cek Data Multi Lokasi', async() => {
         const response = await QoinAPI.getLokasi(token)
-
         //result
         assert.equal(response.status, 200)
 
@@ -47,7 +45,7 @@ describe('Web lokasi', () => {
 
     it('Edit lokasi', async() => {
         const response = await QoinAPI.updateLokasi(id, data.VALID_PUTLOKASI, token)
-
+        console.log(id);
         //result
         assert.equal(response.status, 200)
 

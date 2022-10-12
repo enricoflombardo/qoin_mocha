@@ -1,8 +1,10 @@
 import QoinAPI from '$root/pages/SentraLokasi_Kategori.api'; //import endpoint API
 import QoinAPI2 from '$root/pages/SentraLokasi_Lokasi.api'; //import endpoint API
+import Get_token from './csr-token';
 
 export default async function Getid_Kategori(){
-    const response = await QoinAPI.get_lokasi() //hit API
+    const token = await Get_token(); //token
+    const response = await QoinAPI.get_lokasi(token) //hit API
     let IDrespons = "3"
     
     // validate api
@@ -17,9 +19,9 @@ export default async function Getid_Kategori(){
 }
 
 export async function Getid_Lokasi(){
-    const response = await QoinAPI2.getLokasi() //hit API
+    const response = await QoinAPI2.getLokasi(token) //hit API
     // let IDrespons = response.data.data.list[0].id
-    if (response.data.data.list[0].id == "undefined") {
+    if (response.data.data.list[0].id == 0) {
         IDrespons = "3"
     }else{
         IDrespons = response.data.data.list[0].id
