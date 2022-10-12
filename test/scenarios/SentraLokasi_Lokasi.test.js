@@ -7,25 +7,23 @@ import Getid_Lokasi from '$root/helper/helper-sentraLokasi'; //import id
 import Get_token from '$root/helper/csr-token' //import token
 
 chai.use(jsonSchema)
+const token = await Get_token()
 
-describe.only('Web lokasi', () => {
+describe('Web lokasi', () => {
 
 
     // Engineer mas sase
 
     it('Add lokasi', async() => {
-        const token = await Get_token()
         const response = await QoinAPI.addLokasi(data.VALID_ADDLOKASI, token)
 
         //result
         assert.equal(response.status, 200)
-
         //schema belum nyoba ga brani
         //expect(response.data).to.be.jsonSchema(schema)
     });
 
     it('Add multi lokasi', async() => {
-        const token = await Get_token()
         const response = await QoinAPI.addMultilokasi(data.VALID_ADDMULTILOKASI, token)
 
         //result
@@ -36,7 +34,6 @@ describe.only('Web lokasi', () => {
     });
 
     it('Get dan Cek Data Multi Lokasi', async() => {
-        const token = await Get_token()
         const response = await QoinAPI.getLokasi(token)
 
         //result
@@ -48,7 +45,6 @@ describe.only('Web lokasi', () => {
 
     it('Edit lokasi', async() => {
         const id = await Getid_Lokasi()
-        const token = await Get_token()
         const response = await QoinAPI.updateLokasi(id, data.VALID_PUTLOKASI, token)
 
         //result
@@ -59,7 +55,6 @@ describe.only('Web lokasi', () => {
     });
 
     it('Add lokasi image', async() => {
-        const token = await Get_token()
         const response = await QoinAPI.addImagelokasi(data.VALID_ADDLOCATIONIMAGE, token)
 
         //result
@@ -70,7 +65,6 @@ describe.only('Web lokasi', () => {
     });
 
     it('Get dan Cek Image Lokasi', async() => {
-        const token = await Get_token()
         const response = await QoinAPI.getImagelokasi(token)
 
         //result
@@ -80,15 +74,14 @@ describe.only('Web lokasi', () => {
         //expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETIMAGELOKASI_SCHEMA)
     });
 
-    it('Get Fasilitas Lokasi', async() => {
-        const token = await Get_token()
-        const response = await QoinAPI.getFasilitaslokasi(token)
+    it.only('Get Fasilitas Lokasi', async() => {
+        const response = await QoinAPI.getFasilitaslokasi(id, token)
 
         //result
+        console.log(id);
         assert.equal(response.status, 200)
-
         //schema
-        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
+        // expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
         // console.log(response.headers)
         // console.log(response.data)
     });
@@ -105,7 +98,7 @@ describe.only('Web lokasi', () => {
     });*/
 
     it('Get Lokasi By Id', async() => {
-        const token = await Get_token()
+        
         const response = await QoinAPI.getLokasibyid(token)
 
         //result
@@ -116,7 +109,6 @@ describe.only('Web lokasi', () => {
     });
 
     it('Hapus Image Lokasi', async() => {
-        const token = await Get_token()
         const response = await QoinAPI.deleteImagelokasi(token)
 
         //result
@@ -127,7 +119,6 @@ describe.only('Web lokasi', () => {
     });
 
     it('Hapus lokasi', async() => {
-        const token = await Get_token()
         const id = await Getid_Lokasi()
         const response = await QoinAPI.deleteLokasi(id, token)
 
@@ -142,7 +133,6 @@ describe.only('Web lokasi', () => {
 describe('Mobile lokasi', async() => {
 
     it('Get haversin circle', async () => {
-        const token = await Get_token()
         const response = await QoinAPI.get_haversin_circle(token);
     
         assert.equal(response.status, 200)
@@ -150,7 +140,6 @@ describe('Mobile lokasi', async() => {
     });
     
     it('Get haversin circle by kategori', async () => {
-        const token = await Get_token()
         const response = await QoinAPI.get_haversin_circle_bykategori(token);
     
         assert.equal(response.status, 200)
@@ -158,7 +147,6 @@ describe('Mobile lokasi', async() => {
     });
     
     it('Get haversin lokasi by id', async () => {
-        const token = await Get_token()
         const response = await QoinAPI.get_lokasi_byid(token);
     
         assert.equal(response.status, 200)

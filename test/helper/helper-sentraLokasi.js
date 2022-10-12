@@ -18,6 +18,13 @@ export default async function Getid(){
 
 export async function Getid_Lokasi(){
     const response = await QoinAPI2.get_lokasi() //hit API
-    let IDrespons = response.data.data.list[0].id
+    // let IDrespons = response.data.data.list[0].id
+    if (response.data.data.list[0].id == "undefined") {
+        IDrespons = "3"
+    }else{
+        IDrespons = response.data.id
+        // IDrespons = ""
+    }
+    
     return IDrespons 
 }
