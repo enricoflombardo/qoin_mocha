@@ -11,7 +11,7 @@ chai.use(jsonSchema)
 const token = await Get_token();
 const id = await Getid_Lokasi();
 
-describe.only('Web lokasi', () => {
+describe('Web lokasi', () => {
 
 
     // Engineer mas sase
