@@ -3363,7 +3363,6 @@ export const VALIDATE_GETIMAGELOKASI_SCHEMA = {
             "title": "The data Schema",
             "items": {
                 "type": "object",
-                "default": {},
                 "title": "A Schema",
                 "required": [
                     "id",
@@ -3375,15 +3374,14 @@ export const VALIDATE_GETIMAGELOKASI_SCHEMA = {
                 "properties": {
                     "id": {
                         "type": "integer",
-                        "default": 0,
                         "title": "The id Schema",
                         "examples": [
-                            1
+                            84,
+                            89
                         ]
                     },
                     "is_picture": {
                         "type": "string",
-                        "default": "",
                         "title": "The is_picture Schema",
                         "examples": [
                             "1"
@@ -3391,15 +3389,14 @@ export const VALIDATE_GETIMAGELOKASI_SCHEMA = {
                     },
                     "link_picture": {
                         "type": "string",
-                        "default": "",
                         "title": "The link_picture Schema",
                         "examples": [
-                            "https://s3.loyalto.id/inisadev/imagepublic/1644379195579535311.jpeg"
+                            "http://localhost:9000/inisadev/1649315687164732800.jpg",
+                            "https://s3.loyalto.id/inisadev/public/noimage.png"
                         ]
                     },
                     "m_lokasi_id": {
                         "type": "integer",
-                        "default": 0,
                         "title": "The m_lokasi_id Schema",
                         "examples": [
                             1
@@ -3407,28 +3404,42 @@ export const VALIDATE_GETIMAGELOKASI_SCHEMA = {
                     },
                     "picture": {
                         "type": "string",
-                        "default": "",
                         "title": "The picture Schema",
                         "examples": [
-                            "1644379195579535311.jpeg"
+                            "1649315687164732800.jpg",
+                            ""
                         ]
                     }
                 },
                 "examples": [{
-                    "id": 1,
+                    "id": 84,
                     "is_picture": "1",
-                    "link_picture": "https://s3.loyalto.id/inisadev/imagepublic/1644379195579535311.jpeg",
+                    "link_picture": "http://localhost:9000/inisadev/1649315687164732800.jpg",
                     "m_lokasi_id": 1,
-                    "picture": "1644379195579535311.jpeg"
+                    "picture": "1649315687164732800.jpg"
+                },
+                {
+                    "id": 89,
+                    "is_picture": "1",
+                    "link_picture": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "m_lokasi_id": 1,
+                    "picture": ""
                 }]
             },
             "examples": [
                 [{
-                    "id": 1,
+                    "id": 84,
                     "is_picture": "1",
-                    "link_picture": "https://s3.loyalto.id/inisadev/imagepublic/1644379195579535311.jpeg",
+                    "link_picture": "http://localhost:9000/inisadev/1649315687164732800.jpg",
                     "m_lokasi_id": 1,
-                    "picture": "1644379195579535311.jpeg"
+                    "picture": "1649315687164732800.jpg"
+                },
+                {
+                    "id": 89,
+                    "is_picture": "1",
+                    "link_picture": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "m_lokasi_id": 1,
+                    "picture": ""
                 }]
             ]
         }
@@ -3437,11 +3448,18 @@ export const VALIDATE_GETIMAGELOKASI_SCHEMA = {
         "status_code": 200,
         "message": "Success",
         "data": [{
-            "id": 1,
+            "id": 84,
             "is_picture": "1",
-            "link_picture": "https://s3.loyalto.id/inisadev/imagepublic/1644379195579535311.jpeg",
+            "link_picture": "http://localhost:9000/inisadev/1649315687164732800.jpg",
             "m_lokasi_id": 1,
-            "picture": "1644379195579535311.jpeg"
+            "picture": "1649315687164732800.jpg"
+        },
+        {
+            "id": 89,
+            "is_picture": "1",
+            "link_picture": "https://s3.loyalto.id/inisadev/public/noimage.png",
+            "m_lokasi_id": 1,
+            "picture": ""
         }]
     }]
 }
@@ -4866,6 +4884,65 @@ export const VALIDATE_EDIT_LOKASI_SCHEMA ={
                 "m_lokasi_id": 6,
                 "name": "USG"
             }]
+        }
+    }]
+}
+
+export const VALIDATE_DELETE_LOKASI_SCHEMA = {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "status_code",
+        "message",
+        "data"
+    ],
+    "properties": {
+        "status_code": {
+            "type": "integer",
+            "default": 0,
+            "title": "The status_code Schema",
+            "examples": [
+                200
+            ]
+        },
+        "message": {
+            "type": "string",
+            "default": "",
+            "title": "The message Schema",
+            "examples": [
+                "Success"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The id Schema",
+                    "examples": [
+                        19
+                    ]
+                }
+            },
+            "examples": [{
+                "id": 19
+            }]
+        }
+    },
+    "examples": [{
+        "status_code": 200,
+        "message": "Success",
+        "data": {
+            "id": 19
         }
     }]
 }

@@ -6,8 +6,6 @@ import * as schema from '$root/schema/SentaLokasi_Lokasi.schema'; //import schem
 import {Getid_Lokasi} from '$root/helper/helper-sentraLokasi'; //import id
 import Get_token from '$root/helper/get-token'; // import token
 import Token_mobile from '$root/helper/get-token'
-import randomId from '$root/helper/random-char'
-import makeid from '$root/helper/random-char';
 
 chai.use(jsonSchema)
 
@@ -15,7 +13,7 @@ const token_mobile = await Token_mobile();
 const token = await Get_token();
 const id = await Getid_Lokasi();
 
-describe.only('Web lokasi', () => {
+describe('Web lokasi', () => {
 
 
     // Engineer mas sase
@@ -24,6 +22,9 @@ describe.only('Web lokasi', () => {
         const response = await QoinAPI.addLokasi(data.VALID_ADDLOKASI, token)
         //result
         assert.equal(response.status, 200)
+        //response
+        //response data
+        assert.equal(response.data.data.list[0].nama_pelapor.toLowerCase(), data.VALID_ADD_AKTA.nama_pelapor.toLowerCase());
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_LOKASI_SCHEMA)
     });
@@ -61,8 +62,8 @@ describe.only('Web lokasi', () => {
         //result
         assert.equal(response.status, 200)
 
-        //schema BELUM NYOBA JUGA
-        //expect(response.data).to.be.jsonSchema(schema)
+        //schema
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_DELETE_LOKASI_SCHEMA)
     });
 
     //BELUM BISA
