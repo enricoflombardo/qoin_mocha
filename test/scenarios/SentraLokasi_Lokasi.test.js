@@ -40,7 +40,7 @@ describe('Web lokasi', () => {
         //expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDSENTRAMULTILOKASI_WEBADMIN_SCHEMA)
     });
 
-    it.only('Get dan Cek Data Multi Lokasi', async() => {
+    it('Get dan Cek Data Multi Lokasi', async() => {
         const response = await QoinAPI.getLokasi(token)
         
         //console.log(response.data.data.list[0].id)
