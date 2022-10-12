@@ -6,13 +6,41 @@ const QoinAPI = {
     add_akta: (data) => BaseAPI_JSON.post('/aktaLahir',data),
 
     //web
-    get_id: () => BaseAPI.get('/getDocument?limit=1&filter={"type":"m_akta"}'),
-    index_by_id: (id) => BaseAPI.get('/aktaLahir/'+id),
-    update_akta: (id, data) => BaseAPI.put('/aktaLahir/' + id, data),
-    update_status_verif: (id, data) => BaseAPI.put('/aktaLahirStatusVerifikasi/' + id, data),
-    update_status: (id, data) => BaseAPI.put('/aktaLahirStatus/' + id, data),
-    update_jadwal: (data) => BaseAPI_JSON.put('/aktaLahirJadwal', data),
-    update_status_konfirmasi: (id, data) => BaseAPI.put('/aktaLahirStatusKonfirmasi/' + id, data)
+    get_id: (token) => BaseAPI.get('/getDocument?limit=1&filter={"type":"m_akta"}', {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
+    index_by_id: (id, token) => BaseAPI.get('/aktaLahir/'+id, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
+    update_akta: (id, data, token) => BaseAPI.put('/aktaLahir/' + id, data, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
+    update_status_verif: (id, data, token) => BaseAPI.put('/aktaLahirStatusVerifikasi/' + id, data, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
+    update_status: (id, data, token) => BaseAPI.put('/aktaLahirStatus/' + id, data, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
+    update_jadwal: (id, data, token) => BaseAPI_JSON.put('/aktaLahirJadwal', id, data, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
+    update_status_konfirmasi: (id, data, token) => BaseAPI.put('/aktaLahirStatusKonfirmasi/' + id, data, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    })
 }
 
 export default QoinAPI

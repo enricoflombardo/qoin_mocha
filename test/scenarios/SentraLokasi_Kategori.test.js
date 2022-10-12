@@ -3,15 +3,20 @@ import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '../pages/SentraLokasi_Kategori.api'; //import endpoint API
 import * as data from '$root/data/SentraLokasi_Kategori.data'; //import data
 import * as schema from '$root/schema/SentraLokasi_Kategori.schema'; //import schema
-import Getid from '$root/helper/helper-sentraLokasi'; //import id
+import Getid, { Getid_Lokasi } from '$root/helper/helper-sentraLokasi'; //import id
+import Get_token from '$root/helper/get-token'
 
 chai.use(jsonSchema)
+
+// Token dan id
+const token = Get_token();
+const id = Getid_Lokasi();
 
 // Website
 describe('Web kategori lokasi', () => {
 
     it('Add kategori lokasi', async() => {
-        const response = await QoinAPI.createkategoriLokasi(data.VALID_ADDKATEGORI)
+        const response = await QoinAPI.createkategoriLokasi(data.VALID_ADDKATEGORI, token)
 
         //result
         assert.equal(response.status, 200)
@@ -21,7 +26,7 @@ describe('Web kategori lokasi', () => {
     });
 
     it('Get detail kategori lokasi', async() => {
-        const response = await QoinAPI.getdetailkategoriLokasi()
+        const response = await QoinAPI.getdetailkategoriLokasi(token)
 
         //result
         assert.equal(response.status, 200)
@@ -31,8 +36,7 @@ describe('Web kategori lokasi', () => {
     });
 
     it('Update kategori lokasi', async() => {
-        const id = await Getid()
-        const response = await QoinAPI.updatekategoriLokasi(id, data.VALID_UPDATEKATEGORI)
+        const response = await QoinAPI.updatekategoriLokasi(id, data.VALID_UPDATEKATEGORI, token)
 
         //result
         assert.equal(response.status, 200)
@@ -46,7 +50,6 @@ describe('Web kategori lokasi', () => {
     //belum bisa
 
     // it('Read kategori lokasi', async() => {
-    //     const id = await Getid()
     //     const response = await QoinAPI.readkategoriLokasi(id)
 
     //     // result
@@ -57,8 +60,7 @@ describe('Web kategori lokasi', () => {
     // });
 
     it('Delete kategori lokasi', async() => {
-        const id = await Getid()
-        const response = await QoinAPI.deletekategoriLokasi(id)
+        const response = await QoinAPI.deletekategoriLokasi(id, token)
 
         //result
         assert.equal(response.status, 200)
