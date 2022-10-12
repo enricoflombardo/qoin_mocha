@@ -10,7 +10,12 @@ import Get_token from '$root/helper/csr-token'; // import token
 chai.use(jsonSchema)
 // chai.use(chaiExclude)
 
+// Token and id
+const token = await Get_token();
+const id = await Getid_Lokasi();
+
 describe('Web lokasi', () => {
+
 
     // Engineer mas sase
 
@@ -67,8 +72,6 @@ describe('Web lokasi', () => {
     });
 
     it('Edit lokasi', async() => {
-
-        const id = await Getid_Lokasi()
         const response = await QoinAPI.updateLokasi(id, data.VALID_PUTLOKASI)
 
         //result
@@ -105,13 +108,10 @@ describe('Web lokasi', () => {
     });*/
 
     it('Get Fasilitas Lokasi', async() => {
-        const get_id = await Getid_Lokasi()
-        const GettokenAPI = await Get_token()
-        const response = await QoinAPI.getFasilitaslokasi(get_id, GettokenAPI)
+        const response = await QoinAPI.getFasilitaslokasi(id, token)
 
         //result
         assert.equal(response.status, 200)
-
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
         console.log(response.headers)
@@ -150,7 +150,6 @@ describe('Web lokasi', () => {
     });
 
     it('Hapus lokasi', async() => {
-        const id = await Getid_Lokasi()
         const response = await QoinAPI.deleteLokasi(id)
 
         //result
@@ -162,6 +161,7 @@ describe('Web lokasi', () => {
 });
 
 describe('Mobile lokasi', async() => {
+
     it('Get haversin circle', async () => {
         const response = await QoinAPI.get_haversin_circle();
     

@@ -9,7 +9,6 @@ import Get_token from '$root/helper/csr-token';
 chai.use(jsonSchema)
 
 // Website
-
 describe('Web kategori lokasi', () => {
 
     it('Add kategori lokasi', async() => {
@@ -89,7 +88,10 @@ describe('Web kategori lokasi', () => {
 });
 
 // Mobile
+
+
 describe('Mobile kategori lokasi', (done) => {
+
 
     it('Get kategori lokasi', async ()=> {
         const get_id = await Getid_Lokasi()

@@ -38,7 +38,7 @@ const QoinAPI = {
             Authorization: "Bearer "+ token
         }
     }), //id_voucher
-    getvoucher: (id, token) => BaseAPI.get('/Voucher/'+ id, {
+    getvoucher: (id_voucher, token) => BaseAPI.get('/Voucher/'+ id_voucher, {
         headers : {
             Authorization: "Bearer "+ token
         }
