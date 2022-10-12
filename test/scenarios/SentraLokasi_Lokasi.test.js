@@ -8,6 +8,10 @@ import Get_token from '$root/helper/csr-token'; // import token
 
 chai.use(jsonSchema)
 
+// Token and id
+const token = await Get_token();
+const id = await Getid_Lokasi();
+
 describe('Web lokasi', () => {
 
 
@@ -44,7 +48,6 @@ describe('Web lokasi', () => {
     });
 
     it('Edit lokasi', async() => {
-        const id = await Getid_Lokasi()
         const response = await QoinAPI.updateLokasi(id, data.VALID_PUTLOKASI)
 
         //result
@@ -76,16 +79,13 @@ describe('Web lokasi', () => {
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETIMAGELOKASI_SCHEMA)
     });*/
 
-    it.only('Get Fasilitas Lokasi', async() => {
-        const get_id = await Getid_Lokasi()
-        const GettokenAPI = await Get_token()
-        const response = await QoinAPI.getFasilitaslokasi(get_id, GettokenAPI)
+    it('Get Fasilitas Lokasi', async() => {
+        const response = await QoinAPI.getFasilitaslokasi(id, token)
 
         //result
         assert.equal(response.status, 200)
-
         //schema
-        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
+        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
     });
 
     // Endpoint lokal mas sase
@@ -120,7 +120,6 @@ describe('Web lokasi', () => {
     });
 
     it('Hapus lokasi', async() => {
-        const id = await Getid_Lokasi()
         const response = await QoinAPI.deleteLokasi(id)
 
         //result
