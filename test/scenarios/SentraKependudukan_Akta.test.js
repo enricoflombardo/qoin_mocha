@@ -9,6 +9,8 @@ import Getid from '$root/helper/get-id-akta';
 chai.use(jsonSchema);
 chai.use(chaiExclude);
 
+// Token dan id
+
 
 describe('Mobile', () => {
     it('Berhasil membuat akta melalui mobile', async () => {

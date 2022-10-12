@@ -6,8 +6,6 @@ import * as schema from '$root/schema/SentaLokasi_Lokasi.schema'; //import schem
 import {Getid_Lokasi} from '$root/helper/helper-sentraLokasi'; //import id
 import Get_token from '$root/helper/get-token'; // import token
 import Token_mobile from '$root/helper/get-token'
-import randomId from '$root/helper/random-char'
-import makeid from '$root/helper/random-char';
 
 chai.use(jsonSchema)
 
@@ -41,7 +39,7 @@ describe('Web lokasi', () => {
     });
 
     it('Get dan Cek Data Multi Lokasi', async() => {
-        const response = await QoinAPI.getLokasi(token)
+        const response = await QoinAPI.getLokasi(id, token)
         
         //console.log(response.data.data.list[0].id)
         //schema
@@ -49,7 +47,7 @@ describe('Web lokasi', () => {
     });
 
     it('Edit lokasi', async() => {
-        const response = await QoinAPI.updateLokasi(id, data.VALID_PUTLOKASI)
+        const response = await QoinAPI.updateLokasi(id, data.VALID_PUTLOKASI, token)
 
         //result
         assert.equal(response.status, 200)
@@ -120,7 +118,7 @@ describe('Web lokasi', () => {
     });
 
     it('Hapus lokasi', async() => {
-        const response = await QoinAPI.deleteLokasi(id)
+        const response = await QoinAPI.deleteLokasi(id, token)
 
         //result
         assert.equal(response.status, 200)
@@ -140,7 +138,7 @@ describe('Mobile lokasi', async() => {
     });
     
     it('Get haversin circle by kategori', async () => {
-        const response = await QoinAPI.get_haversin_circle_bykategori(token_mobile);
+        const response = await QoinAPI.get_haversin_circle_bykategori(id, token_mobile);
     
         assert.equal(response.status, 200)
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_HAVERSINCIRCLE_BYKATEGORI_SCHEMA)

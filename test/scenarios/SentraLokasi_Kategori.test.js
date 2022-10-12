@@ -5,10 +5,12 @@ import * as data from '$root/data/SentraLokasi_Kategori.data'; //import data
 import * as schema from '$root/schema/SentraLokasi_Kategori.schema'; //import schema
 import Getid, { Getid_Lokasi } from '$root/helper/helper-sentraLokasi'; //import id
 import Get_token from '$root/helper/get-token'
+import Token_mobile from '$root/helper/get-token' 
 
 chai.use(jsonSchema)
 
 // Token dan id
+const token_mobile = Token_mobile();
 const token = Get_token();
 const id = Getid_Lokasi();
 
@@ -26,7 +28,7 @@ describe('Web kategori lokasi', () => {
     });
 
     it('Get detail kategori lokasi', async() => {
-        const response = await QoinAPI.getdetailkategoriLokasi(token)
+        const response = await QoinAPI.getdetailkategoriLokasi(id, token)
 
         //result
         assert.equal(response.status, 200)
@@ -72,7 +74,7 @@ describe('Mobile kategori lokasi', (done) => {
 
 
     it('Get kategori lokasi', async ()=> {
-        const response = await QoinAPI.get_lokasi();
+        const response = await QoinAPI.get_lokasi(token_mobile);
     
         assert.equal(response.status, 200)
         // console.log(response.data.data)
