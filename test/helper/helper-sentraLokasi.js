@@ -17,7 +17,7 @@ export default async function Getid(){
 }
 
 export async function Getid_Lokasi(){
-    const response = await QoinAPI2.get_lokasi() //hit API
+    const response = await QoinAPI2.getLokasi() //hit API
     let IDrespons = response.data.id
     return IDrespons 
 }

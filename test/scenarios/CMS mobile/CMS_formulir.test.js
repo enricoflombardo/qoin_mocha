@@ -36,7 +36,7 @@ describe('CMS list Document', (done) => {
 })
 
 describe('CMS detail Document by ID', (done) => {
-    it.only('CMS detail Document by ID ditemukan', async () => {
+    it('CMS detail Document by ID ditemukan', async () => {
         const response = await qoinAPI.get_detaildocument_byid();
 
         assert.equal(response.status, 200)
@@ -45,7 +45,7 @@ describe('CMS detail Document by ID', (done) => {
 })
 
 describe('CMS Add Formulir', (done) => {
-    it.only('CMS Add Formulir ditemukan', async () => {
+    it('CMS Add Formulir ditemukan', async () => {
         const response = await qoinAPI.post_add_fromulir(data.VALID_ADDFORMULIR);
 
         assert.equal(response.status, 200)
