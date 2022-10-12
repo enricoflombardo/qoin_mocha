@@ -3491,47 +3491,59 @@ export const VALIDATE_GETFASILITASLOKASI_SCHEMA = {
                         "type": "integer",
                         "title": "The id Schema",
                         "examples": [
-                            284,
-                            285
+                            3,
+                            6,
+                            7
                         ]
                     },
                     "m_lokasi_id": {
                         "type": "integer",
                         "title": "The m_lokasi_id Schema",
                         "examples": [
-                            6
+                            2
                         ]
                     },
                     "name": {
                         "type": "string",
                         "title": "The name Schema",
                         "examples": [
-                            "UGD",
-                            "USG"
+                            "Kantor",
+                            "Pasar",
+                            "Mushola"
                         ]
                     }
                 },
                 "examples": [{
-                    "id": 284,
-                    "m_lokasi_id": 6,
-                    "name": "UGD"
+                    "id": 3,
+                    "m_lokasi_id": 2,
+                    "name": "Kantor"
                 },
                 {
-                    "id": 285,
-                    "m_lokasi_id": 6,
-                    "name": "USG"
+                    "id": 6,
+                    "m_lokasi_id": 2,
+                    "name": "Pasar"
+                },
+                {
+                    "id": 7,
+                    "m_lokasi_id": 2,
+                    "name": "Mushola"
                 }]
             },
             "examples": [
                 [{
-                    "id": 284,
-                    "m_lokasi_id": 6,
-                    "name": "UGD"
+                    "id": 3,
+                    "m_lokasi_id": 2,
+                    "name": "Kantor"
                 },
                 {
-                    "id": 285,
-                    "m_lokasi_id": 6,
-                    "name": "USG"
+                    "id": 6,
+                    "m_lokasi_id": 2,
+                    "name": "Pasar"
+                },
+                {
+                    "id": 7,
+                    "m_lokasi_id": 2,
+                    "name": "Mushola"
                 }]
             ]
         }
@@ -3540,14 +3552,19 @@ export const VALIDATE_GETFASILITASLOKASI_SCHEMA = {
         "status_code": 200,
         "message": "Success",
         "data": [{
-            "id": 284,
-            "m_lokasi_id": 6,
-            "name": "UGD"
+            "id": 3,
+            "m_lokasi_id": 2,
+            "name": "Kantor"
         },
         {
-            "id": 285,
-            "m_lokasi_id": 6,
-            "name": "USG"
+            "id": 6,
+            "m_lokasi_id": 2,
+            "name": "Pasar"
+        },
+        {
+            "id": 7,
+            "m_lokasi_id": 2,
+            "name": "Mushola"
         }]
     }]
 }
@@ -4362,6 +4379,492 @@ export const VALIDATE_KATEGORIBYID_SCHEMA = {
             {
                 "extention": "",
                 "picture": "https://s3.loyalto.id/inisadev/public/noimage.png"
+            }]
+        }
+    }]
+}
+
+export const VALIDATE_ADD_LOKASI_SCHEMA = {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "status_code",
+        "message",
+        "data"
+    ],
+    "properties": {
+        "status_code": {
+            "type": "integer",
+            "default": 0,
+            "title": "The status_code Schema",
+            "examples": [
+                200
+            ]
+        },
+        "message": {
+            "type": "string",
+            "default": "",
+            "title": "The message Schema",
+            "examples": [
+                "Success"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "data",
+                "fasilitas"
+            ],
+            "properties": {
+                "data": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The data Schema",
+                    "required": [
+                        "alamat",
+                        "bahasa",
+                        "created_at",
+                        "deleted_at",
+                        "description",
+                        "id",
+                        "is_active",
+                        "latitude",
+                        "longitude",
+                        "m_lokasi_kategori_id",
+                        "name",
+                        "updated_at"
+                    ],
+                    "properties": {
+                        "alamat": {
+                            "type": "null",
+                            "default": null,
+                            "title": "The alamat Schema",
+                            "examples": [
+                                null
+                            ]
+                        },
+                        "bahasa": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The bahasa Schema",
+                            "examples": [
+                                "id"
+                            ]
+                        },
+                        "created_at": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The created_at Schema",
+                            "examples": [
+                                "2022-06-09T09:04:26+07:00"
+                            ]
+                        },
+                        "deleted_at": {
+                            "type": "null",
+                            "default": null,
+                            "title": "The deleted_at Schema",
+                            "examples": [
+                                null
+                            ]
+                        },
+                        "description": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The description Schema",
+                            "examples": [
+                                "Ini Cabang Rumah Sakit Venturo"
+                            ]
+                        },
+                        "id": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The id Schema",
+                            "examples": [
+                                18
+                            ]
+                        },
+                        "is_active": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The is_active Schema",
+                            "examples": [
+                                1
+                            ]
+                        },
+                        "latitude": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The latitude Schema",
+                            "examples": [
+                                "-7.942348725600281"
+                            ]
+                        },
+                        "longitude": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The longitude Schema",
+                            "examples": [
+                                "112.62298581228141"
+                            ]
+                        },
+                        "m_lokasi_kategori_id": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The m_lokasi_kategori_id Schema",
+                            "examples": [
+                                1
+                            ]
+                        },
+                        "name": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The name Schema",
+                            "examples": [
+                                "Rumah Sakit Venturo 2"
+                            ]
+                        },
+                        "updated_at": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The updated_at Schema",
+                            "examples": [
+                                "2022-06-09T09:04:26+07:00"
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "alamat": null,
+                        "bahasa": "id",
+                        "created_at": "2022-06-09T09:04:26+07:00",
+                        "deleted_at": null,
+                        "description": "Ini Cabang Rumah Sakit Venturo",
+                        "id": 18,
+                        "is_active": 1,
+                        "latitude": "-7.942348725600281",
+                        "longitude": "112.62298581228141",
+                        "m_lokasi_kategori_id": 1,
+                        "name": "Rumah Sakit Venturo 2",
+                        "updated_at": "2022-06-09T09:04:26+07:00"
+                    }]
+                },
+                "fasilitas": {
+                    "type": "array",
+                    "default": [],
+                    "title": "The fasilitas Schema",
+                    "items": {
+                        "type": "object",
+                        "title": "A Schema",
+                        "required": [
+                            "m_lokasi_id",
+                            "name"
+                        ],
+                        "properties": {
+                            "m_lokasi_id": {
+                                "type": "integer",
+                                "title": "The m_lokasi_id Schema",
+                                "examples": [
+                                    18
+                                ]
+                            },
+                            "name": {
+                                "type": "string",
+                                "title": "The name Schema",
+                                "examples": [
+                                    "UGD",
+                                    "USG"
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "m_lokasi_id": 18,
+                            "name": "UGD"
+                        },
+                        {
+                            "m_lokasi_id": 18,
+                            "name": "USG"
+                        }]
+                    },
+                    "examples": [
+                        [{
+                            "m_lokasi_id": 18,
+                            "name": "UGD"
+                        },
+                        {
+                            "m_lokasi_id": 18,
+                            "name": "USG"
+                        }]
+                    ]
+                }
+            },
+            "examples": [{
+                "data": {
+                    "alamat": null,
+                    "bahasa": "id",
+                    "created_at": "2022-06-09T09:04:26+07:00",
+                    "deleted_at": null,
+                    "description": "Ini Cabang Rumah Sakit Venturo",
+                    "id": 18,
+                    "is_active": 1,
+                    "latitude": "-7.942348725600281",
+                    "longitude": "112.62298581228141",
+                    "m_lokasi_kategori_id": 1,
+                    "name": "Rumah Sakit Venturo 2",
+                    "updated_at": "2022-06-09T09:04:26+07:00"
+                },
+                "fasilitas": [{
+                    "m_lokasi_id": 18,
+                    "name": "UGD"
+                },
+                {
+                    "m_lokasi_id": 18,
+                    "name": "USG"
+                }]
+            }]
+        }
+    },
+    "examples": [{
+        "status_code": 200,
+        "message": "Success",
+        "data": {
+            "data": {
+                "alamat": null,
+                "bahasa": "id",
+                "created_at": "2022-06-09T09:04:26+07:00",
+                "deleted_at": null,
+                "description": "Ini Cabang Rumah Sakit Venturo",
+                "id": 18,
+                "is_active": 1,
+                "latitude": "-7.942348725600281",
+                "longitude": "112.62298581228141",
+                "m_lokasi_kategori_id": 1,
+                "name": "Rumah Sakit Venturo 2",
+                "updated_at": "2022-06-09T09:04:26+07:00"
+            },
+            "fasilitas": [{
+                "m_lokasi_id": 18,
+                "name": "UGD"
+            },
+            {
+                "m_lokasi_id": 18,
+                "name": "USG"
+            }]
+        }
+    }]
+}
+
+export const VALIDATE_EDIT_LOKASI_SCHEMA ={
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "status_code",
+        "message",
+        "data"
+    ],
+    "properties": {
+        "status_code": {
+            "type": "integer",
+            "default": 0,
+            "title": "The status_code Schema",
+            "examples": [
+                200
+            ]
+        },
+        "message": {
+            "type": "string",
+            "default": "",
+            "title": "The message Schema",
+            "examples": [
+                "Success"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "data",
+                "fasilitas"
+            ],
+            "properties": {
+                "data": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The data Schema",
+                    "required": [
+                        "bahasa",
+                        "id",
+                        "latitude",
+                        "longitude",
+                        "m_lokasi_kategori_id",
+                        "name",
+                        "updated_at"
+                    ],
+                    "properties": {
+                        "bahasa": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The bahasa Schema",
+                            "examples": [
+                                "id"
+                            ]
+                        },
+                        "id": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The id Schema",
+                            "examples": [
+                                6
+                            ]
+                        },
+                        "latitude": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The latitude Schema",
+                            "examples": [
+                                "-7.264188839148579"
+                            ]
+                        },
+                        "longitude": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The longitude Schema",
+                            "examples": [
+                                "112.69104859142386"
+                            ]
+                        },
+                        "m_lokasi_kategori_id": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The m_lokasi_kategori_id Schema",
+                            "examples": [
+                                1
+                            ]
+                        },
+                        "name": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The name Schema",
+                            "examples": [
+                                "Mitra Keluarga Surabaya"
+                            ]
+                        },
+                        "updated_at": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The updated_at Schema",
+                            "examples": [
+                                "2022-06-09 09:05:42"
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "bahasa": "id",
+                        "id": 6,
+                        "latitude": "-7.264188839148579",
+                        "longitude": "112.69104859142386",
+                        "m_lokasi_kategori_id": 1,
+                        "name": "Mitra Keluarga Surabaya",
+                        "updated_at": "2022-06-09 09:05:42"
+                    }]
+                },
+                "fasilitas": {
+                    "type": "array",
+                    "default": [],
+                    "title": "The fasilitas Schema",
+                    "items": {
+                        "type": "object",
+                        "title": "A Schema",
+                        "required": [
+                            "m_lokasi_id",
+                            "name"
+                        ],
+                        "properties": {
+                            "m_lokasi_id": {
+                                "type": "integer",
+                                "title": "The m_lokasi_id Schema",
+                                "examples": [
+                                    6
+                                ]
+                            },
+                            "name": {
+                                "type": "string",
+                                "title": "The name Schema",
+                                "examples": [
+                                    "UGD",
+                                    "USG"
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "m_lokasi_id": 6,
+                            "name": "UGD"
+                        },
+                        {
+                            "m_lokasi_id": 6,
+                            "name": "USG"
+                        }]
+                    },
+                    "examples": [
+                        [{
+                            "m_lokasi_id": 6,
+                            "name": "UGD"
+                        },
+                        {
+                            "m_lokasi_id": 6,
+                            "name": "USG"
+                        }]
+                    ]
+                }
+            },
+            "examples": [{
+                "data": {
+                    "bahasa": "id",
+                    "id": 6,
+                    "latitude": "-7.264188839148579",
+                    "longitude": "112.69104859142386",
+                    "m_lokasi_kategori_id": 1,
+                    "name": "Mitra Keluarga Surabaya",
+                    "updated_at": "2022-06-09 09:05:42"
+                },
+                "fasilitas": [{
+                    "m_lokasi_id": 6,
+                    "name": "UGD"
+                },
+                {
+                    "m_lokasi_id": 6,
+                    "name": "USG"
+                }]
+            }]
+        }
+    },
+    "examples": [{
+        "status_code": 200,
+        "message": "Success",
+        "data": {
+            "data": {
+                "bahasa": "id",
+                "id": 6,
+                "latitude": "-7.264188839148579",
+                "longitude": "112.69104859142386",
+                "m_lokasi_kategori_id": 1,
+                "name": "Mitra Keluarga Surabaya",
+                "updated_at": "2022-06-09 09:05:42"
+            },
+            "fasilitas": [{
+                "m_lokasi_id": 6,
+                "name": "UGD"
+            },
+            {
+                "m_lokasi_id": 6,
+                "name": "USG"
             }]
         }
     }]

@@ -7,9 +7,11 @@ import Getid_Lokasi from '$root/helper/helper-sentraLokasi'; //import id
 import Get_token from '$root/helper/csr-token' //import token
 
 chai.use(jsonSchema)
-const token = await Get_token()
+// Token and id
+const token = await Get_token();
+const id = await Getid_Lokasi();
 
-describe('Web lokasi', () => {
+describe.only('Web lokasi', () => {
 
 
     // Engineer mas sase
@@ -19,8 +21,8 @@ describe('Web lokasi', () => {
 
         //result
         assert.equal(response.status, 200)
-        //schema belum nyoba ga brani
-        //expect(response.data).to.be.jsonSchema(schema)
+        //schema
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_LOKASI_SCHEMA)
     });
 
     it('Add multi lokasi', async() => {
@@ -30,7 +32,7 @@ describe('Web lokasi', () => {
         assert.equal(response.status, 200)
 
         //schema
-        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDSENTRAMULTILOKASI_WEBADMIN_SCHEMA)
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDSENTRAMULTILOKASI_WEBADMIN_SCHEMA)
     });
 
     it('Get dan Cek Data Multi Lokasi', async() => {
@@ -40,23 +42,21 @@ describe('Web lokasi', () => {
         assert.equal(response.status, 200)
 
         //schema
-        //expect(response.data).to.be.jsonSchema(schema.)
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETSENTRALOKASI_WEBADMIN_SCHEMA)
     });
 
     it('Edit lokasi', async() => {
-        const id = await Getid_Lokasi()
         const response = await QoinAPI.updateLokasi(id, data.VALID_PUTLOKASI, token)
 
         //result
         assert.equal(response.status, 200)
 
-        //schema BELUM NYOBA JUGA
-        //expect(response.data).to.be.jsonSchema(schema)
+        //schema
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_EDIT_LOKASI_SCHEMA)
     });
 
-    it('Add lokasi image', async() => {
-        const response = await QoinAPI.addImagelokasi(data.VALID_ADDLOCATIONIMAGE, token)
-
+    it('Hapus lokasi', async() => {
+        const response = await QoinAPI.deleteLokasi(3, token)
         //result
         assert.equal(response.status, 200)
 
@@ -64,26 +64,34 @@ describe('Web lokasi', () => {
         //expect(response.data).to.be.jsonSchema(schema)
     });
 
+    //BELUM BISA
+    // it('Add lokasi image', async() => {
+    //     const response = await QoinAPI.addImagelokasi(data.VALID_ADDLOCATIONIMAGE, token)
+
+    //     //result
+    //     assert.equal(response.status, 200)
+
+    //     //schema BELUM NYOBA JUGA
+    //     //expect(response.data).to.be.jsonSchema(schema)
+    // });
+
     it('Get dan Cek Image Lokasi', async() => {
-        const response = await QoinAPI.getImagelokasi(token)
+        const response = await QoinAPI.getImagelokasi(id, token)
 
         //result
         assert.equal(response.status, 200)
 
         //schema
-        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETIMAGELOKASI_SCHEMA)
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETIMAGELOKASI_SCHEMA)
     });
 
-    it.only('Get Fasilitas Lokasi', async() => {
+    it('Get Fasilitas Lokasi', async() => {
         const response = await QoinAPI.getFasilitaslokasi(id, token)
 
         //result
-        console.log(id);
         assert.equal(response.status, 200)
         //schema
-        // expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
-        // console.log(response.headers)
-        // console.log(response.data)
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
     });
 
     // Endpoint lokal mas sase
@@ -99,7 +107,7 @@ describe('Web lokasi', () => {
 
     it('Get Lokasi By Id', async() => {
         
-        const response = await QoinAPI.getLokasibyid(token)
+        const response = await QoinAPI.getLokasibyid(id, token)
 
         //result
         assert.equal(response.status, 200)
@@ -108,26 +116,18 @@ describe('Web lokasi', () => {
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETLOKASIBYID_SCHEMA)
     });
 
-    it('Hapus Image Lokasi', async() => {
-        const response = await QoinAPI.deleteImagelokasi(token)
+    //BELUM BISA
+    // it('Hapus Image Lokasi', async() => {
+    //     const response = await QoinAPI.deleteImagelokasi(id, token)
 
-        //result
-        assert.equal(response.status, 200)
+    //     //result
+    //     assert.equal(response.status, 200)
 
-        //schema belum nyoba
-        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETIMAGELOKASI_SCHEMA)
-    });
+    //     //schema belum nyoba
+    //     //expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETIMAGELOKASI_SCHEMA)
+    // });
 
-    it('Hapus lokasi', async() => {
-        const id = await Getid_Lokasi()
-        const response = await QoinAPI.deleteLokasi(id, token)
 
-        //result
-        assert.equal(response.status, 200)
-
-        //schema BELUM NYOBA JUGA
-        //expect(response.data).to.be.jsonSchema(schema)
-    });
 });
 
 describe('Mobile lokasi', async() => {
