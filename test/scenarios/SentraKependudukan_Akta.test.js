@@ -13,14 +13,12 @@ chai.use(chaiExclude);
 const id = await Getid();
 const token = await Get_token();
 
-// Token dan id
-
 
 describe('Mobile', () => {
     it('Berhasil membuat akta melalui mobile', async () => {
         const response = await QoinAPI.add_akta(token, data.VALID_ADD_AKTA) //hit API
         
-        // //result
+        //result
         assert.equal(response.status, 200);
 
         let resultObject = {};
@@ -109,9 +107,7 @@ describe('Mobile', () => {
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALID_ADD_AKTA_SCHEMA)
-
-        // console.log(response.data)
-
+        //console.log(response)
     });
 });
 
@@ -131,10 +127,9 @@ describe('Web', () => {
     });
     
     it('Update Akta', async () => {
-        //const response = await QoinAPI.update_akta(id, data.VALID_UPDATE_AKTA, token) //hit API
-        const response = await QoinAPI.get_id(token)
+        const response = await QoinAPI.update_akta(id, data.VALID_UPDATE_AKTA, token) //hit API
         //result
-        //assert.equal(response.status, 200);
+        assert.equal(response.status, 200);
         
 
         //schema
@@ -143,7 +138,6 @@ describe('Web', () => {
     });
     
     it('Update Status Verifikasi', async () => {
-        const id = await Getid()
         const response = await QoinAPI.update_status_verif(id, data.VALID_UPDATE_STATUS_VERIFIKASI, token) //hit API
         
         //result
@@ -158,8 +152,7 @@ describe('Web', () => {
     });
     
     it('Update Status', async () => {
-        const id = await Getid()
-        const response = await QoinAPI.update_status(id, data.VALID_UPDATE_STATUS) //hit API
+        const response = await QoinAPI.update_status(id, data.VALID_UPDATE_STATUS, token) //hit API
         
         //result
         assert.equal(response.status, 200);
@@ -173,8 +166,7 @@ describe('Web', () => {
     });
     
     it('Update Jadwal', async () => {
-        const id = await Getid()
-        const response = await QoinAPI.update_jadwal(data.VALID_UPDATE_JADWAL) //hit API
+        const response = await QoinAPI.update_jadwal(id, data.VALID_UPDATE_JADWAL, token) //hit API
         
         //result
         assert.equal(response.status, 200);
@@ -188,8 +180,7 @@ describe('Web', () => {
     });
     
     it('Update Status Konfirmasi', async () => {
-        const id = await Getid()
-        const response = await QoinAPI.update_status_konfirmasi(id, data.VALID_UPDATE_STATUS_KONFIRMASI) //hit API
+        const response = await QoinAPI.update_status_konfirmasi(id, data.VALID_UPDATE_STATUS_KONFIRMASI, token) //hit API
         
         //result
         assert.equal(response.status, 200);
