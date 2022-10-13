@@ -3,7 +3,11 @@ import BaseAPI_JSON from '$root/pages/base_json.api';
 
 const QoinAPI = {
     //mobile
-    add_akta: (data) => BaseAPI_JSON.post('/aktaLahir',data),
+    add_akta: (data, token) => BaseAPI_JSON.post('/aktaLahir',data, {
+        headers : {
+            Authorization: "Bearer "+ token
+        }
+    }),
 
     //web
     get_id: (token) => BaseAPI.get('/getDocument?limit=1&filter={"type":"m_akta"}', {
@@ -31,7 +35,7 @@ const QoinAPI = {
             Authorization: "Bearer "+ token
         }
     }),
-    update_jadwal: (id, data, token) => BaseAPI_JSON.put('/aktaLahirJadwal', id, data, {
+    update_jadwal: (data, token) => BaseAPI_JSON.put('/aktaLahirJadwal', data, {
         headers : {
             Authorization: "Bearer "+ token
         }
