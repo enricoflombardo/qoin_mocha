@@ -22,11 +22,49 @@ describe('Mobile', () => {
         
             //result
             assert.equal(response.status, 200);
-            assert.equal(response.data.data.rincian_pemohon.nama_pemohon.toLowerCase(), data.VALID_ADDKK.data.nama_pemohon.toLowerCase());
-            assert.equal(response.data.data.rincian_pemohon.nik_pemohon, data.VALID_ADDKK.data.nik_pemohon);
-            assert.equal(response.data.data.rincian_pemohon.jumlah_anggota, data.VALID_ADDKK.data.jumlah_anggota);
-            assert.equal(response.data.data.rincian_alamat.alamat.toLowerCase(), data.VALID_ADDKK.data.alamat.toLowerCase());
-            assert.equal(response.data.data.rincian_alamat.kota_pemohon.toLowerCase(), data.VALID_ADDKK.data.kota_pemohon.toLowerCase());
+
+            //Check Data
+
+            let resultObject = {};
+            Object.keys(response.data.data).map((key) => { // iterate over the keys
+            resultObject = {
+                ...resultObject,
+                ['data']: {...response.data.data['rincian_alamat'], ...response.data.data['rincian_domisili'], ...response.data.data['rincian_kedatangan'], ...response.data.data['rincian_pemohon']} // merge two or more objects 
+            }
+            return;
+            });
+            
+            const data_res = Object.fromEntries(
+                Object.entries(resultObject.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
+              );
+    
+            const data_in = Object.fromEntries(
+                Object.entries(data.VALID_ADDKK.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
+              );
+            
+            //check Data
+            assert.deepEqualExcluding(data_in, data_res, ['id', 'updatebyid', 'updated_at', 'client_id', 'created_by', "jenis_permohonan", 
+            "jumlah_anggota", 
+            "jam_kedatangan", 
+            "jumlah_anggota", 
+            "kecamatan_domisili_id", 
+            "kecamatan_id", 
+            "kelurahan_domisili_id", 
+            "kelurahan_id", 
+            "kota_domisili_id", 
+            "kota_id", 
+            "lokasi_id", 
+            "m_user_id", 
+            "no_registrasi", 
+            "provinsi_domisili_id", 
+            "provinsi_id", 
+            "rt", 
+            "rw", 
+            "rt", 
+            "rw", 
+            "status", 
+            "tanggal_kedatangan", 
+            "tanggal_permohonan"])
 
             //schema
             expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_KK_SCHEMA)
