@@ -51,8 +51,8 @@ describe.only('Web kategori lokasi', () => {
     });
 
     it('Update kategori lokasi', async() => {
-        const response = await QoinAPI.updatekategoriLokasi(id, data.VALID_UPDATEKATEGORI, token)
-
+        const idUpdate = 3
+        const response = await QoinAPI.updatekategoriLokasi(idUpdate, data.VALID_UPDATEKATEGORI, token)
         //validasi
         const data_res = Object.fromEntries(
             Object.entries(response.data.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])

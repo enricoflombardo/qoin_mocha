@@ -13,7 +13,7 @@ const token_mobile = await Token_mobile();
 const token = await Get_token();
 const id = await Getid_Lokasi();
 
-describe('Web lokasi', () => {
+describe.only('Web lokasi', () => {
 
 
     // Engineer mas sase
@@ -174,7 +174,7 @@ describe('Web lokasi', () => {
 
 });
 
-describe('Mobile lokasi', async() => {
+describe.only('Mobile lokasi', async() => {
 
     it('Get haversin circle', async () => {
         const response = await QoinAPI.get_haversin_circle(token_mobile);
