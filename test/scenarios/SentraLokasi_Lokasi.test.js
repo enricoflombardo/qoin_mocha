@@ -13,7 +13,7 @@ const token_mobile = await Token_mobile();
 const token = await Get_token();
 const id = await Getid_Lokasi();
 
-describe('Web lokasi', () => {
+describe.only('Web lokasi', () => {
 
 
     // Engineer mas sase
@@ -22,9 +22,30 @@ describe('Web lokasi', () => {
         const response = await QoinAPI.addLokasi(data.VALID_ADDLOKASI, token)
         //result
         assert.equal(response.status, 200)
-        //response
         //response data
-        assert.equal(response.data.data.list[0].nama_pelapor.toLowerCase(), data.VALID_ADD_AKTA.nama_pelapor.toLowerCase());
+        let resultObject = {};
+        Object.keys(response.data.data).map((key) => { // iterate over the keys
+        resultObject = {
+            ...resultObject,
+            ['data']: {...response.data.data['data'], ...response.data.data['fasilitas']} // merge two or more objects 
+        }
+        return;
+        });
+        
+        const data_res = Object.fromEntries(
+            Object.entries(resultObject.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
+          );
+
+        const data_in = Object.fromEntries(
+            Object.entries(data.VALID_ADDLOKASI).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
+          );
+
+          console.log(resultObject);
+
+          //exclude
+        //   assert.deepEqualExcluding()
+
+
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_LOKASI_SCHEMA)
     });
@@ -34,6 +55,26 @@ describe('Web lokasi', () => {
 
         //result
         assert.equal(response.status, 200)
+
+        let resultObject = {};
+        Object.keys(response.data.data).map((key) => { // iterate over the keys
+        resultObject = {
+            ...resultObject,
+            ['data']: {...response.data.data['data'], ...response.data.data['fasilitas']} // merge two or more objects 
+        }
+        return;
+        });
+        
+        const data_res = Object.fromEntries(
+            Object.entries(resultObject.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
+          );
+
+        const data_in = Object.fromEntries(
+            Object.entries(data.VALID_ADDMULTILOKASI).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
+          );
+
+          //exclude
+        //   assert.deepEqualExcluding()
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDSENTRAMULTILOKASI_WEBADMIN_SCHEMA)
@@ -52,6 +93,25 @@ describe('Web lokasi', () => {
         const response = await QoinAPI.updateLokasi(id, data.VALID_PUTLOKASI, token)
         //result
         assert.equal(response.status, 200)
+        let resultObject = {};
+        Object.keys(response.data.data).map((key) => { // iterate over the keys
+        resultObject = {
+            ...resultObject,
+            ['data']: {...response.data.data['data'], ...response.data.data['fasilitas']} // merge two or more objects 
+        }
+        return;
+        });
+        
+        const data_res = Object.fromEntries(
+            Object.entries(resultObject.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
+          );
+
+        const data_in = Object.fromEntries(
+            Object.entries(data.VALID_PUTLOKASI).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
+          );
+
+          //exclude
+        //   assert.deepEqualExcluding()
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_EDIT_LOKASI_SCHEMA)
