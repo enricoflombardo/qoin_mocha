@@ -18,7 +18,7 @@ const token = await Get_token();
 
 describe('Mobile', () => {
     it('Berhasil membuat akta melalui mobile', async () => {
-        const response = await QoinAPI.add_akta(data.VALID_ADD_AKTA) //hit API
+        const response = await QoinAPI.add_akta(token, data.VALID_ADD_AKTA) //hit API
         
         // //result
         assert.equal(response.status, 200);
@@ -117,7 +117,7 @@ describe('Mobile', () => {
 
 describe('Web', () => {
     it('Get Index by ID', async () => {
-        const response = await QoinAPI.index_by_id(id) //hit API
+        const response = await QoinAPI.index_by_id(id, token) //hit API
         
         //response status
         assert.equal(response.status, 200);
@@ -144,7 +144,7 @@ describe('Web', () => {
     
     it('Update Status Verifikasi', async () => {
         const id = await Getid()
-        const response = await QoinAPI.update_status_verif(id, data.VALID_UPDATE_STATUS_VERIFIKASI) //hit API
+        const response = await QoinAPI.update_status_verif(id, data.VALID_UPDATE_STATUS_VERIFIKASI, token) //hit API
         
         //result
         assert.equal(response.status, 200);
