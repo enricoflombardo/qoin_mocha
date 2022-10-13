@@ -4,17 +4,19 @@ import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '../pages/SentraLokasi_Kategori.api'; //import endpoint API
 import * as data from '$root/data/SentraLokasi_Kategori.data'; //import data
 import * as schema from '$root/schema/SentraLokasi_Kategori.schema'; //import schema
-import Getid, { Getid_Lokasi } from '$root/helper/helper-sentraLokasi'; //import id
+import { Getid_Lokasi } from '$root/helper/helper-sentraLokasi'; //import id
 import Get_token from '$root/helper/get-token'
+import { Token_mobile } from '$root/helper/get-token' 
 
 chai.use(jsonSchema)
 chai.use(chaiExclude);
 
-// Token dan id
+//Token dan id
+const token_mobile = await Token_mobile();
 const token = await Get_token();
 const id = await Getid_Lokasi();
 // Website
-describe('Web kategori lokasi', () => {
+describe.only('Web kategori lokasi', () => {
 
     it('Add kategori lokasi', async() => {
         const response = await QoinAPI.createkategoriLokasi(token, data.VALID_ADDKATEGORI)
@@ -44,16 +46,14 @@ describe('Web kategori lokasi', () => {
 
         //result
         assert.equal(response.status, 200)
-
         //schema
-        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETDETAILKATEGORILOKASI)
+        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETDETAILKATEGORILOKASI)
     });
 
     it('Update kategori lokasi', async() => {
         const response = await QoinAPI.updatekategoriLokasi(id, data.VALID_UPDATEKATEGORI, token)
 
         //validasi
-        
         const data_res = Object.fromEntries(
             Object.entries(response.data.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
             );
@@ -86,7 +86,6 @@ describe('Web kategori lokasi', () => {
 
     it('Delete kategori lokasi', async() => {
         const response = await QoinAPI.deletekategoriLokasi(id, token)
-
         //result
         assert.equal(response.status, 200)
 
@@ -97,11 +96,11 @@ describe('Web kategori lokasi', () => {
 // Mobile
 
 
-describe('Mobile kategori lokasi', (done) => {
+describe.only('Mobile kategori lokasi', (done) => {
 
 
     it('Get kategori lokasi', async ()=> {
-        const response = await QoinAPI.get_lokasi();
+        const response = await QoinAPI.get_lokasi(token_mobile);
     
         assert.equal(response.status, 200)
 

@@ -13,7 +13,7 @@ const token_mobile = await Token_mobile();
 const token = await Get_token();
 const id = await Getid_Lokasi();
 
-describe.only('Web lokasi', () => {
+describe('Web lokasi', () => {
 
 
     // Engineer mas sase
@@ -174,7 +174,7 @@ describe.only('Web lokasi', () => {
 
 });
 
-describe.only('Mobile lokasi', async() => {
+describe('Mobile lokasi', async() => {
 
     it('Get haversin circle', async () => {
         const response = await QoinAPI.get_haversin_circle(token_mobile);
@@ -184,7 +184,7 @@ describe.only('Mobile lokasi', async() => {
     });
     
     it('Get haversin circle by kategori', async () => {
-        const response = await QoinAPI.get_haversin_circle_bykategori(token_mobile);
+        const response = await QoinAPI.get_haversin_circle_bykategori(id, token_mobile);
     
         assert.equal(response.status, 200)
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_HAVERSINCIRCLE_BYKATEGORI_SCHEMA)
