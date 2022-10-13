@@ -22,12 +22,24 @@ describe('Web lokasi', () => {
         const response = await QoinAPI.addLokasi(data.VALID_ADDLOKASI, token)
         //result
         assert.equal(response.status, 200)
+
+
         //response data
         let resultObject = {};
+        let postObject = {};
+
+
         Object.keys(response.data.data).map((key) => { // iterate over the keys
         resultObject = {
             ...resultObject,
             ['data']: {...response.data.data['data'], ...response.data.data['fasilitas']} // merge two or more objects 
+        }
+        return;
+        });
+        Object.keys(response.data.data).map((key) => { // iterate over the keys
+        postObject = {
+            ...postObject,
+            ['data']: {...data.VALID_ADDLOKASI['data'], ...data.VALID_ADDLOKASI['fasilitas']} // merge two or more objects 
         }
         return;
         });
@@ -37,13 +49,12 @@ describe('Web lokasi', () => {
           );
 
         const data_in = Object.fromEntries(
-            Object.entries(data.VALID_ADDLOKASI).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
+            Object.entries(postObject.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
           );
 
-          console.log(resultObject);
-
-          //exclude
-        //   assert.deepEqualExcluding()
+            // delete data_res[0].m_lokasi_id
+          //validasi exclude
+        //   assert.deepEqualExcluding(data_res, data_in, ['deleted_at', 'created_at', 'alamat', 'description', 'id', 'updated_at','m_lokasi_id', 'is_active', 'm_lokasi_id'])
 
 
         //schema
@@ -56,11 +67,21 @@ describe('Web lokasi', () => {
         //result
         assert.equal(response.status, 200)
 
-        let resultObject = {};
+          let resultObject = {};
+        let postObject = {};
+
+
         Object.keys(response.data.data).map((key) => { // iterate over the keys
         resultObject = {
             ...resultObject,
             ['data']: {...response.data.data['data'], ...response.data.data['fasilitas']} // merge two or more objects 
+        }
+        return;
+        });
+        Object.keys(response.data.data).map((key) => { // iterate over the keys
+        postObject = {
+            ...postObject,
+            ['data']: {...data.VALID_ADDMULTILOKASI['data'], ...data.VALID_ADDMULTILOKASI['fasilitas']} // merge two or more objects 
         }
         return;
         });
@@ -70,11 +91,12 @@ describe('Web lokasi', () => {
           );
 
         const data_in = Object.fromEntries(
-            Object.entries(data.VALID_ADDMULTILOKASI).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
+            Object.entries(postObject.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
           );
 
-          //exclude
-        //   assert.deepEqualExcluding()
+            // delete data_res[0].m_lokasi_id
+          //validasi exclude
+        //   assert.deepEqualExcluding(data_res, data_in, ['deleted_at', 'created_at', 'alamat', 'description', 'id', 'updated_at','m_lokasi_id', 'is_active', 'm_lokasi_id'])
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDSENTRAMULTILOKASI_WEBADMIN_SCHEMA)
@@ -94,10 +116,20 @@ describe('Web lokasi', () => {
         //result
         assert.equal(response.status, 200)
         let resultObject = {};
+        let postObject = {};
+
+
         Object.keys(response.data.data).map((key) => { // iterate over the keys
         resultObject = {
             ...resultObject,
             ['data']: {...response.data.data['data'], ...response.data.data['fasilitas']} // merge two or more objects 
+        }
+        return;
+        });
+        Object.keys(response.data.data).map((key) => { // iterate over the keys
+        postObject = {
+            ...postObject,
+            ['data']: {...data.VALID_PUTLOKASI['data'], ...data.VALID_PUTLOKASI['fasilitas']} // merge two or more objects 
         }
         return;
         });
@@ -107,11 +139,12 @@ describe('Web lokasi', () => {
           );
 
         const data_in = Object.fromEntries(
-            Object.entries(data.VALID_PUTLOKASI).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
+            Object.entries(postObject.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
           );
 
-          //exclude
-        //   assert.deepEqualExcluding()
+            // delete data_res[0].m_lokasi_id
+          //validasi exclude
+        //   assert.deepEqualExcluding(data_res, data_in, ['deleted_at', 'created_at', 'alamat', 'description', 'id', 'updated_at','m_lokasi_id', 'is_active', 'm_lokasi_id'])
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_EDIT_LOKASI_SCHEMA)

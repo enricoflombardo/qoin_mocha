@@ -11,9 +11,10 @@ import Token_mobile from '$root/helper/get-token'
 chai.use(jsonSchema)
 
 // Token dan id
-const token_mobile = Token_mobile();
-const token = Get_token();
-const id = Getid();
+const token_mobile = await Token_mobile();
+const token = await Get_token();
+const id = await Getid();
+const id_anggota = await Getid_anggota();
 
 describe('Mobile', () => {
     it('Berhasil membuat kk melalui mobile', async () => {
@@ -46,7 +47,6 @@ describe('Web', () => {
     });
 
     it('update data KK', async () => {
-        const id = await Getid();
         const response = await QoinAPI.updatekk(id, data.VALID_UPDATEKK, token) //hit API
 
         assert.equal(response.status, 200);
@@ -58,7 +58,6 @@ describe('Web', () => {
     });
 
     it('Update Status Verifikasi KK', async () => {
-        const id = await Getid();
         const response = await QoinAPI.updatestatusverif(id, data.VALID_STATUSVERIFKK, token)
         
         assert.equal(response.status, 200);
@@ -67,7 +66,6 @@ describe('Web', () => {
     });
 
     it('Update Status KK', async () => {
-        const id = await Getid();
         const response = await QoinAPI.updatestatus(id, data.VALID_STATUSKK, token)
 
         assert.equal(response.status, 200);
@@ -84,8 +82,6 @@ describe('Web', () => {
     });
 
     it('Update anggota KK', async () => {
-        const id = await Getid();
-        const id_anggota = await Getid_anggota();
         const response = await QoinAPI.updateanggota(id, id_anggota, data.VALID_UPDATE_ANGGOTA, token) //hit API
 
         assert.equal(response.status, 200);
@@ -94,7 +90,6 @@ describe('Web', () => {
     });
 
     it('Update Status konfirmasi KK', async () => {
-        const id = await Getid();
         const response = await QoinAPI.updatekonfirmasi(id, data.VALID_STATUSKONFIRKK, token)
 
         assert.equal(response.status, 200);
