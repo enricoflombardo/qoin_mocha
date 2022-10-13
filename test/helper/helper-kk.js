@@ -1,14 +1,17 @@
 import QoinAPI from '$root/pages/SentraKependudukan_KK.api'; //import endpoint API
+import Get_token from '$root/helper/get-token';
+
+const token = await Get_token();
 
 export default async function Getid(){
-    const response = await QoinAPI.getid() //hit API
+    const response = await QoinAPI.getid(token) //hit API
     let IDrespons = "3"
     
     // validate api
-    if (response.data.id == "undefined") {
+    if (response.data.data.list[0].id == 0) {
         IDrespons = "3"
     }else{
-        IDrespons = response.data.id
+        IDrespons = response.data.data.list[0].id
         // IDrespons = ""
     }
     

@@ -77,3 +77,12 @@ export const VALID_PUTLOKASI = {
 export const VALID_ADDLOCATIONIMAGE = {
     "picture": "C:\Users\WINDOWS 10\Downloads\B3V7LzRQ1665044777-04faba2d228b70b6811d0377cb54c32f.jpg"
 }
+export const VALID_LOGIN_MOBILE = {
+    'ClientId': '3',
+    'Phone': '6285749322633',
+    'Pin': '123123',
+    'InstallId': 'll',
+    'DeviceId': '4fe',
+    'DeviceType': 'android',
+    'Source': 'app'
+}

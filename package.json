@@ -27,5 +27,6 @@
   },
   "devDependencies": {
     "chai-exclude": "^2.1.0"
-  }
+  },
+  "repository": "https://github.com/enricoflombardo/qoin_mocha.git"
 }
