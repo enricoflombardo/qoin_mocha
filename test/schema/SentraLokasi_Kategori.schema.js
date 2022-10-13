@@ -3801,3 +3801,62 @@ export const VALIDATE_LOKASI_SCHEMA = {
         }
     }]
 }
+
+export const VALIDATE_DELETE_KATEGORILOKASI_SCHEMA = {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "status_code",
+        "message",
+        "data"
+    ],
+    "properties": {
+        "status_code": {
+            "type": "integer",
+            "default": 0,
+            "title": "The status_code Schema",
+            "examples": [
+                200
+            ]
+        },
+        "message": {
+            "type": "string",
+            "default": "",
+            "title": "The message Schema",
+            "examples": [
+                "Success"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The id Schema",
+                    "examples": [
+                        401
+                    ]
+                }
+            },
+            "examples": [{
+                "id": 401
+            }]
+        }
+    },
+    "examples": [{
+        "status_code": 200,
+        "message": "Success",
+        "data": {
+            "id": 401
+        }
+    }]
+}

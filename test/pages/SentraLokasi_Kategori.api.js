@@ -20,7 +20,7 @@ const QoinAPI = {
             Authorization: "Bearer "+ token
         }
     }),
-    updatekategoriLokasi: (id, token, data) => BaseAPI.put('/KategoriLokasi/' + id, data, {
+    updatekategoriLokasi: (id, data, token) => BaseAPI.put('/KategoriLokasi/' + id, data, {
         headers : {
             Authorization: "Bearer "+ token
         }

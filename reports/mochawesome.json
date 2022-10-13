@@ -1,5 +1,6 @@
 {
   "stats": {
+<<<<<<< HEAD
     "suites": 2,
     "tests": 8,
     "passes": 8,
@@ -9,6 +10,17 @@
     "end": "2022-10-13T07:01:38.030Z",
     "duration": 1416,
     "testsRegistered": 8,
+=======
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-13T04:39:30.101Z",
+    "end": "2022-10-13T04:39:30.812Z",
+    "duration": 711,
+    "testsRegistered": 4,
+>>>>>>> afa1313fc497407059070eb0bc8f2551d8250735
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,48 +30,138 @@
   },
   "results": [
     {
+<<<<<<< HEAD
       "uuid": "43712964-6ce6-4893-a7d1-b3ffa1e3d6f8",
       "title": "",
       "fullFile": "",
       "file": "",
+=======
+      "uuid": "8438138b-016d-4f9a-8102-8d2c26a3be65",
+      "title": "",
+      "fullFile": "/home/ardan/Ardan/QA/Automation Test/Git/dev-ardan/test/scenarios/SentraLokasi_Kategori.test.js",
+      "file": "/test/scenarios/SentraLokasi_Kategori.test.js",
+>>>>>>> afa1313fc497407059070eb0bc8f2551d8250735
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
+<<<<<<< HEAD
           "uuid": "c8a1751d-9cd1-4502-830d-31ae6e23407c",
           "title": "Mobile",
           "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\SentraKependudukan_KK.test.js",
           "file": "\\test\\scenarios\\SentraKependudukan_KK.test.js",
+=======
+          "uuid": "b7209597-4c2e-4299-a5e1-91ab4e3a0e83",
+          "title": "Web kategori lokasi",
+          "fullFile": "/home/ardan/Ardan/QA/Automation Test/Git/dev-ardan/test/scenarios/SentraLokasi_Kategori.test.js",
+          "file": "/test/scenarios/SentraLokasi_Kategori.test.js",
+>>>>>>> afa1313fc497407059070eb0bc8f2551d8250735
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
+<<<<<<< HEAD
               "title": "Berhasil membuat kk melalui mobile",
               "fullTitle": "Mobile Berhasil membuat kk melalui mobile",
               "timedOut": false,
               "duration": 145,
+=======
+              "title": "Add kategori lokasi",
+              "fullTitle": "Web kategori lokasi Add kategori lokasi",
+              "timedOut": false,
+              "duration": 143,
+>>>>>>> afa1313fc497407059070eb0bc8f2551d8250735
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
+<<<<<<< HEAD
               "code": "const response = await QoinAPI.addKk(token_mobile, data.VALID_ADDKK) //hit API\n\n    //result\n    assert.equal(response.status, 200);\n    assert.equal(response.data.data.rincian_pemohon.nama_pemohon.toLowerCase(), data.VALID_ADDKK.data.nama_pemohon.toLowerCase());\n    assert.equal(response.data.data.rincian_pemohon.nik_pemohon, data.VALID_ADDKK.data.nik_pemohon);\n    assert.equal(response.data.data.rincian_pemohon.jumlah_anggota, data.VALID_ADDKK.data.jumlah_anggota);\n    assert.equal(response.data.data.rincian_alamat.alamat.toLowerCase(), data.VALID_ADDKK.data.alamat.toLowerCase());\n    assert.equal(response.data.data.rincian_alamat.kota_pemohon.toLowerCase(), data.VALID_ADDKK.data.kota_pemohon.toLowerCase());\n    //schema\n    expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_KK_SCHEMA)",
               "err": {},
               "uuid": "965b8908-06d5-4d31-b320-d0177131cca7",
               "parentUUID": "c8a1751d-9cd1-4502-830d-31ae6e23407c",
+=======
+              "code": "const response = await QoinAPI.createkategoriLokasi(token, data.VALID_ADDKATEGORI)\n//validasi\n\n    const data_res = Object.fromEntries(\n    Object.entries(response.data.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])\n    );\n    const data_in = Object.fromEntries(\n    Object.entries(data.VALID_ADDKATEGORI).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])\n    );\n    \n    //result\n    assert.equal(response.status, 200)\n  //validasi exclude\n  assert.deepEqualExcluding(data_res, data_in, ['created_at', 'icon', 'is_active','updated_at'])\n//schema BELUM BISA : EXPECTED DELETED_AT\n// expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_KATEGORILOKASI_SCHEMA)",
+              "err": {},
+              "uuid": "4e02ee39-b10d-4464-be31-a2a86b87f985",
+              "parentUUID": "b7209597-4c2e-4299-a5e1-91ab4e3a0e83",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get detail kategori lokasi",
+              "fullTitle": "Web kategori lokasi Get detail kategori lokasi",
+              "timedOut": false,
+              "duration": 153,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await QoinAPI.getdetailkategoriLokasi(id, token)\n//result\nassert.equal(response.status, 200)\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_GETDETAILKATEGORILOKASI)",
+              "err": {},
+              "uuid": "be453463-9987-429d-b75c-42e4d8f84843",
+              "parentUUID": "b7209597-4c2e-4299-a5e1-91ab4e3a0e83",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Update kategori lokasi",
+              "fullTitle": "Web kategori lokasi Update kategori lokasi",
+              "timedOut": false,
+              "duration": 253,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await QoinAPI.updatekategoriLokasi(id, data.VALID_UPDATEKATEGORI, token)\n//validasi\n\nconst data_res = Object.fromEntries(\n    Object.entries(response.data.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])\n    );\n    const data_in = Object.fromEntries(\n    Object.entries(data.VALID_UPDATEKATEGORI).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])\n    );\n    \n    //result\n    assert.equal(response.status, 200)\n  //exclude\n  assert.deepEqualExcluding(data_res, data_in, ['created_at', 'icon','updated_at', 'deleted_at', 'id'])\n//schema BELUM BISA : KURANG LINK_PICTURE\n// expect(response.data).to.be.jsonSchema(schema.VALIDATE_UPDATE_KATEGORILOKASI_SCHEMA)",
+              "err": {},
+              "uuid": "20f78a2d-6dfe-4d9d-b899-41ee752fd373",
+              "parentUUID": "b7209597-4c2e-4299-a5e1-91ab4e3a0e83",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete kategori lokasi",
+              "fullTitle": "Web kategori lokasi Delete kategori lokasi",
+              "timedOut": false,
+              "duration": 133,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await QoinAPI.deletekategoriLokasi(id, token)\n//result\nassert.equal(response.status, 200)\nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_DELETE_KATEGORILOKASI_SCHEMA)",
+              "err": {},
+              "uuid": "96d4666f-b197-4f02-abea-d5d5b67dadaf",
+              "parentUUID": "b7209597-4c2e-4299-a5e1-91ab4e3a0e83",
+>>>>>>> afa1313fc497407059070eb0bc8f2551d8250735
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
+<<<<<<< HEAD
             "965b8908-06d5-4d31-b320-d0177131cca7"
+=======
+            "4e02ee39-b10d-4464-be31-a2a86b87f985",
+            "be453463-9987-429d-b75c-42e4d8f84843",
+            "20f78a2d-6dfe-4d9d-b899-41ee752fd373",
+            "96d4666f-b197-4f02-abea-d5d5b67dadaf"
+>>>>>>> afa1313fc497407059070eb0bc8f2551d8250735
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
+<<<<<<< HEAD
           "duration": 145,
           "root": false,
           "rootEmpty": false,
@@ -214,6 +316,9 @@
           "pending": [],
           "skipped": [],
           "duration": 1242,
+=======
+          "duration": 682,
+>>>>>>> afa1313fc497407059070eb0bc8f2551d8250735
           "root": false,
           "rootEmpty": false,
           "_timeout": 50000
