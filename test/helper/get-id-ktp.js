@@ -9,7 +9,6 @@ async function Getid(){
         IDrespons = "3"
     }else{
         IDrespons = response.data.data.list[0].id
-        // IDrespons = ""
     }
     
     return IDrespons 

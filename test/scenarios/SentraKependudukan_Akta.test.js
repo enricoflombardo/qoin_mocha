@@ -39,7 +39,7 @@ describe('Mobile', () => {
         const data_in = Object.fromEntries(
             Object.entries(data.VALID_ADD_AKTA).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
           );
-          console.log(resultObject);
+          //console.log(resultObject);
         
         //check object Rincian Ayah
         assert.deepEqualExcluding(data_in, data_res, ['id', 'updatebyid', 'updated_at', 'client_id', 'created_by','alamat_pelapor',
@@ -130,12 +130,12 @@ describe('Web', () => {
 
     });
     
-    it.only('Update Akta', async () => {
-        const response = await QoinAPI.update_akta(id, data.VALID_UPDATE_AKTA, token) //hit API
-        //const response = await QoinAPI.get_id(token)
+    it('Update Akta', async () => {
+        //const response = await QoinAPI.update_akta(id, data.VALID_UPDATE_AKTA, token) //hit API
+        const response = await QoinAPI.get_id(token)
         //result
         //assert.equal(response.status, 200);
-        console.log(id)
+        
 
         //schema
         //expect(response.data).to.be.jsonSchema(schema.VALID_UPDATE_AKTA_SCHEMA)
