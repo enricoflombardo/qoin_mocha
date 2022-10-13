@@ -1,6 +1,16 @@
 {
   "stats": {
     "suites": 1,
+<<<<<<< HEAD
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-13T08:55:30.680Z",
+    "end": "2022-10-13T08:55:30.827Z",
+    "duration": 147,
+    "testsRegistered": 1,
+=======
     "tests": 6,
     "passes": 6,
     "pending": 0,
@@ -9,6 +19,7 @@
     "end": "2022-10-13T09:12:06.646Z",
     "duration": 1992,
     "testsRegistered": 6,
+>>>>>>> 5f5a2c09fc2e7c0fcd3e94af95f8515e063df2b0
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,33 +29,62 @@
   },
   "results": [
     {
+<<<<<<< HEAD
+      "uuid": "c130028e-cf01-4c14-a817-98c52c284c4d",
+      "title": "",
+      "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\SentraKependudukan_KTP.test.js",
+      "file": "\\test\\scenarios\\SentraKependudukan_KTP.test.js",
+=======
       "uuid": "1c0babd4-1937-498c-a6d6-eb15d240c8b0",
       "title": "",
       "fullFile": "D:\\QA Automation\\API Testing\\qoinisa\\test\\scenarios\\SentraKependudukan_Akta.test.js",
       "file": "\\test\\scenarios\\SentraKependudukan_Akta.test.js",
+>>>>>>> 5f5a2c09fc2e7c0fcd3e94af95f8515e063df2b0
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
+<<<<<<< HEAD
+          "uuid": "a2232974-b578-40d1-a1d9-f41818a1a862",
+          "title": "Web",
+          "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\SentraKependudukan_KTP.test.js",
+          "file": "\\test\\scenarios\\SentraKependudukan_KTP.test.js",
+=======
           "uuid": "8b6bc9e2-ec3c-4280-81bc-84490c47be33",
           "title": "Web",
           "fullFile": "D:\\QA Automation\\API Testing\\qoinisa\\test\\scenarios\\SentraKependudukan_Akta.test.js",
           "file": "\\test\\scenarios\\SentraKependudukan_Akta.test.js",
+>>>>>>> 5f5a2c09fc2e7c0fcd3e94af95f8515e063df2b0
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
+<<<<<<< HEAD
+              "title": "Update Status konfirmasi KTP",
+              "fullTitle": "Web Update Status konfirmasi KTP",
+              "timedOut": false,
+              "duration": 137,
+=======
               "title": "Get Index by ID",
               "fullTitle": "Web Get Index by ID",
               "timedOut": false,
               "duration": 1420,
+>>>>>>> 5f5a2c09fc2e7c0fcd3e94af95f8515e063df2b0
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
+<<<<<<< HEAD
+              "code": "const response = await QoinAPI.updatekonfirmasi(id, data.VALID_STATUSKONFIRKTP, token)\n//console\n//assert.equal(response.status, 200);\nconsole.log(response.data)\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_UPDATE_STATUS_VERIFIKASI_SCHEMA)",
+              "err": {},
+              "uuid": "aae6af97-c95c-4909-b4c6-0f97ca3f4d91",
+              "parentUUID": "a2232974-b578-40d1-a1d9-f41818a1a862",
+              "isHook": false,
+              "skipped": false
+=======
               "code": "const response = await QoinAPI.index_by_id(id, token) //hit API\n\n//response status\nassert.equal(response.status, 200);\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALID_GET_INDEX_BY_ID_SCHEMA)",
               "err": {},
               "uuid": "abcfcd40-7f97-470a-9636-12c9127861c1",
@@ -141,21 +181,30 @@
               "parentUUID": "8b6bc9e2-ec3c-4280-81bc-84490c47be33",
               "isHook": false,
               "skipped": false
+>>>>>>> 5f5a2c09fc2e7c0fcd3e94af95f8515e063df2b0
             }
           ],
           "suites": [],
           "passes": [
+<<<<<<< HEAD
+            "aae6af97-c95c-4909-b4c6-0f97ca3f4d91"
+=======
             "abcfcd40-7f97-470a-9636-12c9127861c1",
             "dd57cebd-5fa3-4254-9b01-04417323f1a6",
             "df8e7919-a2d2-4e94-8996-67f519d98ff4",
             "89a6d178-a614-42c4-bce6-1070110ee0d0",
             "00aa9cf8-cce3-4611-9b68-8028ef35868d",
             "6ae458bd-c170-4f28-8ce6-bc00a12d7eb5"
+>>>>>>> 5f5a2c09fc2e7c0fcd3e94af95f8515e063df2b0
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
+<<<<<<< HEAD
+          "duration": 137,
+=======
           "duration": 1978,
+>>>>>>> 5f5a2c09fc2e7c0fcd3e94af95f8515e063df2b0
           "root": false,
           "rootEmpty": false,
           "_timeout": 180000

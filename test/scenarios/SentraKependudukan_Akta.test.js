@@ -13,14 +13,12 @@ chai.use(chaiExclude);
 const id = await Getid();
 const token = await Get_token();
 
-// Token dan id
-
 
 describe('Mobile', () => {
     it('Berhasil membuat akta melalui mobile', async () => {
         const response = await QoinAPI.add_akta(data.VALID_ADD_AKTA, token) //hit API
         
-        // //result
+        //result
         assert.equal(response.status, 200);
 
         let resultObject = {};
@@ -109,9 +107,7 @@ describe('Mobile', () => {
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALID_ADD_AKTA_SCHEMA)
-
-        // console.log(response.data)
-
+        //console.log(response)
     });
 });
 
@@ -129,7 +125,6 @@ describe('Web', () => {
     
     it('Update Akta', async () => {
         const response = await QoinAPI.update_akta(id, data.VALID_UPDATE_AKTA, token) //hit API
-
         //result
         assert.equal(response.status, 200);
         

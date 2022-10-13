@@ -9,7 +9,7 @@ import Token_mobile from '$root/helper/get-token'
 chai.use(jsonSchema)
 
 // Token dan id
-const token_mobile = Token_mobile();
+const token_mobile = await Token_mobile();
 const token = await Get_token();
 const id = await Getid();
 
@@ -47,7 +47,7 @@ describe('Mobile', () => {
     });
     
     it('Riwayat', async () => {
-        const response = await QoinAPI.get_riwayat(token_mobile) //hit API
+        const response = await QoinAPI.get_riwayat(id, token_mobile) //hit API
         
             //status
             assert.equal(response.status, 200);
