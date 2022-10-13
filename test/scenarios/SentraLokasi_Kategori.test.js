@@ -24,7 +24,7 @@ describe('Web kategori lokasi', () => {
         assert.equal(response.status, 200)
 
         //schema belum nyoba
-        //expect(response.data).to.be.jsonSchema(schema.)
+        // expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADD_KATEGORILOKASI_SCHEMA)
     });
 
     it('Get detail kategori lokasi', async() => {
@@ -44,10 +44,12 @@ describe('Web kategori lokasi', () => {
         assert.equal(response.status, 200)
 
         //schema
-        // expect(response.data).to.be.jsonSchema(schema.)
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_UPDATE_KATEGORILOKASI_SCHEMA)
 
         // console.log(response.data.data)
     });
+    
+    //belum bisa
 
     // it('Read kategori lokasi', async() => {
     //     const response = await QoinAPI.readkategoriLokasi(id)
@@ -79,8 +81,7 @@ describe('Mobile kategori lokasi', (done) => {
         assert.equal(response.status, 200)
         // console.log(response.data.data)
 
-        //schema
-        expect(response.data).to.be.jsonSchema(schema.VALIDATE_LOKASI_SCHEMA)
-        
+        //schema belum nyoba
+        // expect(response.data).to.be.jsonSchema(schema.VALIDATE_LOKASI_SCHEMA)
     });
 });

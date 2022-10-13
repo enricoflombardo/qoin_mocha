@@ -31,9 +31,5 @@ export async function Getid_Lokasi(){
         
     }
     
-    return IDrespons
+    return IDrespons 
 }
-
-
- 
-// export default Getid

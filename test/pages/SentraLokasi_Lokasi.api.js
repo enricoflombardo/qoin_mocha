@@ -29,57 +29,47 @@ const QoinAPI = {
     }),
 
     //web
-    addLokasi: (token, data) => BaseAPI_JSON.post('/Lokasi', data, {
+    addLokasi: (data, token) => BaseAPI_JSON.post('/Lokasi', data, {
         headers : {
-            Authorization: "Bearer "+ token
+            Authorization: "Bearer " + token
         }
     }),
-    addMultilokasi: (token,data) => BaseAPI_JSON.post('/multiLokasi', data, {
+    addMultilokasi: (data, token) => BaseAPI_JSON.post('/multiLokasi', data, {
         headers : {
-            Authorization: "Bearer "+ token
+            Authorization: "Bearer " + token
         }
     }),
     getLokasi: (token) => BaseAPI.get('/Lokasi', {
         headers : {
-            Authorization: "Bearer "+ token
+            Authorization: "Bearer " + token
         }
     }),
-    updateLokasi: (id, token, data) => BaseAPI_JSON.put('/lokasi/' + id, data, {
+    updateLokasi: (id, data, token) => BaseAPI_JSON.put('/Lokasi/' + id, data, {
         headers : {
-            Authorization: "Bearer "+ token
+            Authorization: "Bearer " + token
         }
     }),
-    deleteLokasi: (id, token) => BaseAPI.delete('/lokasi/' + id, {
+    deleteLokasi: (id, token) => BaseAPI.delete('/Lokasi/' + id, {
         headers : {
-            Authorization: "Bearer "+ token
+            Authorization: "Bearer " + token
         }
     }),
-    addImagelokasi: (id, token, data) => BaseAPI.post('/lokasiAddImage/' + id, data, {
+    addImagelokasi: (id, data, token) => BaseAPI.post('/lokasiAddImage/' + id, data, {
         headers : {
-            Authorization: "Bearer "+ token
+            Authorization: "Bearer " + token
         }
     }),
-    getImagelokasi: (id, token) => BaseAPI.get('/lokasiGetImage/' + id, {
+    getImagelokasi: (id, token) => BaseAPI.get('/lokasiGetImage/'+ id, {
         headers : {
-            Authorization: "Bearer "+ token
+            Authorization: "Bearer " + token
         }
     }),
     deleteImagelokasi: (id, token) => BaseAPI.delete('/lokasiDeleteImage/' + id, {
         headers : {
-            Authorization: "Bearer "+ token
+            Authorization: "Bearer " + token
         }
     }),
-    getFasilitaslokasi: (id, token) => BaseAPI.get('/fasilitasLokasi/' + id, {
-        headers : {
-            Authorization: "Bearer "+ token
-        }
-    }),
-    readExcel: (token) => BaseAPI.post('/readExcel'+ {
-        headers : {
-            Authorization: "Bearer "+ token
-        }
-    }),
-    getTemplateexcel: (token) => BaseAPI.get('/template-excel' + {
+    getFasilitaslokasi: (id, token) => BaseAPI.get('/fasilitasLokasi/'+ id, {
         headers : {
             Authorization: "Bearer "+ token
         }
@@ -88,7 +78,9 @@ const QoinAPI = {
         headers : {
             Authorization: "Bearer "+ token
         }
-    })
+    }),
+    readExcel: () => BaseAPI.post('/readExcel'),
+    getTemplateexcel: () => BaseAPI.get('/template-excel'),
 }
 
 export default QoinAPI

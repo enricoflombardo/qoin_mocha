@@ -39,6 +39,7 @@ describe('Mobile', () => {
         const data_in = Object.fromEntries(
             Object.entries(data.VALID_ADD_AKTA).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
           );
+          console.log(resultObject);
         
         //check object Rincian Ayah
         assert.deepEqualExcluding(data_in, data_res, ['id', 'updatebyid', 'updated_at', 'client_id', 'created_by','alamat_pelapor',
