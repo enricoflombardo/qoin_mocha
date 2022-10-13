@@ -38,7 +38,7 @@ const QoinAPI = {
             Authorization: "Bearer "+ token
         }
     }),
-    updatejadwal: (data) => BaseAPI_JSON.put('/kkJadwal', data, {
+    updatejadwal: (data, token) => BaseAPI_JSON.put('/kkJadwal', data, {
         headers : {
             Authorization: "Bearer "+ token
         }

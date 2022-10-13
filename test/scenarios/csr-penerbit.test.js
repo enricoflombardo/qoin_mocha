@@ -12,7 +12,7 @@ import Get_token, {Getid_voucher, Getid_program, Getid_bansos, Getid_user, Getid
 
 chai.use(jsonSchema)
 
-describe('Web', () => {
+describe.skip('Web', () => {
     it('Login', async () => {
         const response = await QoinAPI.login(data.VALID_LOGIN) //hit API
         

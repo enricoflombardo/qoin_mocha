@@ -9,7 +9,7 @@ async function Getid(){
 
     let IDrespons = "3"
     
-    if (response.data.data.list[0].id == 0) {
+    if (response.data.data.list[0].id == "undefined") {
         IDrespons = "3"
     }else{
         IDrespons = response.data.data.list[0]
