@@ -56,7 +56,6 @@ describe('Web', () => {
     });
 
     it('Update Status Verifikasi KTP', async () => {
-        const id = await Getid();
         const response = await QoinAPI.updatestatusverif(id, data.VALID_STATUSVERIFKTP, token)
     
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_UPDATE_STATUS_VERIFIKASI_SCHEMA)
@@ -71,7 +70,6 @@ describe('Web', () => {
     });
 
     it('Update Status KTP', async () => {
-        const id = await Getid();
         const response = await QoinAPI.updatestatus(id, data.VALID_STATUSKTP, token)
     
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_UPDATE_STATUS)
@@ -79,7 +77,6 @@ describe('Web', () => {
     });
 
     it('Update Status konfirmasi KTP', async () => {
-        const id = await Getid();
         const response = await QoinAPI.updatekonfirmasi(id, data.VALID_STATUSKONFIRKTP, token)
 
     });
