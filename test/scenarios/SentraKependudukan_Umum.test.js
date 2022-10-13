@@ -1,13 +1,21 @@
 import chai,{ assert,expect } from 'chai';
 import jsonSchema from 'chai-json-schema';//import json schema 
 import QoinAPI from '$root/pages/SentraKependudukan_Umum.api'; //import endpoint API
+import Getid from '../helper/get-id-akta';
+import Get_token from '$root/helper/get-token'
+import Token_mobile from '$root/helper/get-token'
 // import * as schema from '../schema/SentraKependudukan_KK.schema'; //import schema
 
 chai.use(jsonSchema)
 
+// Token dan id
+const token_mobile = Token_mobile();
+const token = await Get_token();
+const id = await Getid();
+
 describe('Web Admin', () => {
     it('Get Dashboard', async () => {
-        const response = await QoinAPI.get_dashboard() //hit API
+        const response = await QoinAPI.get_dashboard(token) //hit API
         
             //status
             assert.equal(response.status, 200);
@@ -17,7 +25,7 @@ describe('Web Admin', () => {
     });
     
     it('Get All Document', async () => {
-        const response = await QoinAPI.get_allDoc() //hit API
+        const response = await QoinAPI.get_allDoc(token) //hit API
         
             //status
             assert.equal(response.status, 200);
@@ -29,7 +37,7 @@ describe('Web Admin', () => {
 
 describe('Mobile', () => {
     it('Riwayat All', async () => {
-        const response = await QoinAPI.get_riwayatAll() //hit API
+        const response = await QoinAPI.get_riwayatAll(token_mobile) //hit API
         
             //status
             assert.equal(response.status, 200);
@@ -39,7 +47,7 @@ describe('Mobile', () => {
     });
     
     it('Riwayat', async () => {
-        const response = await QoinAPI.get_riwayat() //hit API
+        const response = await QoinAPI.get_riwayat(token_mobile) //hit API
         
             //status
             assert.equal(response.status, 200);
@@ -49,7 +57,7 @@ describe('Mobile', () => {
     });
     
     it('Detail Riwayat', async () => {
-        const response = await QoinAPI.get_detailRiwayat() //hit API
+        const response = await QoinAPI.get_detailRiwayat(token_mobile) //hit API
         
             //status
             assert.equal(response.status, 200);

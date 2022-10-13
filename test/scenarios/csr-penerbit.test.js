@@ -3,8 +3,8 @@ import jsonSchema from 'chai-json-schema';//import json schema
 import QoinAPI from '$root/pages/csr-penerbit.api'; //import endpoint API
 import * as data from '$root/data/csr-penerbit.data'; //import data params
 import * as schema from '../schema/csr-penerbit.schema'; //import schema
-import Getid, {Getid_voucher } from '$root/helper/helper-csr'; //import id
-import Get_token from '$root/helper/csr-token'; //import token
+import Get_token, {Getid_voucher, Getid_program, Getid_bansos, Getid_user, Getid_penerima} from '$root/helper/helper-csr'; //import id
+// import Get_token from '$root/helper/get-token'; //import token
 
 
 // TAMA TAMA TAMA
@@ -17,8 +17,8 @@ describe('Web', () => {
         const response = await QoinAPI.login(data.VALID_LOGIN) //hit API
         
             //result
-            assert.equal(response.status, 202) 
-            
+            assert.equal(response.status, 202)
+            console.log(response.data)
             //schema
             // expect(response.data).to.be.jsonSchema(schema.VALIDATE_LOGIN_SCHEMA)
     });
@@ -48,12 +48,15 @@ describe('Web', () => {
     
     it('Read Penerbit', async () => {
         const token = await Get_token();
-        const id = await Getid();
-        const response = await QoinAPI.getpenerbit(id, token)
+        //const id = await get_id();
+        const response = await QoinAPI.getpenerbit(token)
 
         assert.equal(response.status, 200);
     
-        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETPENERBIT_SCHEMA) //Call JSON Schema
+        // expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETPENERBIT_SCHEMA) //Call JSON Schema
+        // console.log(response.data)
+        // console.log(headers)
+        // console.log(data)
     });
 
     it('Update Penerbit', async () => {
