@@ -13,7 +13,7 @@ const token_mobile = await Token_mobile();
 const token = await Get_token();
 const id = await Getid_Lokasi();
 
-describe.only('Web lokasi', () => {
+describe('Web lokasi', () => {
 
 
     // Engineer mas sase
@@ -37,6 +37,7 @@ describe.only('Web lokasi', () => {
           );           
           //validasi exclude
           assert.deepEqualExcludingEvery(data_res_data, data_in_data, ['deleted_at', 'created_at', 'alamat', 'description', 'id', 'updated_at', 'is_active', 'm_lokasi_id'])
+          assert.deepEqualExcludingEvery(data_res_fasilitas, data_in_fasilitas, ['deleted_at', 'created_at', 'alamat', 'description', 'id', 'updated_at', 'is_active', 'm_lokasi_id'])
 
 
         //schema
@@ -63,6 +64,8 @@ describe.only('Web lokasi', () => {
           );           
           //validasi exclude
           assert.deepEqualExcludingEvery(data_res_data, data_in_data, ['deleted_at', 'created_at', 'alamat', 'description', 'id', 'updated_at', 'is_active', 'm_lokasi_id'])
+          //validasi exclude
+          assert.deepEqualExcludingEvery(data_res_fasilitas, data_in_fasilitas, ['deleted_at', 'created_at', 'alamat', 'description', 'id', 'updated_at', 'is_active', 'm_lokasi_id'])
 
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_ADDSENTRAMULTILOKASI_WEBADMIN_SCHEMA)
@@ -97,6 +100,7 @@ describe.only('Web lokasi', () => {
           );           
           //validasi exclude
           assert.deepEqualExcludingEvery(data_res_data, data_in_data, ['deleted_at', 'created_at', 'alamat', 'description', 'id', 'updated_at', 'is_active', 'm_lokasi_id'])
+          assert.deepEqualExcludingEvery(data_res_fasilitas, data_in_fasilitas, ['deleted_at', 'created_at', 'alamat', 'description', 'id', 'updated_at', 'is_active', 'm_lokasi_id'])
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_EDIT_LOKASI_SCHEMA)
     });
@@ -174,7 +178,7 @@ describe.only('Web lokasi', () => {
 
 });
 
-describe.only('Mobile lokasi', async() => {
+describe('Mobile lokasi', async() => {
 
     it('Get haversin circle', async () => {
         const response = await QoinAPI.get_haversin_circle(token_mobile);
