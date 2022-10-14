@@ -1,3 +1,4 @@
+//WEB
 export const VALIDATE_GETDETAILKATEGORILOKASI = {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
@@ -2481,6 +2482,311 @@ export const VALIDATE_READKATEGORILOKASI = {
     }]
 }
 
+export const VALIDATE_ADD_KATEGORILOKASI_SCHEMA = {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "status_code",
+        "message",
+        "data"
+    ],
+    "properties": {
+        "status_code": {
+            "type": "integer",
+            "default": 0,
+            "title": "The status_code Schema",
+            "examples": [
+                200
+            ]
+        },
+        "message": {
+            "type": "string",
+            "default": "",
+            "title": "The message Schema",
+            "examples": [
+                "Success"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "color",
+                "created_at",
+                "deleted_at",
+                "icon",
+                "id",
+                "is_active",
+                "name",
+                "name_en",
+                "updated_at"
+            ],
+            "properties": {
+                "color": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The color Schema",
+                    "examples": [
+                        "#ba68c8"
+                    ]
+                },
+                "created_at": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The created_at Schema",
+                    "examples": [
+                        "2022-06-07T11:17:59+07:00"
+                    ]
+                },
+                "deleted_at": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The deleted_at Schema",
+                    "examples": [
+                        null
+                    ]
+                },
+                "icon": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The icon Schema",
+                    "examples": [
+                        null
+                    ]
+                },
+                "id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The id Schema",
+                    "examples": [
+                        401
+                    ]
+                },
+                "is_active": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The is_active Schema",
+                    "examples": [
+                        1
+                    ]
+                },
+                "name": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The name Schema",
+                    "examples": [
+                        "Bengkel"
+                    ]
+                },
+                "name_en": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The name_en Schema",
+                    "examples": [
+                        "Test"
+                    ]
+                },
+                "updated_at": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The updated_at Schema",
+                    "examples": [
+                        "2022-06-07T11:17:59+07:00"
+                    ]
+                }
+            },
+            "examples": [{
+                "color": "#ba68c8",
+                "created_at": "2022-06-07T11:17:59+07:00",
+                "deleted_at": null,
+                "icon": null,
+                "id": 401,
+                "is_active": 1,
+                "name": "Bengkel",
+                "name_en": "Test",
+                "updated_at": "2022-06-07T11:17:59+07:00"
+            }]
+        }
+    },
+    "examples": [{
+        "status_code": 200,
+        "message": "Success",
+        "data": {
+            "color": "#ba68c8",
+            "created_at": "2022-06-07T11:17:59+07:00",
+            "deleted_at": null,
+            "icon": null,
+            "id": 401,
+            "is_active": 1,
+            "name": "Bengkel",
+            "name_en": "Test",
+            "updated_at": "2022-06-07T11:17:59+07:00"
+        }
+    }]
+}
+
+export const VALIDATE_UPDATE_KATEGORILOKASI_SCHEMA = {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "status_code",
+        "message",
+        "data"
+    ],
+    "properties": {
+        "status_code": {
+            "type": "integer",
+            "default": 0,
+            "title": "The status_code Schema",
+            "examples": [
+                200
+            ]
+        },
+        "message": {
+            "type": "string",
+            "default": "",
+            "title": "The message Schema",
+            "examples": [
+                "Success"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "color",
+                "created_at",
+                "deleted_at",
+                "icon",
+                "id",
+                "is_active",
+                "link_picture",
+                "name",
+                "name_en",
+                "updated_at"
+            ],
+            "properties": {
+                "color": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The color Schema",
+                    "examples": [
+                        "#6859dd"
+                    ]
+                },
+                "created_at": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The created_at Schema",
+                    "examples": [
+                        "2022-01-18T08:50:58+07:00"
+                    ]
+                },
+                "deleted_at": {
+                    "type": "null",
+                    "default": null,
+                    "title": "The deleted_at Schema",
+                    "examples": [
+                        null
+                    ]
+                },
+                "icon": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The icon Schema",
+                    "examples": [
+                        "1645669425488311900.svg"
+                    ]
+                },
+                "id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The id Schema",
+                    "examples": [
+                        1
+                    ]
+                },
+                "is_active": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The is_active Schema",
+                    "examples": [
+                        "0"
+                    ]
+                },
+                "link_picture": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The link_picture Schema",
+                    "examples": [
+                        "http://localhost:9000/inisadev/1645669425488311900.svg"
+                    ]
+                },
+                "name": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The name Schema",
+                    "examples": [
+                        "Dealer"
+                    ]
+                },
+                "name_en": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The name_en Schema",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "updated_at": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The updated_at Schema",
+                    "examples": [
+                        "2022-06-07T11:18:21+07:00"
+                    ]
+                }
+            },
+            "examples": [{
+                "color": "#6859dd",
+                "created_at": "2022-01-18T08:50:58+07:00",
+                "deleted_at": null,
+                "icon": "1645669425488311900.svg",
+                "id": 1,
+                "is_active": "0",
+                "link_picture": "http://localhost:9000/inisadev/1645669425488311900.svg",
+                "name": "Dealer",
+                "name_en": "",
+                "updated_at": "2022-06-07T11:18:21+07:00"
+            }]
+        }
+    },
+    "examples": [{
+        "status_code": 200,
+        "message": "Success",
+        "data": {
+            "color": "#6859dd",
+            "created_at": "2022-01-18T08:50:58+07:00",
+            "deleted_at": null,
+            "icon": "1645669425488311900.svg",
+            "id": 1,
+            "is_active": "0",
+            "link_picture": "http://localhost:9000/inisadev/1645669425488311900.svg",
+            "name": "Dealer",
+            "name_en": "",
+            "updated_at": "2022-06-07T11:18:21+07:00"
+        }
+    }]
+}
+//MOBILE 
 export const VALIDATE_LOKASI_SCHEMA = {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
@@ -2526,6 +2832,7 @@ export const VALIDATE_LOKASI_SCHEMA = {
                         "type": "object",
                         "title": "A Schema",
                         "required": [
+                            "color",
                             "created_at",
                             "extention",
                             "icon",
@@ -2540,158 +2847,81 @@ export const VALIDATE_LOKASI_SCHEMA = {
                                 "type": "string",
                                 "title": "The color Schema",
                                 "examples": [
-                                    "#f78416",
-                                    "#2ad597",
-                                    "#6859dd",
-                                    "#307aec",
-                                    "#ff495c",
-                                    "#fc1a04",
                                     "#ba68c8",
-                                    "#5632a8",
-                                    "#194d21",
-                                    "#f54242",
-                                    "#43194d"
+                                    "#eb4034",
+                                    "#f47373",
+                                    "#307aec",
+                                    "#6859dd",
+                                    "#22a173",
+                                    "#f78416"
                                 ]
                             },
                             "created_at": {
                                 "type": "string",
                                 "title": "The created_at Schema",
                                 "examples": [
-                                    "2022-01-18T10:20:36+07:00",
-                                    "2022-01-18T08:51:33+07:00",
-                                    "2022-01-18T08:51:50+07:00",
-                                    "2022-01-18T08:52:06+07:00",
+                                    "2022-06-07T11:16:49+07:00",
+                                    "2022-06-07T11:09:29+07:00",
+                                    "2022-06-07T11:08:58+07:00",
+                                    "2022-06-07T11:05:11+07:00",
+                                    "2022-06-06T17:15:20+07:00",
+                                    "2022-06-06T17:14:04+07:00",
+                                    "2022-06-06T17:07:27+07:00",
+                                    "2022-06-06T16:44:48+07:00",
+                                    "2022-06-06T10:41:33+07:00",
+                                    "2022-06-06T10:39:13+07:00",
+                                    "2022-06-06T10:31:13+07:00",
+                                    "2022-06-06T10:23:39+07:00",
+                                    "2022-06-06T10:23:03+07:00",
                                     "2022-01-18T08:52:20+07:00",
-                                    "2022-03-30T15:52:42+07:00",
-                                    "2022-04-21T14:55:50+07:00",
-                                    "2022-04-21T14:56:01+07:00",
-                                    "2022-04-21T14:56:13+07:00",
-                                    "2022-04-21T15:04:09+07:00",
-                                    "2022-04-21T15:04:21+07:00",
-                                    "2022-04-21T15:04:31+07:00",
-                                    "2022-04-21T15:04:43+07:00",
-                                    "2022-04-21T15:07:00+07:00",
-                                    "2022-04-21T15:07:11+07:00",
-                                    "2022-04-21T15:07:22+07:00",
-                                    "2022-04-21T15:07:33+07:00",
-                                    "2022-04-21T15:07:44+07:00",
-                                    "2022-04-21T15:07:54+07:00",
-                                    "2022-04-21T15:08:06+07:00",
-                                    "2022-04-21T15:08:17+07:00",
-                                    "2022-04-21T15:08:29+07:00",
-                                    "2022-04-21T15:08:39+07:00",
-                                    "2022-04-21T15:08:49+07:00",
-                                    "2022-04-21T15:09:01+07:00",
-                                    "2022-04-21T15:09:13+07:00",
-                                    "2022-04-21T15:09:24+07:00",
-                                    "2022-04-21T15:09:35+07:00",
-                                    "2022-04-21T15:09:46+07:00",
-                                    "2022-04-21T15:14:04+07:00",
-                                    "2022-04-21T15:14:15+07:00",
-                                    "2022-04-21T15:14:26+07:00",
-                                    "2022-04-21T15:14:37+07:00",
-                                    "2022-04-21T15:17:17+07:00",
-                                    "2022-04-21T15:18:02+07:00",
-                                    "2022-04-21T15:18:13+07:00",
-                                    "2022-04-21T15:22:28+07:00",
-                                    "2022-04-21T15:22:59+07:00",
-                                    "2022-06-09T14:02:03+07:00",
-                                    "2022-06-09T16:46:50+07:00",
-                                    "2022-06-09T16:47:51+07:00",
-                                    "2022-06-09T16:48:31+07:00",
-                                    "2022-06-09T16:49:53+07:00",
-                                    "2022-06-10T15:23:01+07:00",
-                                    "2022-06-13T10:39:16+07:00",
-                                    "2022-06-13T13:47:32+07:00",
-                                    "2022-06-13T14:36:49+07:00",
-                                    "2022-07-07T14:02:57+07:00"
+                                    "2022-01-18T08:52:06+07:00",
+                                    "2022-01-18T08:51:50+07:00",
+                                    "2022-01-18T08:51:33+07:00",
+                                    "2022-01-18T10:20:36+07:00"
                                 ]
                             },
                             "extention": {
                                 "type": "string",
                                 "title": "The extention Schema",
                                 "examples": [
-                                    "png",
-                                    "svg",
                                     "",
-                                    "jpg"
+                                    "svg"
                                 ]
                             },
                             "icon": {
                                 "type": "string",
                                 "title": "The icon Schema",
                                 "examples": [
-                                    "https://s3.loyalto.id/inisadev/imagepublic/CzWeuRb41648446079-ddc9a37fe424a06c87bc0887da6f6a57.png",
-                                    "https://s3.loyalto.id/inisadev/imagepublic/bRFCwyYL1648446013-335c8f2f910101da08dc06111d4bfab5.png",
-                                    "https://s3.loyalto.id/inisadev/imagepublic/AjkTzdRK1648446184-8aeacc1527860584de8071dcc0f42f9d.png",
-                                    "https://s3.loyalto.id/inisadev/imagepublic/xRk5v8aR1648446099-489f388997d8661201daa7e505e6faab.png",
-                                    "https://s3.loyalto.id/inisadev/imagepublic/dmw0oebv1648446088-eefe16e30dcfb7d9eaaa66f77539ac9c.png",
-                                    "https://s3.loyalto.id/inisadev/imagepublic/AtDDpUoF1648630362-769a658929845d0a5caa4422fcb5bb7d.svg",
                                     "https://s3.loyalto.id/inisadev/public/noimage.png",
-                                    "https://s3.loyalto.id/inisadev/imagepublic/6RvV1XqY1650529036-90e4eaff5610bdfa16eb3f2d42f8bb76.jpg",
-                                    "https://s3.loyalto.id/inisadev/imagepublic/1Ii2VTPS1650529348-90e4eaff5610bdfa16eb3f2d42f8bb76.jpg",
-                                    "https://s3.loyalto.id/inisadev/imagepublic/ATzsod9F1654768010-c829ee98aa884ec488c0b8d21f0bb361.png",
-                                    "https://s3.loyalto.id/inisadev/imagepublic/IPR0858m1654768070-c829ee98aa884ec488c0b8d21f0bb361.png",
-                                    "https://s3.loyalto.id/inisadev/imagepublic/LRuEx7k11654768111-c829ee98aa884ec488c0b8d21f0bb361.png",
-                                    "https://s3.loyalto.id/inisadev/imagepublic/zNIeeWxW1654768193-c829ee98aa884ec488c0b8d21f0bb361.png",
-                                    "https://s3.loyalto.id/inisadev/imagepublic/WNB9vWVO1654849380-a89bb038c485a3af1038b045cb9b70ff.png",
-                                    "https://s3.loyalto.id/inisadev/imagepublic/AFvCedvI1655091556-d35a02ac608097e4ae7f14b3e4e0c09c.png",
-                                    "https://s3.loyalto.id/inisadev/imagepublic/6geyiZj01655105808-d35a02ac608097e4ae7f14b3e4e0c09c.png",
-                                    "https://s3.loyalto.id/inisadev/imagepublic/IyUbn7s41657177377-e3087cddfdf4c788b41bcdfe9b612cdd.png"
+                                    "http://localhost:9000/inisadev/1645080803877885400.svg",
+                                    "http://localhost:9000/inisadev/220124145312.svg",
+                                    "http://localhost:9000/inisadev/220124145327.svg",
+                                    "http://localhost:9000/inisadev/220124145334.svg",
+                                    "http://localhost:9000/inisadev/220124145340.svg"
                                 ]
                             },
                             "id": {
                                 "type": "integer",
                                 "title": "The id Schema",
                                 "examples": [
-                                    2,
-                                    3,
-                                    4,
-                                    5,
+                                    400,
+                                    399,
+                                    398,
+                                    397,
+                                    396,
+                                    395,
+                                    394,
+                                    393,
+                                    392,
+                                    391,
+                                    390,
+                                    389,
+                                    388,
                                     6,
-                                    260,
-                                    268,
-                                    269,
-                                    270,
-                                    271,
-                                    272,
-                                    273,
-                                    274,
-                                    275,
-                                    276,
-                                    277,
-                                    278,
-                                    279,
-                                    280,
-                                    281,
-                                    282,
-                                    283,
-                                    284,
-                                    285,
-                                    286,
-                                    287,
-                                    288,
-                                    289,
-                                    290,
-                                    291,
-                                    292,
-                                    293,
-                                    294,
-                                    295,
-                                    296,
-                                    297,
-                                    300,
-                                    301,
-                                    305,
-                                    307,
-                                    308,
-                                    309,
-                                    310,
-                                    314,
-                                    316,
-                                    317,
-                                    318,
-                                    319
+                                    5,
+                                    4,
+                                    3,
+                                    2
                                 ]
                             },
                             "is_active": {
@@ -2705,1096 +2935,451 @@ export const VALIDATE_LOKASI_SCHEMA = {
                                 "type": "string",
                                 "title": "The name Schema",
                                 "examples": [
-                                    "Kantor Polisi",
-                                    "Bank",
-                                    "Bandara1",
-                                    "Terminal Bus",
-                                    "Pendidikan",
-                                    "Restoran",
-                                    "",
+                                    "Sepeda",
                                     "Bengkel",
-                                    "Cat alon",
-                                    "Pesawat",
-                                    "Mobil",
-                                    "Sekolah",
-                                    "Bengkel 1",
-                                    "RS. Bakti Permai",
-                                    "Rumah Sakit Brawijaya"
+                                    "mobil",
+                                    "Pendidikan",
+                                    "Terminal Bus",
+                                    "Bandara",
+                                    "Bank",
+                                    "Kantor Polisi"
                                 ]
                             },
                             "name_en": {
                                 "type": "string",
                                 "title": "The name_en Schema",
                                 "examples": [
-                                    "Police Station",
-                                    "Bank",
-                                    "Airport",
-                                    "Bus Station",
-                                    "Education",
-                                    "Restaurant",
                                     "",
-                                    "Test Cat alon",
-                                    "Car",
-                                    "School",
-                                    "Test - Edit",
-                                    "Hospital",
-                                    "Brawijaya Hospital"
+                                    "Test",
+                                    "Education",
+                                    "Bus Station",
+                                    "Airport",
+                                    "Bank",
+                                    "Police Station"
                                 ]
                             },
                             "updated_at": {
                                 "type": "string",
                                 "title": "The updated_at Schema",
                                 "examples": [
-                                    "2022-03-28T12:43:39+07:00",
-                                    "2022-04-01T09:28:20+07:00",
-                                    "2022-06-09T15:02:11+07:00",
-                                    "2022-03-28T12:41:39+07:00",
-                                    "2022-03-28T12:41:28+07:00",
-                                    "2022-04-01T09:30:25+07:00",
-                                    "2022-04-21T14:55:50+07:00",
-                                    "2022-04-21T14:56:01+07:00",
-                                    "2022-04-21T14:56:13+07:00",
-                                    "2022-04-21T15:04:09+07:00",
-                                    "2022-04-21T15:04:21+07:00",
-                                    "2022-04-21T15:04:31+07:00",
-                                    "2022-04-21T15:04:43+07:00",
-                                    "2022-04-21T15:07:00+07:00",
-                                    "2022-04-21T15:07:11+07:00",
-                                    "2022-04-21T15:07:22+07:00",
-                                    "2022-04-21T15:07:33+07:00",
-                                    "2022-04-21T15:07:44+07:00",
-                                    "2022-04-21T15:07:54+07:00",
-                                    "2022-04-21T15:08:06+07:00",
-                                    "2022-04-21T15:08:17+07:00",
-                                    "2022-04-21T15:08:29+07:00",
-                                    "2022-04-21T15:08:39+07:00",
-                                    "2022-04-21T15:08:49+07:00",
-                                    "2022-04-21T15:09:01+07:00",
-                                    "2022-04-21T15:09:13+07:00",
-                                    "2022-04-21T15:09:24+07:00",
-                                    "2022-04-21T15:09:35+07:00",
-                                    "2022-04-21T15:09:46+07:00",
-                                    "2022-04-21T15:14:04+07:00",
-                                    "2022-04-21T15:14:15+07:00",
-                                    "2022-04-21T15:14:26+07:00",
-                                    "2022-04-21T15:14:37+07:00",
-                                    "2022-04-21T15:17:17+07:00",
-                                    "2022-04-21T15:18:02+07:00",
-                                    "2022-04-21T15:18:13+07:00",
-                                    "2022-04-21T15:22:28+07:00",
-                                    "2022-05-19T16:57:25+07:00",
-                                    "2022-06-09T14:02:03+07:00",
-                                    "2022-06-09T16:46:50+07:00",
-                                    "2022-06-09T16:47:51+07:00",
-                                    "2022-06-09T16:48:31+07:00",
-                                    "2022-06-09T16:49:53+07:00",
-                                    "2022-06-10T15:23:01+07:00",
-                                    "2022-06-13T10:39:16+07:00",
-                                    "2022-06-13T13:47:32+07:00",
-                                    "2022-07-07T12:37:01+07:00",
-                                    "2022-07-07T14:02:57+07:00"
+                                    "2022-06-07T11:16:49+07:00",
+                                    "2022-06-07T11:09:29+07:00",
+                                    "2022-06-07T11:08:58+07:00",
+                                    "2022-06-07T11:05:11+07:00",
+                                    "2022-06-06T17:15:20+07:00",
+                                    "2022-06-06T17:14:04+07:00",
+                                    "2022-06-06T17:07:27+07:00",
+                                    "2022-06-06T16:44:48+07:00",
+                                    "2022-06-06T10:41:33+07:00",
+                                    "2022-06-06T10:39:13+07:00",
+                                    "2022-06-06T10:31:13+07:00",
+                                    "2022-06-06T10:23:39+07:00",
+                                    "2022-06-06T10:23:03+07:00",
+                                    "2022-02-17T13:53:24+07:00",
+                                    "2022-01-24T14:53:12+07:00",
+                                    "2022-01-24T14:53:27+07:00",
+                                    "2022-02-18T10:53:23+07:00",
+                                    "2022-04-05T15:40:46+07:00"
                                 ]
                             }
                         },
                         "examples": [{
-                            "color": "#f78416",
-                            "created_at": "2022-01-18T10:20:36+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/CzWeuRb41648446079-ddc9a37fe424a06c87bc0887da6f6a57.png",
-                            "id": 2,
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-07T11:16:49+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 400,
                             "is_active": "1",
-                            "name": "Kantor Polisi",
-                            "name_en": "Police Station",
-                            "updated_at": "2022-03-28T12:43:39+07:00"
+                            "name": "Sepeda",
+                            "name_en": "",
+                            "updated_at": "2022-06-07T11:16:49+07:00"
                         },
                         {
-                            "color": "#2ad597",
-                            "created_at": "2022-01-18T08:51:33+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/bRFCwyYL1648446013-335c8f2f910101da08dc06111d4bfab5.png",
-                            "id": 3,
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-07T11:09:29+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 399,
                             "is_active": "1",
-                            "name": "Bank",
-                            "name_en": "Bank",
-                            "updated_at": "2022-04-01T09:28:20+07:00"
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-07T11:09:29+07:00"
                         },
                         {
-                            "color": "#6859dd",
-                            "created_at": "2022-01-18T08:51:50+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/AjkTzdRK1648446184-8aeacc1527860584de8071dcc0f42f9d.png",
-                            "id": 4,
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-07T11:08:58+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 398,
                             "is_active": "1",
-                            "name": "Bandara1",
-                            "name_en": "Airport",
-                            "updated_at": "2022-06-09T15:02:11+07:00"
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-07T11:08:58+07:00"
                         },
                         {
-                            "color": "#307aec",
-                            "created_at": "2022-01-18T08:52:06+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/xRk5v8aR1648446099-489f388997d8661201daa7e505e6faab.png",
-                            "id": 5,
+                            "color": "#eb4034",
+                            "created_at": "2022-06-07T11:05:11+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 397,
                             "is_active": "1",
-                            "name": "Terminal Bus",
-                            "name_en": "Bus Station",
-                            "updated_at": "2022-03-28T12:41:39+07:00"
+                            "name": "mobil",
+                            "name_en": "Test",
+                            "updated_at": "2022-06-07T11:05:11+07:00"
                         },
                         {
-                            "color": "#ff495c",
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T17:15:20+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 396,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-06T17:15:20+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T17:14:04+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 395,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-06T17:14:04+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T17:07:27+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 394,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-06T17:07:27+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T16:44:48+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 393,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "Test",
+                            "updated_at": "2022-06-06T16:44:48+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T10:41:33+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 392,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-06T10:41:33+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T10:39:13+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 391,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-06T10:39:13+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T10:31:13+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 390,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-06T10:31:13+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T10:23:39+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 389,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-06T10:23:39+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T10:23:03+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 388,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "Test",
+                            "updated_at": "2022-06-06T10:23:03+07:00"
+                        },
+                        {
+                            "color": "#f47373",
                             "created_at": "2022-01-18T08:52:20+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/dmw0oebv1648446088-eefe16e30dcfb7d9eaaa66f77539ac9c.png",
+                            "extention": "svg",
+                            "icon": "http://localhost:9000/inisadev/1645080803877885400.svg",
                             "id": 6,
                             "is_active": "1",
                             "name": "Pendidikan",
                             "name_en": "Education",
-                            "updated_at": "2022-03-28T12:41:28+07:00"
+                            "updated_at": "2022-02-17T13:53:24+07:00"
                         },
                         {
-                            "color": "#fc1a04",
-                            "created_at": "2022-03-30T15:52:42+07:00",
+                            "color": "#307aec",
+                            "created_at": "2022-01-18T08:52:06+07:00",
                             "extention": "svg",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/AtDDpUoF1648630362-769a658929845d0a5caa4422fcb5bb7d.svg",
-                            "id": 260,
+                            "icon": "http://localhost:9000/inisadev/220124145312.svg",
+                            "id": 5,
                             "is_active": "1",
-                            "name": "Restoran",
-                            "name_en": "Restaurant",
-                            "updated_at": "2022-04-01T09:30:25+07:00"
+                            "name": "Terminal Bus",
+                            "name_en": "Bus Station",
+                            "updated_at": "2022-01-24T14:53:12+07:00"
                         },
                         {
-                            "created_at": "2022-04-21T14:55:50+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 268,
+                            "color": "#6859dd",
+                            "created_at": "2022-01-18T08:51:50+07:00",
+                            "extention": "svg",
+                            "icon": "http://localhost:9000/inisadev/220124145327.svg",
+                            "id": 4,
                             "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T14:55:50+07:00"
+                            "name": "Bandara",
+                            "name_en": "Airport",
+                            "updated_at": "2022-01-24T14:53:27+07:00"
                         },
                         {
-                            "created_at": "2022-04-21T14:56:01+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 269,
+                            "color": "#22a173",
+                            "created_at": "2022-01-18T08:51:33+07:00",
+                            "extention": "svg",
+                            "icon": "http://localhost:9000/inisadev/220124145334.svg",
+                            "id": 3,
                             "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T14:56:01+07:00"
+                            "name": "Bank",
+                            "name_en": "Bank",
+                            "updated_at": "2022-02-18T10:53:23+07:00"
                         },
                         {
-                            "created_at": "2022-04-21T14:56:13+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 270,
+                            "color": "#f78416",
+                            "created_at": "2022-01-18T10:20:36+07:00",
+                            "extention": "svg",
+                            "icon": "http://localhost:9000/inisadev/220124145340.svg",
+                            "id": 2,
                             "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T14:56:13+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:04:09+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 271,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:04:09+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:04:21+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 272,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:04:21+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:04:31+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 273,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:04:31+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:04:43+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 274,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:04:43+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:07:00+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 275,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:07:00+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:07:11+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 276,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:07:11+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:07:22+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 277,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:07:22+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:07:33+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 278,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:07:33+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:07:44+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 279,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:07:44+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:07:54+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 280,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:07:54+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:08:06+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 281,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:08:06+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:08:17+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 282,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:08:17+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:08:29+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 283,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:08:29+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:08:39+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 284,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:08:39+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:08:49+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 285,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:08:49+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:09:01+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 286,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:09:01+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:09:13+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 287,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:09:13+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:09:24+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 288,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:09:24+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:09:35+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 289,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:09:35+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:09:46+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 290,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:09:46+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:14:04+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 291,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:14:04+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:14:15+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 292,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:14:15+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:14:26+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 293,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:14:26+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:14:37+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 294,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:14:37+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-04-21T15:17:17+07:00",
-                            "extention": "jpg",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/6RvV1XqY1650529036-90e4eaff5610bdfa16eb3f2d42f8bb76.jpg",
-                            "id": 295,
-                            "is_active": "1",
-                            "name": "Bengkel",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:17:17+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:18:02+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 296,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:18:02+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:18:13+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 297,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:18:13+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-04-21T15:22:28+07:00",
-                            "extention": "jpg",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/1Ii2VTPS1650529348-90e4eaff5610bdfa16eb3f2d42f8bb76.jpg",
-                            "id": 300,
-                            "is_active": "1",
-                            "name": "Bengkel",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:22:28+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-04-21T15:22:59+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 301,
-                            "is_active": "1",
-                            "name": "Bengkel",
-                            "name_en": "",
-                            "updated_at": "2022-05-19T16:57:25+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-06-09T14:02:03+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 305,
-                            "is_active": "1",
-                            "name": "Cat alon",
-                            "name_en": "Test Cat alon",
-                            "updated_at": "2022-06-09T14:02:03+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-06-09T16:46:50+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/ATzsod9F1654768010-c829ee98aa884ec488c0b8d21f0bb361.png",
-                            "id": 307,
-                            "is_active": "1",
-                            "name": "Pesawat",
-                            "name_en": "",
-                            "updated_at": "2022-06-09T16:46:50+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-06-09T16:47:51+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/IPR0858m1654768070-c829ee98aa884ec488c0b8d21f0bb361.png",
-                            "id": 308,
-                            "is_active": "1",
-                            "name": "Pesawat",
-                            "name_en": "",
-                            "updated_at": "2022-06-09T16:47:51+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-06-09T16:48:31+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/LRuEx7k11654768111-c829ee98aa884ec488c0b8d21f0bb361.png",
-                            "id": 309,
-                            "is_active": "1",
-                            "name": "Pesawat",
-                            "name_en": "",
-                            "updated_at": "2022-06-09T16:48:31+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-06-09T16:49:53+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/zNIeeWxW1654768193-c829ee98aa884ec488c0b8d21f0bb361.png",
-                            "id": 310,
-                            "is_active": "1",
-                            "name": "Pesawat",
-                            "name_en": "",
-                            "updated_at": "2022-06-09T16:49:53+07:00"
-                        },
-                        {
-                            "color": "#5632a8",
-                            "created_at": "2022-06-10T15:23:01+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/WNB9vWVO1654849380-a89bb038c485a3af1038b045cb9b70ff.png",
-                            "id": 314,
-                            "is_active": "1",
-                            "name": "Mobil",
-                            "name_en": "Car",
-                            "updated_at": "2022-06-10T15:23:01+07:00"
-                        },
-                        {
-                            "color": "#194d21",
-                            "created_at": "2022-06-13T10:39:16+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/AFvCedvI1655091556-d35a02ac608097e4ae7f14b3e4e0c09c.png",
-                            "id": 316,
-                            "is_active": "1",
-                            "name": "Sekolah",
-                            "name_en": "School",
-                            "updated_at": "2022-06-13T10:39:16+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-06-13T13:47:32+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 317,
-                            "is_active": "1",
-                            "name": "Bengkel 1",
-                            "name_en": "Test - Edit",
-                            "updated_at": "2022-06-13T13:47:32+07:00"
-                        },
-                        {
-                            "color": "#f54242",
-                            "created_at": "2022-06-13T14:36:49+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/6geyiZj01655105808-d35a02ac608097e4ae7f14b3e4e0c09c.png",
-                            "id": 318,
-                            "is_active": "1",
-                            "name": "RS. Bakti Permai",
-                            "name_en": "Hospital",
-                            "updated_at": "2022-07-07T12:37:01+07:00"
-                        },
-                        {
-                            "color": "#43194d",
-                            "created_at": "2022-07-07T14:02:57+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/IyUbn7s41657177377-e3087cddfdf4c788b41bcdfe9b612cdd.png",
-                            "id": 319,
-                            "is_active": "1",
-                            "name": "Rumah Sakit Brawijaya",
-                            "name_en": "Brawijaya Hospital",
-                            "updated_at": "2022-07-07T14:02:57+07:00"
+                            "name": "Kantor Polisi",
+                            "name_en": "Police Station",
+                            "updated_at": "2022-04-05T15:40:46+07:00"
                         }]
                     },
                     "examples": [
                         [{
-                            "color": "#f78416",
-                            "created_at": "2022-01-18T10:20:36+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/CzWeuRb41648446079-ddc9a37fe424a06c87bc0887da6f6a57.png",
-                            "id": 2,
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-07T11:16:49+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 400,
                             "is_active": "1",
-                            "name": "Kantor Polisi",
-                            "name_en": "Police Station",
-                            "updated_at": "2022-03-28T12:43:39+07:00"
+                            "name": "Sepeda",
+                            "name_en": "",
+                            "updated_at": "2022-06-07T11:16:49+07:00"
                         },
                         {
-                            "color": "#2ad597",
-                            "created_at": "2022-01-18T08:51:33+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/bRFCwyYL1648446013-335c8f2f910101da08dc06111d4bfab5.png",
-                            "id": 3,
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-07T11:09:29+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 399,
                             "is_active": "1",
-                            "name": "Bank",
-                            "name_en": "Bank",
-                            "updated_at": "2022-04-01T09:28:20+07:00"
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-07T11:09:29+07:00"
                         },
                         {
-                            "color": "#6859dd",
-                            "created_at": "2022-01-18T08:51:50+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/AjkTzdRK1648446184-8aeacc1527860584de8071dcc0f42f9d.png",
-                            "id": 4,
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-07T11:08:58+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 398,
                             "is_active": "1",
-                            "name": "Bandara1",
-                            "name_en": "Airport",
-                            "updated_at": "2022-06-09T15:02:11+07:00"
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-07T11:08:58+07:00"
                         },
                         {
-                            "color": "#307aec",
-                            "created_at": "2022-01-18T08:52:06+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/xRk5v8aR1648446099-489f388997d8661201daa7e505e6faab.png",
-                            "id": 5,
+                            "color": "#eb4034",
+                            "created_at": "2022-06-07T11:05:11+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 397,
                             "is_active": "1",
-                            "name": "Terminal Bus",
-                            "name_en": "Bus Station",
-                            "updated_at": "2022-03-28T12:41:39+07:00"
+                            "name": "mobil",
+                            "name_en": "Test",
+                            "updated_at": "2022-06-07T11:05:11+07:00"
                         },
                         {
-                            "color": "#ff495c",
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T17:15:20+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 396,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-06T17:15:20+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T17:14:04+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 395,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-06T17:14:04+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T17:07:27+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 394,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-06T17:07:27+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T16:44:48+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 393,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "Test",
+                            "updated_at": "2022-06-06T16:44:48+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T10:41:33+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 392,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-06T10:41:33+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T10:39:13+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 391,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-06T10:39:13+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T10:31:13+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 390,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-06T10:31:13+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T10:23:39+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 389,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "",
+                            "updated_at": "2022-06-06T10:23:39+07:00"
+                        },
+                        {
+                            "color": "#ba68c8",
+                            "created_at": "2022-06-06T10:23:03+07:00",
+                            "extention": "",
+                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                            "id": 388,
+                            "is_active": "1",
+                            "name": "Bengkel",
+                            "name_en": "Test",
+                            "updated_at": "2022-06-06T10:23:03+07:00"
+                        },
+                        {
+                            "color": "#f47373",
                             "created_at": "2022-01-18T08:52:20+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/dmw0oebv1648446088-eefe16e30dcfb7d9eaaa66f77539ac9c.png",
+                            "extention": "svg",
+                            "icon": "http://localhost:9000/inisadev/1645080803877885400.svg",
                             "id": 6,
                             "is_active": "1",
                             "name": "Pendidikan",
                             "name_en": "Education",
-                            "updated_at": "2022-03-28T12:41:28+07:00"
+                            "updated_at": "2022-02-17T13:53:24+07:00"
                         },
                         {
-                            "color": "#fc1a04",
-                            "created_at": "2022-03-30T15:52:42+07:00",
+                            "color": "#307aec",
+                            "created_at": "2022-01-18T08:52:06+07:00",
                             "extention": "svg",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/AtDDpUoF1648630362-769a658929845d0a5caa4422fcb5bb7d.svg",
-                            "id": 260,
+                            "icon": "http://localhost:9000/inisadev/220124145312.svg",
+                            "id": 5,
                             "is_active": "1",
-                            "name": "Restoran",
-                            "name_en": "Restaurant",
-                            "updated_at": "2022-04-01T09:30:25+07:00"
+                            "name": "Terminal Bus",
+                            "name_en": "Bus Station",
+                            "updated_at": "2022-01-24T14:53:12+07:00"
                         },
                         {
-                            "created_at": "2022-04-21T14:55:50+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 268,
+                            "color": "#6859dd",
+                            "created_at": "2022-01-18T08:51:50+07:00",
+                            "extention": "svg",
+                            "icon": "http://localhost:9000/inisadev/220124145327.svg",
+                            "id": 4,
                             "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T14:55:50+07:00"
+                            "name": "Bandara",
+                            "name_en": "Airport",
+                            "updated_at": "2022-01-24T14:53:27+07:00"
                         },
                         {
-                            "created_at": "2022-04-21T14:56:01+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 269,
+                            "color": "#22a173",
+                            "created_at": "2022-01-18T08:51:33+07:00",
+                            "extention": "svg",
+                            "icon": "http://localhost:9000/inisadev/220124145334.svg",
+                            "id": 3,
                             "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T14:56:01+07:00"
+                            "name": "Bank",
+                            "name_en": "Bank",
+                            "updated_at": "2022-02-18T10:53:23+07:00"
                         },
                         {
-                            "created_at": "2022-04-21T14:56:13+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 270,
+                            "color": "#f78416",
+                            "created_at": "2022-01-18T10:20:36+07:00",
+                            "extention": "svg",
+                            "icon": "http://localhost:9000/inisadev/220124145340.svg",
+                            "id": 2,
                             "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T14:56:13+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:04:09+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 271,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:04:09+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:04:21+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 272,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:04:21+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:04:31+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 273,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:04:31+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:04:43+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 274,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:04:43+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:07:00+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 275,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:07:00+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:07:11+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 276,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:07:11+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:07:22+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 277,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:07:22+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:07:33+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 278,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:07:33+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:07:44+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 279,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:07:44+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:07:54+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 280,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:07:54+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:08:06+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 281,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:08:06+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:08:17+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 282,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:08:17+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:08:29+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 283,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:08:29+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:08:39+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 284,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:08:39+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:08:49+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 285,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:08:49+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:09:01+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 286,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:09:01+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:09:13+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 287,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:09:13+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:09:24+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 288,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:09:24+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:09:35+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 289,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:09:35+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:09:46+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 290,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:09:46+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:14:04+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 291,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:14:04+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:14:15+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 292,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:14:15+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:14:26+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 293,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:14:26+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:14:37+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 294,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:14:37+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-04-21T15:17:17+07:00",
-                            "extention": "jpg",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/6RvV1XqY1650529036-90e4eaff5610bdfa16eb3f2d42f8bb76.jpg",
-                            "id": 295,
-                            "is_active": "1",
-                            "name": "Bengkel",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:17:17+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:18:02+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 296,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:18:02+07:00"
-                        },
-                        {
-                            "created_at": "2022-04-21T15:18:13+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 297,
-                            "is_active": "1",
-                            "name": "",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:18:13+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-04-21T15:22:28+07:00",
-                            "extention": "jpg",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/1Ii2VTPS1650529348-90e4eaff5610bdfa16eb3f2d42f8bb76.jpg",
-                            "id": 300,
-                            "is_active": "1",
-                            "name": "Bengkel",
-                            "name_en": "",
-                            "updated_at": "2022-04-21T15:22:28+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-04-21T15:22:59+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 301,
-                            "is_active": "1",
-                            "name": "Bengkel",
-                            "name_en": "",
-                            "updated_at": "2022-05-19T16:57:25+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-06-09T14:02:03+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 305,
-                            "is_active": "1",
-                            "name": "Cat alon",
-                            "name_en": "Test Cat alon",
-                            "updated_at": "2022-06-09T14:02:03+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-06-09T16:46:50+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/ATzsod9F1654768010-c829ee98aa884ec488c0b8d21f0bb361.png",
-                            "id": 307,
-                            "is_active": "1",
-                            "name": "Pesawat",
-                            "name_en": "",
-                            "updated_at": "2022-06-09T16:46:50+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-06-09T16:47:51+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/IPR0858m1654768070-c829ee98aa884ec488c0b8d21f0bb361.png",
-                            "id": 308,
-                            "is_active": "1",
-                            "name": "Pesawat",
-                            "name_en": "",
-                            "updated_at": "2022-06-09T16:47:51+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-06-09T16:48:31+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/LRuEx7k11654768111-c829ee98aa884ec488c0b8d21f0bb361.png",
-                            "id": 309,
-                            "is_active": "1",
-                            "name": "Pesawat",
-                            "name_en": "",
-                            "updated_at": "2022-06-09T16:48:31+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-06-09T16:49:53+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/zNIeeWxW1654768193-c829ee98aa884ec488c0b8d21f0bb361.png",
-                            "id": 310,
-                            "is_active": "1",
-                            "name": "Pesawat",
-                            "name_en": "",
-                            "updated_at": "2022-06-09T16:49:53+07:00"
-                        },
-                        {
-                            "color": "#5632a8",
-                            "created_at": "2022-06-10T15:23:01+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/WNB9vWVO1654849380-a89bb038c485a3af1038b045cb9b70ff.png",
-                            "id": 314,
-                            "is_active": "1",
-                            "name": "Mobil",
-                            "name_en": "Car",
-                            "updated_at": "2022-06-10T15:23:01+07:00"
-                        },
-                        {
-                            "color": "#194d21",
-                            "created_at": "2022-06-13T10:39:16+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/AFvCedvI1655091556-d35a02ac608097e4ae7f14b3e4e0c09c.png",
-                            "id": 316,
-                            "is_active": "1",
-                            "name": "Sekolah",
-                            "name_en": "School",
-                            "updated_at": "2022-06-13T10:39:16+07:00"
-                        },
-                        {
-                            "color": "#ba68c8",
-                            "created_at": "2022-06-13T13:47:32+07:00",
-                            "extention": "",
-                            "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                            "id": 317,
-                            "is_active": "1",
-                            "name": "Bengkel 1",
-                            "name_en": "Test - Edit",
-                            "updated_at": "2022-06-13T13:47:32+07:00"
-                        },
-                        {
-                            "color": "#f54242",
-                            "created_at": "2022-06-13T14:36:49+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/6geyiZj01655105808-d35a02ac608097e4ae7f14b3e4e0c09c.png",
-                            "id": 318,
-                            "is_active": "1",
-                            "name": "RS. Bakti Permai",
-                            "name_en": "Hospital",
-                            "updated_at": "2022-07-07T12:37:01+07:00"
-                        },
-                        {
-                            "color": "#43194d",
-                            "created_at": "2022-07-07T14:02:57+07:00",
-                            "extention": "png",
-                            "icon": "https://s3.loyalto.id/inisadev/imagepublic/IyUbn7s41657177377-e3087cddfdf4c788b41bcdfe9b612cdd.png",
-                            "id": 319,
-                            "is_active": "1",
-                            "name": "Rumah Sakit Brawijaya",
-                            "name_en": "Brawijaya Hospital",
-                            "updated_at": "2022-07-07T14:02:57+07:00"
+                            "name": "Kantor Polisi",
+                            "name_en": "Police Station",
+                            "updated_at": "2022-04-05T15:40:46+07:00"
                         }]
                     ]
                 },
@@ -3803,511 +3388,210 @@ export const VALIDATE_LOKASI_SCHEMA = {
                     "default": 0,
                     "title": "The total_item Schema",
                     "examples": [
-                        48
+                        18
                     ]
                 }
             },
             "examples": [{
                 "list": [{
-                    "color": "#f78416",
-                    "created_at": "2022-01-18T10:20:36+07:00",
-                    "extention": "png",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/CzWeuRb41648446079-ddc9a37fe424a06c87bc0887da6f6a57.png",
-                    "id": 2,
+                    "color": "#ba68c8",
+                    "created_at": "2022-06-07T11:16:49+07:00",
+                    "extention": "",
+                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "id": 400,
                     "is_active": "1",
-                    "name": "Kantor Polisi",
-                    "name_en": "Police Station",
-                    "updated_at": "2022-03-28T12:43:39+07:00"
+                    "name": "Sepeda",
+                    "name_en": "",
+                    "updated_at": "2022-06-07T11:16:49+07:00"
                 },
                 {
-                    "color": "#2ad597",
-                    "created_at": "2022-01-18T08:51:33+07:00",
-                    "extention": "png",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/bRFCwyYL1648446013-335c8f2f910101da08dc06111d4bfab5.png",
-                    "id": 3,
+                    "color": "#ba68c8",
+                    "created_at": "2022-06-07T11:09:29+07:00",
+                    "extention": "",
+                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "id": 399,
                     "is_active": "1",
-                    "name": "Bank",
-                    "name_en": "Bank",
-                    "updated_at": "2022-04-01T09:28:20+07:00"
+                    "name": "Bengkel",
+                    "name_en": "",
+                    "updated_at": "2022-06-07T11:09:29+07:00"
                 },
                 {
-                    "color": "#6859dd",
-                    "created_at": "2022-01-18T08:51:50+07:00",
-                    "extention": "png",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/AjkTzdRK1648446184-8aeacc1527860584de8071dcc0f42f9d.png",
-                    "id": 4,
+                    "color": "#ba68c8",
+                    "created_at": "2022-06-07T11:08:58+07:00",
+                    "extention": "",
+                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "id": 398,
                     "is_active": "1",
-                    "name": "Bandara1",
-                    "name_en": "Airport",
-                    "updated_at": "2022-06-09T15:02:11+07:00"
+                    "name": "Bengkel",
+                    "name_en": "",
+                    "updated_at": "2022-06-07T11:08:58+07:00"
                 },
                 {
-                    "color": "#307aec",
-                    "created_at": "2022-01-18T08:52:06+07:00",
-                    "extention": "png",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/xRk5v8aR1648446099-489f388997d8661201daa7e505e6faab.png",
-                    "id": 5,
+                    "color": "#eb4034",
+                    "created_at": "2022-06-07T11:05:11+07:00",
+                    "extention": "",
+                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "id": 397,
                     "is_active": "1",
-                    "name": "Terminal Bus",
-                    "name_en": "Bus Station",
-                    "updated_at": "2022-03-28T12:41:39+07:00"
+                    "name": "mobil",
+                    "name_en": "Test",
+                    "updated_at": "2022-06-07T11:05:11+07:00"
                 },
                 {
-                    "color": "#ff495c",
+                    "color": "#ba68c8",
+                    "created_at": "2022-06-06T17:15:20+07:00",
+                    "extention": "",
+                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "id": 396,
+                    "is_active": "1",
+                    "name": "Bengkel",
+                    "name_en": "",
+                    "updated_at": "2022-06-06T17:15:20+07:00"
+                },
+                {
+                    "color": "#ba68c8",
+                    "created_at": "2022-06-06T17:14:04+07:00",
+                    "extention": "",
+                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "id": 395,
+                    "is_active": "1",
+                    "name": "Bengkel",
+                    "name_en": "",
+                    "updated_at": "2022-06-06T17:14:04+07:00"
+                },
+                {
+                    "color": "#ba68c8",
+                    "created_at": "2022-06-06T17:07:27+07:00",
+                    "extention": "",
+                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "id": 394,
+                    "is_active": "1",
+                    "name": "Bengkel",
+                    "name_en": "",
+                    "updated_at": "2022-06-06T17:07:27+07:00"
+                },
+                {
+                    "color": "#ba68c8",
+                    "created_at": "2022-06-06T16:44:48+07:00",
+                    "extention": "",
+                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "id": 393,
+                    "is_active": "1",
+                    "name": "Bengkel",
+                    "name_en": "Test",
+                    "updated_at": "2022-06-06T16:44:48+07:00"
+                },
+                {
+                    "color": "#ba68c8",
+                    "created_at": "2022-06-06T10:41:33+07:00",
+                    "extention": "",
+                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "id": 392,
+                    "is_active": "1",
+                    "name": "Bengkel",
+                    "name_en": "",
+                    "updated_at": "2022-06-06T10:41:33+07:00"
+                },
+                {
+                    "color": "#ba68c8",
+                    "created_at": "2022-06-06T10:39:13+07:00",
+                    "extention": "",
+                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "id": 391,
+                    "is_active": "1",
+                    "name": "Bengkel",
+                    "name_en": "",
+                    "updated_at": "2022-06-06T10:39:13+07:00"
+                },
+                {
+                    "color": "#ba68c8",
+                    "created_at": "2022-06-06T10:31:13+07:00",
+                    "extention": "",
+                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "id": 390,
+                    "is_active": "1",
+                    "name": "Bengkel",
+                    "name_en": "",
+                    "updated_at": "2022-06-06T10:31:13+07:00"
+                },
+                {
+                    "color": "#ba68c8",
+                    "created_at": "2022-06-06T10:23:39+07:00",
+                    "extention": "",
+                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "id": 389,
+                    "is_active": "1",
+                    "name": "Bengkel",
+                    "name_en": "",
+                    "updated_at": "2022-06-06T10:23:39+07:00"
+                },
+                {
+                    "color": "#ba68c8",
+                    "created_at": "2022-06-06T10:23:03+07:00",
+                    "extention": "",
+                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                    "id": 388,
+                    "is_active": "1",
+                    "name": "Bengkel",
+                    "name_en": "Test",
+                    "updated_at": "2022-06-06T10:23:03+07:00"
+                },
+                {
+                    "color": "#f47373",
                     "created_at": "2022-01-18T08:52:20+07:00",
-                    "extention": "png",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/dmw0oebv1648446088-eefe16e30dcfb7d9eaaa66f77539ac9c.png",
+                    "extention": "svg",
+                    "icon": "http://localhost:9000/inisadev/1645080803877885400.svg",
                     "id": 6,
                     "is_active": "1",
                     "name": "Pendidikan",
                     "name_en": "Education",
-                    "updated_at": "2022-03-28T12:41:28+07:00"
+                    "updated_at": "2022-02-17T13:53:24+07:00"
                 },
                 {
-                    "color": "#fc1a04",
-                    "created_at": "2022-03-30T15:52:42+07:00",
+                    "color": "#307aec",
+                    "created_at": "2022-01-18T08:52:06+07:00",
                     "extention": "svg",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/AtDDpUoF1648630362-769a658929845d0a5caa4422fcb5bb7d.svg",
-                    "id": 260,
+                    "icon": "http://localhost:9000/inisadev/220124145312.svg",
+                    "id": 5,
                     "is_active": "1",
-                    "name": "Restoran",
-                    "name_en": "Restaurant",
-                    "updated_at": "2022-04-01T09:30:25+07:00"
+                    "name": "Terminal Bus",
+                    "name_en": "Bus Station",
+                    "updated_at": "2022-01-24T14:53:12+07:00"
                 },
                 {
-                    "created_at": "2022-04-21T14:55:50+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 268,
+                    "color": "#6859dd",
+                    "created_at": "2022-01-18T08:51:50+07:00",
+                    "extention": "svg",
+                    "icon": "http://localhost:9000/inisadev/220124145327.svg",
+                    "id": 4,
                     "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T14:55:50+07:00"
+                    "name": "Bandara",
+                    "name_en": "Airport",
+                    "updated_at": "2022-01-24T14:53:27+07:00"
                 },
                 {
-                    "created_at": "2022-04-21T14:56:01+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 269,
+                    "color": "#22a173",
+                    "created_at": "2022-01-18T08:51:33+07:00",
+                    "extention": "svg",
+                    "icon": "http://localhost:9000/inisadev/220124145334.svg",
+                    "id": 3,
                     "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T14:56:01+07:00"
+                    "name": "Bank",
+                    "name_en": "Bank",
+                    "updated_at": "2022-02-18T10:53:23+07:00"
                 },
                 {
-                    "created_at": "2022-04-21T14:56:13+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 270,
+                    "color": "#f78416",
+                    "created_at": "2022-01-18T10:20:36+07:00",
+                    "extention": "svg",
+                    "icon": "http://localhost:9000/inisadev/220124145340.svg",
+                    "id": 2,
                     "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T14:56:13+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:04:09+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 271,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:04:09+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:04:21+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 272,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:04:21+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:04:31+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 273,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:04:31+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:04:43+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 274,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:04:43+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:07:00+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 275,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:07:00+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:07:11+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 276,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:07:11+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:07:22+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 277,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:07:22+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:07:33+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 278,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:07:33+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:07:44+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 279,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:07:44+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:07:54+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 280,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:07:54+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:08:06+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 281,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:08:06+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:08:17+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 282,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:08:17+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:08:29+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 283,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:08:29+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:08:39+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 284,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:08:39+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:08:49+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 285,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:08:49+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:09:01+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 286,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:09:01+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:09:13+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 287,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:09:13+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:09:24+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 288,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:09:24+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:09:35+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 289,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:09:35+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:09:46+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 290,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:09:46+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:14:04+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 291,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:14:04+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:14:15+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 292,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:14:15+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:14:26+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 293,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:14:26+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:14:37+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 294,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:14:37+07:00"
-                },
-                {
-                    "color": "#ba68c8",
-                    "created_at": "2022-04-21T15:17:17+07:00",
-                    "extention": "jpg",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/6RvV1XqY1650529036-90e4eaff5610bdfa16eb3f2d42f8bb76.jpg",
-                    "id": 295,
-                    "is_active": "1",
-                    "name": "Bengkel",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:17:17+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:18:02+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 296,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:18:02+07:00"
-                },
-                {
-                    "created_at": "2022-04-21T15:18:13+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 297,
-                    "is_active": "1",
-                    "name": "",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:18:13+07:00"
-                },
-                {
-                    "color": "#ba68c8",
-                    "created_at": "2022-04-21T15:22:28+07:00",
-                    "extention": "jpg",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/1Ii2VTPS1650529348-90e4eaff5610bdfa16eb3f2d42f8bb76.jpg",
-                    "id": 300,
-                    "is_active": "1",
-                    "name": "Bengkel",
-                    "name_en": "",
-                    "updated_at": "2022-04-21T15:22:28+07:00"
-                },
-                {
-                    "color": "#ba68c8",
-                    "created_at": "2022-04-21T15:22:59+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 301,
-                    "is_active": "1",
-                    "name": "Bengkel",
-                    "name_en": "",
-                    "updated_at": "2022-05-19T16:57:25+07:00"
-                },
-                {
-                    "color": "#ba68c8",
-                    "created_at": "2022-06-09T14:02:03+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 305,
-                    "is_active": "1",
-                    "name": "Cat alon",
-                    "name_en": "Test Cat alon",
-                    "updated_at": "2022-06-09T14:02:03+07:00"
-                },
-                {
-                    "color": "#ba68c8",
-                    "created_at": "2022-06-09T16:46:50+07:00",
-                    "extention": "png",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/ATzsod9F1654768010-c829ee98aa884ec488c0b8d21f0bb361.png",
-                    "id": 307,
-                    "is_active": "1",
-                    "name": "Pesawat",
-                    "name_en": "",
-                    "updated_at": "2022-06-09T16:46:50+07:00"
-                },
-                {
-                    "color": "#ba68c8",
-                    "created_at": "2022-06-09T16:47:51+07:00",
-                    "extention": "png",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/IPR0858m1654768070-c829ee98aa884ec488c0b8d21f0bb361.png",
-                    "id": 308,
-                    "is_active": "1",
-                    "name": "Pesawat",
-                    "name_en": "",
-                    "updated_at": "2022-06-09T16:47:51+07:00"
-                },
-                {
-                    "color": "#ba68c8",
-                    "created_at": "2022-06-09T16:48:31+07:00",
-                    "extention": "png",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/LRuEx7k11654768111-c829ee98aa884ec488c0b8d21f0bb361.png",
-                    "id": 309,
-                    "is_active": "1",
-                    "name": "Pesawat",
-                    "name_en": "",
-                    "updated_at": "2022-06-09T16:48:31+07:00"
-                },
-                {
-                    "color": "#ba68c8",
-                    "created_at": "2022-06-09T16:49:53+07:00",
-                    "extention": "png",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/zNIeeWxW1654768193-c829ee98aa884ec488c0b8d21f0bb361.png",
-                    "id": 310,
-                    "is_active": "1",
-                    "name": "Pesawat",
-                    "name_en": "",
-                    "updated_at": "2022-06-09T16:49:53+07:00"
-                },
-                {
-                    "color": "#5632a8",
-                    "created_at": "2022-06-10T15:23:01+07:00",
-                    "extention": "png",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/WNB9vWVO1654849380-a89bb038c485a3af1038b045cb9b70ff.png",
-                    "id": 314,
-                    "is_active": "1",
-                    "name": "Mobil",
-                    "name_en": "Car",
-                    "updated_at": "2022-06-10T15:23:01+07:00"
-                },
-                {
-                    "color": "#194d21",
-                    "created_at": "2022-06-13T10:39:16+07:00",
-                    "extention": "png",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/AFvCedvI1655091556-d35a02ac608097e4ae7f14b3e4e0c09c.png",
-                    "id": 316,
-                    "is_active": "1",
-                    "name": "Sekolah",
-                    "name_en": "School",
-                    "updated_at": "2022-06-13T10:39:16+07:00"
-                },
-                {
-                    "color": "#ba68c8",
-                    "created_at": "2022-06-13T13:47:32+07:00",
-                    "extention": "",
-                    "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                    "id": 317,
-                    "is_active": "1",
-                    "name": "Bengkel 1",
-                    "name_en": "Test - Edit",
-                    "updated_at": "2022-06-13T13:47:32+07:00"
-                },
-                {
-                    "color": "#f54242",
-                    "created_at": "2022-06-13T14:36:49+07:00",
-                    "extention": "png",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/6geyiZj01655105808-d35a02ac608097e4ae7f14b3e4e0c09c.png",
-                    "id": 318,
-                    "is_active": "1",
-                    "name": "RS. Bakti Permai",
-                    "name_en": "Hospital",
-                    "updated_at": "2022-07-07T12:37:01+07:00"
-                },
-                {
-                    "color": "#43194d",
-                    "created_at": "2022-07-07T14:02:57+07:00",
-                    "extention": "png",
-                    "icon": "https://s3.loyalto.id/inisadev/imagepublic/IyUbn7s41657177377-e3087cddfdf4c788b41bcdfe9b612cdd.png",
-                    "id": 319,
-                    "is_active": "1",
-                    "name": "Rumah Sakit Brawijaya",
-                    "name_en": "Brawijaya Hospital",
-                    "updated_at": "2022-07-07T14:02:57+07:00"
+                    "name": "Kantor Polisi",
+                    "name_en": "Police Station",
+                    "updated_at": "2022-04-05T15:40:46+07:00"
                 }],
-                "total_item": 48
+                "total_item": 18
             }]
         }
     },
@@ -4316,505 +3600,263 @@ export const VALIDATE_LOKASI_SCHEMA = {
         "message": "Success",
         "data": {
             "list": [{
-                "color": "#f78416",
-                "created_at": "2022-01-18T10:20:36+07:00",
-                "extention": "png",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/CzWeuRb41648446079-ddc9a37fe424a06c87bc0887da6f6a57.png",
-                "id": 2,
+                "color": "#ba68c8",
+                "created_at": "2022-06-07T11:16:49+07:00",
+                "extention": "",
+                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                "id": 400,
                 "is_active": "1",
-                "name": "Kantor Polisi",
-                "name_en": "Police Station",
-                "updated_at": "2022-03-28T12:43:39+07:00"
+                "name": "Sepeda",
+                "name_en": "",
+                "updated_at": "2022-06-07T11:16:49+07:00"
             },
             {
-                "color": "#2ad597",
-                "created_at": "2022-01-18T08:51:33+07:00",
-                "extention": "png",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/bRFCwyYL1648446013-335c8f2f910101da08dc06111d4bfab5.png",
-                "id": 3,
+                "color": "#ba68c8",
+                "created_at": "2022-06-07T11:09:29+07:00",
+                "extention": "",
+                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                "id": 399,
                 "is_active": "1",
-                "name": "Bank",
-                "name_en": "Bank",
-                "updated_at": "2022-04-01T09:28:20+07:00"
+                "name": "Bengkel",
+                "name_en": "",
+                "updated_at": "2022-06-07T11:09:29+07:00"
             },
             {
-                "color": "#6859dd",
-                "created_at": "2022-01-18T08:51:50+07:00",
-                "extention": "png",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/AjkTzdRK1648446184-8aeacc1527860584de8071dcc0f42f9d.png",
-                "id": 4,
+                "color": "#ba68c8",
+                "created_at": "2022-06-07T11:08:58+07:00",
+                "extention": "",
+                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                "id": 398,
                 "is_active": "1",
-                "name": "Bandara1",
-                "name_en": "Airport",
-                "updated_at": "2022-06-09T15:02:11+07:00"
+                "name": "Bengkel",
+                "name_en": "",
+                "updated_at": "2022-06-07T11:08:58+07:00"
             },
             {
-                "color": "#307aec",
-                "created_at": "2022-01-18T08:52:06+07:00",
-                "extention": "png",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/xRk5v8aR1648446099-489f388997d8661201daa7e505e6faab.png",
-                "id": 5,
+                "color": "#eb4034",
+                "created_at": "2022-06-07T11:05:11+07:00",
+                "extention": "",
+                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                "id": 397,
                 "is_active": "1",
-                "name": "Terminal Bus",
-                "name_en": "Bus Station",
-                "updated_at": "2022-03-28T12:41:39+07:00"
+                "name": "mobil",
+                "name_en": "Test",
+                "updated_at": "2022-06-07T11:05:11+07:00"
             },
             {
-                "color": "#ff495c",
+                "color": "#ba68c8",
+                "created_at": "2022-06-06T17:15:20+07:00",
+                "extention": "",
+                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                "id": 396,
+                "is_active": "1",
+                "name": "Bengkel",
+                "name_en": "",
+                "updated_at": "2022-06-06T17:15:20+07:00"
+            },
+            {
+                "color": "#ba68c8",
+                "created_at": "2022-06-06T17:14:04+07:00",
+                "extention": "",
+                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                "id": 395,
+                "is_active": "1",
+                "name": "Bengkel",
+                "name_en": "",
+                "updated_at": "2022-06-06T17:14:04+07:00"
+            },
+            {
+                "color": "#ba68c8",
+                "created_at": "2022-06-06T17:07:27+07:00",
+                "extention": "",
+                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                "id": 394,
+                "is_active": "1",
+                "name": "Bengkel",
+                "name_en": "",
+                "updated_at": "2022-06-06T17:07:27+07:00"
+            },
+            {
+                "color": "#ba68c8",
+                "created_at": "2022-06-06T16:44:48+07:00",
+                "extention": "",
+                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                "id": 393,
+                "is_active": "1",
+                "name": "Bengkel",
+                "name_en": "Test",
+                "updated_at": "2022-06-06T16:44:48+07:00"
+            },
+            {
+                "color": "#ba68c8",
+                "created_at": "2022-06-06T10:41:33+07:00",
+                "extention": "",
+                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                "id": 392,
+                "is_active": "1",
+                "name": "Bengkel",
+                "name_en": "",
+                "updated_at": "2022-06-06T10:41:33+07:00"
+            },
+            {
+                "color": "#ba68c8",
+                "created_at": "2022-06-06T10:39:13+07:00",
+                "extention": "",
+                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                "id": 391,
+                "is_active": "1",
+                "name": "Bengkel",
+                "name_en": "",
+                "updated_at": "2022-06-06T10:39:13+07:00"
+            },
+            {
+                "color": "#ba68c8",
+                "created_at": "2022-06-06T10:31:13+07:00",
+                "extention": "",
+                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                "id": 390,
+                "is_active": "1",
+                "name": "Bengkel",
+                "name_en": "",
+                "updated_at": "2022-06-06T10:31:13+07:00"
+            },
+            {
+                "color": "#ba68c8",
+                "created_at": "2022-06-06T10:23:39+07:00",
+                "extention": "",
+                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                "id": 389,
+                "is_active": "1",
+                "name": "Bengkel",
+                "name_en": "",
+                "updated_at": "2022-06-06T10:23:39+07:00"
+            },
+            {
+                "color": "#ba68c8",
+                "created_at": "2022-06-06T10:23:03+07:00",
+                "extention": "",
+                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
+                "id": 388,
+                "is_active": "1",
+                "name": "Bengkel",
+                "name_en": "Test",
+                "updated_at": "2022-06-06T10:23:03+07:00"
+            },
+            {
+                "color": "#f47373",
                 "created_at": "2022-01-18T08:52:20+07:00",
-                "extention": "png",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/dmw0oebv1648446088-eefe16e30dcfb7d9eaaa66f77539ac9c.png",
+                "extention": "svg",
+                "icon": "http://localhost:9000/inisadev/1645080803877885400.svg",
                 "id": 6,
                 "is_active": "1",
                 "name": "Pendidikan",
                 "name_en": "Education",
-                "updated_at": "2022-03-28T12:41:28+07:00"
+                "updated_at": "2022-02-17T13:53:24+07:00"
             },
             {
-                "color": "#fc1a04",
-                "created_at": "2022-03-30T15:52:42+07:00",
+                "color": "#307aec",
+                "created_at": "2022-01-18T08:52:06+07:00",
                 "extention": "svg",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/AtDDpUoF1648630362-769a658929845d0a5caa4422fcb5bb7d.svg",
-                "id": 260,
+                "icon": "http://localhost:9000/inisadev/220124145312.svg",
+                "id": 5,
                 "is_active": "1",
-                "name": "Restoran",
-                "name_en": "Restaurant",
-                "updated_at": "2022-04-01T09:30:25+07:00"
+                "name": "Terminal Bus",
+                "name_en": "Bus Station",
+                "updated_at": "2022-01-24T14:53:12+07:00"
             },
             {
-                "created_at": "2022-04-21T14:55:50+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 268,
+                "color": "#6859dd",
+                "created_at": "2022-01-18T08:51:50+07:00",
+                "extention": "svg",
+                "icon": "http://localhost:9000/inisadev/220124145327.svg",
+                "id": 4,
                 "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T14:55:50+07:00"
+                "name": "Bandara",
+                "name_en": "Airport",
+                "updated_at": "2022-01-24T14:53:27+07:00"
             },
             {
-                "created_at": "2022-04-21T14:56:01+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 269,
+                "color": "#22a173",
+                "created_at": "2022-01-18T08:51:33+07:00",
+                "extention": "svg",
+                "icon": "http://localhost:9000/inisadev/220124145334.svg",
+                "id": 3,
                 "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T14:56:01+07:00"
+                "name": "Bank",
+                "name_en": "Bank",
+                "updated_at": "2022-02-18T10:53:23+07:00"
             },
             {
-                "created_at": "2022-04-21T14:56:13+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 270,
+                "color": "#f78416",
+                "created_at": "2022-01-18T10:20:36+07:00",
+                "extention": "svg",
+                "icon": "http://localhost:9000/inisadev/220124145340.svg",
+                "id": 2,
                 "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T14:56:13+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:04:09+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 271,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:04:09+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:04:21+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 272,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:04:21+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:04:31+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 273,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:04:31+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:04:43+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 274,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:04:43+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:07:00+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 275,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:07:00+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:07:11+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 276,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:07:11+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:07:22+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 277,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:07:22+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:07:33+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 278,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:07:33+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:07:44+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 279,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:07:44+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:07:54+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 280,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:07:54+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:08:06+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 281,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:08:06+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:08:17+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 282,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:08:17+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:08:29+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 283,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:08:29+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:08:39+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 284,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:08:39+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:08:49+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 285,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:08:49+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:09:01+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 286,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:09:01+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:09:13+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 287,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:09:13+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:09:24+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 288,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:09:24+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:09:35+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 289,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:09:35+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:09:46+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 290,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:09:46+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:14:04+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 291,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:14:04+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:14:15+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 292,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:14:15+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:14:26+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 293,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:14:26+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:14:37+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 294,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:14:37+07:00"
-            },
-            {
-                "color": "#ba68c8",
-                "created_at": "2022-04-21T15:17:17+07:00",
-                "extention": "jpg",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/6RvV1XqY1650529036-90e4eaff5610bdfa16eb3f2d42f8bb76.jpg",
-                "id": 295,
-                "is_active": "1",
-                "name": "Bengkel",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:17:17+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:18:02+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 296,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:18:02+07:00"
-            },
-            {
-                "created_at": "2022-04-21T15:18:13+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 297,
-                "is_active": "1",
-                "name": "",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:18:13+07:00"
-            },
-            {
-                "color": "#ba68c8",
-                "created_at": "2022-04-21T15:22:28+07:00",
-                "extention": "jpg",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/1Ii2VTPS1650529348-90e4eaff5610bdfa16eb3f2d42f8bb76.jpg",
-                "id": 300,
-                "is_active": "1",
-                "name": "Bengkel",
-                "name_en": "",
-                "updated_at": "2022-04-21T15:22:28+07:00"
-            },
-            {
-                "color": "#ba68c8",
-                "created_at": "2022-04-21T15:22:59+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 301,
-                "is_active": "1",
-                "name": "Bengkel",
-                "name_en": "",
-                "updated_at": "2022-05-19T16:57:25+07:00"
-            },
-            {
-                "color": "#ba68c8",
-                "created_at": "2022-06-09T14:02:03+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 305,
-                "is_active": "1",
-                "name": "Cat alon",
-                "name_en": "Test Cat alon",
-                "updated_at": "2022-06-09T14:02:03+07:00"
-            },
-            {
-                "color": "#ba68c8",
-                "created_at": "2022-06-09T16:46:50+07:00",
-                "extention": "png",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/ATzsod9F1654768010-c829ee98aa884ec488c0b8d21f0bb361.png",
-                "id": 307,
-                "is_active": "1",
-                "name": "Pesawat",
-                "name_en": "",
-                "updated_at": "2022-06-09T16:46:50+07:00"
-            },
-            {
-                "color": "#ba68c8",
-                "created_at": "2022-06-09T16:47:51+07:00",
-                "extention": "png",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/IPR0858m1654768070-c829ee98aa884ec488c0b8d21f0bb361.png",
-                "id": 308,
-                "is_active": "1",
-                "name": "Pesawat",
-                "name_en": "",
-                "updated_at": "2022-06-09T16:47:51+07:00"
-            },
-            {
-                "color": "#ba68c8",
-                "created_at": "2022-06-09T16:48:31+07:00",
-                "extention": "png",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/LRuEx7k11654768111-c829ee98aa884ec488c0b8d21f0bb361.png",
-                "id": 309,
-                "is_active": "1",
-                "name": "Pesawat",
-                "name_en": "",
-                "updated_at": "2022-06-09T16:48:31+07:00"
-            },
-            {
-                "color": "#ba68c8",
-                "created_at": "2022-06-09T16:49:53+07:00",
-                "extention": "png",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/zNIeeWxW1654768193-c829ee98aa884ec488c0b8d21f0bb361.png",
-                "id": 310,
-                "is_active": "1",
-                "name": "Pesawat",
-                "name_en": "",
-                "updated_at": "2022-06-09T16:49:53+07:00"
-            },
-            {
-                "color": "#5632a8",
-                "created_at": "2022-06-10T15:23:01+07:00",
-                "extention": "png",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/WNB9vWVO1654849380-a89bb038c485a3af1038b045cb9b70ff.png",
-                "id": 314,
-                "is_active": "1",
-                "name": "Mobil",
-                "name_en": "Car",
-                "updated_at": "2022-06-10T15:23:01+07:00"
-            },
-            {
-                "color": "#194d21",
-                "created_at": "2022-06-13T10:39:16+07:00",
-                "extention": "png",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/AFvCedvI1655091556-d35a02ac608097e4ae7f14b3e4e0c09c.png",
-                "id": 316,
-                "is_active": "1",
-                "name": "Sekolah",
-                "name_en": "School",
-                "updated_at": "2022-06-13T10:39:16+07:00"
-            },
-            {
-                "color": "#ba68c8",
-                "created_at": "2022-06-13T13:47:32+07:00",
-                "extention": "",
-                "icon": "https://s3.loyalto.id/inisadev/public/noimage.png",
-                "id": 317,
-                "is_active": "1",
-                "name": "Bengkel 1",
-                "name_en": "Test - Edit",
-                "updated_at": "2022-06-13T13:47:32+07:00"
-            },
-            {
-                "color": "#f54242",
-                "created_at": "2022-06-13T14:36:49+07:00",
-                "extention": "png",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/6geyiZj01655105808-d35a02ac608097e4ae7f14b3e4e0c09c.png",
-                "id": 318,
-                "is_active": "1",
-                "name": "RS. Bakti Permai",
-                "name_en": "Hospital",
-                "updated_at": "2022-07-07T12:37:01+07:00"
-            },
-            {
-                "color": "#43194d",
-                "created_at": "2022-07-07T14:02:57+07:00",
-                "extention": "png",
-                "icon": "https://s3.loyalto.id/inisadev/imagepublic/IyUbn7s41657177377-e3087cddfdf4c788b41bcdfe9b612cdd.png",
-                "id": 319,
-                "is_active": "1",
-                "name": "Rumah Sakit Brawijaya",
-                "name_en": "Brawijaya Hospital",
-                "updated_at": "2022-07-07T14:02:57+07:00"
+                "name": "Kantor Polisi",
+                "name_en": "Police Station",
+                "updated_at": "2022-04-05T15:40:46+07:00"
             }],
-            "total_item": 48
+            "total_item": 18
+        }
+    }]
+}
+
+export const VALIDATE_DELETE_KATEGORILOKASI_SCHEMA = {
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "status_code",
+        "message",
+        "data"
+    ],
+    "properties": {
+        "status_code": {
+            "type": "integer",
+            "default": 0,
+            "title": "The status_code Schema",
+            "examples": [
+                200
+            ]
+        },
+        "message": {
+            "type": "string",
+            "default": "",
+            "title": "The message Schema",
+            "examples": [
+                "Success"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The id Schema",
+                    "examples": [
+                        401
+                    ]
+                }
+            },
+            "examples": [{
+                "id": 401
+            }]
+        }
+    },
+    "examples": [{
+        "status_code": 200,
+        "message": "Success",
+        "data": {
+            "id": 401
         }
     }]
 }

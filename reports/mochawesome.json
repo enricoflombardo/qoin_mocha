@@ -5,9 +5,15 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
+<<<<<<< HEAD
     "start": "2022-10-11T07:06:26.053Z",
     "end": "2022-10-11T07:06:26.851Z",
     "duration": 798,
+=======
+    "start": "2022-10-13T09:36:25.245Z",
+    "end": "2022-10-13T09:36:25.397Z",
+    "duration": 152,
+>>>>>>> 3f33347f66b0cbc9f1cf7ea37a644e93b8b05b70
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,49 +24,85 @@
   },
   "results": [
     {
+<<<<<<< HEAD
       "uuid": "2eb85077-df0c-4697-a512-8db364620e64",
       "title": "",
       "fullFile": "E:\\ProjectMocha\\Automation Qoin\\qoin_mocha\\test\\scenarios\\SentraLokasi_Lokasi.test.js",
       "file": "\\test\\scenarios\\SentraLokasi_Lokasi.test.js",
+=======
+      "uuid": "e05f87f0-b09f-4251-9c1b-4b3aed215f0c",
+      "title": "",
+      "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\SentraKependudukan_KTP.test.js",
+      "file": "\\test\\scenarios\\SentraKependudukan_KTP.test.js",
+>>>>>>> 3f33347f66b0cbc9f1cf7ea37a644e93b8b05b70
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
+<<<<<<< HEAD
           "uuid": "936673c9-af88-45ee-ae48-bb179178a2f0",
           "title": "Web lokasi",
           "fullFile": "E:\\ProjectMocha\\Automation Qoin\\qoin_mocha\\test\\scenarios\\SentraLokasi_Lokasi.test.js",
           "file": "\\test\\scenarios\\SentraLokasi_Lokasi.test.js",
+=======
+          "uuid": "1dff20fd-085b-491f-a8a9-91b9fa415219",
+          "title": "Web",
+          "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\SentraKependudukan_KTP.test.js",
+          "file": "\\test\\scenarios\\SentraKependudukan_KTP.test.js",
+>>>>>>> 3f33347f66b0cbc9f1cf7ea37a644e93b8b05b70
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
+<<<<<<< HEAD
               "title": "Get Fasilitas Lokasi",
               "fullTitle": "Web lokasi Get Fasilitas Lokasi",
               "timedOut": false,
               "duration": 620,
+=======
+              "title": "Update Status konfirmasi KTP",
+              "fullTitle": "Web Update Status konfirmasi KTP",
+              "timedOut": false,
+              "duration": 141,
+>>>>>>> 3f33347f66b0cbc9f1cf7ea37a644e93b8b05b70
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
+<<<<<<< HEAD
               "code": "const get_id = await Getid_Lokasi()\nconst GettokenAPI = await Get_token()\nconst response = await QoinAPI.getFasilitaslokasi(get_id, GettokenAPI)\n//result\n assert.equal(response.status, 200)\n// //schema\nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)\nconsole.log(response.headers)\nconsole.log(response.data)",
               "err": {},
               "uuid": "17731a4c-d74d-440c-812b-a8ba15030266",
               "parentUUID": "936673c9-af88-45ee-ae48-bb179178a2f0",
+=======
+              "code": "const response = await QoinAPI.updatekonfirmasi(id, data.VALID_STATUSKONFIRKTP, token)\n//console\nassert.equal(response.status, 200);\nconst data_res = Object.fromEntries(\n    Object.entries(response.data.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])\n  );\nconst data_in = Object.fromEntries(\n    Object.entries(data.VALID_UPDATEKTP).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])\n  );\n\n//check object Rincian Ayah\nassert.deepEqualExcluding(data_in, data_res, ['id', 'updatebyid', 'updated_at', 'client_id', 'created_by','alamat_pelapor', \"alamat\",\n\"foto\",\n\"jenis_permohonan\",\n\"kecamatan\",\n\"kecamatan_id\",\n\"kelurahan\",\n\"kelurahan_id\",\n\"kode_pos\",\n\"kota\",\n\"kota_id\",\n\"lokasi_id\",\n\"m_user_id\",\n\"nama\",\n\"no_kk\",\n\"no_nik\",\n\"provinsi\",\n\"provinsi_id\",\n\"rt\",\n\"rw\",\n\"tempat_kedatangan\",\n\"jam_kedatangan\",\n\"lokasi_id\",\n\"notes\",\n\"status\",\n\"tanggal_kedatangan\"])\n//console.log(response.data)\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_UPDATE_STATUS_VERIFIKASI_SCHEMA)",
+              "err": {},
+              "uuid": "397c64ce-13a7-49ec-af08-7f36897726b1",
+              "parentUUID": "1dff20fd-085b-491f-a8a9-91b9fa415219",
+>>>>>>> 3f33347f66b0cbc9f1cf7ea37a644e93b8b05b70
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
+<<<<<<< HEAD
             "17731a4c-d74d-440c-812b-a8ba15030266"
+=======
+            "397c64ce-13a7-49ec-af08-7f36897726b1"
+>>>>>>> 3f33347f66b0cbc9f1cf7ea37a644e93b8b05b70
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
+<<<<<<< HEAD
           "duration": 620,
+=======
+          "duration": 141,
+>>>>>>> 3f33347f66b0cbc9f1cf7ea37a644e93b8b05b70
           "root": false,
           "rootEmpty": false,
           "_timeout": 50000
