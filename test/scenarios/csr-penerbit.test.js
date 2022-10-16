@@ -17,13 +17,8 @@ describe('Web', () => {
         const response = await QoinAPI.login(data.VALID_LOGIN) //hit API
         
             //result
-<<<<<<< HEAD
-            assert.equal(response.status, 202) 
-            
-=======
             assert.equal(response.status, 202)
             console.log(response.data)
->>>>>>> 276126e7e6f5e3333571acbff463563ecf8079e2
             //schema
             // expect(response.data).to.be.jsonSchema(schema.VALIDATE_LOGIN_SCHEMA)
     });

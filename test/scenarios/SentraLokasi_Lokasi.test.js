@@ -114,8 +114,8 @@ describe('Web lokasi', () => {
         assert.equal(response.status, 200)
         //schema
         expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETFASILITASLOKASI_SCHEMA)
-        console.log(response.headers)
-        console.log(response.data)
+        // console.log(response.headers)
+        // console.log(response.data)
     });
 
     // Endpoint lokal mas sase
@@ -129,14 +129,17 @@ describe('Web lokasi', () => {
         expect(response.data).to.be.jsonSchema(schema)
     });*/
 
-    it('Get Lokasi By Id', async() => {
-        const response = await QoinAPI.getLokasibyid()
+    it.only('Get Lokasi By Id', async() => {
+        const response = await QoinAPI.getLokasi(id, token)
 
         //result
-        assert.equal(response.status, 200)
+        //assert.equal(response.status, 200)
 
         //schema
-        expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETLOKASIBYID_SCHEMA)
+        //expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETLOKASIBYID_SCHEMA)
+        console.log(id)
+
+
     });
 
     it('Hapus Image Lokasi', async() => {
