@@ -1,25 +1,14 @@
 {
   "stats": {
     "suites": 1,
-<<<<<<< HEAD
     "tests": 1,
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-10-13T08:55:30.680Z",
-    "end": "2022-10-13T08:55:30.827Z",
-    "duration": 147,
+    "start": "2022-10-17T05:32:48.105Z",
+    "end": "2022-10-17T05:32:48.297Z",
+    "duration": 192,
     "testsRegistered": 1,
-=======
-    "tests": 6,
-    "passes": 6,
-    "pending": 0,
-    "failures": 0,
-    "start": "2022-10-13T09:12:04.654Z",
-    "end": "2022-10-13T09:12:06.646Z",
-    "duration": 1992,
-    "testsRegistered": 6,
->>>>>>> 5f5a2c09fc2e7c0fcd3e94af95f8515e063df2b0
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -29,182 +18,49 @@
   },
   "results": [
     {
-<<<<<<< HEAD
-      "uuid": "c130028e-cf01-4c14-a817-98c52c284c4d",
-      "title": "",
-      "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\SentraKependudukan_KTP.test.js",
-      "file": "\\test\\scenarios\\SentraKependudukan_KTP.test.js",
-=======
-      "uuid": "1c0babd4-1937-498c-a6d6-eb15d240c8b0",
+      "uuid": "43f53050-5af8-4e2d-8f39-5f0fa25f13d7",
       "title": "",
       "fullFile": "D:\\QA Automation\\API Testing\\qoinisa\\test\\scenarios\\SentraKependudukan_Akta.test.js",
       "file": "\\test\\scenarios\\SentraKependudukan_Akta.test.js",
->>>>>>> 5f5a2c09fc2e7c0fcd3e94af95f8515e063df2b0
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-<<<<<<< HEAD
-          "uuid": "a2232974-b578-40d1-a1d9-f41818a1a862",
-          "title": "Web",
-          "fullFile": "E:\\Qoin Automation\\qoin_mocha\\test\\scenarios\\SentraKependudukan_KTP.test.js",
-          "file": "\\test\\scenarios\\SentraKependudukan_KTP.test.js",
-=======
-          "uuid": "8b6bc9e2-ec3c-4280-81bc-84490c47be33",
+          "uuid": "4094299d-9e81-439f-b52b-9dfd7ddcfbe3",
           "title": "Web",
           "fullFile": "D:\\QA Automation\\API Testing\\qoinisa\\test\\scenarios\\SentraKependudukan_Akta.test.js",
           "file": "\\test\\scenarios\\SentraKependudukan_Akta.test.js",
->>>>>>> 5f5a2c09fc2e7c0fcd3e94af95f8515e063df2b0
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-<<<<<<< HEAD
-              "title": "Update Status konfirmasi KTP",
-              "fullTitle": "Web Update Status konfirmasi KTP",
-              "timedOut": false,
-              "duration": 137,
-=======
               "title": "Get Index by ID",
               "fullTitle": "Web Get Index by ID",
               "timedOut": false,
-              "duration": 1420,
->>>>>>> 5f5a2c09fc2e7c0fcd3e94af95f8515e063df2b0
+              "duration": 187,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-<<<<<<< HEAD
-              "code": "const response = await QoinAPI.updatekonfirmasi(id, data.VALID_STATUSKONFIRKTP, token)\n//console\n//assert.equal(response.status, 200);\nconsole.log(response.data)\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_UPDATE_STATUS_VERIFIKASI_SCHEMA)",
+              "code": "const response = await QoinAPI.index_by_id(id, token) //hit API\n\n//response status\nassert.equal(response.status, 200);\n//schema\n// expect(response.data).to.be.jsonSchema(schema.VALID_GET_INDEX_BY_ID_SCHEMA)\nconsole.log(response.data);",
               "err": {},
-              "uuid": "aae6af97-c95c-4909-b4c6-0f97ca3f4d91",
-              "parentUUID": "a2232974-b578-40d1-a1d9-f41818a1a862",
+              "uuid": "9cd96ad1-1339-481b-964a-bf767a1923da",
+              "parentUUID": "4094299d-9e81-439f-b52b-9dfd7ddcfbe3",
               "isHook": false,
               "skipped": false
-=======
-              "code": "const response = await QoinAPI.index_by_id(id, token) //hit API\n\n//response status\nassert.equal(response.status, 200);\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALID_GET_INDEX_BY_ID_SCHEMA)",
-              "err": {},
-              "uuid": "abcfcd40-7f97-470a-9636-12c9127861c1",
-              "parentUUID": "8b6bc9e2-ec3c-4280-81bc-84490c47be33",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Update Akta",
-              "fullTitle": "Web Update Akta",
-              "timedOut": false,
-              "duration": 112,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "const response = await QoinAPI.update_akta(id, data.VALID_UPDATE_AKTA, token) //hit API\n//result\nassert.equal(response.status, 200);\n\nconst data_res = Object.fromEntries(\n    Object.entries(response.data.data).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])\n  );\nconst data_in = Object.fromEntries(\n    Object.entries(data.VALID_UPDATE_AKTA).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])\n  );\n\n//check object Rincian Ayah\nassert.deepEqualExcluding(data_in, data_res, ['id', 'updatebyid', 'updated_at', 'client_id', 'created_by','alamat_pelapor',\n'berat',\n'is_dengan_ortu',\n'berat_bayi',\n'dengan_orang_tua',\n'jam_kedatangan',\n'jenis_kelamin_anak',\n'jenis_kelamin_pelapor',\n'jenis_permohonan',\n'jenis_kelamin',\n'kecamatan_ayah_id',\n'kecamatan_ibu_id',\n'kecamatan_id',\n'kecamatan_pelapor_id',\n'kelahiran_ke_spell_en',\n'kelahiran_ke_spell_id',\n'kelurahan_ayah_id',\n'kelurahan_ibu_id',\n'kelurahan_id',\n'kelurahan_pelapor_id',\n'kota_ayah_id',\n'kota_ibu_id',\n'kota_id',\n'kota_pelapor_id',\n'lokasi_id',\n'm_user_id',\n'nama_anak',\n'nama_lengkap',\n'nik_ayah',\n'nik_ibu',\n'no_nik_ayah',\n'no_nik_ibu',\n'panjang',\n'pekerjaan_ayah',\n'pekerjaan_ayah_lainnya',\n'no_registrasi',\n'panjang_bayi',\n'pekerjaan_ayah',\n'provinsi_ayah_id',\n'provinsi_ibu_id',\n'provinsi_id',\n'provinsi_pelapor_id',\n'pukul_kelahiran',\n'tanggal_lahir',\n'tanggal_lahir_ayah',\n'tanggal_lahir_ibu',\n'tanggal_pernikahan_ibu',\n'pukul_kelahiran',\n'status',\n'tahun_spell_en',\n'tahun_spell_id',\n'tanggal_kedatangan',\n'tanggal_lahir',\n'tanggal_lahir_spell_en',\n'tanggal_lahir_spell_id',\n'tanggal_permohonan',\n'tanggal_pernikahan_ibu',\n'umur_pelapor',\n'tgl_lahir_ayah',\n'tgl_lahir_ibu',\n'umur'])\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALID_UPDATE_AKTA_SCHEMA)",
-              "err": {},
-              "uuid": "dd57cebd-5fa3-4254-9b01-04417323f1a6",
-              "parentUUID": "8b6bc9e2-ec3c-4280-81bc-84490c47be33",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Update Status Verifikasi",
-              "fullTitle": "Web Update Status Verifikasi",
-              "timedOut": false,
-              "duration": 112,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "const response = await QoinAPI.update_status_verif(id, data.VALID_UPDATE_STATUS_VERIFIKASI, token) //hit API\n\n//result\nassert.equal(response.status, 200);\n//response data\nassert.equal(response.data.data.notes.toLowerCase(), data.VALID_UPDATE_STATUS_VERIFIKASI.notes.toLowerCase());\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALID_UPDATE_STATUS_VERIFIKASI_SCHEMA)",
-              "err": {},
-              "uuid": "df8e7919-a2d2-4e94-8996-67f519d98ff4",
-              "parentUUID": "8b6bc9e2-ec3c-4280-81bc-84490c47be33",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Update Status",
-              "fullTitle": "Web Update Status",
-              "timedOut": false,
-              "duration": 126,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "const response = await QoinAPI.update_status(id, data.VALID_UPDATE_STATUS, token) //hit API\n\n//result\nassert.equal(response.status, 200);\n//response data\nassert.equal(response.data.data.status.toLowerCase(), data.VALID_UPDATE_STATUS.status.toLowerCase());\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALID_UPDATE_STATUS_SCHEMA)",
-              "err": {},
-              "uuid": "89a6d178-a614-42c4-bce6-1070110ee0d0",
-              "parentUUID": "8b6bc9e2-ec3c-4280-81bc-84490c47be33",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Update Jadwal",
-              "fullTitle": "Web Update Jadwal",
-              "timedOut": false,
-              "duration": 104,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "const response = await QoinAPI.update_jadwal(data.VALID_UPDATE_JADWAL, token) //hit API\n\n//result\nassert.equal(response.status, 200);\n//response data\nassert.equal(response.data.data.tanggal_kedatangan, data.VALID_UPDATE_JADWAL.tanggal_kedatangan);\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALID_UPDATE_JADWAL_SCHEMA)\n// console.log(response.data)",
-              "err": {},
-              "uuid": "00aa9cf8-cce3-4611-9b68-8028ef35868d",
-              "parentUUID": "8b6bc9e2-ec3c-4280-81bc-84490c47be33",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Update Status Konfirmasi",
-              "fullTitle": "Web Update Status Konfirmasi",
-              "timedOut": false,
-              "duration": 104,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "const response = await QoinAPI.update_status_konfirmasi(id, data.VALID_UPDATE_STATUS_KONFIRMASI, token) //hit API\n\n//result\nassert.equal(response.status, 200);\n//response data\nassert.deepEqualExcluding(response.data.data, data.VALID_UPDATE_STATUS_KONFIRMASI, ['id', 'updatebyid', 'updated_at'])\n//schema\nexpect(response.data).to.be.jsonSchema(schema.VALID_UPDATE_STATUS_KONFIRMASI_SCHEMA)",
-              "err": {},
-              "uuid": "6ae458bd-c170-4f28-8ce6-bc00a12d7eb5",
-              "parentUUID": "8b6bc9e2-ec3c-4280-81bc-84490c47be33",
-              "isHook": false,
-              "skipped": false
->>>>>>> 5f5a2c09fc2e7c0fcd3e94af95f8515e063df2b0
             }
           ],
           "suites": [],
           "passes": [
-<<<<<<< HEAD
-            "aae6af97-c95c-4909-b4c6-0f97ca3f4d91"
-=======
-            "abcfcd40-7f97-470a-9636-12c9127861c1",
-            "dd57cebd-5fa3-4254-9b01-04417323f1a6",
-            "df8e7919-a2d2-4e94-8996-67f519d98ff4",
-            "89a6d178-a614-42c4-bce6-1070110ee0d0",
-            "00aa9cf8-cce3-4611-9b68-8028ef35868d",
-            "6ae458bd-c170-4f28-8ce6-bc00a12d7eb5"
->>>>>>> 5f5a2c09fc2e7c0fcd3e94af95f8515e063df2b0
+            "9cd96ad1-1339-481b-964a-bf767a1923da"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-<<<<<<< HEAD
-          "duration": 137,
-=======
-          "duration": 1978,
->>>>>>> 5f5a2c09fc2e7c0fcd3e94af95f8515e063df2b0
+          "duration": 187,
           "root": false,
           "rootEmpty": false,
           "_timeout": 180000

@@ -1087,7 +1087,6 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                             "umur_pelapor",
                             "umur_saksi1",
                             "umur_saksi2",
-                            "updated_at",
                             "verifikasi_at",
                             "verifikasi_by"
                         ],

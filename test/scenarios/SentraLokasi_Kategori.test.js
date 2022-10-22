@@ -16,7 +16,7 @@ const token_mobile = await Token_mobile();
 const token = await Get_token();
 const id = await Getid_Lokasi();
 // Website
-describe('Web kategori lokasi', () => {
+describe.only('Web kategori lokasi', () => {
 
     it('Add kategori lokasi', async() => {
         const response = await QoinAPI.createkategoriLokasi(token, data.VALID_ADDKATEGORI)
