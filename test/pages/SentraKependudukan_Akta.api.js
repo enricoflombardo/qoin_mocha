@@ -5,7 +5,8 @@ const QoinAPI = {
     //mobile
     add_akta: (data, token) => BaseAPI_JSON.post('/aktaLahir',data, {
         headers : {
-            Authorization: "Bearer "+ token
+            Authorization: "Bearer "+ token,
+            schema: schema_file
         }
     }),
 
@@ -15,9 +16,10 @@ const QoinAPI = {
             Authorization: "Bearer "+ token
         }
     }),
-    index_by_id: (id, token) => BaseAPI.get('/aktaLahir/'+id, {
+    index_by_id: (id, token, schema_file) => BaseAPI.get('/aktaLahir/'+id, {
         headers : {
-            Authorization: "Bearer "+ token
+            Authorization: "Bearer "+ token,
+            schema: schema_file
         }
     }),
     update_akta: (id, data, token) => BaseAPI.put('/aktaLahir/' + id, data, {

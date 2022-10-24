@@ -1087,7 +1087,6 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                             "umur_pelapor",
                             "umur_saksi1",
                             "umur_saksi2",
-                            "updated_at",
                             "verifikasi_at",
                             "verifikasi_by"
                         ],
@@ -1105,7 +1104,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The alamat_ibu Schema",
                                 "examples": [
-                                    "JL. RUMAH KELUARGA"
+                                    "JL. RUMAH KELUARGA "
                                 ]
                             },
                             "alamat_pelapor": {
@@ -1113,7 +1112,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The alamat_pelapor Schema",
                                 "examples": [
-                                    "JL. RUMAH PELAPOR"
+                                    "JL. RUMAH PELAPOR "
                                 ]
                             },
                             "alamat_saksi1": {
@@ -1133,11 +1132,11 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 ]
                             },
                             "berat": {
-                                "type": "string",
-                                "default": "",
+                                "type": "number",
+                                "default": 0.0,
                                 "title": "The berat Schema",
                                 "examples": [
-                                    "5.6"
+                                    5.6
                                 ]
                             },
                             "id": {
@@ -1145,23 +1144,23 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": 0,
                                 "title": "The id Schema",
                                 "examples": [
-                                    125
+                                    163
                                 ]
                             },
                             "is_dengan_ortu": {
-                                "type": "string",
-                                "default": "",
+                                "type": "integer",
+                                "default": 0,
                                 "title": "The is_dengan_ortu Schema",
                                 "examples": [
-                                    "1"
+                                    1
                                 ]
                             },
                             "jam_kedatangan": {
-                                "type": "string",
-                                "default": "",
+                                "type": "null",
+                                "default": null,
                                 "title": "The jam_kedatangan Schema",
                                 "examples": [
-                                    "12:12:12"
+                                    null
                                 ]
                             },
                             "jenis_kelahiran": {
@@ -1193,7 +1192,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The jenis_kelamin_pelapor Schema",
                                 "examples": [
-                                    "LAKI-LAKI"
+                                    "LAKI-LAKI "
                                 ]
                             },
                             "jenis_permohonan": {
@@ -1233,7 +1232,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The kecamatan_ayah_id Schema",
                                 "examples": [
-                                    "3507210"
+                                    "350721"
                                 ]
                             },
                             "kecamatan_ibu": {
@@ -1249,7 +1248,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The kecamatan_ibu_id Schema",
                                 "examples": [
-                                    "3507210"
+                                    "350721"
                                 ]
                             },
                             "kecamatan_id": {
@@ -1257,7 +1256,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The kecamatan_id Schema",
                                 "examples": [
-                                    "3507210"
+                                    "350721"
                                 ]
                             },
                             "kecamatan_kk": {
@@ -1281,7 +1280,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The kecamatan_pelapor_id Schema",
                                 "examples": [
-                                    "3507210"
+                                    "350721"
                                 ]
                             },
                             "kecamatan_saksi1": {
@@ -1337,7 +1336,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The kelurahan_ayah_id Schema",
                                 "examples": [
-                                    "3507210009"
+                                    "3507212009"
                                 ]
                             },
                             "kelurahan_ibu": {
@@ -1353,7 +1352,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The kelurahan_ibu_id Schema",
                                 "examples": [
-                                    "3507210009"
+                                    "3507212009"
                                 ]
                             },
                             "kelurahan_id": {
@@ -1361,7 +1360,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The kelurahan_id Schema",
                                 "examples": [
-                                    "3507210009"
+                                    "3507212009"
                                 ]
                             },
                             "kelurahan_kk": {
@@ -1385,7 +1384,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The kelurahan_pelapor_id Schema",
                                 "examples": [
-                                    "3507210009"
+                                    "3507212009"
                                 ]
                             },
                             "kelurahan_saksi1": {
@@ -1437,11 +1436,11 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 ]
                             },
                             "kode_wilayah": {
-                                "type": "string",
-                                "default": "",
+                                "type": "null",
+                                "default": null,
                                 "title": "The kode_wilayah Schema",
                                 "examples": [
-                                    "35"
+                                    null
                                 ]
                             },
                             "konfirmasi_at": {
@@ -1561,15 +1560,15 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The lokasi_id Schema",
                                 "examples": [
-                                    "3507210"
+                                    "350721"
                                 ]
                             },
                             "m_user_id": {
-                                "type": "string",
-                                "default": "",
+                                "type": "integer",
+                                "default": 0,
                                 "title": "The m_user_id Schema",
                                 "examples": [
-                                    "9"
+                                    1
                                 ]
                             },
                             "nama_anak": {
@@ -1609,7 +1608,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The nama_pelapor Schema",
                                 "examples": [
-                                    "AHMAD"
+                                    "TES AKTA LAHIR BARU"
                                 ]
                             },
                             "nama_saksi1": {
@@ -1681,15 +1680,15 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The no_registrasi Schema",
                                 "examples": [
-                                    "NTT2022101331004"
+                                    "NTT2022102131001"
                                 ]
                             },
                             "notes": {
-                                "type": "string",
-                                "default": "",
+                                "type": "null",
+                                "default": null,
                                 "title": "The notes Schema",
                                 "examples": [
-                                    "LANJUT"
+                                    null
                                 ]
                             },
                             "notes_operator": {
@@ -1709,11 +1708,11 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 ]
                             },
                             "panjang": {
-                                "type": "string",
-                                "default": "",
+                                "type": "number",
+                                "default": 0.0,
                                 "title": "The panjang Schema",
                                 "examples": [
-                                    "50.7"
+                                    50.7
                                 ]
                             },
                             "pekerjaan_ayah": {
@@ -1721,7 +1720,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The pekerjaan_ayah Schema",
                                 "examples": [
-                                    "NOTARIS"
+                                    "LAINNYA"
                                 ]
                             },
                             "pekerjaan_ayah_lainnya": {
@@ -1737,7 +1736,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The pekerjaan_ibu Schema",
                                 "examples": [
-                                    "IBU RUMAH TANGGA"
+                                    "IBU RUMAH TANGGA  "
                                 ]
                             },
                             "pekerjaan_ibu_lainnya": {
@@ -1753,7 +1752,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The pekerjaan_pelapor Schema",
                                 "examples": [
-                                    "TUKANG LAPOR"
+                                    "TUKANG LAPOR "
                                 ]
                             },
                             "pekerjaan_pelapor_lainnya": {
@@ -1913,7 +1912,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The pukul_kelahiran Schema",
                                 "examples": [
-                                    "19.55"
+                                    "00:00:19"
                                 ]
                             },
                             "status": {
@@ -1937,7 +1936,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The tanggal_lahir Schema",
                                 "examples": [
-                                    "1999-10-05"
+                                    "1999-10-05T00:00:00+07:00"
                                 ]
                             },
                             "tanggal_lahir_ayah": {
@@ -1945,7 +1944,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The tanggal_lahir_ayah Schema",
                                 "examples": [
-                                    "1981-03-15"
+                                    "1981-03-15T00:00:00+07:00"
                                 ]
                             },
                             "tanggal_lahir_ibu": {
@@ -1953,7 +1952,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The tanggal_lahir_ibu Schema",
                                 "examples": [
-                                    "1979-10-05"
+                                    "1979-10-05T00:00:00+07:00"
                                 ]
                             },
                             "tanggal_pernikahan_ibu": {
@@ -1961,7 +1960,7 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "default": "",
                                 "title": "The tanggal_pernikahan_ibu Schema",
                                 "examples": [
-                                    "1998-10-20"
+                                    "1998-10-20T00:00:00+07:00"
                                 ]
                             },
                             "tempat_dilahirkan": {
@@ -1989,11 +1988,11 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 ]
                             },
                             "umur_pelapor": {
-                                "type": "string",
-                                "default": "",
+                                "type": "integer",
+                                "default": 0,
                                 "title": "The umur_pelapor Schema",
                                 "examples": [
-                                    "15"
+                                    15
                                 ]
                             },
                             "umur_saksi1": {
@@ -2010,14 +2009,6 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                                 "title": "The umur_saksi2 Schema",
                                 "examples": [
                                     null
-                                ]
-                            },
-                            "updated_at": {
-                                "type": "string",
-                                "default": "",
-                                "title": "The updated_at Schema",
-                                "examples": [
-                                    "2022-10-13 15:39:05"
                                 ]
                             },
                             "verifikasi_at": {
@@ -2039,49 +2030,49 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                         },
                         "examples": [{
                             "alamat_ayah": "JL. RUMAH KELUARGA",
-                            "alamat_ibu": "JL. RUMAH KELUARGA",
-                            "alamat_pelapor": "JL. RUMAH PELAPOR",
+                            "alamat_ibu": "JL. RUMAH KELUARGA ",
+                            "alamat_pelapor": "JL. RUMAH PELAPOR ",
                             "alamat_saksi1": null,
                             "alamat_saksi2": null,
-                            "berat": "5.6",
-                            "id": 125,
-                            "is_dengan_ortu": "1",
-                            "jam_kedatangan": "12:12:12",
+                            "berat": 5.6,
+                            "id": 163,
+                            "is_dengan_ortu": 1,
+                            "jam_kedatangan": null,
                             "jenis_kelahiran": "TUNGGAL",
                             "jenis_kelahiran_lainnya": null,
                             "jenis_kelamin_anak": "LAKI-LAKI",
-                            "jenis_kelamin_pelapor": "LAKI-LAKI",
+                            "jenis_kelamin_pelapor": "LAKI-LAKI ",
                             "jenis_permohonan": "BIKIN BARU ",
                             "kebangsaan_ayah": "INDONESIA",
                             "kebangsaan_ibu": "AMSTERDAM",
                             "kecamatan_ayah": "WAGIR",
-                            "kecamatan_ayah_id": "3507210",
+                            "kecamatan_ayah_id": "350721",
                             "kecamatan_ibu": "WAGIR",
-                            "kecamatan_ibu_id": "3507210",
-                            "kecamatan_id": "3507210",
+                            "kecamatan_ibu_id": "350721",
+                            "kecamatan_id": "350721",
                             "kecamatan_kk": "WAGIR",
                             "kecamatan_pelapor": "WAGIR",
-                            "kecamatan_pelapor_id": "3507210",
+                            "kecamatan_pelapor_id": "350721",
                             "kecamatan_saksi1": null,
                             "kecamatan_saksi1_id": null,
                             "kecamatan_saksi2": null,
                             "kecamatan_saksi2_id": null,
                             "kelahiran_ke": 1,
                             "kelurahan_ayah": "SIDORAHAYU",
-                            "kelurahan_ayah_id": "3507210009",
+                            "kelurahan_ayah_id": "3507212009",
                             "kelurahan_ibu": "SIDORAHAYU",
-                            "kelurahan_ibu_id": "3507210009",
-                            "kelurahan_id": "3507210009",
+                            "kelurahan_ibu_id": "3507212009",
+                            "kelurahan_id": "3507212009",
                             "kelurahan_kk": "SIDORAHAYU",
                             "kelurahan_pelapor": "SIDORAHAYU",
-                            "kelurahan_pelapor_id": "3507210009",
+                            "kelurahan_pelapor_id": "3507212009",
                             "kelurahan_saksi1": null,
                             "kelurahan_saksi1_id": null,
                             "kelurahan_saksi2": null,
                             "kelurahan_saksi2_id": null,
                             "kewarganegaraan_ayah": "WNI",
                             "kewarganegaraan_ibu": "WNA",
-                            "kode_wilayah": "35",
+                            "kode_wilayah": null,
                             "konfirmasi_at": null,
                             "konfirmasi_by": null,
                             "kota_ayah": "MALANG",
@@ -2096,13 +2087,13 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                             "kota_saksi1_id": null,
                             "kota_saksi2": null,
                             "kota_saksi2_id": null,
-                            "lokasi_id": "3507210",
-                            "m_user_id": "9",
+                            "lokasi_id": "350721",
+                            "m_user_id": 1,
                             "nama_anak": "SI ANAK",
                             "nama_ayah": "SI AYAH",
                             "nama_ibu": "SI IBU",
                             "nama_kepala_keluarga": "SI BAPAK",
-                            "nama_pelapor": "AHMAD",
+                            "nama_pelapor": "TES AKTA LAHIR BARU",
                             "nama_saksi1": null,
                             "nama_saksi2": null,
                             "nik_pelapor": "555555",
@@ -2111,16 +2102,16 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                             "no_nik_ibu": "12345",
                             "no_nik_saksi1": null,
                             "no_nik_saksi2": null,
-                            "no_registrasi": "NTT2022101331004",
-                            "notes": "LANJUT",
+                            "no_registrasi": "NTT2022102131001",
+                            "notes": null,
                             "notes_operator": null,
                             "notes_supervisor": null,
-                            "panjang": "50.7",
-                            "pekerjaan_ayah": "NOTARIS",
+                            "panjang": 50.7,
+                            "pekerjaan_ayah": "LAINNYA",
                             "pekerjaan_ayah_lainnya": "KORUPSI",
-                            "pekerjaan_ibu": "IBU RUMAH TANGGA",
+                            "pekerjaan_ibu": "IBU RUMAH TANGGA  ",
                             "pekerjaan_ibu_lainnya": null,
-                            "pekerjaan_pelapor": "TUKANG LAPOR",
+                            "pekerjaan_pelapor": "TUKANG LAPOR ",
                             "pekerjaan_pelapor_lainnya": null,
                             "pekerjaan_saksi1": null,
                             "pekerjaan_saksi1_lainnya": null,
@@ -2140,20 +2131,19 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                             "provinsi_saksi1_id": null,
                             "provinsi_saksi2": null,
                             "provinsi_saksi2_id": null,
-                            "pukul_kelahiran": "19.55",
+                            "pukul_kelahiran": "00:00:19",
                             "status": "diproses",
                             "tanggal_kedatangan": null,
-                            "tanggal_lahir": "1999-10-05",
-                            "tanggal_lahir_ayah": "1981-03-15",
-                            "tanggal_lahir_ibu": "1979-10-05",
-                            "tanggal_pernikahan_ibu": "1998-10-20",
+                            "tanggal_lahir": "1999-10-05T00:00:00+07:00",
+                            "tanggal_lahir_ayah": "1981-03-15T00:00:00+07:00",
+                            "tanggal_lahir_ibu": "1979-10-05T00:00:00+07:00",
+                            "tanggal_pernikahan_ibu": "1998-10-20T00:00:00+07:00",
                             "tempat_dilahirkan": "GUBUK SENTOSA",
                             "tempat_kedatangan": "WAGIR",
                             "tempat_lahir": "MALANG",
-                            "umur_pelapor": "15",
+                            "umur_pelapor": 15,
                             "umur_saksi1": null,
                             "umur_saksi2": null,
-                            "updated_at": "2022-10-13 15:39:05",
                             "verifikasi_at": null,
                             "verifikasi_by": null
                         }]
@@ -2161,49 +2151,49 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                     "examples": [
                         [{
                             "alamat_ayah": "JL. RUMAH KELUARGA",
-                            "alamat_ibu": "JL. RUMAH KELUARGA",
-                            "alamat_pelapor": "JL. RUMAH PELAPOR",
+                            "alamat_ibu": "JL. RUMAH KELUARGA ",
+                            "alamat_pelapor": "JL. RUMAH PELAPOR ",
                             "alamat_saksi1": null,
                             "alamat_saksi2": null,
-                            "berat": "5.6",
-                            "id": 125,
-                            "is_dengan_ortu": "1",
-                            "jam_kedatangan": "12:12:12",
+                            "berat": 5.6,
+                            "id": 163,
+                            "is_dengan_ortu": 1,
+                            "jam_kedatangan": null,
                             "jenis_kelahiran": "TUNGGAL",
                             "jenis_kelahiran_lainnya": null,
                             "jenis_kelamin_anak": "LAKI-LAKI",
-                            "jenis_kelamin_pelapor": "LAKI-LAKI",
+                            "jenis_kelamin_pelapor": "LAKI-LAKI ",
                             "jenis_permohonan": "BIKIN BARU ",
                             "kebangsaan_ayah": "INDONESIA",
                             "kebangsaan_ibu": "AMSTERDAM",
                             "kecamatan_ayah": "WAGIR",
-                            "kecamatan_ayah_id": "3507210",
+                            "kecamatan_ayah_id": "350721",
                             "kecamatan_ibu": "WAGIR",
-                            "kecamatan_ibu_id": "3507210",
-                            "kecamatan_id": "3507210",
+                            "kecamatan_ibu_id": "350721",
+                            "kecamatan_id": "350721",
                             "kecamatan_kk": "WAGIR",
                             "kecamatan_pelapor": "WAGIR",
-                            "kecamatan_pelapor_id": "3507210",
+                            "kecamatan_pelapor_id": "350721",
                             "kecamatan_saksi1": null,
                             "kecamatan_saksi1_id": null,
                             "kecamatan_saksi2": null,
                             "kecamatan_saksi2_id": null,
                             "kelahiran_ke": 1,
                             "kelurahan_ayah": "SIDORAHAYU",
-                            "kelurahan_ayah_id": "3507210009",
+                            "kelurahan_ayah_id": "3507212009",
                             "kelurahan_ibu": "SIDORAHAYU",
-                            "kelurahan_ibu_id": "3507210009",
-                            "kelurahan_id": "3507210009",
+                            "kelurahan_ibu_id": "3507212009",
+                            "kelurahan_id": "3507212009",
                             "kelurahan_kk": "SIDORAHAYU",
                             "kelurahan_pelapor": "SIDORAHAYU",
-                            "kelurahan_pelapor_id": "3507210009",
+                            "kelurahan_pelapor_id": "3507212009",
                             "kelurahan_saksi1": null,
                             "kelurahan_saksi1_id": null,
                             "kelurahan_saksi2": null,
                             "kelurahan_saksi2_id": null,
                             "kewarganegaraan_ayah": "WNI",
                             "kewarganegaraan_ibu": "WNA",
-                            "kode_wilayah": "35",
+                            "kode_wilayah": null,
                             "konfirmasi_at": null,
                             "konfirmasi_by": null,
                             "kota_ayah": "MALANG",
@@ -2218,13 +2208,13 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                             "kota_saksi1_id": null,
                             "kota_saksi2": null,
                             "kota_saksi2_id": null,
-                            "lokasi_id": "3507210",
-                            "m_user_id": "9",
+                            "lokasi_id": "350721",
+                            "m_user_id": 1,
                             "nama_anak": "SI ANAK",
                             "nama_ayah": "SI AYAH",
                             "nama_ibu": "SI IBU",
                             "nama_kepala_keluarga": "SI BAPAK",
-                            "nama_pelapor": "AHMAD",
+                            "nama_pelapor": "TES AKTA LAHIR BARU",
                             "nama_saksi1": null,
                             "nama_saksi2": null,
                             "nik_pelapor": "555555",
@@ -2233,16 +2223,16 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                             "no_nik_ibu": "12345",
                             "no_nik_saksi1": null,
                             "no_nik_saksi2": null,
-                            "no_registrasi": "NTT2022101331004",
-                            "notes": "LANJUT",
+                            "no_registrasi": "NTT2022102131001",
+                            "notes": null,
                             "notes_operator": null,
                             "notes_supervisor": null,
-                            "panjang": "50.7",
-                            "pekerjaan_ayah": "NOTARIS",
+                            "panjang": 50.7,
+                            "pekerjaan_ayah": "LAINNYA",
                             "pekerjaan_ayah_lainnya": "KORUPSI",
-                            "pekerjaan_ibu": "IBU RUMAH TANGGA",
+                            "pekerjaan_ibu": "IBU RUMAH TANGGA  ",
                             "pekerjaan_ibu_lainnya": null,
-                            "pekerjaan_pelapor": "TUKANG LAPOR",
+                            "pekerjaan_pelapor": "TUKANG LAPOR ",
                             "pekerjaan_pelapor_lainnya": null,
                             "pekerjaan_saksi1": null,
                             "pekerjaan_saksi1_lainnya": null,
@@ -2262,20 +2252,19 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                             "provinsi_saksi1_id": null,
                             "provinsi_saksi2": null,
                             "provinsi_saksi2_id": null,
-                            "pukul_kelahiran": "19.55",
+                            "pukul_kelahiran": "00:00:19",
                             "status": "diproses",
                             "tanggal_kedatangan": null,
-                            "tanggal_lahir": "1999-10-05",
-                            "tanggal_lahir_ayah": "1981-03-15",
-                            "tanggal_lahir_ibu": "1979-10-05",
-                            "tanggal_pernikahan_ibu": "1998-10-20",
+                            "tanggal_lahir": "1999-10-05T00:00:00+07:00",
+                            "tanggal_lahir_ayah": "1981-03-15T00:00:00+07:00",
+                            "tanggal_lahir_ibu": "1979-10-05T00:00:00+07:00",
+                            "tanggal_pernikahan_ibu": "1998-10-20T00:00:00+07:00",
                             "tempat_dilahirkan": "GUBUK SENTOSA",
                             "tempat_kedatangan": "WAGIR",
                             "tempat_lahir": "MALANG",
-                            "umur_pelapor": "15",
+                            "umur_pelapor": 15,
                             "umur_saksi1": null,
                             "umur_saksi2": null,
-                            "updated_at": "2022-10-13 15:39:05",
                             "verifikasi_at": null,
                             "verifikasi_by": null
                         }]
@@ -2293,49 +2282,49 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
             "examples": [{
                 "list": [{
                     "alamat_ayah": "JL. RUMAH KELUARGA",
-                    "alamat_ibu": "JL. RUMAH KELUARGA",
-                    "alamat_pelapor": "JL. RUMAH PELAPOR",
+                    "alamat_ibu": "JL. RUMAH KELUARGA ",
+                    "alamat_pelapor": "JL. RUMAH PELAPOR ",
                     "alamat_saksi1": null,
                     "alamat_saksi2": null,
-                    "berat": "5.6",
-                    "id": 125,
-                    "is_dengan_ortu": "1",
-                    "jam_kedatangan": "12:12:12",
+                    "berat": 5.6,
+                    "id": 163,
+                    "is_dengan_ortu": 1,
+                    "jam_kedatangan": null,
                     "jenis_kelahiran": "TUNGGAL",
                     "jenis_kelahiran_lainnya": null,
                     "jenis_kelamin_anak": "LAKI-LAKI",
-                    "jenis_kelamin_pelapor": "LAKI-LAKI",
+                    "jenis_kelamin_pelapor": "LAKI-LAKI ",
                     "jenis_permohonan": "BIKIN BARU ",
                     "kebangsaan_ayah": "INDONESIA",
                     "kebangsaan_ibu": "AMSTERDAM",
                     "kecamatan_ayah": "WAGIR",
-                    "kecamatan_ayah_id": "3507210",
+                    "kecamatan_ayah_id": "350721",
                     "kecamatan_ibu": "WAGIR",
-                    "kecamatan_ibu_id": "3507210",
-                    "kecamatan_id": "3507210",
+                    "kecamatan_ibu_id": "350721",
+                    "kecamatan_id": "350721",
                     "kecamatan_kk": "WAGIR",
                     "kecamatan_pelapor": "WAGIR",
-                    "kecamatan_pelapor_id": "3507210",
+                    "kecamatan_pelapor_id": "350721",
                     "kecamatan_saksi1": null,
                     "kecamatan_saksi1_id": null,
                     "kecamatan_saksi2": null,
                     "kecamatan_saksi2_id": null,
                     "kelahiran_ke": 1,
                     "kelurahan_ayah": "SIDORAHAYU",
-                    "kelurahan_ayah_id": "3507210009",
+                    "kelurahan_ayah_id": "3507212009",
                     "kelurahan_ibu": "SIDORAHAYU",
-                    "kelurahan_ibu_id": "3507210009",
-                    "kelurahan_id": "3507210009",
+                    "kelurahan_ibu_id": "3507212009",
+                    "kelurahan_id": "3507212009",
                     "kelurahan_kk": "SIDORAHAYU",
                     "kelurahan_pelapor": "SIDORAHAYU",
-                    "kelurahan_pelapor_id": "3507210009",
+                    "kelurahan_pelapor_id": "3507212009",
                     "kelurahan_saksi1": null,
                     "kelurahan_saksi1_id": null,
                     "kelurahan_saksi2": null,
                     "kelurahan_saksi2_id": null,
                     "kewarganegaraan_ayah": "WNI",
                     "kewarganegaraan_ibu": "WNA",
-                    "kode_wilayah": "35",
+                    "kode_wilayah": null,
                     "konfirmasi_at": null,
                     "konfirmasi_by": null,
                     "kota_ayah": "MALANG",
@@ -2350,13 +2339,13 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                     "kota_saksi1_id": null,
                     "kota_saksi2": null,
                     "kota_saksi2_id": null,
-                    "lokasi_id": "3507210",
-                    "m_user_id": "9",
+                    "lokasi_id": "350721",
+                    "m_user_id": 1,
                     "nama_anak": "SI ANAK",
                     "nama_ayah": "SI AYAH",
                     "nama_ibu": "SI IBU",
                     "nama_kepala_keluarga": "SI BAPAK",
-                    "nama_pelapor": "AHMAD",
+                    "nama_pelapor": "TES AKTA LAHIR BARU",
                     "nama_saksi1": null,
                     "nama_saksi2": null,
                     "nik_pelapor": "555555",
@@ -2365,16 +2354,16 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                     "no_nik_ibu": "12345",
                     "no_nik_saksi1": null,
                     "no_nik_saksi2": null,
-                    "no_registrasi": "NTT2022101331004",
-                    "notes": "LANJUT",
+                    "no_registrasi": "NTT2022102131001",
+                    "notes": null,
                     "notes_operator": null,
                     "notes_supervisor": null,
-                    "panjang": "50.7",
-                    "pekerjaan_ayah": "NOTARIS",
+                    "panjang": 50.7,
+                    "pekerjaan_ayah": "LAINNYA",
                     "pekerjaan_ayah_lainnya": "KORUPSI",
-                    "pekerjaan_ibu": "IBU RUMAH TANGGA",
+                    "pekerjaan_ibu": "IBU RUMAH TANGGA  ",
                     "pekerjaan_ibu_lainnya": null,
-                    "pekerjaan_pelapor": "TUKANG LAPOR",
+                    "pekerjaan_pelapor": "TUKANG LAPOR ",
                     "pekerjaan_pelapor_lainnya": null,
                     "pekerjaan_saksi1": null,
                     "pekerjaan_saksi1_lainnya": null,
@@ -2394,20 +2383,19 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                     "provinsi_saksi1_id": null,
                     "provinsi_saksi2": null,
                     "provinsi_saksi2_id": null,
-                    "pukul_kelahiran": "19.55",
+                    "pukul_kelahiran": "00:00:19",
                     "status": "diproses",
                     "tanggal_kedatangan": null,
-                    "tanggal_lahir": "1999-10-05",
-                    "tanggal_lahir_ayah": "1981-03-15",
-                    "tanggal_lahir_ibu": "1979-10-05",
-                    "tanggal_pernikahan_ibu": "1998-10-20",
+                    "tanggal_lahir": "1999-10-05T00:00:00+07:00",
+                    "tanggal_lahir_ayah": "1981-03-15T00:00:00+07:00",
+                    "tanggal_lahir_ibu": "1979-10-05T00:00:00+07:00",
+                    "tanggal_pernikahan_ibu": "1998-10-20T00:00:00+07:00",
                     "tempat_dilahirkan": "GUBUK SENTOSA",
                     "tempat_kedatangan": "WAGIR",
                     "tempat_lahir": "MALANG",
-                    "umur_pelapor": "15",
+                    "umur_pelapor": 15,
                     "umur_saksi1": null,
                     "umur_saksi2": null,
-                    "updated_at": "2022-10-13 15:39:05",
                     "verifikasi_at": null,
                     "verifikasi_by": null
                 }],
@@ -2421,49 +2409,49 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
         "data": {
             "list": [{
                 "alamat_ayah": "JL. RUMAH KELUARGA",
-                "alamat_ibu": "JL. RUMAH KELUARGA",
-                "alamat_pelapor": "JL. RUMAH PELAPOR",
+                "alamat_ibu": "JL. RUMAH KELUARGA ",
+                "alamat_pelapor": "JL. RUMAH PELAPOR ",
                 "alamat_saksi1": null,
                 "alamat_saksi2": null,
-                "berat": "5.6",
-                "id": 125,
-                "is_dengan_ortu": "1",
-                "jam_kedatangan": "12:12:12",
+                "berat": 5.6,
+                "id": 163,
+                "is_dengan_ortu": 1,
+                "jam_kedatangan": null,
                 "jenis_kelahiran": "TUNGGAL",
                 "jenis_kelahiran_lainnya": null,
                 "jenis_kelamin_anak": "LAKI-LAKI",
-                "jenis_kelamin_pelapor": "LAKI-LAKI",
+                "jenis_kelamin_pelapor": "LAKI-LAKI ",
                 "jenis_permohonan": "BIKIN BARU ",
                 "kebangsaan_ayah": "INDONESIA",
                 "kebangsaan_ibu": "AMSTERDAM",
                 "kecamatan_ayah": "WAGIR",
-                "kecamatan_ayah_id": "3507210",
+                "kecamatan_ayah_id": "350721",
                 "kecamatan_ibu": "WAGIR",
-                "kecamatan_ibu_id": "3507210",
-                "kecamatan_id": "3507210",
+                "kecamatan_ibu_id": "350721",
+                "kecamatan_id": "350721",
                 "kecamatan_kk": "WAGIR",
                 "kecamatan_pelapor": "WAGIR",
-                "kecamatan_pelapor_id": "3507210",
+                "kecamatan_pelapor_id": "350721",
                 "kecamatan_saksi1": null,
                 "kecamatan_saksi1_id": null,
                 "kecamatan_saksi2": null,
                 "kecamatan_saksi2_id": null,
                 "kelahiran_ke": 1,
                 "kelurahan_ayah": "SIDORAHAYU",
-                "kelurahan_ayah_id": "3507210009",
+                "kelurahan_ayah_id": "3507212009",
                 "kelurahan_ibu": "SIDORAHAYU",
-                "kelurahan_ibu_id": "3507210009",
-                "kelurahan_id": "3507210009",
+                "kelurahan_ibu_id": "3507212009",
+                "kelurahan_id": "3507212009",
                 "kelurahan_kk": "SIDORAHAYU",
                 "kelurahan_pelapor": "SIDORAHAYU",
-                "kelurahan_pelapor_id": "3507210009",
+                "kelurahan_pelapor_id": "3507212009",
                 "kelurahan_saksi1": null,
                 "kelurahan_saksi1_id": null,
                 "kelurahan_saksi2": null,
                 "kelurahan_saksi2_id": null,
                 "kewarganegaraan_ayah": "WNI",
                 "kewarganegaraan_ibu": "WNA",
-                "kode_wilayah": "35",
+                "kode_wilayah": null,
                 "konfirmasi_at": null,
                 "konfirmasi_by": null,
                 "kota_ayah": "MALANG",
@@ -2478,13 +2466,13 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                 "kota_saksi1_id": null,
                 "kota_saksi2": null,
                 "kota_saksi2_id": null,
-                "lokasi_id": "3507210",
-                "m_user_id": "9",
+                "lokasi_id": "350721",
+                "m_user_id": 1,
                 "nama_anak": "SI ANAK",
                 "nama_ayah": "SI AYAH",
                 "nama_ibu": "SI IBU",
                 "nama_kepala_keluarga": "SI BAPAK",
-                "nama_pelapor": "AHMAD",
+                "nama_pelapor": "TES AKTA LAHIR BARU",
                 "nama_saksi1": null,
                 "nama_saksi2": null,
                 "nik_pelapor": "555555",
@@ -2493,16 +2481,16 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                 "no_nik_ibu": "12345",
                 "no_nik_saksi1": null,
                 "no_nik_saksi2": null,
-                "no_registrasi": "NTT2022101331004",
-                "notes": "LANJUT",
+                "no_registrasi": "NTT2022102131001",
+                "notes": null,
                 "notes_operator": null,
                 "notes_supervisor": null,
-                "panjang": "50.7",
-                "pekerjaan_ayah": "NOTARIS",
+                "panjang": 50.7,
+                "pekerjaan_ayah": "LAINNYA",
                 "pekerjaan_ayah_lainnya": "KORUPSI",
-                "pekerjaan_ibu": "IBU RUMAH TANGGA",
+                "pekerjaan_ibu": "IBU RUMAH TANGGA  ",
                 "pekerjaan_ibu_lainnya": null,
-                "pekerjaan_pelapor": "TUKANG LAPOR",
+                "pekerjaan_pelapor": "TUKANG LAPOR ",
                 "pekerjaan_pelapor_lainnya": null,
                 "pekerjaan_saksi1": null,
                 "pekerjaan_saksi1_lainnya": null,
@@ -2522,20 +2510,19 @@ export const VALID_GET_INDEX_BY_ID_SCHEMA = {
                 "provinsi_saksi1_id": null,
                 "provinsi_saksi2": null,
                 "provinsi_saksi2_id": null,
-                "pukul_kelahiran": "19.55",
+                "pukul_kelahiran": "00:00:19",
                 "status": "diproses",
                 "tanggal_kedatangan": null,
-                "tanggal_lahir": "1999-10-05",
-                "tanggal_lahir_ayah": "1981-03-15",
-                "tanggal_lahir_ibu": "1979-10-05",
-                "tanggal_pernikahan_ibu": "1998-10-20",
+                "tanggal_lahir": "1999-10-05T00:00:00+07:00",
+                "tanggal_lahir_ayah": "1981-03-15T00:00:00+07:00",
+                "tanggal_lahir_ibu": "1979-10-05T00:00:00+07:00",
+                "tanggal_pernikahan_ibu": "1998-10-20T00:00:00+07:00",
                 "tempat_dilahirkan": "GUBUK SENTOSA",
                 "tempat_kedatangan": "WAGIR",
                 "tempat_lahir": "MALANG",
-                "umur_pelapor": "15",
+                "umur_pelapor": 15,
                 "umur_saksi1": null,
                 "umur_saksi2": null,
-                "updated_at": "2022-10-13 15:39:05",
                 "verifikasi_at": null,
                 "verifikasi_by": null
             }],

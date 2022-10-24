@@ -50,7 +50,7 @@ describe('Web kategori lokasi', () => {
         //expect(response.data).to.be.jsonSchema(schema.VALIDATE_GETDETAILKATEGORILOKASI)
     });
 
-    it('Update kategori lokasi', async() => {
+    it.skip('Update kategori lokasi', async() => {
         const response = await QoinAPI.updatekategoriLokasi(id, data.VALID_UPDATEKATEGORI, token)
 
         //validasi
@@ -62,8 +62,8 @@ describe('Web kategori lokasi', () => {
             const data_in = Object.fromEntries(
             Object.entries(data.VALID_UPDATEKATEGORI).map(([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])
             );
-            
-            //result
+            console.log(id)
+            result
             assert.equal(response.status, 200)
 
           //exclude
@@ -100,7 +100,7 @@ describe('Web kategori lokasi', () => {
 describe('Mobile kategori lokasi', (done) => {
 
 
-    it.only('Get kategori lokasi', async ()=> {
+    it('Get kategori lokasi', async ()=> {
         const response = await QoinAPI.get_lokasi(token_mobile);
     
         assert.equal(response.status, 200)
