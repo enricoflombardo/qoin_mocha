@@ -15,8 +15,8 @@ const token = await Get_token();
 
 
 describe('Mobile', () => {
-    it('Berhasil membuat akta melalui mobile', async () => {
-        const response = await QoinAPI.add_akta(data.VALID_ADD_AKTA, token) //hit API
+    it.only('Berhasil membuat akta melalui mobile', async () => {
+        const response = await QoinAPI.add_akta(data.VALID_ADD_AKTA, token, schema.VALID_ADD_AKTA_SCHEMA) //hit API
         
         //result
         assert.equal(response.status, 200);
@@ -107,21 +107,21 @@ describe('Mobile', () => {
         assert.equal(data_in.dengan_orang_tua, data_res.is_dengan_ortu);
 
         //schema
-        expect(response.data).to.be.jsonSchema(schema.VALID_ADD_AKTA_SCHEMA)
+        expect(response.data).to.be.jsonSchema(response.config.headers.schema)
         //console.log(response)
     });
 });
 
 describe('Web', () => {
     it.only('Get Index by ID', async () => {
-        const response = await QoinAPI.index_by_id(id, token) //hit API
+        const response = await QoinAPI.index_by_id(id, token, schema.VALID_GET_INDEX_BY_ID_SCHEMA) //hit API
         
         //response status
         assert.equal(response.status, 200);
 
         //schema
-        // expect(response.data).to.be.jsonSchema(schema.VALID_GET_INDEX_BY_ID_SCHEMA)
-        console.log(response.data);
+        expect(response.data).to.be.jsonSchema(response.config.headers.schema)
+        // console.log(response.config.headers.schema);
 
     });
     

@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-10-17T05:32:48.105Z",
-    "end": "2022-10-17T05:32:48.297Z",
-    "duration": 192,
+    "start": "2022-10-22T08:05:31.013Z",
+    "end": "2022-10-22T08:05:31.353Z",
+    "duration": 340,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "43f53050-5af8-4e2d-8f39-5f0fa25f13d7",
+      "uuid": "ba8facd9-e086-4676-8bf5-dc8e57e2e011",
       "title": "",
       "fullFile": "D:\\QA Automation\\API Testing\\qoinisa\\test\\scenarios\\SentraKependudukan_Akta.test.js",
       "file": "\\test\\scenarios\\SentraKependudukan_Akta.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4094299d-9e81-439f-b52b-9dfd7ddcfbe3",
+          "uuid": "a025e760-d695-40e8-bb9a-97a0040ba922",
           "title": "Web",
           "fullFile": "D:\\QA Automation\\API Testing\\qoinisa\\test\\scenarios\\SentraKependudukan_Akta.test.js",
           "file": "\\test\\scenarios\\SentraKependudukan_Akta.test.js",
@@ -38,29 +38,29 @@
               "title": "Get Index by ID",
               "fullTitle": "Web Get Index by ID",
               "timedOut": false,
-              "duration": 187,
+              "duration": 335,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const response = await QoinAPI.index_by_id(id, token) //hit API\n\n//response status\nassert.equal(response.status, 200);\n//schema\n// expect(response.data).to.be.jsonSchema(schema.VALID_GET_INDEX_BY_ID_SCHEMA)\nconsole.log(response.data);",
+              "code": "const response = await QoinAPI.index_by_id(id, token, schema.VALID_GET_INDEX_BY_ID_SCHEMA) //hit API\n\n//response status\nassert.equal(response.status, 200);\n//schema\nexpect(response.data).to.be.jsonSchema(response.config.headers.schema)\n// console.log(response.config.headers.schema);",
               "err": {},
-              "uuid": "9cd96ad1-1339-481b-964a-bf767a1923da",
-              "parentUUID": "4094299d-9e81-439f-b52b-9dfd7ddcfbe3",
+              "uuid": "36c40c57-cc6c-4850-b0ef-761e5bc643ab",
+              "parentUUID": "a025e760-d695-40e8-bb9a-97a0040ba922",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9cd96ad1-1339-481b-964a-bf767a1923da"
+            "36c40c57-cc6c-4850-b0ef-761e5bc643ab"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 187,
+          "duration": 335,
           "root": false,
           "rootEmpty": false,
           "_timeout": 180000
